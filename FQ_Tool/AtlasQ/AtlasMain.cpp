@@ -4,12 +4,12 @@
 #include <ctime>
 #include <string>
 #include <vector>
+#include <new>
 #include "AtlasCore.h"
 #ifdef _WIN32
 #include <windows.h>
 #else
 #include <unistd.h>
-#include <sys/wait.h>
 #endif
 
 using namespace std;
@@ -132,76 +132,16 @@ static vector<string> Quoted(const string& line)
 	return v;
 }
 
-#ifdef _WIN32
-static bool RunChild(const string& rom, const string& script, string& out)
+static void ResetAtlas()
 {
-	char exe[MAX_PATH];
-	GetModuleFileNameA(NULL, exe, MAX_PATH);
-	string cmd = string("\"") + exe + "\" \"" + rom + "\" \"" + script + "\"";
-	SECURITY_ATTRIBUTES sa;
-	sa.nLength = sizeof(sa);
-	sa.lpSecurityDescriptor = NULL;
-	sa.bInheritHandle = TRUE;
-	HANDLE rd, wr;
-	if(!CreatePipe(&rd, &wr, &sa, 0))
-		return false;
-	SetHandleInformation(rd, HANDLE_FLAG_INHERIT, 0);
-	STARTUPINFOA si;
-	ZeroMemory(&si, sizeof(si));
-	si.cb = sizeof(si);
-	si.dwFlags = STARTF_USESTDHANDLES;
-	si.hStdInput = GetStdHandle(STD_INPUT_HANDLE);
-	si.hStdOutput = wr;
-	si.hStdError = wr;
-	PROCESS_INFORMATION pi;
-	vector<char> line(cmd.begin(), cmd.end());
-	line.push_back(0);
-	if(!CreateProcessA(NULL, &line[0], NULL, NULL, TRUE, 0, NULL, NULL, &si, &pi))
-	{
-		CloseHandle(rd);
-		CloseHandle(wr);
-		return false;
-	}
-	CloseHandle(wr);
-	char buf[4096];
-	DWORD n;
-	while(ReadFile(rd, buf, sizeof(buf), &n, NULL) && n > 0)
-		out.append(buf, n);
-	CloseHandle(rd);
-	WaitForSingleObject(pi.hProcess, INFINITE);
-	DWORD code = 1;
-	GetExitCodeProcess(pi.hProcess, &code);
-	CloseHandle(pi.hProcess);
-	CloseHandle(pi.hThread);
-	return code == 0;
+	Atlas.~AtlasCore();
+	Stats.~StatisticsHandler();
+	new(&Stats) StatisticsHandler();
+	bSwap = 0;
+	StringAlign = 0;
+	MaxEmbPtr = 0;
+	new(&Atlas) AtlasCore();
 }
-#else
-static bool RunChild(const string& rom, const string& script, string& out)
-{
-	int fds[2];
-	if(pipe(fds) != 0)
-		return false;
-	fflush(stdout);
-	pid_t pid = fork();
-	if(pid == 0)
-	{
-		close(fds[0]);
-		dup2(fds[1], 1);
-		dup2(fds[1], 2);
-		close(fds[1]);
-		exit(RunOne(rom.c_str(), script.c_str()));
-	}
-	close(fds[1]);
-	char buf[4096];
-	ssize_t n;
-	while((n = read(fds[0], buf, sizeof(buf))) > 0)
-		out.append(buf, n);
-	close(fds[0]);
-	int st = 0;
-	waitpid(pid, &st, 0);
-	return WIFEXITED(st) && WEXITSTATUS(st) == 0;
-}
-#endif
 
 static int RunBatch(const char* BatFile, const char* RestFile)
 {
@@ -219,7 +159,7 @@ static int RunBatch(const char* BatFile, const char* RestFile)
 	fclose(f);
 
 	int jobs = 0, failed = 0;
-	string report, rest;
+	string rest;
 	size_t pos = 0;
 	while(pos < all.size())
 	{
@@ -254,12 +194,16 @@ static int RunBatch(const char* BatFile, const char* RestFile)
 		string exe = t[0];
 		for(size_t i = 0; i < exe.size(); i++)
 			exe[i] = tolower(exe[i]);
-		if(exe.size() < 9 || exe.compare(exe.size() - 9, 9, "atlas.exe") != 0)
+		bool isAtlas = (exe.size() >= 9 && exe.compare(exe.size() - 9, 9, "atlas.exe") == 0) ||
+			(exe.size() >= 10 && exe.compare(exe.size() - 10, 10, "atlasq.exe") == 0);
+		if(!isAtlas)
 		{
 			rest += line + "\r\n";
 			continue;
 		}
 		vector<string> a(t.begin() + 1, t.end());
+		if(!a.empty() && a[0] == "-bat")
+			continue;
 		if(a.size() >= 2 && a[0] == "-d")
 			a.erase(a.begin(), a.begin() + 2);
 		if(a.size() != 2)
@@ -267,22 +211,16 @@ static int RunBatch(const char* BatFile, const char* RestFile)
 		string rom = FixPath(a[0]), script = FixPath(a[1]);
 		jobs++;
 
-		string out;
-		bool ok = RunChild(rom, script, out);
-		if(!ok && out.empty())
-			out = script + ": Error: Atlas crashed\n";
-		if(!ok || !out.empty())
-		{
+		if(jobs > 1)
+			ResetAtlas();
+		g_Problems = 0;
+		if(RunOne(rom.c_str(), script.c_str()))
 			failed++;
-			report += "[" + script + "]\n" + out;
-			if(report[report.size()-1] != '\n')
-				report += "\n";
-		}
 	}
 
 	if(failed)
 	{
-		printf("Atlas: %d/%d file(s) with errors\n\n%s", failed, jobs, report.c_str());
+		printf("Atlas: %d/%d file(s) with errors\n", failed, jobs);
 		return 1;
 	}
 	if(RestFile)

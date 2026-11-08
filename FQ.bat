@@ -1,4 +1,8 @@
+@echo off
 copy "FQ_ROM\FQJP.sfc" "FQ_ROM\FQ_translation.sfc"
+
+"FQ_Tool\AtlasQ.exe" -bat FQ.bat
+goto build
 
 type nul > "FQ_menu\menu00.bin"
 type nul > "FQ_menu\menu01.bin"
@@ -738,5 +742,6 @@ type nul > "FQ_chimei\chimei45.bin"
 "FQ_Tool\AtlasQ.exe" -d log.txt "FQ_chimei\chimei45.bin" "FQ_chimei\chimei45.txt"
 
 
+:build
 "FQ_Tool\xkas.exe" -o "FQ_ROM\FQ_translation.sfc" "FQ_ASM\FQ_main.asm"
 "FQ_Tool\checksum.exe" "FQ_ROM\FQ_translation.sfc"
