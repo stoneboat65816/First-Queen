@@ -745,3 +745,5 @@ type nul > "FQ_chimei\chimei45.bin"
 :build
 "FQ_Tool\xkas.exe" -o "FQ_ROM\FQ_translation.sfc" "FQ_ASM\FQ_main.asm"
 "FQ_Tool\checksum.exe" "FQ_ROM\FQ_translation.sfc"
+
+pause
