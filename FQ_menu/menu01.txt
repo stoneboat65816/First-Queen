@@ -1,0 +1,25 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<KATA><PAL2>　　　ＭＥＮＵ　　　
+//<PAL0>
+//　ケ゛ームスタート　
+//
+//　メンハ゛ー<HIRA>をみる<KATA>　
+//
+//　チーム<HIRA>のへんせい<KATA>　
+//
+//　オール　マッフ゜　
+//
+//　システム<END>
+<pal7>MENU<pal3><line>
+Bắt đầu<line>
+Thành viên<line>
+Xếp nhóm<line>
+Xem bản đồ<line>
+Hệ thống<end>

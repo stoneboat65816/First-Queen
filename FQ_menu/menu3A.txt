@@ -1,0 +1,10 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<KATA><PAL3>　マシ゛シャン　<HIRA><PAL0>の　<KATA>チーム<HIRA>には、はいれません<KATA>｡<END>
+Không thể vào nhóm của Ma đạo sĩ!<end>

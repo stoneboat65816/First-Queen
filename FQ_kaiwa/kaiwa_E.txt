@@ -1,0 +1,3486 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($05BE)
+#WRITE(MyPtr, $000000)
+//spd0　　　　　　　　　　　　　　　　　　　［リッチモンドの村］<end>
+<mannaka>Richmond Village<end>
+
+#WRITE(MyPtr, $000003)
+//spd0　　　　　　　　　　　　　　　　　　コンウォールの森の近く<end>
+<mannaka>Near Conwall Forest<end>
+
+#WRITE(MyPtr, $000006)
+//墓からの声：「この世をすくいに、［過去］からきた魔法使いが［沼の館］にいる。」
+//「沼をよくさがせ、館の入口があるはずだ。」<end>
+<frame><$02>
+A voice from the grave:<line>
+A wizard now dwells in the<line>
+mansion in the swamp.<page>
+He came here from "the past"<line>
+to save this world.<page>
+Go to the swamp and search.<line>
+The mansion entrance is there.<end>
+
+#WRITE(MyPtr, $000009)
+//半魚人：「どうだ？　オラのワニ、かわいいだろ？」
+//「こんなかわいいワニをアマゾネスのやつらは食っちまうんだぞ！　　オラ、信じられないだよ！」<end>
+<frame><$02><font><$01>
+Fishman:  well? Ain't my gator<line>
+cute as can be?<page>
+I can't believe them Amazones<line>
+eat gators as cute as this!<line>
+Unbelievable!<end>
+
+#WRITE(MyPtr, $00000C)
+//かべに落がきがある<page>
+//「この城は魔王にうばわれてしまった。あいつとけいやくできるのは、一人だけなのだ！」<end>
+<frame><$02>
+A note is stuck on the wall.<line>
+It reads:<page>
+"This castle was seized by<line>
+the Demon King. Only one may<line>
+make a pact with him.<end>
+
+#WRITE(MyPtr, $00000F)
+//ドクロ：「魔物がこわいものしっているか。そいつは、強れつな光だよケケケケケ。」<end>
+<frame><$02><font><$01>
+Skull:  know what monsters<line>
+fear? A blinding light!<line>
+Kekekeke.<end>
+
+#WRITE(MyPtr, $000012)
+//ドクロ：「魔物が手を出せないものしっているか。そいつは空の虹さ。ははははは。」<end>
+<frame><$02><font><$01>
+Skull:  know what monsters<line>
+can never lay a hand on?<page>
+The rainbow in the sky!<line>
+Kekekeke.<end>
+
+#WRITE(MyPtr, $000015)
+//ドクロ：「ドラゴンは、このおくにいる。」
+//「でもやつに会うためには、おくの祭だんにのっているドクロの力をかりなきゃならないぜ。」<end>
+<frame><$02><font><$01>
+Skull:<line>
+The dragon lies deep within.<page>
+But to meet it, you must<line>
+borrow the power of the skull<line>
+on the altar inside. Kekeke.<end>
+
+#WRITE(MyPtr, $000018)
+//spd0　　　　　　　　　　　　　　　　　　このカガミは何か変だ！<end>
+This mirror is very strange!<end>
+
+#WRITE(MyPtr, $00001B)
+//ペリーズ：「リッチモンド伯よ、　たのむぞ。キャサリンのくわだてを打ちくだいてくれ！」
+//「わしはこのとおり自分の身もままならない。わずかな数だが、わが兵が外で待っておる。」
+//「かれらをひきいて［オルニック］と戦ってくれ！」<end>
+King Peris:  Count Richmond,<line>
+help Us crush the schemes<line>
+of Catharin.<page>
+As you can see, We can no<line>
+longer even move this body<line>
+on Our own.<page>
+They are few, but Our<line>
+soldiers await you outside.<page>
+Lead them and fight<line>
+against the Ornic!<end>
+
+#WRITE(MyPtr, $00001E)
+//ペリーズ：「すでにわが配下の騎士コンスタンティンも、ソルズベリーに向かわしておる。」
+//「かれらはすぐにでも戦える場所にいるはずじゃ。そなたのかつやくを期待しておるぞ。」<end>
+King Peris:  Our vassal, the<line>
+knight Constantin, has already<line>
+marched to Solberry.<page>
+He must be near the front by<line>
+now. Join forces with him.<page>
+May you win glorious<line>
+victories.<end>
+
+#WRITE(MyPtr, $000021)
+//ペリーズ：「せ、戦況はどうじゃ？よい協力者はえられたか？」
+//「わが［カーディック］の兵だけではあの［オルニック］には立ち向かえんかもしれん。」<page>
+//「ほかの部族に協力を求めるほかはないか・・・」<end>
+King Peris:  how goes the war?<line>
+Have you found worthy allies<line>
+to fight beside you?<page>
+If we rely on the troops of<line>
+Cardic alone, we cannot<line>
+hold back the Ornic.<line>
+We must ask the other tribes<line>
+for their aid...<end>
+
+#WRITE(MyPtr, $000024)
+//ペリーズ：「おお、リッチモンド、ゴホッ、せっ、戦況は・・・　　　グフッ、グフッ」<end>
+King Peris:  ah, Richmond...<line>
+cough... how goes the war...<line>
+Cough... cough...<end>
+
+#WRITE(MyPtr, $000027)
+//ソフィア：「［オルニック］と戦ってくれるのですね！」<page>
+//ソフィア：「それではカーディックの町にわたくしのおさななじみの、［ジェーン］がおりますから、たずねてみてください。きっと力になってくれるはずです。」<end>
+Sophia:  please help us defeat<line>
+the Ornic!<page>
+Sophia:  in the town of Cardic<line>
+lives my dear friend<line>
+Jean. Go and see her.<page>
+Sophia:  I'm sure she will<line>
+lend you her strength in<line>
+this battle.<end>
+
+#WRITE(MyPtr, $00002A)
+//ソフィア：「父の容体は思わしくありません。いっこくも早く［オルニック］をたおしてください。」<end>
+Sophia:  my father's health is<line>
+not improving. Please make<line>
+haste and strike the Ornic.<end>
+
+#WRITE(MyPtr, $00002D)
+//ソフィア：「父は、もうダメかもしれません。」
+//「もし父が死んだら、城にのこる者すべてを集めて、キャサリンと戦うことになりましょう。」<end>
+Sophia:  my father may not<line>
+survive this time.<page>
+If anything happens to him,<line>
+I will gather all who remain<line>
+in the castle and fight<line>
+Catharin to the bitter end.<end>
+
+#WRITE(MyPtr, $000030)
+//「リッチモンド様、我々もおともさせて下さい。」<page>
+//「我々弓兵は、［Ｂ］ボタンで矢をうつことが出来ます。」<end>
+<frame><$02>
+Lord Richmond, please let<line>
+us follow you.<page>
+We are archers. Just press<line>
+the B Button and we will<line>
+fire our arrows.<end>
+
+#WRITE(MyPtr, $000033)
+//「城は我々が守ります。なにとぞ、ご無事で。」<end>
+<frame><$02>
+We will guard the castle.<line>
+Please take care, my lord.<end>
+
+#WRITE(MyPtr, $000036)
+//「まあ、あなた様のうわさは町中に広まっていますわ。がんばって下さいね！」<end>
+<frame><$02><font><$01>
+Your fame is known all over<line>
+this town. Do your best!<end>
+
+#WRITE(MyPtr, $000039)
+//「宿屋に［ジェーン］のファンが　あつまっているんだ。」
+//「あいつら、ジェーン一人じゃいくさに行かせないって、はりきっていたぜ。」<end>
+<frame><$02><font><$01>
+Jean's crazy fans are all<line>
+gathered at the inn.<page>
+They say they'll never let<line>
+her go anywhere alone.<end>
+
+#WRITE(MyPtr, $00003C)
+//「うわさでは、敵は［ルートン］のドワーフをおって、［コーンウォール］まで来ているらしいのです。」<end>
+<frame><$02>
+Rumor has it the enemy passed<line>
+through Lurton of the Dwarves<line>
+and is heading for Conwall.<end>
+
+#WRITE(MyPtr, $00003F)
+//「エルフ王の子が人質にとらわれたそうだ。」<page>
+//「でもなきゃ［オルニック］のばかどもをエルフのやつらが放っておくわけないさ。」<end>
+<frame><$02><font><$01>
+I hear the Elf prince has<line>
+been kidnapped.<page>
+Otherwise the Elves would<line>
+never let those fool Ornic<line>
+do as they please.<end>
+
+#WRITE(MyPtr, $000042)
+//「勇気のあるお方、道中ご無事で」<end>
+<frame><$02><font><$01>
+O brave one, I pray you<line>
+travel safe and sound.<end>
+
+#WRITE(MyPtr, $000045)
+//「［ナイト］は死をもおそれず、ゆうかんに戦う。死んでしまっては、なんにもならんと思うがのう。」<end>
+<frame><$02><font><$01>
+Knights do not fear death.<line>
+They fight bravely.<page>
+But once you're dead, it's<line>
+all over... What a waste...<end>
+
+#WRITE(MyPtr, $000048)
+//「ここは、カーディックの城下町だよ。敵が来てもこの町はだいじょうぶだよね？」<end>
+<frame><$02><font><$01>
+This is the town below<line>
+Cardic Castle. If the enemy<line>
+comes, will we still be safe?<end>
+
+#WRITE(MyPtr, $00004B)
+//「［オルニック］って北のはずれの国なんでしょう。ここまで来れるのかしら？」<end>
+<frame><$02><font><$01>
+Ornic is a faraway country<line>
+in the North, right? Could<line>
+they really come this far?<end>
+
+#WRITE(MyPtr, $00004E)
+//「北では、山のやつらがあばれ回ってるっていうし、［ドワーフ］や　［ケンタウロス］がいざこざをおこしているし・・、ぶっそうな世の中になったもんじゃわい。」<end>
+<frame><$02><font><$01>
+Up in the northern mountains<line>
+there's a ruckus. It's those<line>
+Dwarves and Centaurus...<page>
+They're always at each other.<line>
+There's no peace in this<line>
+world at all.<end>
+
+#WRITE(MyPtr, $000051)
+//「戦争だって？？　おそろしいことだ！！！」<end>
+<frame><$02><font><$01>
+A war, you say??<line>
+Oh, how dreadful!!<end>
+
+#WRITE(MyPtr, $000054)
+//「東のみなと町、［アンレー］に、海の向こうから兵士がついたって　うわさです。」<end>
+<frame><$02><font><$01>
+In the port town of Anrey<line>
+to the East, many soldiers<line>
+from across the sea gather.<page>
+Or so the rumor goes.<end>
+
+#WRITE(MyPtr, $000057)
+//「［オルニック］の城は、けわしい地形に守られた城だそうです。　　どうか、お気をつけて。」<end>
+<frame><$02><font><$01>
+Ornic Castle is protected<line>
+by rugged terrain.<line>
+Please take care.<end>
+
+#WRITE(MyPtr, $00005A)
+//ジェーン：「話は闇いたわ。用意はできているの。ソフィアがあぶないんじゃだまってられないわ。」
+//「あたしも行く。まかせて！」
+//「でも、その前に、ファンのみんなにあいさつして来るわ。宿屋にいかなくちゃ。」<page>
+//ジェーン：「これから、あたしは　あなたとはちがう部隊として、行動するわ。」
+//「ちがう部隊へコントロールを　　うつす方法をおしえるわね！」<page>
+//「ここで［キャンプ］をすると、　あたしの名前もでているはずよ。」<page>
+//「［ゲームスタート］を、えらんでから、あたしの部隊［ジェーン］をえらべばいいの。いいわね？」<page>
+//ジェーンの部隊が仲間になった<end>
+Jean:  I've heard the whole<line>
+story. And I'm all ready<line>
+to go.<page>
+I may be a woman, but when<line>
+Sophia is in danger, how<line>
+could I just sit still?<page>
+Come on, let's go!<line>
+Leave everything to me.<page>
+But first I must go to the<line>
+inn and say goodbye to my<line>
+fans.<page>
+Jean:  from now on I'll lead<line>
+a unit separate from<line>
+yours, sir.<page>
+Let me show you how to<line>
+control another unit.<page>
+Press Select and make camp.<line>
+Then you'll see my name<line>
+in the Menu.<page>
+After choosing "Start" you<line>
+can choose my unit.<page>
+Got it, sir?<page>
+Jean has joined the party!<end>
+
+#WRITE(MyPtr, $00005D)
+//神父：「［オルニック］のぼうきょは神もおゆるしにはなりますまい」
+//「勇かんなるわが修道士たちは彼らをたおすべくすでに出発しました。どこかで会う事もあるでしょう。」<end>
+<frame><$02>
+Priest:  the gods will never<line>
+forgive the tyrant Ornic.<page>
+My brave monks have already<line>
+set out to strike them down.<page>
+You will surely meet them<line>
+somewhere along the way.<end>
+
+#WRITE(MyPtr, $000060)
+//「東の海岸の先に半魚人のすむ洞くつがあるよ。みかけは悪いけど話せるやつらだよ。」<end>
+<frame><$02><font><$01>
+Good man:  on the eastern<line>
+shore there's a cave where<line>
+the Fishmen live.<page>
+They look ugly, but they're<line>
+quite reasonable.<end>
+
+#WRITE(MyPtr, $000063)
+//「海には強い女だけの村があるらしいの。行ってみたらいかが？」<end>
+<frame><$02><font><$01>
+Good woman:  by the sea there<line>
+is a village of strong women.<page>
+Why don't you try going<line>
+there?<end>
+
+#WRITE(MyPtr, $000066)
+//主人：「ごくろうさまです。　　　兵隊さんなら、いつでもただで　　おとめします。」<end>
+<frame><$02><font><$01>
+Owner:  thank you. Your troops<line>
+are always welcome here.<end>
+
+#WRITE(MyPtr, $000069)
+//ファンクラブ：「ぼくらはジェーンさんの行く所なら、どこへでも行きます！」<end>
+<frame><$02><font><$01>
+Fan Club:  wherever Jean goes,<line>
+we'll follow!<end>
+
+#WRITE(MyPtr, $00006C)
+//主人：「われわれも協力します。　クラスチェンジできる人がいれば、武器や防具をさしあげましょう。」<end>
+<frame><$02><font><$01>
+Owner:  we will lend you our<line>
+aid, sir.<page>
+If anyone can Class change,<line>
+I will give them weapons<line>
+and armor.<end>
+
+#WRITE(MyPtr, $00006F)
+//妻：「せんそーですって！　　　　まあどうしましょう！！」<page>
+//夫：「逃げようか？かあちゃん。」<end>
+<frame><$02><font><$01>
+Wife:  they say there's a war!<line>
+Oh my, what shall we do~<page>
+Husband:  run, what else?<line>
+Hurry up and run, dear.<end>
+
+#WRITE(MyPtr, $000072)
+//「［Ｘ］ボタンは、部下をたいきゃくさせます。部下たちは、入って来た方向に向かってにげます。」<end>
+<frame><$02>
+Press X to make your men<line>
+retreat.<page>
+They will then flee back the<line>
+way they came in.<end>
+
+#WRITE(MyPtr, $000075)
+//老人：「西の岩あなには、［ケンタウロス］どもがすんでおる。」
+//「気のあらいやつらでな、話せば力になってくれるかもしれんが、最近［ドワーフ］といざこざをおこしたようで、仲が悪くなっておる。」<end>
+<frame><$02><font><$01>
+Old man:  the Centaurus live<line>
+in a rock cave to the West.<page>
+They're quite wild, but if<line>
+you win them over they may<line>
+prove useful.<page>
+But lately they've been<line>
+quarreling with the<line>
+Dwarves.<end>
+
+#WRITE(MyPtr, $000078)
+//こども：「エルフの子［ロバート］がさらわれたんだって！」
+//「ぼく、あの子知っているんだ。　ねえ、たすけてあげてよ！！」<end>
+<frame><$02><font><$01>
+Child:  Robert the Elf has<line>
+been kidnapped!<page>
+I know him.<line>
+Please save him!!<end>
+
+#WRITE(MyPtr, $00007B)
+//「リッチモンド様、われわれはあなたとともに最後まで戦います。行きましょう、［オルニック］へ！」<page>
+//「リッチモンド様、もし我々部下をちょくせつコントロールしたい時は［ＬＲ］ボタンをおして下さい。」<end>
+<frame><$02>
+Lord Richmond, we will fight<line>
+at your side to the very<line>
+end. Now, let's go!<page>
+On to Ornic! And don't forget<line>
+to press L or R if you wish<line>
+to control us directly.<end>
+
+#WRITE(MyPtr, $00007E)
+//アマゾネス：「いくさですって？　今それどころじゃないのよ。」
+//「大事な宝、［なみだのしずく石］がぬすまれてしまったの。」
+//「なにかてがかりでも、つかめればいいのだけど。」<end>
+<frame><$02><font><$01>
+Amazones:  a war, you say?<line>
+This is no time for that.<page>
+Our treasure, the "Teardrop<line>
+Stone", has been stolen.<page>
+We must find a clue soon<line>
+and get it back.<end>
+
+#WRITE(MyPtr, $000081)
+//アマゾネス：「わたしたちの宝、　［なみだのしずく石］をアラシの夜ぬすまれてしまったのです。」
+//「ボートがなくなっているけど、　あのアラシではしずんでしまったかもしれないわ。」
+//「ぬすんだやつが生きているとすれば、近くにいるような気がするわ」<end>
+<frame><$02><font><$01>
+Amazones:  our treasure, the<line>
+"Teardrop Stone", was stolen<line>
+on the night of the storm.<page>
+Our boat is gone too, and it<line>
+probably sank in that storm.<page>
+I feel that if the thief is<line>
+still alive, he must be<line>
+somewhere nearby.<end>
+
+#WRITE(MyPtr, $000084)
+//アマゾネス：「なみだのしずく石を持ってきてくれたのね！」
+//「ありがとう！！　これがあれば、わたしたちも力をだせるわ。」<page>
+//アマゾネスの部隊が仲間になった<end>
+<frame><$02><font><$01>
+Amazones:  you've brought back<line>
+the "Teardrop Stone"!<page>
+Thank you! With it, we can<line>
+lend you our strength.<page>
+The Amazones have joined!<end>
+
+#WRITE(MyPtr, $000087)
+//アマゾネス：「よくも、［なみだのしずく石］を、化け物にわたしたわね！　かくごをおし！！」<end>
+<frame><$02><font><$01>
+Amazones:  curse you! You gave<line>
+the Teardrop Stone to the<line>
+monster!<page>
+Prepare to die!!<end>
+
+#WRITE(MyPtr, $00008A)
+//ドロボウ：「ひえぇぇぇぇ　見つかっちゃった。アマゾネスどもにオレの事を知らせないでくれ！」<page>
+//「オレか？　オレは［オルニック］の者だ。キャサリン様から命ぜられアマゾネスの宝、［なみだのしずく石］をぬすんだんだ」
+//「［なみだのしずく石］は、イカの化け物にもっていかれちまった。」
+//「オレはにげたけど、相棒はきっとくわれちまったろうな。」<page>
+//あの化け物は海の中にはいってしまったから、とりもどすのはむずかしいぜ。」<end>
+<frame><$02><font><$01>
+Thief:  yikes, I've been found!<line>
+Don't tell the Amazones<line>
+about me!<page>
+Me? I'm from Ornic.<line>
+Lady Catharin ordered me to<line>
+steal the Amazones' stone.<page>
+But the Teardrop Stone was<line>
+taken by a giant squid.<page>
+I got away, but my partner<line>
+was eaten by it.<page>
+That monster went down into<line>
+the sea. It'll be hard to get<line>
+the stone back.<end>
+
+#WRITE(MyPtr, $00008D)
+//主人：「岩場づたいにいった所に、［アマゾネス］のすむ村があるぜ」<end>
+<frame><$02><font><$01>
+Owner:  along the rocky shore<line>
+lies the Amazones village.<end>
+
+#WRITE(MyPtr, $000090)
+//主人：「岩場の西の方には［ほらあな］があって、化け物がすんでいるらしい。」<page>
+//「化け物たいじに行く者もあったが帰ってきたもんはおらなんだ。　　今じゃあ、だれも近よらんよ。」<end>
+<frame><$02><font><$01>
+Owner:  west of the rocks is a<line>
+cave with a monster inside.<page>
+Those who went to slay it<line>
+never came back.<page>
+Now nobody dares to go<line>
+near it anymore.<end>
+
+#WRITE(MyPtr, $000093)
+//妖精：「私たちはあなたがたの味方です。」<page>
+//「もし、エルフたちの力をかりたいのでしたら、［サンリスの塔］へ向かいなさい。」
+//「そこにとじこめられているエルフの王子を、ぶじにエルフ王のもとへとどけてあげることです。」
+//「キャメロットに助けを求めたり、オルニックの近くまでせめては、手おくれになるかもしれません。」<end>
+<font><$01>
+Spirit:  I am your ally.<page>
+If you want the Elves to<line>
+help you, head for the<line>
+Tower of Sanrith.<page>
+Rescue the Elf prince held<line>
+there, and the Elves will<line>
+join your cause.<page>
+If you seek Camelot's aid or<line>
+draw near Ornic first, it<line>
+may all be too late.<end>
+
+#WRITE(MyPtr, $000096)
+//妖精：「ベニックに行きましたか？
+//とおい過去から、あなた方を助けるために、よみがえった方が待っておりますよ。」<end>
+<font><$01>
+Spirit:<line>
+have you been to Benic yet?<page>
+A great sage from the distant<line>
+past awaits you there.<end>
+
+#WRITE(MyPtr, $000099)
+//主人：「勇者様、女王キャサリンは魔物に心を支配されてしまったと、泉の妖精が話してくれました。」
+//「西の［森の泉］に行けば、妖精に会えますよ。」<end>
+<frame><$02><font><$01>
+Owner:  brave one, Queen<line>
+Catharin's soul has been<line>
+seized by a demon.<page>
+So said the spirit of the<line>
+spring. Go to the forest by<line>
+the spring in the West.<end>
+
+#WRITE(MyPtr, $00009C)
+//老人：「［敵］はこのあたりまで、やってきておる。やつらがたおせんようでは、きたえ方がたらんぞ。」<end>
+<frame><$02><font><$01>
+Old man:  the enemy has come<line>
+near here. You must train<line>
+hard to defeat them.<end>
+
+#WRITE(MyPtr, $00009F)
+//半魚人：「おらたちゃ見はりじゃ。よそ者は早くかえるだ。」<end>
+<frame><$02><font><$01>
+Fishman:<line>
+we're on guard duty, croak.<line>
+Strangers, go home, croak.<end>
+
+#WRITE(MyPtr, $0000A2)
+//半魚人：「てめえら、アマゾネスのまわしモンだな。」
+//「あいつらァ、いつもオラたちの　ワニっこをぬすんで行きやがんだ。さっさと帰れ！」<end>
+<frame><$02><font><$01>
+Fishman:  you're spies for<line>
+them Amazones, ain't ya,<line>
+croak?<page>
+They're always stealin' our<line>
+gators, croak. Go home, croak!<end>
+
+#WRITE(MyPtr, $0000A5)
+//半魚人：「てめえらのコンタンは、キャサリン様から闇いてわかってんだ！」
+//「おう、ミンナ、かまうこたぁねえから、たたんじまえ！」<end>
+<frame><$02><font><$01>
+Fishman:  Lady Catharin told us<line>
+all about your dirty plans,<line>
+croak!<page>
+Everyone, beat 'em to death,<line>
+don't hold back, croak!<end>
+
+#WRITE(MyPtr, $0000A8)
+//半魚人：「アンだ？　戦争だ？　　おるにっくだ？　オラたちには関係ないね。」
+//「でも、ペリーズの王さんにゃ、前に世話になったかんな。」
+//「どうだ、［なみだのしずく石］をとってきてくれたら、この村のモンは、おめえさんに協力するがね。」<end>
+<frame><$02><font><$01>
+Fishman:  huh? A war? Ornic,<line>
+croak? Got nothin' to do<line>
+with us, croak.<page>
+But we owe old King Peris<line>
+from way back, croak.<page>
+Tell ya what, bring the<line>
+"Teardrop Stone" here and<line>
+the whole village will help<line>
+ya, croak!<end>
+
+#WRITE(MyPtr, $0000AB)
+//半魚人：「お、なみだのしずく石だこれで［アマゾネス］たちも、少しはおとなしくなるってもんだ。」
+//　「そんじゃ、やくそくだからな。　ひとつおらたちも、ワニつれて行くべえ。」<page>
+//半魚人の部隊が仲間になった<end>
+<frame><$02><font><$01>
+Fishman:  oh, it's the Teardrop<line>
+Stone! Without it, them<line>
+Amazones will behave, croak.<page>
+A promise is a promise. We'll<line>
+bring our gators with ya.<page>
+The Fishmen have joined!<end>
+
+#WRITE(MyPtr, $0000AE)
+//夫：「アマゾネスと半魚人は昔っから仲が悪いんだ。かわいいワニを女たちは皮はいでくっちまうんだぜ」妻：「だからわたしたちは、みんなとはなれてくらしているのよ。　　ねえ、あ・な・た！」<page>
+//夫：「ゲロゲロッ！」<end>
+<frame><$02><font><$01>
+Husband: the Amazones and the<line>
+Fishmen have been at odds<line>
+since the old days.<page>
+The Amazones skin our cute<line>
+gators and eat them.<page>
+Wife:  that's why we live far<line>
+away from everyone else.<page>
+Husband:  croak croak!<end>
+
+#WRITE(MyPtr, $0000B1)
+//「おねがい、［なみだのしずく石］をとりかえしてきて！」<end>
+<frame><$02><font><$01>
+Please, bring back the<line>
+Teardrop Stone for us!<end>
+
+#WRITE(MyPtr, $0000B4)
+//「［なみだのしずく石］を、とりかえしてきてくれたのね。さあ、早くリーダーのところへ！」<end>
+<frame><$02><font><$01>
+You got the Teardrop Stone<line>
+back! Then hurry to our<line>
+leader!<end>
+
+#WRITE(MyPtr, $0000B7)
+//宿の主人：「おとまりですか？　　道にまよった旅人は、よくうちへ　いらっしゃいます。」<end>
+<frame><$02><font><$01>
+Innkeeper: staying the night?<page>
+Weary travelers are always<line>
+welcome at our humble inn.<end>
+
+#WRITE(MyPtr, $0000BA)
+//主人：「私は魔法の研究をしている者です。あなたに魔法の矢をさしあげましょう。」
+//「これを弓でうてば、かべをもつらぬく事ができます。」<end>
+<frame><$02><font><$01>
+Owner:  I am a researcher<line>
+of magic.<page>
+Let me give you these<line>
+magic arrows.<page>
+Shoot them from a bow and<line>
+they will pierce walls.<end>
+
+#WRITE(MyPtr, $0000BD)
+//主人：「うわさでは、魔力を持った［石］がいくつかあるそうです。」
+//「なかにはとてもおそろしい力をもつものもあると闇いております。」<end>
+<frame><$02><font><$01>
+Owner:<line>
+Rumor says there are a few<line>
+stones holding magic power.<page>
+Among them is one with<line>
+truly terrible power.<line>
+Or so the rumor goes.<end>
+
+#WRITE(MyPtr, $0000C0)
+//村長：「ようこそ、われらの村に。われわれケンタウロスもオルニックの事では頭をいためておる。」
+//「だが、ドワーフのやつらにもなんとか、［いたい目］を見せてやらねば、はらのむしがおさまらん。」
+//「われらの助けをかりたいのであればドワーフとも戦ってもらおう」<end>
+<frame><$02><font><$01>
+Village chief: welcome to<line>
+our village.<page>
+We Centaurus are troubled<line>
+by the Ornic too.<page>
+But those Dwarves need to<line>
+be taught a lesson, or we'll<line>
+never rest easy.<page>
+If you want our help, then<line>
+help us give those Dwarves<line>
+a good beating.<end>
+
+#WRITE(MyPtr, $0000C3)
+//村長：「そうか、では血気にはやっている若いのが何人かいるから、つれてゆくがよい。」<page>
+//ケンタウロスの部隊が仲間になった<end>
+<frame><$02><font><$01>
+Chief:  I see. There are some<line>
+hot blooded youths here.<page>
+Take them with you.<page>
+The Centaurus have joined.<end>
+
+#WRITE(MyPtr, $0000C6)
+//村長：「われらも、ここでただ手をこまねいているわけではない。」
+//「そなたも、するべきことがわかっているはずじゃ。こんな所であそんでいる時ではないぞ。」<end>
+<frame><$02><font><$01>
+Chief:  we cannot just stand<line>
+here with our arms folded<line>
+forever.<page>
+Surely you have things to<line>
+do too. This is no time to<line>
+be idling around here.<end>
+
+#WRITE(MyPtr, $0000C9)
+//村長：「あの、いじきたないドワーフどもと手を組むとは！　おまえらの顔などみたくもないわ！」<page>
+//「我らケンタウロスは敵だと思え」<end>
+Chief:  you dare join hands<line>
+with those filthy Dwarves!<line>
+I never want to see you again!<page>
+From now on we Centaurus<line>
+are your enemies!<end>
+
+#WRITE(MyPtr, $0000CC)
+//ケンタウロス：「ここは［ケンタウロス］の村だ。」<page>
+//「いにしえより、神がわれらにさずけて下さった土地だ。　ドワーフのしたいようにはさせん！」<end>
+<frame><$02><font><$01>
+Centaurus:<line>
+this is the Centaurus village.<page>
+This land was granted to us<line>
+by the gods in ancient times.<page>
+We won't let those Dwarves<line>
+do as they please!<end>
+
+#WRITE(MyPtr, $0000CF)
+//ケンタウロス：「何だお前たちは？何しに来たんだ。人間が来る所ではないぞ！！」<end>
+<frame><$02><font><$01>
+Centaurus:  who are you?<line>
+What are you doing here? This<line>
+is no place for humans!!<end>
+
+#WRITE(MyPtr, $0000D2)
+//「ここの人々のためにもがんばって下さい。神よ、正しき者に勝利を、ログリスに平和を！」<end>
+<frame><$02><font><$01>
+Do your best for the people<line>
+here. O gods, grant victory<line>
+to the righteous!<page>
+Grant peace to Glorith!<end>
+
+#WRITE(MyPtr, $0000D5)
+//「ここはログリスのみなと町。海の向こうからもたくさんの人がやってきます。」<end>
+<frame><$02><font><$01>
+This is the port of Glorith.<line>
+Many people come here from<line>
+across the sea.<end>
+
+#WRITE(MyPtr, $0000D8)
+//「キャサリンがせめてくるのか！」
+//「うわさじゃ、やつらリザードマンやオオガラスどもを味方にしたそうじゃないか！」<end>
+<frame><$02><font><$01>
+Catharin's army is attacking!<page>
+They say she has allied with<line>
+the Lizardmen and the<line>
+giant crows!<end>
+
+#WRITE(MyPtr, $0000DB)
+<end>
+
+#WRITE(MyPtr, $0000DE)
+//「みんながいっしょに戦えば、オルニックなんてこわくないのに。」
+//「ま、おれは戦いに行きたかないけどよ。」<end>
+<frame><$02><font><$01>
+If everyone fights together,<line>
+why fear the Ornic!<page>
+That said, I really don't<line>
+want to go to war at all.<end>
+
+#WRITE(MyPtr, $0000E1)
+//「ここにいれば、いざって時でも、海に逃げられるのですよ。」<end>
+<frame><$02><font><$01>
+In an emergency we can<line>
+flee from here to the sea.<end>
+
+#WRITE(MyPtr, $0000E4)
+//「なぁに、あそんでくれるの？」<end>
+<frame><$02><font><$01>
+What, you'll play with me?<end>
+
+#WRITE(MyPtr, $0000E7)
+//「はるか北まで戦いに行かれるのですね。　なんて勇気あるお方なんでしょう。」<end>
+<frame><$02><font><$01>
+You're going all the way to<line>
+the far North to fight? How<line>
+brave you are.<end>
+
+#WRITE(MyPtr, $0000EA)
+//「キャメロットの王を動かすには、だれかが、セットクに行くしかないだろうな。」<end>
+<frame><$02><font><$01>
+To move the King of Camelot,<line>
+someone has to persuade<line>
+him.<end>
+
+#WRITE(MyPtr, $0000ED)
+//「ベニックの沼の［リザードマン］は強敵です。やつらをたおすには、強い兵士が必要ですよ。」<end>
+<frame><$02><font><$01>
+The Lizardmen of Benic Swamp<line>
+are tough. You'll need strong<line>
+soldiers to beat them.<end>
+
+#WRITE(MyPtr, $0000F0)
+//妻：「ここだけの話だけど、キャメロットの王様って［こしぬけ］らしいわよ。」
+//「いつも城のおくにかくれているんですって。」<end>
+<frame><$02><font><$01>
+Wife:  between you and me...<line>
+the King of Camelot is a<line>
+real coward.<page>
+He hides deep in his castle<line>
+all day long.<end>
+
+#WRITE(MyPtr, $0000F3)
+//夫：「先代の王なら、だまっちゃいないだろうけど、どこかでインキョしているみたいなんだ。」<end>
+<frame><$02><font><$01>
+Husband:  the former king<line>
+would never stand for this.<page>
+But he retired somewhere and<line>
+nobody knows where.<end>
+
+#WRITE(MyPtr, $0000F6)
+//半魚人：「キャメロットのお城の　［カガミ］には、しかけがあるってさあ。ゲロゲロ。」<end>
+<frame><$02><font><$01>
+Fishman:  the mirror in Camelot<line>
+Castle has a trick to<line>
+opening it, croak.<end>
+
+#WRITE(MyPtr, $0000F9)
+//半魚人：「あたしたちすっかり人間になっちゃった気分ね、ゲロゲロ。ここの水はうまいよ、ゲロ」<end>
+<frame><$02><font><$01>
+Fishman:  we feel like we've<line>
+become human, croak.<line>
+The water here is great, croak.<end>
+
+#WRITE(MyPtr, $0000FC)
+//牧師：「オルニックの人も、すべての人がキャサリンをよく思っているわけではない。」
+//「リーダーをたおせば、あるいは味方につく者もあるでしょう。」<end>
+<frame><$02>
+Pastor:  even among the Ornic,<line>
+not everyone thinks well<line>
+of Catharin.<page>
+Defeat their leader, and some<line>
+of them may well join you.<end>
+
+#WRITE(MyPtr, $0000FF)
+//こども：「あのねぇ、［エクスカリバー］ってすごい剣がエドウィン城にあるんだって。」<end>
+<frame><$02><font><$01>
+Kid:  hey mister, listen.<line>
+In Edwin Castle there's an<line>
+awesome sword, Excalibur.<end>
+
+#WRITE(MyPtr, $000102)
+//主人：「オレにもいくさに行けってか？　ジョーダン言っちゃいけねえよ。この宿を守らなきゃならん。」
+//「どっちが勝ってもオレたちの生活はかわらないよ。」<end>
+<frame><$02><font><$01>
+Owner:  me, go to war?<line>
+Don't joke around. I've got<line>
+this inn to look after.<page>
+Whichever side wins, it won't<line>
+change our lives one bit.<end>
+
+#WRITE(MyPtr, $000105)
+//キンピカの騎士：「フランクはどうもたいくつでね。わざわざドーバーをこえてやって来たんだ。
+//ウワサじゃ、こまったことになっているようじゃないか。
+//わかってるって、敵はオルニックだろう。おれたちがけちらしてやるぜ
+//おれはフランクの王子［アラン］、よろしくな！」<page>
+//アランの部隊が仲間になった<end>
+<frame><$02>
+Shining knight: Flank is so<line>
+boring. I came all the way<line>
+from Dorver.<page>
+I hear you're in trouble.<line>
+I get it. Your enemy must<line>
+be the Ornic, right?<page>
+We'll give them a thrashing.<page>
+I'm Alan, Prince of Flank!<line>
+Pleased to meet you!<page>
+Alan has joined the party!<end>
+
+#WRITE(MyPtr, $000108)
+//ノーム：「一族の生きのこりはほんのすこしだよう。オロオロ。」<end>
+<frame><$02><font><$01>
+Gnome:  only a few of our clan<line>
+survived. How awful.<end>
+
+#WRITE(MyPtr, $00010B)
+//「お金などいりません。使いこなせる武器などがあれば、どうぞお持ちになっていって下さい。」<end>
+<frame><$02><font><$01>
+We don't need any money.<line>
+If any weapons suit you,<line>
+feel free to take them.<end>
+
+#WRITE(MyPtr, $00010E)
+//「これはこれはロレンスのだんな。だんなも行かれるんですかい？」
+//「なら、いいヨロイがありますよ。着てって下さい。　カーディックの店は、弟さんにおまかせですか？」<page>
+//ロレンスは［強そう］になった！<end>
+<frame><$02><font><$01>
+Well well, if it isn't<line>
+Lawrence. You're going too?<page>
+Then I've got some good<line>
+armor. Put it on.<page>
+Did you leave the shop in<line>
+Cardic to your brother?<page>
+Lawrence got stronger!<end>
+
+#WRITE(MyPtr, $000111)
+//「キャメロットのお城にも強い兵隊さんがたくさんいるらしいです。」
+//「あのお城に力ずくで入るのはむずかしいですわ。先代の王様なら、もちろん、入れるでしょうけど・・」<end>
+<frame><$02><font><$01>
+There are many strong<line>
+soldiers in Camelot Castle.<page>
+It's hard to force your way<line>
+in. But of course, the former<line>
+king could get in.<end>
+
+#WRITE(MyPtr, $000114)
+//きとう師（ロッテリア）：「おお、とうとういくさとなったか。わらわのにらんだとおりじゃ。」
+//「みよ！　この日のために、いのり作りし［はかいの石］、これを持ち敵にひとあわふかせてくれん。」
+//「これを使う時は、味方もまた命をうしなうやもしれん。おそろしい石じゃ。こころして使えよ。」<page>
+//ロッテリアが仲間になった<end>
+<frame><$02><font><$01>
+Shaman Lotteria: at last you<line>
+have come. Just as I<line>
+foresaw.<page>
+Behold! The Stone of Ruin I<line>
+prayed over for this very<line>
+day!<page>
+It holds unthinkable power,<line>
+wiping out foes in an instant.<page>
+Of course, when you use it,<line>
+your allies will die too.<line>
+How terrifying!<page>
+Think carefully before use!<page>
+Shaman Lotteria has joined!<end>
+
+#WRITE(MyPtr, $000117)
+//バードマン：「カーディック軍か？王は城の中だ。」<end>
+<frame><$02><font><$01>
+Birdman:  the Cardic army?<line>
+The king is in the castle.<end>
+
+#WRITE(MyPtr, $00011A)
+//エルフ王ロイ：「わが一族は、城から外へ出る事はできん。」
+//「最愛の息子ロバートがキャサリンにとらわれておるからじゃ。」
+//「お主らの期待には、こたえることができん、帰られるがよい。」<end>
+<frame><$02>
+Roy, King of the Elves:  our<line>
+clan cannot leave the castle.<page>
+My son Robert has been taken<line>
+away by Catharin.<page>
+We cannot grant what<line>
+you ask of us.<line>
+Please, go back.<end>
+
+#WRITE(MyPtr, $00011D)
+//エルフ：「キャメロットが動き始めたので、キャサリンが［みせしめ］にロバート王子の命をうばった！　　人間どもはすべて敵だ！！」<end>
+<frame><$02><font><$01>
+Elf: because Camelot moved,<line>
+Catharin killed Prince<line>
+Robert as a warning!<page>
+From now on all humans are<line>
+our enemies!<end>
+
+#WRITE(MyPtr, $000120)
+//エルフ王ロイ：「おお、ロバート、よく無事でもどってきてくれた！　パパはうれしいよ！」
+//「よし、みなの者、キャサリンに　かりを返すのだ！」<page>
+//エルフの部隊が仲間になった<end>
+<frame><$02>
+Roy, King of the Elves:  oh<line>
+Robert, you came back safe!<page>
+Papa is so happy!<line>
+Everyone, now is the time<line>
+to pay Catharin back!<page>
+The Elves have joined!<end>
+
+#WRITE(MyPtr, $000123)
+//エルフ王ロイ：「わしのもっている［エルフの笛］を使えばバードマンどもをよぶ事ができるぞ。」<end>
+<frame><$02>
+Roy, King of the Elves: just<line>
+blow my Elf Flute and you<line>
+can summon the Birdmen.<end>
+
+#WRITE(MyPtr, $000126)
+//エルフ：「なんだ？　カーディックの者か？」
+//「ここは神聖なるエルフの城だ。　人間はどうも信用できん。　　　　早々に立ち去ってくれ。」<end>
+<frame><$02><font><$01>
+Elf:  what? From Cardic?<line>
+This is the sacred castle<line>
+of the Elves.<page>
+We don't trust humans.<line>
+Leave at once!<end>
+
+#WRITE(MyPtr, $000129)
+//エルフ：「勇者よ、ありがとう！！オルニックのやつらはぜったいに　ゆるせん！」
+//エルフ：「二度とわれわれに手が　だせぬよう、オルニックのやつらをうちのめしてやる！」<end>
+<frame><$02><font><$01>
+Elf: brave one, thank you<line>
+so much!! We will never<line>
+forgive the Ornic!<page>
+We'll give them such a<line>
+beating that they never<line>
+touch us again!<end>
+
+#WRITE(MyPtr, $00012C)
+//兵士：「アイテムは、一人にひとつしか持てません。」
+//「大事なアイテムは、なくさないように気をつけてください。」
+//「また、アイテムを持ちすぎないように、ほかの部隊にわけてあげる事もかんがえてください。」<end>
+<frame><$02>
+Soldier:  each person can carry<line>
+only 1 Item. Take care not<line>
+to lose important Items.<page>
+Think carefully and give<line>
+Items to other units,<line>
+so no one carries too many.<end>
+
+#WRITE(MyPtr, $00012F)
+//ドワーフ：「われわれは、きわめてシンコクな状況におかれている。」
+//「とつぜんオルニック軍のこうげきをうけ、このかくれ里にたどりついた者も、けっして多くはない。」<end>
+<frame><$02><font><$01>
+Dwarf: we are in an<line>
+extremely grave<line>
+situation.<page>
+The Ornic suddenly attacked<line>
+us, and now few of us are<line>
+left in this remote<line>
+hidden village.<end>
+
+#WRITE(MyPtr, $000132)
+//ドワーフ：「ケンタウロスどもを仲間にいれるとは！　カーディックも信じられん。」
+//「やつらはわれわれの森をあらしたのだ。これではオルニックと和解した方がまだましだ！」<end>
+<frame><$02><font><$01>
+Dwarf: you joined hands with<line>
+the Centaurus! Even Cardic<line>
+can't be trusted!<page>
+They trampled our forest!<line>
+At this rate, we'd be better<line>
+off making peace with Ornic.<end>
+
+#WRITE(MyPtr, $000135)
+//ノーム：「クラスチェンジできる者はいないかい？」
+//「ほんのわずかだけど、使える武器があるなら、持って行きなよ。」<end>
+<frame><$02><font><$01>
+Gnome: can anyone Class change?<line>
+I have a few humble weapons.<line>
+Please take them.<end>
+
+#WRITE(MyPtr, $000138)
+//ドワーフ：「オルニックのやつらはきらいだが、ケンタウロスどもは　もっときらいだ。」<end>
+<frame><$02><font><$01>
+Dwarf: we hate the Ornic,<line>
+but the ones we hate most<line>
+are the Centaurus.<end>
+
+#WRITE(MyPtr, $00013B)
+//ドワーフ：「おれたちドワーフは、めったにおたがいの村へはいききしないものなんだ。」
+//「気がついた時にはもうばらばらにされてしまったあとだった。」<end>
+<frame><$02><font><$01>
+Dwarf: we Dwarves rarely<line>
+visit each other's villages.<page>
+So when trouble came, our<line>
+homes and families were<line>
+torn apart.<end>
+
+#WRITE(MyPtr, $00013E)
+//ドワーフ：「気をつけろ、このあたりはオルニックのやつらがよく通るぞ。」<end>
+<frame><$02><font><$01>
+Dwarf: be careful!<line>
+The Ornic often pass through<line>
+this area!<end>
+
+#WRITE(MyPtr, $000141)
+//声：「聖剣は、それを持つしかくのある者をまっている。あなた方ではない。」<end>
+<frame><$02><font><$01>
+A voice:<line>
+The holy sword awaits one<line>
+worthy to wield it.<page>
+That one is not you.<end>
+
+#WRITE(MyPtr, $000144)
+//ドワーフ：「ケンタウロスも人間もゆだんのならぬやつばかりだ。」<end>
+<frame><$02><font><$01>
+Dwarf: Centaurus and humans<line>
+alike are all treacherous.<line>
+You can't let your guard down.<end>
+
+#WRITE(MyPtr, $000147)
+//「わが主君、ユーサー王はだれにもお会いにはならない。さあ、帰られよ。」<end>
+<frame><$02><font><$01>
+King Uther, our sovereign,<line>
+does not wish to see anyone.<line>
+Please leave.<end>
+
+#WRITE(MyPtr, $00014A)
+//「これはこれはごインキョ様。ただ今すぐに開けますです。」<end>
+<frame><$02><font><$01>
+Why, it's the retired King!<line>
+We'll open the gate at once.<end>
+
+#WRITE(MyPtr, $00014D)
+//兵士：「この先は［ろうや］でございますだ。」<end>
+<frame><$02><font><$01>
+Soldier: ahead is the prison.<end>
+
+#WRITE(MyPtr, $000150)
+//ユーサー：「すでに、キャメロットはオルニックと協定をむすんだ。　今さらあとにはひけるものか！」<end>
+<frame><$02>
+Uther: Camelot has already<line>
+signed a pact with Ornic. We<line>
+cannot back out now!<end>
+
+#WRITE(MyPtr, $000153)
+//ユーサー：「お父上、あなたが戦えとおっしゃるなら、とじこもっているわけにはまいりますまい。」<end>
+<frame><$02>
+Uther: Father!<page>
+If you tell me to fight,<line>
+how could I stay shut up<line>
+in my castle any longer!<end>
+
+#WRITE(MyPtr, $000156)
+//ユーサー：「わがヨロイを持て！　いざ出陣じゃ！」<end>
+<frame><$02>
+Uther: attendants!<line>
+Bring me my armor!<line>
+I am going to battle!<end>
+
+#WRITE(MyPtr, $000159)
+//じい：「殿！　おやめ下さい！！　じいはかなしゅうございます！」<end>
+<frame><$02><font><$01>
+Old man:  my lord!<line>
+Please stop!!<line>
+This old man is so sad!<end>
+
+#WRITE(MyPtr, $00015C)
+//ユーサー：「ええい、はなせ！　　主君がためらっていてどうする。」
+//「オルニックとあたるなら、全力をつくさねば。いざ、変身っ！！」<end>
+<frame><$02>
+Uther: let go of me!<line>
+What kind of ruler would<line>
+hesitate now!<page>
+If we face the Ornic, we<line>
+must give it our all!<line>
+Now, transform!!<end>
+
+#WRITE(MyPtr, $00015F)
+//兵士：「ごインキョ様にケイレイ」<end>
+<frame><$02><font><$01>
+Soldier: salute the retired<line>
+King!!<end>
+
+#WRITE(MyPtr, $000162)
+//兵士：「わが王は心のおやさしい方であらせられる。ご自分から戦いをしかけるような事はなさらない。」<end>
+<frame><$02><font><$01>
+Soldier: our king is a man<line>
+of kind heart.<page>
+He would never start a war<line>
+on his own.<end>
+
+#WRITE(MyPtr, $000165)
+//リザードマン：「へへへへへっ、　なんだ？　おれたちのエサになりにきたのか？」<end>
+<frame><$01><font><$01>
+Lizardman: hehehe~<line>
+What's this? Did you come here<line>
+to be our snacks?<end>
+
+#WRITE(MyPtr, $000168)
+//魔女（マーサ）：「わたしはお前たちを助けるために過去からよみがえった者。」
+//「［サラスの雪山］をこえるには、雪をとかさねばならないであろう。だが、あんずる事はない。［太陽の守り］を雪山においた。あとは、お前たちの力しだいじゃ。」<end>
+Witch (Martha):<line>
+I have returned from the past<line>
+to help you.<page>
+To cross Mount Sarath, the<line>
+snow must be melted.<page>
+But fear not. I left the Sun<line>
+Charm in the snowy mountain.<page>
+The rest depends on your<line>
+own strength and effort.<end>
+
+#WRITE(MyPtr, $00016B)
+//マーサ：「また、魔王の力をかりたいのなら、修道士を一人で沼の古城に行かせるがよい。」
+//「城へ入れるよう、ふういんをといておく。みっつならんだ石ぞうのひとつにふれれば中に入れるはず。」「キャサリンの後には、大魔法使い［ガロア］がついている。ゆだんをするでない。では、さらばじゃ。」「武運をいのっておるぞ。」<end>
+Martha:<line>
+If you wish to borrow the<line>
+Demon King's power, send a<line>
+Monk to the old castle in<line>
+the swamp.<page>
+Enter the castle and break<line>
+the seal.<page>
+Touch 1 of the 3 statues<line>
+standing in a row to get in.<page>
+Behind Catharin stands the<line>
+Archmage Galoa. Never let<line>
+your guard down with him.<page>
+Now, farewell to you.<line>
+Good luck.<end>
+
+#WRITE(MyPtr, $00016E)
+//主人：「ゆっくり、やすんで行って下さい」<end>
+<frame><$02><font><$01>
+Owner:<line>
+Please rest as long as you like.<end>
+
+#WRITE(MyPtr, $000171)
+//修道士：「あなた方はカーディックの方ですね。」
+//「われわれもこれだけの人数になってしまいましたが、まだ戦えます。いっしょにまいりましょう！！」<page>
+//修道士の部隊が仲間になった<end>
+<frame><$02>
+Monk:<line>
+You are from Cardic, yes?<page>
+There are only this many of<line>
+us left, but we can still<line>
+fight.<page>
+We will follow you!!<page>
+The Monks have joined!<end>
+
+#WRITE(MyPtr, $000174)
+//インキョ：「そうですか、こんな事になっているのに、キャメロットが動かないとはなさけない。」
+//「では、わたしたちもまいりましょうか」<page>
+//ゴエイ：「がってんでい！！！、ごインキョ！」<page>
+//ごインキョの部隊が仲間になった<page>
+//インキョ：「キャメロットには、わしらだけで行きましょう。うたぐりぶかい相手でな。」<page>
+//ゴエイ：「わしらのチームにはだれもいれないでもらいたい！」<end>
+<frame><$02>
+Retired King: I see.<line>
+Things have come to this, yet<line>
+Camelot still sits idle.<page>
+How pathetic.<line>
+Then let us go as well.<page>
+Guard: as you command!<page>
+The Retired King's troops<line>
+have joined!<page>
+Retired King: let us go to<line>
+Camelot by ourselves.<line>
+They are very suspicious.<page>
+Guard: don't let anyone else<line>
+into our unit!<end>
+
+#WRITE(MyPtr, $000177)
+//マーサ：「さあ、行くがよい。　　魔王は、魔法陣の中に入れば、よび出せるであろう。」<end>
+Martha: now, go.<line>
+Enter the magic circle and<line>
+you can summon the Demon King.<end>
+
+#WRITE(MyPtr, $00017A)
+//主人：「わずかですが、うちにあるもので使いこなせる武器などがあれば、お持ちになって行って下さい」<end>
+<frame><$02><font><$01>
+Owner: I have a few weapons<line>
+left. If anyone can use them,<line>
+feel free to take them.<end>
+
+#WRITE(MyPtr, $00017D)
+//魔王：「オレ様をよびだしたのはキサマか？」<end>
+<frame><$01>
+Demon King: are you the one<line>
+who summoned me?<end>
+
+#WRITE(MyPtr, $000180)
+//魔王：「けいやくにより、キサマにだけのぞみをかなえてやる。いくつかの魔力をあたえてやろう。」
+//「使い方は自分でためすがいい。そのかわり、ペリーズがくたばったらたましいはオレ様のものだぞ。」<end>
+<frame><$01>
+Demon King: by our pact, I<line>
+shall grant a wish to you<line>
+alone.<page>
+I will grant you some magic<line>
+power. Find out for yourself<line>
+how to use it.<page>
+In return, when Peris dies,<line>
+his soul shall belong to me.<end>
+
+#WRITE(MyPtr, $000183)
+//魔王：「欲ばりなやつらだ。もっと魔力がほしいなら、悪魔にでもなるんだな。ハァハハハ。」<end>
+<frame><$01>
+Demon King: so greedy.<line>
+If you want more magic power,<line>
+become a demon. Hahaha~<end>
+
+#WRITE(MyPtr, $000186)
+//spd0魔王：「魔力がほしいのか？」　　　　　はい。魔力をわけて下さい　　　　いいえ。さようなら！<end>
+<frame><$01>
+Demon King: want magic power?<line>
+      Yes<line>
+      No, bye bye!<end>
+
+#WRITE(MyPtr, $000189)
+//リザードマン：「ケケケ、オレたちはオルニックの兵士どもとはちがうぜ。かくごしな！」<end>
+Lizardman: kekeke.<line>
+We're not like those Ornic<line>
+soldiers. Prepare to die!<end>
+
+#WRITE(MyPtr, $00018C)
+//リザードマン：「この沼地でオレたちとやり合おうとは。命知らずなやつらだぜ。」<end>
+Lizardman: you dare fight<line>
+us in this swamp!<line>
+Fools who know no fear!<end>
+
+#WRITE(MyPtr, $00018F)
+//牢番：「わしは知らんぞ、なーんにも知らん！　［ぞう］にしかけがあるなんて知らんのだ！」<end>
+<frame><$02><font><$01>
+Jailer: I don't know nothin'!<line>
+Nothin' at all! I sure don't<line>
+know the statue has a secret!<end>
+
+#WRITE(MyPtr, $000192)
+//こども：「わーい、助けに来てくれたんだね。」
+//「オオガラスにさらわれて、とじこめられていたんだ。」
+//「ぼく、エルフの［ロバート］って言うの。お父さんの所へつれて行ってよね。」<page>
+//ロバートが仲間になった<end>
+<frame><$02><font><$01>
+Child: hooray~<line>
+You came to save me!<page>
+The giant crows carried me<line>
+off and locked me in here.<page>
+I'm Robert of the Elves.<line>
+Please take me to my dad.<page>
+Robert has joined!<end>
+
+#WRITE(MyPtr, $000195)
+//ゾンビ：「くやしい・・、このままでは、死にきれるものではない。」<end>
+<frame><$02><font><$01>
+Zombie: so bitter...<line>
+Like this, I can never<line>
+rest in peace.<end>
+
+#WRITE(MyPtr, $000198)
+//ゾンビ：「ああ、わが領主様。生きておいでなのなら、われらのうらみをはらしてください！」<end>
+<frame><$02><font><$01>
+Zombie: oh, my lord!<line>
+If you still live, please<line>
+avenge us!<end>
+
+#WRITE(MyPtr, $00019B)
+//「ああ、体があつい！　この感覚はまるで生き返ったようだ！」<end>
+<frame><$02><font><$01>
+"My body feels so warm! It<line>
+feels like I'm alive again!"<end>
+
+#WRITE(MyPtr, $00019E)
+//「サラスの山道の落とされたつり橋をかけなおさないと、オルニックはせめられません。」
+//「サラスの山道から敵を追い出して下さい！　われわれで［橋］をかけなおします！！」<end>
+<frame><$02><font><$01>
+"The rope bridge over the Sarath<line>
+pass has been cut. Unless it's<line>
+rebuilt, we can't reach Ornic."<page>
+Drive all the enemies out of<line>
+the Sarath pass. Then we'll<line>
+rebuild the bridge for you!!<end>
+
+#WRITE(MyPtr, $0001A1)
+//「すでに［つり橋］はわたれるようになっています。オルニックが守りをかためないうちにさあ早く！」<end>
+<frame><$02><font><$01>
+The rope bridge can now be<line>
+crossed. Hurry and attack while<line>
+Ornic's defenses are still weak!<end>
+
+#WRITE(MyPtr, $0001A4)
+//墓からの声：「たのむぅ・・・　　みんなを助けてやってくれぇ・・」<page>
+//「地下のドラゴンが［死者をよみがえらせる宝］を持っているぅ・・」<end>
+<frame><$02>
+A voice from the grave:<line>
+Please... please save<line>
+everyone...<page>
+The dragon underground holds a<line>
+treasure that revives the dead...<end>
+
+#WRITE(MyPtr, $0001A7)
+//［ぞうのはね］の数がへんだ
+//ひとつがとれそうだ！<page>
+//spd0　　　　　　　　　　　　　　　　　　［ぞうのはね］をとった！<end>
+<font><$01>
+The number of the statue's<line>
+wings is odd. One of them<line>
+looks like it could come off!<page>
+Took a wing from the statue!<end>
+
+#WRITE(MyPtr, $0001AA)
+//下にあった［ぞう］のはねをつけると、近くでなにかの音がした<end>
+<font><$01>
+When the wing was attached to<line>
+the statue below, a sound rang<line>
+out somewhere nearby.<end>
+
+#WRITE(MyPtr, $0001AD)
+//グール：「にっ、にんげん。なんのよっ、ようだぁ！　かえれぇ、かえれぇ」<end>
+<frame><$02><font><$01>
+Ghoul: Hu,humans.<line>
+Whaat,whaat do you waant!<line>
+Go,go awaaay!<end>
+
+#WRITE(MyPtr, $0001B0)
+//グール：「わっ、わしらぁ、にっ、にんげん、みっ、みてないぃ。きっきゃさりん、きっ、きてないぃ」<end>
+<frame><$02><font><$01>
+Ghoul: we,weee haven't<line>
+seen any hu,humans. Catharinnn<line>
+didn't come heere.<end>
+
+#WRITE(MyPtr, $0001B3)
+//グール：「こっ、このおくぅ、りゅりゅう、いるぅ。にっ、にんげん、くっ、くわれたぁ」<end>
+<frame><$02><font><$01>
+Ghoul: there's a dra,draaagon<line>
+deeep inside. It eeats<line>
+huumans.<end>
+
+#WRITE(MyPtr, $0001B6)
+//グール：「たっ、たからぁ、あるぅりゅっ、りゅう、まっ、まもるぅ」<end>
+<frame><$02><font><$01>
+Ghoul: treasure, treasuure.<line>
+Draagon guaards it.<end>
+
+#WRITE(MyPtr, $0001B9)
+//グール：「わっ、わしらぁ、たっ、たたかうぅ、きっ、きらいぃ。そ、そとにいるやつらたたかうぅ。」<end>
+<frame><$02><font><$01>
+Ghoul: weee haaate fighting.<line>
+Haaate it. Those outsiide<line>
+aalwaays fight.<end>
+
+#WRITE(MyPtr, $0001BC)
+//グール：「［じしん］を、おこす、いし、どうくつのどこかにあるう」<page>
+//「なくなっても、また、もどって、くるぅ、へんないしぃ」<end>
+<frame><$02><font><$01>
+Ghoul: a stoone that makes<line>
+earthquaakes is soomewhere<line>
+in this caave.<page>
+Eeven if it's looost it comes<line>
+baack. A weeird stooone...<end>
+
+#WRITE(MyPtr, $0001BF)
+//ゾンビ：「たすけてくれ！　グールのやつらは、おれをウンとくさらせてから食うつもりなんだ！」<page>
+//「たのむ、おれも連れてってくれ」<page>
+//ゾンビが仲間になった！<end>
+<frame><$02><font><$01>
+Zombie: help me!<line>
+The Ghouls want to let me rot<line>
+before they eat me!<page>
+Please take me with you!<page>
+Zombie has joined!<end>
+
+#WRITE(MyPtr, $0001C2)
+//きとう師：「グールの神殿には、　めおとのドクロが祭られておる。
+//ドラゴンの所に行きたいのなら、彼らの助けが必要じゃ」
+//きとう師：「だが、グールのやつらが、ハシゴをはずしたので、ここからではおくへ進めない」
+//きとう師：「リッチモンドの村に、もう一つの入口があったはずじゃ」<end>
+<frame><$02><font><$01>
+Shaman: inside the Ghoul temple<line>
+a skull couple is enshrined.<page>
+If you want to reach the dragon,<line>
+you'll need their help.<page>
+Shaman: but the Ghouls took the<line>
+ladder away, so you can't go<line>
+further in from here.<page>
+Shaman: there is another way<line>
+in from Richmond Village.<end>
+
+#WRITE(MyPtr, $0001C5)
+//チビドラゴン：「あなたたちが、　［強い人］だね？」
+//「お父さんがぼくに［お前も強い人について修業して来い］ってさ。　ぼくもつれて行ってね。」<page>
+//チビドラゴンが仲間になった<end>
+<frame><$02><font><$01>
+Little Dragon: are you the<line>
+strong ones?<page>
+Dad said "go train with the<line>
+strong ones, then come back".<line>
+Please take me with you!<page>
+Little Dragon has joined.<end>
+
+#WRITE(MyPtr, $0001C8)
+//ドラゴン：「わしのねむりのじゃまをするのは、どこのどいつだ？」
+//「ほう、リッチモンドの村人を生きかえらせるため、［復活の石］がほしいと言うのだな・・・。」
+//「ほしければ、お前たちの力をしめしてみよ！」<end>
+<frame><$01><font><$01>
+Dragon: who dares disturb<line>
+my sleep?<page>
+So, you want the Stone of Rebirth<line>
+to save the people of Richmond...<page>
+Very well. If you want it, let<line>
+me test your strength!<end>
+
+#WRITE(MyPtr, $0001CB)
+//ドラゴン：「ウーム・・・、わしとここまではりあえる者は、ずいぶんとあらわれなかった。」
+//「よし、リッチモンドの村へもどるがよい。墓に向かっていのるのだ。村人を復活させてあげよう」<end>
+<frame><$02>
+Dragon: hmm... Never before has<line>
+anyone held out against me<line>
+this long.<page>
+Very well. Go to Richmond Village.<line>
+Face the graveyard there. I shall<line>
+revive the villagers for you.<end>
+
+#WRITE(MyPtr, $0001CE)
+//オルニック先王：「わしは前の国王じゃ。キャサリンのやつは何者かにあやつられておるのじゃ。」
+//「あやつのまわりは、人の形をした魔物だらけじゃ。」
+//「わしも、何か手伝えればよいのだが、わずかの武具があるだけじゃ」<end>
+<frame><$02><font><$01>
+Former King of Ornic:<line>
+I was the previous King. Catharin<line>
+is being controlled by someone.<page>
+She is surrounded by demons<line>
+in human form.<page>
+I wish I could help more, but<line>
+I only have a little armor left.<end>
+
+#WRITE(MyPtr, $0001D1)
+//ソフィア：「いよいよキャサリンと対決する時が来たのですね。」
+//「わたしはここであなた方のご無事を神にいのっています。どうか生きて帰ってきて・・・。」<end>
+Sophia: the time has come to<line>
+face Catharin at last.<page>
+
+#WRITE(MyPtr, $0001D4)
+//ガロア：「わが名は、［ガロア］　わしのたくらみを、さんざんにふみにじったのは、お前たちか！」　　「せいぜい、この部屋で苦しんでもらおう！」<end>
+<frame><$01><font><$01>
+Galoa: I am Galoa. So you are<line>
+the ones who trampled all<line>
+my plans!<page>
+Then taste the torment of<line>
+purgatory in this very<line>
+room!<end>
+
+#WRITE(MyPtr, $0001D7)
+//キャサリン：「ついにここまで来たというわけね。でも、おまえたちに私はたおせないよ！」
+//「どうしうちのおそろしさを、とくと味わうがよい！」<end>
+<frame><$01><font><$01>
+Catharin: so you finally made<line>
+it this far.<page>
+But you can do nothing to me.<line>
+Now taste the horror of<line>
+fighting your own!<end>
+
+#WRITE(MyPtr, $0001DA)
+//キャサリン：「ガロ、ア・、な、ぜ・・、じゃ・・・。」<end>
+<frame><$01><font><$01>
+Catharin: Galoaaa... Why...why...<end>
+
+#WRITE(MyPtr, $0001DD)
+//ガロア：「おのれ、マーサめ！　　じゃまをしおって！　　　　　　　ええい、ここはひとまず引くか！」<end>
+<frame><$01><font><$01>
+Galoa: that wretched Martha!<line>
+How dare she interfere!<line>
+I must retreat for now!<end>
+
+#WRITE(MyPtr, $0001E0)
+//ガロア：「ゴ、ゴアアアアアアァァァァ・・・！！」<end>
+<frame><$01><font><$01>
+Galoa: Gooaaaaaa...!!<end>
+
+#WRITE(MyPtr, $0001E3)
+//ガロア：「もう少しで、ログリスののすべてを手にできたものを！」
+//「おまえたちはゆるさない。ユルスモノカ！」<end>
+<frame><$01><font><$01>
+Galoa: just a little more and<line>
+all Glorith would have been mine!<page>
+I will never forgive you!<line>
+Never!!<end>
+
+#WRITE(MyPtr, $0001E6)
+//「われわれに手向かう者には、ハメツあるのみだ。」<end>
+<frame><$01><font><$01>
+Those who oppose us face<line>
+nothing but ruin.<end>
+
+#WRITE(MyPtr, $0001E9)
+//「もうすぐキャサリン様がこの地を支配なさるのだ。ムダなていこうは命をみじかくするだけだぞ。」<end>
+<frame><$01><font><$01>
+Soon Lady Catharin will rule<line>
+this land. Resisting will only<line>
+shorten your lives.<end>
+
+#WRITE(MyPtr, $0001EC)
+//「ペリーズのじじいが死ねば、この地はキャサリン様のものだ。」<end>
+<frame><$01><font><$01>
+When that old fool Peris dies,<line>
+this land will be Lady Catharin's.<end>
+
+#WRITE(MyPtr, $0001EF)
+//「われわれに、はむかうとは、いいどきょうだ。だが、その元気、いつまでつづくかな。」<end>
+<frame><$01><font><$01>
+You've got guts to stand<line>
+against us.<page>
+But how long will that<line>
+spirit of yours last?<end>
+
+#WRITE(MyPtr, $0001F2)
+//「おまえたちにはうらみはないが、これも仕事なんだ。悪く思うな。」<end>
+<frame><$01><font><$01>
+I hold no grudge against you.<line>
+But this is my job. Don't take<line>
+it personally!<end>
+
+#WRITE(MyPtr, $0001F5)
+//「なんと、こんなヤツラがわがオルリックにたてつこうというのか。まるでよせ集めの軍隊じゃないか。」<end>
+<frame><$01><font><$01>
+What, this lot dares to defy<line>
+Ornic? They look like a<line>
+ragtag army.<end>
+
+#WRITE(MyPtr, $0001F8)
+//「ペリーズはもう死ぬ。予言どおりキャサリン様がログリスを統一するのだ。これ以上の争いはムダだぞ」<end>
+<frame><$01><font><$01>
+Peris is dead. Lady Catharin will<line>
+unite all Glorith as the prophecy<line>
+says. Fighting on is pointless.<end>
+
+#WRITE(MyPtr, $0001FB)
+//かべが動きだした！<end>
+The wall has moved!<end>
+
+#WRITE(MyPtr, $0001FE)
+//［月のアミュレット］を海になげこんだ。<end>
+<font><$01>
+Threw the Moon Amulet into the sea.<end>
+
+#WRITE(MyPtr, $000201)
+//魔導士：「ぐふっ・・・、　おれもこれまでのようだな。」
+//「オルニックの砦をぬければ決戦場だ。しかし、二度と後にはもどれんぞ。かくごをしておけ。」<end>
+<frame><$01><font><$01>
+Sorcerer: ugh... It seems this<line>
+is my end. Past the Ornic<line>
+fort lies the final battlefield.<page>
+But you will never be able to<line>
+turn back. Be prepared!<end>
+
+#WRITE(MyPtr, $000204)
+//「敵の様子を知るには、エリアに入った時［スタートボタン］をおし、キーで、スクロールさせて下さい。
+//エリア全体の様子を見る事ができますわ。
+//化け物の中には、とつぜんあらわれる物もいるそうです。見えない時はきっとそれです！」<end>
+<frame><$02><font><$01>
+To see what the enemy is up to,<line>
+press Start when you enter a<line>
+battle, then use the D Pad.<page>
+You can then see the whole<line>
+area.<page>
+Some monsters appear without<line>
+warning. You can't see those<line>
+coming in advance.<end>
+
+#WRITE(MyPtr, $000207)
+//「［敵が強い］と感じたら、それは自分たちが、まだ弱いのです。」<page>
+//「先をいそがず、きたえながら、進む方がよいでしょう。」<end>
+<frame><$02><font><$01>
+If the enemy seems strong, it<line>
+means your side is still weak.<page>
+Don't rush ahead. Train your<line>
+troops first, then advance.<line>
+It won't be too late.<end>
+
+#WRITE(MyPtr, $00020A)
+//ドクロ：「たのむ。オレを元の所にもどしてくれ。」<page>
+//spd0　　　　　　　　　　　　　　　　　　　　　ドクロをとった！<end>
+<frame><$02><font><$01>
+Skull: please.<line>
+Put me back where I was!<page>
+<mannaka>Took the skull!<end>
+
+#WRITE(MyPtr, $00020D)
+//ドクロ：「悪いグールが、あの人をどこかへつれて行ったの。　とてもさびしい、シクシク。」<end>
+<frame><$02><font><$01>
+Skull: a wicked Ghoul took<line>
+him away somewhere.<line>
+I'm so lonely. Sob sob.<end>
+
+#WRITE(MyPtr, $000210)
+//ドクロ：「あんたーっ！　もどってきたのね。よかったわっ！！！　　親切な方、ありがとう！」　
+//「ドラゴンのいる所へ行きたいの？ちょっとまってね！　お礼に、水でヨウガンをひやしてあげるわ。」<end>
+<frame><$02><font><$01>
+Skull: darling! You're back!!<line>
+Oh, I'm so glad!!<page>
+Thank you, Kind People!<line>
+You want to go where the<line>
+dragon is? Wait a moment.<page>
+Let me cool the lava with<line>
+water for you.<end>
+
+#WRITE(MyPtr, $000213)
+//声：「ケケケ、ここまで来たのか。だが、ここまでだぜ。」<page>
+//マーサの声：「じゃまをするんじゃないよっ！　きえておしまいっ！」<end>
+<frame><$01><font><$01>
+A voice: kekeke.<line>
+So you made it this far.<line>
+But you won't go any further.<page><frame><$02><font><$00>
+Martha's voice:<line>
+Don't stand in their way!<line>
+Begone!!<end>
+
+#WRITE(MyPtr, $000216)
+//声：「よく来た。ここから先、お前の勇気をためさせてもらおう。　　　行くがいい、死ぬ気でなっ！！」<end>
+<frame><$02>
+A voice: you came at last.<line>
+From here on is the place<line>
+that tests your courage.<page>
+Now, go.<line>
+Go as if you are ready<line>
+to die!<end>
+
+#WRITE(MyPtr, $000219)
+//声：「ここから先へ行けるのは、　修道士一人だけだ。」<end>
+<frame><$02>
+A voice:<line>
+From here on, only one Monk<line>
+may enter.<end>
+
+#WRITE(MyPtr, $00021C)
+//声：「リッチモンドよ・・・　あなたをまっていました。この剣をたくしましょう。」
+//「そして、しんの勇者としてふさわしいすがたにおなりなさい。」<page>
+//「敵の女王は、［ガロア］という魔女にあやつられています。」
+//「さらに強くなって、いっこくも早く、この国に平和をとりもどしてください。」<end>
+<frame><$02>
+A voice: Richmond...<line>
+I have long awaited you. I<line>
+entrust this sword to you.<page>
+Now take the form befitting<line>
+a true hero.<page>
+The enemy queen is controlled<line>
+by the witch Galoa.<page>
+Grow stronger and quickly<line>
+restore peace to this<line>
+land.<end>
+
+#WRITE(MyPtr, $00021F)
+//「キャメロット親衛隊、ただいま参上。すけだちいたす！」<end>
+<frame><$02><font><$01>
+The Camelot Royal Guard is here!<line>
+We've come to help!<end>
+
+#WRITE(MyPtr, $000222)
+//「助けに来たぞっ！」<end>
+<frame><$02><font><$01>
+We've come to save you!<end>
+
+#WRITE(MyPtr, $000225)
+//「おお、助けに来てくれたのか、　ありがたい。」<end>
+<frame><$02><font><$01>
+You came to save us! Thank you!<end>
+
+#WRITE(MyPtr, $000228)
+//「待っていたんですよ。早く行きましょう。」<end>
+<frame><$02><font><$01>
+We've been waiting for you.<line>
+Let's go.<end>
+
+#WRITE(MyPtr, $00022B)
+//女：「エルフの城には［勇者］しか手に入れる事のできない［聖剣］がかくされていると闇きます。」<end>
+<frame><$02><font><$01>
+Woman:  they say the Elf castle<line>
+hides a holy sword that only<line>
+a true hero can draw.<end>
+
+#WRITE(MyPtr, $00022E)
+//男：「私しか生きのこりませんでした。みんなオルニックのやつらに、やられてしまったのです。」
+//「やつらは、［サラスの山道］にかかる［つり橋］をおとし、［がけ］でふさいで、守っています。」
+//「［サラスの雪山］をぬければ、敵のうしろに出られます。」<page>
+//男：「［リッチモンドのがけ］は、［地しん］でもおきれば、くずれるでしょう。」
+//「しかし、［つり橋］はこの村の者が生き返りでもしないかぎり、なおせるみこみはありません。」
+//「［サラスの雪山］はとても大人数が通れるような所ではありません」
+//「オルニックをせめるには、なんとしても、［つり橋］をかけなおさなければならないのです！」<end>
+<frame><$02><font><$01>
+Good man: I'm the only one who<line>
+survived. Everyone else was<line>
+killed by the Ornic.<page>
+They cut the rope bridge over<line>
+the Sarath pass and dug in<line>
+on the cliffs.<page>
+If you cross Mount Sarath,<line>
+you can come out behind the<line>
+enemy.<page>
+Good man: an earthquake would<line>
+bring the Richmond cliffs<line>
+crashing down.<page>
+But to rebuild the bridge, the<line>
+villagers who died would have<line>
+to be brought back to life.<page>
+Mount Sarath is no place for<line>
+a large army to pass.<page>
+To attack Ornic, we must<line>
+rebuild that bridge at all costs!<end>
+
+#WRITE(MyPtr, $000231)
+//「オルニックへ行くんじゃ、リッチモンドのがけがじゃまじゃのう。」
+//「ルートンの丘は敵がふさいでしまったで、こまったもんじゃのう。」<end>
+<frame><$02><font><$01>
+The Richmond cliffs block the<line>
+way to Ornic.<page>
+And the enemy holds Lurton<line>
+Hill. I don't know what to do.<end>
+
+#WRITE(MyPtr, $000234)
+//牢番：「おそかったな。エルフの子はオルニックのやつらが連れて行ってしまったよ。」<end>
+<frame><$02><font><$01>
+Jailer: you're too late.<line>
+The Ornic already took the<line>
+Elf brat away.<end>
+
+#WRITE(MyPtr, $000237)
+//「つり橋が落とされている。これではオリニック城へ進めない。リッチモンドの村の者が生きていれば、橋をかけられるのに。」<end>
+<frame><$02><font><$01>
+The rope bridge has been cut.<line>
+At this rate we cannot<line>
+advance to Ornic.<page>
+If the people of Richmond<line>
+were alive, they could help<line>
+us rebuild the bridge.<end>
+
+#WRITE(MyPtr, $00023A)
+//spd0「ジェーンって知っているかい？」　　　よく知らない　　　　　　　　　　もう闇いた<end>
+<frame><$02><font><$01>
+Do you know Jean?<line>
+      No, I don't<line>
+      I've heard of her<end>
+
+#WRITE(MyPtr, $00023D)
+//spd0　　　　　　　　　　　　　　　　　　　　［サラスの山道］<end>
+<mannaka>Sarath Pass<end>
+
+#WRITE(MyPtr, $000240)
+//隊長：「よしっ！　みんなわたったな。橋を落として、城をせめられないようにするんだ。」<page>
+//兵士：「ホントに切っちゃっていいんですか？」<page>
+//隊長：「なにをためらっている！　早く切れ！！」<end>
+<frame><$01><font><$01>
+Captain:  good! Everyone's<line>
+across. Cut the bridge so they<line>
+can't attack the castle.<page>
+Soldier:  but are you sure it's<line>
+OK to cut it, Captain?<page>
+Captain:  sure it's OK!<line>
+What're you waiting for!<line>
+Cut it now!<page>
+Soldier:  OK, we're cutting it!<end>
+
+#WRITE(MyPtr, $000243)
+//「この町で一番うつくしいのはもちろんの事、剣のうでなら騎士も顔負けってぐらいすごいんだぜ。」<end>
+<frame><$02><font><$01>
+She's the prettiest swordswoman<line>
+in this town.<page>
+Her swordplay is every bit<line>
+as good as any knight's.<end>
+
+#WRITE(MyPtr, $000246)
+//「我らがペリーズ王は、この国の開祖［ゴルド王］の血を引くお方。」
+//「ちいさい国とは言え、オルニックなんぞにゃ負けてはおれんわい。」<end>
+<frame><$02>
+Our King Peris carries the<line>
+blood of King Gord.<page>
+King Gord was the founder<line>
+of this country.<page>
+Small as it is, this country<line>
+will never lose to the likes<line>
+of the Ornic.<end>
+
+#WRITE(MyPtr, $000249)
+//ファンクラブ：「ジェーンさん！　戦いにいくのですね。ぜひ、我々も連れて行って下さい！」<page>
+//ジェーン：「わかったわ、みんなで行きましょう。」<page>
+//ファンクラブが、仲間になった<end>
+Fan Club:  Miss Jean! You're<line>
+going to war? Please take<line>
+us with you!<page>
+Jean:  all right.<line>
+Come on, everyone, let's go!<page>
+Jean's Fan Club has joined!<end>
+
+#WRITE(MyPtr, $00024C)
+//「［オルニック］なんかに負けないでね。」<end>
+<frame><$02><font><$01>
+We won't lose to those<line>
+Ornic.<end>
+
+#WRITE(MyPtr, $00024F)
+//牢番：「キャメロットが動き始めたからだぜ。エルフの子がどうなったかは知らんね」<end>
+<frame><$02><font><$01>
+Jailer:  it's all because<line>
+Camelot made a move!<page>
+Who knows what happened<line>
+to that Elf brat.<end>
+
+#WRITE(MyPtr, $000252)
+//聖者：「この城があぶなくなった時は、私の力であなたをよびよせましょう。たよりにしております。」<end>
+<frame><$02>
+Saint:  when this castle is in<line>
+danger, I will use my power<line>
+to call you back, brave one.<end>
+
+#WRITE(MyPtr, $000255)
+//兵士：「勇者さま、あまりお力にはなれませんが、こんな物でよかったら持って行ってください。」<end>
+<frame><$02>
+Soldier:  brave one, this is but<line>
+a humble gift, but please<line>
+accept it.<end>
+
+#WRITE(MyPtr, $000258)
+//　　　　オルニック戦記<end>
+Ornic Chronicles<end>
+
+#WRITE(MyPtr, $00025B)
+//遠い昔、［ログリス］とよばれる　大地があった。<end>
+Long, long ago, there was a<line>
+land called Glorith.<end>
+
+#WRITE(MyPtr, $00025E)
+//［ログリス］は多様な民族が住み、およそつぎのような国に分かれて　いる。<end>
+Glorith was home to many<line>
+different races.<line>
+The continent was divided<line>
+into the following nations.<end>
+
+#WRITE(MyPtr, $000261)
+//　南に［ペリーズ王］の治める　　　［カーディック］<end>
+In the South lay Cardic,<line>
+ruled by King Peris.<end>
+
+#WRITE(MyPtr, $000264)
+//　南西の［ソルズベリー］には　　　［ケンタウロス族］<end>
+In the Southwest lay Solberry,<line>
+land of the Centaurus.<end>
+
+#WRITE(MyPtr, $000267)
+//南東には海をへだてて、女だけが　住む［アマゾネス］の村<end>
+Across the sea to the Southeast<line>
+lay the Amazones village.<page>
+Only women lived there.<end>
+
+#WRITE(MyPtr, $00026A)
+//西には［バードマン］を従える、　エルフの国［エドウィン］<end>
+In the West lay the Kingdom of<line>
+Edwin, land of the Elves who<page>
+led an army of Birdmen.<end>
+
+#WRITE(MyPtr, $00026D)
+//東には［ユーサー王］の治める、　［キャメロット］<end>
+In the East lay Camelot,<line>
+ruled by King Uther.<end>
+
+#WRITE(MyPtr, $000270)
+//中央の森には［ドワーフ］の住む　［コンウォール］<end>
+In the center lay Conwall Forest,<line>
+home of the Dwarves.<end>
+
+#WRITE(MyPtr, $000273)
+//北西の沼地は［リザードマン］の　支配する［ベニック］<end>
+Benic, the swamp in the North<line>
+west, was ruled by Lizardmen.<end>
+
+#WRITE(MyPtr, $000276)
+//そして北には、［オルニック］が　あった。<end>
+And in the North lay Ornic.<end>
+
+#WRITE(MyPtr, $000279)
+//［カーディック］の［ペリーズ王］には、［ソフィア］と言う、一人のむすめがいた。<end>
+King Peris of Cardic had a<line>
+daughter named Sophia.<end>
+
+#WRITE(MyPtr, $00027C)
+//ソフィア：「お父様、おかげんはいかがですか。」<page>
+//ペリーズ：「ああ、心配をかけるのう。しかし、わしも老い先みじかいのはまちがいない。」
+//「それよりも、［オルニック］が気がかりじゃ。最近、よくないウワサを闇く。」<end>
+Sophia: <line>
+Father, how is your health<line>
+today?<page>
+King Peris: I've worried you<line>
+again. But truly, I do not<line>
+have much time left.<page>
+But I am more worried<line>
+about Ornic.<page>
+Lately I hear nothing but<line>
+bad rumors.<end>
+
+#WRITE(MyPtr, $00027F)
+//牧師：「兵士をきたえるのに、時間がかかるようでしたら、敵の動きをおくらせるようにいのりましょう」<end>
+<frame><$02><font><$01>
+Pastor:  if you need time to<line>
+train your soldiers, I will<line>
+pray to slow the enemy.<end>
+
+#WRITE(MyPtr, $000282)
+//spd0敵のいどう開始をおくらせますか？　　　おそい方がよい　　　　　　　　　早くてもかまわない<end>
+<frame><$02><font><$01>
+Slow the enemy's advance?<line>
+      Slower is better<line>
+      Fast is fine too<end>
+
+#WRITE(MyPtr, $000285)
+//兵士：「はっ、女王キャサリン様が即位されていらい、オルニックではいくさの準備をつづけているとか」<end>
+<frame><$02><font><$01>
+Soldier:  yes. Ever since Queen<line>
+Catharin took the throne, Ornic<line>
+keeps preparing for war.<end>
+
+#WRITE(MyPtr, $000288)
+//ペリーズ：「もし、そうだとしたらねらいはこの［カーディック］。　そして、わしらの命じゃ！」<end>
+Peris: if so, her target is<line>
+this very Cardic.<line>
+And my life as well!<end>
+
+#WRITE(MyPtr, $00028B)
+//ソフィア：「！　なぜ、そんな。」<end>
+Sophia: !!<line>
+No, it can't be!<line>
+Why would she do that!<end>
+
+#WRITE(MyPtr, $00028E)
+//ペリーズ：「われらが祖先、［ゴルド王］のゆい言を知っておろう。」
+//「［我がまつえい、ただ一人となりし時、ログリスはひとつとなり、はんえいす］とある。」<end>
+Peris: our ancestor, King Gord,<line>
+left us his last words. Surely<line>
+you know them?<page>
+"When but one of my descendants<line>
+remains, Glorith shall become<line>
+one and prosper for all<line>
+eternity."<end>
+
+#WRITE(MyPtr, $000291)
+//ペリーズ：「［キャサリン］はわしらの遠い親せき、つまりゴルド王のまつえいじゃ。」
+//「今はわしらとキャサリンしかまつえいはいない。」<end>
+Peris: Catharin is a distant<line>
+relative of ours. She too is a<line>
+descendant of King Gord.<page>
+Now only you and I, and she,<line>
+remain of King Gord's<line>
+bloodline.<end>
+
+#WRITE(MyPtr, $000294)
+//ペリーズ：「あの女は［ログリス］全土を手にいれようと、わしら親子をねらって来るじゃろう。」<end>
+Peris: that woman wants to seize<line>
+all of Glorith, and she is<line>
+coming for us, father and child.<end>
+
+#WRITE(MyPtr, $000297)
+//ペリーズ：「だが、［オルニック］をむかえうつ力は［カーディック］にはない。早く手を打たんと・・」<end>
+Peris: but right now Cardic<line>
+lacks the strength to<line>
+resist Ornic...<page>
+We must act<line>
+quickly...<end>
+
+#WRITE(MyPtr, $00029A)
+//spd0　　　　　　　　　　　　　　　　　　［［［オルニック城］］］　<end>
+<mannaka>Ornic Castle<end>
+
+#WRITE(MyPtr, $00029D)
+//兵士：「兵をきたえるには、敵と戦う時間が長いほどよいのです。敵をたおさずともレベルは上がります」<end>
+<frame><$02>
+Soldier:  to train troops, the<line>
+longer you fight the enemy<line>
+the better.<page>
+You don't have to defeat them.<line>
+Just dragging the fight out<line>
+will raise your Level.<end>
+
+#WRITE(MyPtr, $0002A0)
+//兵士：「［海の砦］の敵をたおすには、カタパルトにやられないように敵をおびきだすとよいでしょう」<page>
+//「敵部隊だけたおして、だっしゅつするのが、よい作戦です！」<end>
+<frame><$02>
+Soldier:  to beat the enemy at<line>
+the sea fort, lure them away<line>
+from the catapults.<page>
+Defeat only the enemy unit,<line>
+then escape the battle.<line>
+That is the best plan!<end>
+
+#WRITE(MyPtr, $0002A3)
+//兵士：「もうし上げます！　全部隊出発の準備がととのいましてございます！」<end>
+<frame><$01><font><$01>
+Soldier:  I report!<line>
+All units are ready<line>
+to march!<end>
+
+#WRITE(MyPtr, $0002A6)
+//キャサリン：「よし、して、先発隊のようすはどうじゃ？」<end>
+<frame><$01><font><$01>
+Catharin:  good. And how fares<line>
+the vanguard?<end>
+
+#WRITE(MyPtr, $0002A9)
+//兵士：「ベニックのリザードマンはすでにわれわれの意のままとなっております。」<end>
+<frame><$01><font><$01>
+Soldier:  the Lizardmen of<line>
+Benic now obey our will.<end>
+
+#WRITE(MyPtr, $0002AC)
+//兵士：「キャメロットのユーサー王にはたっぷりオドシをかけておきました。」<page>
+//「城にとじこもったままですが、　状況しだいでこちらの味方となりましょう。」<end>
+<frame><$01><font><$01>
+Soldier:  as for old King Uther<line>
+of Camelot, we gave him<line>
+a good scare.<page>
+Now he hides in his castle,<line>
+surely waiting to see which<line>
+way the wind blows.<end>
+
+#WRITE(MyPtr, $0002AF)
+//キャサリン：「エルフ、アマゾネスはどうした？　どちらも敵に回してはうるさい連中じゃ。」<end>
+<frame><$01><font><$01>
+Catharin:  and the Elves and the<line>
+Amazones? Either one would be<line>
+a nuisance as an enemy.<end>
+
+#WRITE(MyPtr, $0002B2)
+//兵士：「ご安心を。すでに手はうってございます。」<end>
+<frame><$01><font><$01>
+Soldier:  rest easy, my Queen.<line>
+I have a clever plan.<end>
+
+#WRITE(MyPtr, $0002B5)
+//spd0　　　　　　　　　　　　　　　　　　エルフの城［エドウィン］<end>
+<mannaka>Edwin Castle<end>
+
+#WRITE(MyPtr, $0002B8)
+//兵士：「一大事にございます！！」<end>
+<frame><$02><font><$01>
+Soldier: Your Majesty!!<line>
+Terrible news!!<end>
+
+#WRITE(MyPtr, $0002BB)
+//エルフ王ロイ：「何事じゃ？」<end>
+<frame><$02>
+Roy, King of the Elves: <line>
+What is it!?<end>
+
+#WRITE(MyPtr, $0002BE)
+//兵士：「たった今、王子様が、［ロバート王子］様がオオガラスどもにさらわれてしまいました！」<end>
+<frame><$02><font><$01>
+Soldier: just now Prince Robert<line>
+was carried off by the giant<line>
+crows!<end>
+
+#WRITE(MyPtr, $0002C1)
+//エルフ王ロイ：「何とロバートが！見はりの者はどうした！　バードマンは何をしておるのだっ！！」<end>
+<frame><$02>
+Roy, King of the Elves: what!<line>
+Robert! Where were the guards!<line>
+What were the Birdmen doing!!<end>
+
+#WRITE(MyPtr, $0002C4)
+//兵士：「いっしゅんの出来事でございました。前からの敵に気をとられ後ろからの敵に気がつかず・・・」「もうしわけございません！！！」<end>
+<frame><$02><font><$01>
+Soldier: it happened in the<line>
+blink of an eye.<page>
+We were busy with the enemy in<line>
+front and let our guard down<line>
+behind... Forgive us, Majesty!!<end>
+
+#WRITE(MyPtr, $0002C7)
+//魔導士：「フッフッフ・・・　　　エルフ王よ、おこまりのようだな」<end>
+<frame><$01><font><$01>
+Sorcerer: heh heh heh...<line>
+King of the Elves, you seem<line>
+to be in trouble.<end>
+
+#WRITE(MyPtr, $0002CA)
+//兵士：「き、きさまは、オルニックの魔導士！　生かして返すかっ！　くらえっ！」<end>
+<frame><$01><font><$01>
+Soldier: you, you're the Ornic<line>
+sorcerer! You won't leave<line>
+here alive!  Take this!!<end>
+
+#WRITE(MyPtr, $0002CD)
+//魔導士：「心配は無用、ロバートは生きておる。」<page>
+//「我々は、むやみに人を殺したりはせんよ。ただし、キャサリン様にさからうのならば、責任は持てん。」<end>
+<frame><$01><font><$01>
+Sorcerer: fear not. Robert is<line>
+still alive. We don't kill<line>
+people needlessly.<page>
+But if you defy Queen<line>
+Catharin, I can't promise<line>
+anything.<end>
+
+#WRITE(MyPtr, $0002D0)
+//エルフ王ロイ：「ぬうううう・・・キャサリンめ！」<end>
+<frame><$02>
+Roy, King of the Elves: grrr...<line>
+That damned Catharin!<end>
+
+#WRITE(MyPtr, $0002D3)
+//spd0　　　　　　　　　　　　　　　　　　　　［サンリスの塔］<end>
+<mannaka>Tower of Sanrith<end>
+
+#WRITE(MyPtr, $0002D6)
+//牢番：「ほら、おとなしく入っているんだぞ、ぼうず。」<end>
+<frame><$02><font><$01>
+Jailer: hey kid, be a good<line>
+boy and get in there.<end>
+
+#WRITE(MyPtr, $0002D9)
+//牢番：「まったく、オルニックのやつらはムゴイ事しやがるぜ。こんなちいさい子をさらうなんて・・・」「ま、おれには関係ないか。」<end>
+<frame><$02><font><$01>
+Jailer: those Ornic sure are<line>
+cruel. Treating a little kid<line>
+like this...<page>
+Eh, whatever, not my problem.<line>
+None of my business.<end>
+
+#WRITE(MyPtr, $0002DC)
+//spd0　　　　　　　　　　　　　　　　　　　［アマゾネスの村］<end>
+<mannaka>Amazones Village<end>
+
+#WRITE(MyPtr, $0002DF)
+//コソ泥Ａ：「おう、相棒、早くしろい！」<end>
+<frame><$01><font><$01>
+Pick: hey, hurry it up, pal!<end>
+
+#WRITE(MyPtr, $0002E2)
+//コソ泥Ｂ：「とったぜ！　これが　［なみだのしずく石］だ！」
+//「女共が大切にしている宝だ。　　これで、キャサリン様からたんまり礼金がもらえるぜ！」<end>
+<frame><$01><font><$01>
+Pocket: got it!<line>
+This is the Teardrop Stone<line>
+right here.<page>
+The women's precious treasure.<line>
+This time we'll get a pile of<line>
+cash from Lady Catharin!<end>
+
+#WRITE(MyPtr, $0002E5)
+//コソ泥Ａ：「よし、ずらかろう！」<end>
+<frame><$01><font><$01>
+Pick: sweet!  Let's scram!<end>
+
+#WRITE(MyPtr, $0002E8)
+//コソ泥Ｂ：「風が出てきたぜ、　　大丈夫かなあ？」<end>
+<frame><$01><font><$01>
+Pocket: the wind's picking up.<line>
+Think we'll be OK?<end>
+
+#WRITE(MyPtr, $0002EB)
+//コソ泥Ａ：「かまうこたあねえや、早くしないと気づかれるぜ！」<end>
+<frame><$01><font><$01>
+Pick: forget it. Who cares.<line>
+Hurry or they'll notice!<end>
+
+#WRITE(MyPtr, $0002EE)
+//兵士：「敵だ！　オオガラスどもがせめて来たぞ！！！」<end>
+<frame><$02><font><$01>
+Soldier: enemies!<line>
+The giant crows are attacking!!<end>
+
+#WRITE(MyPtr, $0002F1)
+//隊長：「なにをしておるのだ！　　早くがけをのぼって、弓兵をたおすのだ！！」<end>
+<frame><$01><font><$01>
+Captain: what are you doing!<line>
+Climb the hill and kill<line>
+those archers now!!<end>
+
+#WRITE(MyPtr, $0002F4)
+//魔導士：「こんなゴミどものそうじに、なにを手まどっておるのだ。　わしがきれいにしてくれるわ！！」<end>
+<frame><$01><font><$01>
+Sorcerer: must I clean up this<line>
+trash myself?<line>
+Fine, I'll sweep it away!!<end>
+
+#WRITE(MyPtr, $0002F7)
+//ドワーフ：「いかん！　こいつはかなわんぞ。みんな、にげるんだ！」<end>
+<frame><$02><font><$01>
+Dwarf: bad!  We can't beat<line>
+these guys. Everyone, run!<end>
+
+#WRITE(MyPtr, $0002FA)
+//魔導士：「キャサリン様、すべて、手はず通り・・・」<end>
+<frame><$01><font><$01>
+Sorcerer: my Queen<line>
+Catharin, all is going<line>
+according to plan...<end>
+
+#WRITE(MyPtr, $0002FD)
+//キャサリン：「おお、たいぎであった。者共！、時は来た！」
+//「ついに、わが［オルニック］が、この全ログリスをわが手にする時が来たのじゃっ！」<end>
+<frame><$01><font><$01>
+Catharin: ah, well done.<line>
+All of you! My time has come!<page>
+At last the moment has come<line>
+for all the land of Glorith<line>
+to fall into my hands!<end>
+
+#WRITE(MyPtr, $000300)
+//「おーうっ！！！」<end>
+<frame><$01><font><$01>
+Hail!! Hail!!<line>
+Long live the Queen!!<end>
+
+#WRITE(MyPtr, $000303)
+//キャサリン：「手向かう者には、　ようしゃするな！」
+//「めざすは、［カーディック］、　ペリーズとソフィアの息のねをとめるのじゃ！」<end>
+<frame><$01><font><$01>
+Catharin: show no mercy to<line>
+those who resist!<page>
+Our target is Cardic Castle.<line>
+Bring me the lives of Peris<line>
+and Sophia!<end>
+
+#WRITE(MyPtr, $000306)
+//「お、おーうっ！！！」<end>
+<frame><$01><font><$01>
+<mannaka>"Yes, my Queen!!"<end>
+
+#WRITE(MyPtr, $000309)
+//村人：「敵だあーっ！　オルニックがせめて来たぞーっ！」<end>
+<frame><$02>
+Villager: enemies!<line>
+The Ornic army is here!<end>
+
+#WRITE(MyPtr, $00030C)
+//村人：「は、早く逃げろーっ！」<end>
+<frame><$02>
+Villager: run, run for it!<end>
+
+#WRITE(MyPtr, $00030F)
+//兵士：「領主様！　お逃げ下さい。ここはわれわれが食いとめます！」<end>
+<frame><$02>
+Soldier: my lord!<line>
+Please flee. Leave this place<line>
+to us, we'll hold them off!<end>
+
+#WRITE(MyPtr, $000312)
+//リッチモンド：「何を言う！　お前たちこそ早く逃げろ！　敵は私がふせぐ！」<end>
+Richmond: what are you saying!<line>
+You must flee at once!<line>
+I will hold off the enemy!<end>
+
+#WRITE(MyPtr, $000315)
+//兵士：「この村だけの事ではありませんぞ、［ログリス］の運命がかかっているのです！」
+//「早く、少しでも早くカーディックのお城にこの事を！」<end>
+<frame><$02>
+Soldier: the fate of all Glorith<line>
+hangs in the balance, not just<line>
+this village!<page>
+Please carry word of this to<line>
+Cardic Castle!<end>
+
+#WRITE(MyPtr, $000318)
+//リッチモンド：「・・・わかった、すぐに助けをたのむ。ムダに死ぬなよ！」<end>
+Richmond: ...I understand.<line>
+I will come back to save you!<line>
+Don't die for nothing!<end>
+
+#WRITE(MyPtr, $00031B)
+//ドワーフ：「えらいこっちゃ！！　［オルニック］がせめて来たぞ！」<end>
+<frame><$02><font><$01>
+Dwarf: those Ornic dogs are<line>
+here, brothers!<end>
+
+#WRITE(MyPtr, $00031E)
+//ドワーフ：「何の、そうかんたんにおれたちの森を通してなるものか！戦いだ！　おのをとれ！」<end>
+<frame><$02><font><$01>
+Dwarf: they won't get through<line>
+our forest! It's war!<line>
+Grab your axes, brothers!<end>
+
+#WRITE(MyPtr, $000321)
+//兵士：「もうし上げます。リッチモンドの領主、リッチモンド伯が手きずを負われていらっしゃいました」<end>
+<frame><$02>
+Soldier: I report!  Lord<line>
+Richmond is gravely wounded!<end>
+
+#WRITE(MyPtr, $000324)
+//ペリーズ：「リッチモンドが！　すぐにここへ！」<end>
+King Peris: Richmond!<line>
+Bring him in at once!<end>
+
+#WRITE(MyPtr, $000327)
+//リッチモンド：「ペリーズ王、つ、ついに［キャサリン］が兵を上げましたっ！」<page>
+//「敵はログリスの中央、コーンウォールをぬけてこちらへ、先発隊は、す、すでに、近くま・で・来て・」<end>
+Richmond: Your Majesty, at<line>
+last Catharin and her ilk<line>
+have raised an army!<page>
+The enemy is passing through<line>
+Conwall, the heart of Glorith,<line>
+heading this way.<page>
+The vanguard is already near...<end>
+
+#WRITE(MyPtr, $00032A)
+//ソフィア：「リッチモンド伯！　しっかりなさって！！」<end>
+Sophia: Count Richmond!<line>
+Please wake up!!<end>
+
+#WRITE(MyPtr, $00032D)
+//兵士：「大丈夫、まだ息はありますすぐに手当をいたします！」<end>
+<frame><$02>
+Soldier: don't worry. He is<line>
+still breathing. I'll tend to<line>
+his wounds right away!<end>
+
+#WRITE(MyPtr, $000330)
+//とつぜんの大音きょうと共にオルニックの城は、勇者たちをのみこみ、くずれ落ちた。<page>
+//しかし、がれきの下からは妖じゅうの死がいも、勇者たちのすがたも見つけることは出来なかった。<end>
+A great roar suddenly rang<line>
+out, and Ornic Castle collapsed,<line>
+swallowing up the heroes.<page>
+But beneath the rubble there<line>
+was no trace of the beast's<line>
+body, nor of the heroes.<end>
+
+#WRITE(MyPtr, $000333)
+//こうしてログリスは一つの国となり勝利の日を待たずに病死したペリーズ王にかわりソフィアが最初の女王となる。<end>
+And so Glorith was united<line>
+as one...<page>
+Sophia became the first Queen,<line>
+succeeding King Peris, who died<line>
+of illness before the victory.<end>
+
+#WRITE(MyPtr, $000336)
+//spd0　　　　　　　　　　　　　　　　　　　　　どこかの海辺<end>
+<mannaka>On a beach somewhere<end>
+
+#WRITE(MyPtr, $000339)
+//「う、うう・・・　こ、ここはどこだ？？　何だ？　私は何をしているんだ？？」<end>
+"Ugh... Where is me... Who am<line>
+here? Why? Why is this place<line>
+inside of me??"<end>
+
+#WRITE(MyPtr, $00033C)
+//「お、思いだせない！　わ、わたしの名前は・・・　？」<page>
+//「わたしは・・・　だれなんだ！」<end>
+"I can't remember anything!<line>
+I... What is my name.....?"<page>
+"I am... Who am I!"<end>
+
+#WRITE(MyPtr, $00033F)
+//「何かしかけが、ありそうだぞ！」<end>
+There seems to be some kind of<line>
+mechanism here!<end>
+
+#WRITE(MyPtr, $000342)
+//「あっ！　ゆかが・・・！」<end>
+Whoa! The floor...!<end>
+
+#WRITE(MyPtr, $000345)
+//「二部隊以上の部隊を手に入れておるか？
+//ほかの部隊を動かすには、キャンプして［オールマップ］を見るのじゃ
+//そこで、［ＬＲ］ボタンを、おしてみなさい。てんめつするキャラが変るじゃろう。
+//［Ａ］ボタンをおせば、その部隊にコントロールがうつるのじゃ。」<end>
+<frame><$02>
+Leading 2 or more units?<line>
+To control another unit,<line>
+first make camp.<page>
+Then open the Menu to see the<line>
+whole map, and press L or R.<page>
+You can then pick the blinking<line>
+unit. Press A to take control<line>
+of that unit.<end>
+
+#WRITE(MyPtr, $000348)
+//兵士：「おはずかしい話ですが、我々はみじゅくな兵士が多く、すぐに強い敵と戦うのはむりでしょう。」「戦いのけいけんをつませてあげて下さい。」<end>
+<frame><$02>
+Soldier:  I'm ashamed to say it,<line>
+but many of our soldiers<line>
+are still green.<page>
+We can't fight strong foes<line>
+yet. Please let us build up<line>
+some experience.<end>
+
+#WRITE(MyPtr, $00034B)
+//アマゾネス：「［オルニック］は　ゆるせないわ！　戦いましょう！」<end>
+<frame><$02><font><$01>
+Amazones: we can never forgive<line>
+the Ornic!<line>
+We will fight too!<end>
+
+#WRITE(MyPtr, $00034E)
+//ロレンス「さあさあ、［クラスチェンジ］できる人はいないかな。
+//いれば、うちの武器や防具を持っていっていいぜ。」<page>
+//主人：「にいさん！　本当に戦争に行っちゃうのかい？」<page>
+//ロレンス：「当たり前だ。店はお前にまかせたぜ。武器屋に戦争けいけんは必要さ。」<end>
+<frame><$02><font><$01>
+Lawrence: well now, can anyone<line>
+here Class change?<page>
+If so, take weapons and armor<line>
+from my humble shop.<page>
+Owner: brother!<line>
+Are you really going to war?<page>
+Lawrence: of course.<line>
+I'm leaving the shop to you.<page>
+A weapon dealer needs some<line>
+experience of war too,<line>
+you know.<end>
+
+#WRITE(MyPtr, $000351)
+//「アイテムには、持っているだけでこうかのあるものと、［Ｙ］ボタンで使うものがあります。」<end>
+<frame><$02>
+There are 2 kinds of Items. One<line>
+works just by carrying it<line>
+with you.<page>
+The other must be used by<line>
+pressing the Y Button.<end>
+
+#WRITE(MyPtr, $000354)
+//「オルニックはもう目の前です。　がんばってください。」<end>
+"Ornic lies right before you.<line>
+Do your best".<end>
+
+#WRITE(MyPtr, $000357)
+//アマゾネス：「わたしたちアマゾネスは昔からどこの国とも戦わずにいたわ。」
+//「自分たちの村を守る時にしか戦わないの。」<end>
+<frame><$02><font><$01>
+Amazones: since long ago we<line>
+Amazones have never made war<line>
+on any nation.<page>
+We only fight to protect<line>
+our own village.<end>
+
+#WRITE(MyPtr, $00035A)
+//アマゾネス：「ここは女だけの村。いつもは決して男はいれないのだけど、今こまった事がおきてるの。」「私たちのリーダーに会ってみて　下さい。」<end>
+<frame><$02><font><$01>
+Amazones: this village is for<line>
+women only. We never let men<line>
+inside.<page>
+But we're in trouble now, so<line>
+we'll make an exception. Go<line>
+and meet our leader.<end>
+
+#WRITE(MyPtr, $00035D)
+//アマゾネス：「なみだのしずく石は私たちの宝。私たちの苦しみのなみだを、すいとってくれるの。」
+//「あれがあれば、どんな苦しみも　おそれる事がないのよ。」<end>
+<frame><$02><font><$01>
+Amazones: the Teardrop Stone<line>
+is our treasure. It drinks up<line>
+all of our sorrows.<page>
+As long as we have it, we<line>
+fear no hardship at all.<end>
+
+#WRITE(MyPtr, $000360)
+//アマゾネス：「えっ！　ぬすんだのは［オルニック］から来たコソドロですって！」
+//「で、海の化物にとられたのね。」
+//「それなら、この宝を持って行くといいわ。　潮を引かせる力のあるお守りなの。」<end>
+<frame><$02><font><$01>
+Amazones: what! The thieves<line>
+were crooks from Ornic!<end>
+<frame><$02><font><$01>
+But a sea monster took it from<line>
+them? Then take this treasure<line>
+with you.<page>
+It is a charm that makes the<line>
+tide go out.<end>
+
+#WRITE(MyPtr, $000363)
+//spd0［なみだのしずく石］を見せますか　　　見せてわたす　　　　　　　　　　いまはやめておく<end>
+Show the Teardrop Stone?<line>
+      Show it<line>
+      Forget it<end>
+
+#WRITE(MyPtr, $000366)
+//半魚人：「おお、ここの所よく人間が通るな。ここは半魚人の村だ。」<end>
+<frame><$02><font><$01>
+Fishman: well, humans comin'<line>
+round here, croak. This is<line>
+the Fishman village, croak.<end>
+
+#WRITE(MyPtr, $000369)
+//半魚人：「オラたちは海だけじゃなく、りくにも住めるように、はたけ作って生活しとる。」
+//「言わば、［半のう半魚人］ってェトコだな」<end>
+<frame><$02><font><$01>
+Fishman: we don't just live in<line>
+the sea, we farm fields to live<line>
+on land too, croak.<page>
+That's why they call us<line>
+Fishmen, croak.<end>
+
+#WRITE(MyPtr, $00036C)
+//半魚人：「がんばってくるだぞ。」<end>
+<frame><$02><font><$01>
+Fishman: do your best, croak.<end>
+
+#WRITE(MyPtr, $00036F)
+//spd0われらの手助けを必要とするか？　　　　おおいに必要とする　　　　　　　どうぞ、おかまいなく<end>
+<frame><$02><font><$01>
+Do you need our help?<line>
+      Very much<line>
+      Don't care<end>
+
+#WRITE(MyPtr, $000372)
+//「この国には、太古からいくつもの部族が住んでおる。」
+//「話せば仲間になってくれるものもおろうが、その部族と仲の悪い部族は敵になるやもしれん。」
+//「仲間えらびはしんちょうにの。」<end>
+<frame><$02>
+Since ancient times many<line>
+tribes have lived on this land.<page>
+Some tribes will surely join<line>
+you if persuaded, but then<line>
+others will oppose you.<page>
+You must choose your allies<line>
+with great care.<end>
+
+#WRITE(MyPtr, $000375)
+//「ともに、ケンタウロスどもと戦ってくれるならば、我々も手をかそうではないか。」<end>
+<frame><$02><font><$01>
+If you fight the Centaurus<line>
+with us, we'll lend you<line>
+a hand.<end>
+
+#WRITE(MyPtr, $000378)
+//「［ログリス］はその昔、［ゴルド王］によってまとめられたが、すぐみなバラバラになってしまった。」<page>
+//「いつか、すくい主があらわれるだろうと信じてたのに、大きな戦いが始まってしまうなんて・・・。」<end>
+<frame><$02><font><$01>
+Long ago, King Gord united<line>
+Glorith as one, but it soon<line>
+fell apart again.<page>
+I always believed a savior<line>
+would come someday, but I<line>
+never thought a big war...<end>
+
+#WRITE(MyPtr, $00037B)
+//「あなたごぞんじ？　［フランク］から王子様がいらっしゃってるんですって！」
+//「海の向こうの王子様ってどんな方かしらぁ。お会いしたいわぁ」<end>
+<frame><$02><font><$01>
+Have you heard?<line>
+They say a prince came from Flank!<page>
+I wonder what a prince from<line>
+across the sea looks like. I'd<line>
+love to meet him.<end>
+
+#WRITE(MyPtr, $00037E)
+//牧師：「この戦いに勝利すれば、　この地にかつてない平和な時がおとずれる。そんな気がします。」<end>
+<frame><$02>
+Pastor: I have a feeling that<line>
+if we win this war, a peace<line>
+like never before will come<line>
+to this land.<end>
+
+#WRITE(MyPtr, $000381)
+//こども：「キャメロットのお城にはねえ、丈夫な盾があるらしいよ。」<end>
+<frame><$02><font><$01>
+Kid: in Camelot Castle there's<line>
+a really sturdy shield.<end>
+
+#WRITE(MyPtr, $000384)
+//兵士：「シェフィールドの方には、［ヘビ］がたくさんいます。弱い兵をきたえるのにいいと思います。」<end>
+<frame><$02>
+Soldier:  there are lots of snakes<line>
+in Shefield. You can use them<line>
+to train weak soldiers.<end>
+
+#WRITE(MyPtr, $000387)
+//「キャメロット王、［ユーサー］は［オルニック］におどかされて、城にとじこもったって話だ。」
+//「なさけないヤツ・・・」<end>
+<frame><$02><font><$01>
+King Uther of Camelot got a<line>
+good scare from the Ornic.<page>
+Now he just hides in his<line>
+castle. What a coward...<end>
+
+#WRITE(MyPtr, $00038A)
+//「いっぺん死ぬと、よくわかるよ。［生きた心地］ってやつがさ。」<end>
+<frame><$02><font><$01>
+Die once and you'll understand.<line>
+That's what it means to feel<line>
+truly alive.<end>
+
+#WRITE(MyPtr, $00038D)
+//主人：「はるか、北東にあるグールのすむ洞くつには、［ドラゴン］がいるそうです。」<end>
+<frame><$02><font><$01>
+Owner: they say far to the<line>
+Northeast there's a cave,<line>
+and a dragon lives in it.<end>
+
+#WRITE(MyPtr, $000390)
+//エルフ：「ロバート王子がどこかに連れ去られてしまったのだ。」
+//「キャサリンは、人間の味方をすれば、王子の命はない、と言ってきているのだ。」
+//「協力したいのだが・・　わかってくれ。」<end>
+<frame><$02><font><$01>
+Elf: Prince Robert has been<line>
+taken off somewhere.<page>
+Catharin says that if we join<line>
+hands with humans, the prince<line>
+will die...<page>
+We want to fight alongside<line>
+you humans, but...<line>
+Please understand.<end>
+
+#WRITE(MyPtr, $000393)
+//「ユックリトナブリコロシテヤル。オモイシルガイイ・・・」<end>
+<frame><$01><font><$01>
+I'll beat you to death slowly.<line>
+Get ready to die...<end>
+
+#WRITE(MyPtr, $000396)
+//アマゾネス：「わたしたちは、ほかの人とはあまり話をしないのよ。　わるいけどね。」<end>
+<frame><$02><font><$01>
+Amazones: sorry, but we don't<line>
+talk much with outsiders.<end>
+
+#WRITE(MyPtr, $000399)
+//spd0仲間にしますか？　　　　　　　　　　　仲間になってくれ　　　　　　　　考えておくよ<end>
+<frame><$02><font><$01>
+Make them your allies?<line>
+      Yes<line>
+      Let me think<end>
+
+#WRITE(MyPtr, $00039C)
+//主人：「ケンタウロスとドワーフはここの所とても仲が悪いのです。」
+//「かれらのあらそいにくわわるのはあまりよい事とは思えませんな。」<end>
+<frame><$02><font><$01>
+Owner: the Centaurus and the<line>
+Dwarves around here are on<line>
+very bad terms.<page>
+I don't think getting caught<line>
+up in their feud is a good<line>
+idea.<end>
+
+#WRITE(MyPtr, $00039F)
+//「ベニックの城には魔王がすんでいるらしい。やつに力をかりれば魔力をうけられるぞ。」
+//「ただし、それなりに修業をつんだ者でないとだめらしいがな。」<end>
+<frame><$02><font><$01>
+They say the Demon King lives<line>
+in Benic Castle. With his help<line>
+you can gain magic power.<page>
+But only someone who has<line>
+trained to the highest level<line>
+can receive it.<end>
+
+#WRITE(MyPtr, $0003A2)
+//ドワーフの部隊が仲間になった<end>
+The Dwarf army has joined!<end>
+
+#WRITE(MyPtr, $0003A5)
+//キャメロットの部隊が仲間になった<end>
+The Camelot army has joined!<end>
+
+#WRITE(MyPtr, $0003A8)
+//兵士：「国王にもしもの事があっては一大事。　ごむりをさせぬよう、よろしくおねがいいたす。」<end>
+<frame><$02><font><$01>
+Soldier: if anything happened<line>
+to the King, it'd be a disaster.<page>
+Please don't push yourself too hard.<end>
+
+#WRITE(MyPtr, $0003AB)
+//spd0［カーディックの城がきけんです］カーディック城まで、リッチモンドの部隊をよびもどすことができます<end>
+Cardic Castle is in danger.<line>
+You can call Richmond's<line>
+unit back to Cardic Castle.<end>
+
+#WRITE(MyPtr, $0003AE)
+//spd0　　部隊をよびもどしますか？　　　　　よびもどす　　　　　　　　　　　このままつづける<end>
+Call the troops back?<line>
+      Call back<line>
+      Not needed<end>
+
+#WRITE(MyPtr, $0003B1)
+//spd0　　　　　　　　　　　　　　　　　　　　魔法使いになった<end>
+<name> used magic<end>
+
+#WRITE(MyPtr, $0003B4)
+//spd0　　　　　　　　　　　　　　　　　　　　　悪魔になった<end>
+<name> has<line>
+become a demon.<end>
+
+#WRITE(MyPtr, $0003B7)
+//「ありがとうございました。まるで生き返ったようなきもちです。」<end>
+<frame><$02>
+Thank you.<line>
+It feels just like being<line>
+brought back to life.<end>
+
+#WRITE(MyPtr, $0003BA)
+//「きゃあ、きゃあー！　王子様よっおーじ・さ・まぁーーーっ！！」<end>
+<frame><$02><font><$01>
+Oh my! Oh my goodness!<line>
+It's the Prince~!!<end>
+
+#WRITE(MyPtr, $0003BD)
+//spd0　　　　　　　　　　　　　　　　［この門は勇者しか通れません。］<end>
+Only a true hero may<line>
+pass this gate.<end>
+
+#WRITE(MyPtr, $0003C0)
+//spd0　　　　　　　　　　　　　　　　　ドクロを［だん］の上においた<end>
+Placed the skull on the altar.<end>
+
+#WRITE(MyPtr, $0003C3)
+//spd0　　　　　　　　　　　　　　　　　　　味方がこんらんした！<end>
+The allied army fell into chaos!<end>
+
+#WRITE(MyPtr, $0003C6)
+//マーサ：「そうはさせないよ。　　お主の魔力ぐらい、このわたしが　ふうじてくれよう！」<end>
+<frame><$02>
+Martha: not so fast! I'll seal<line>
+away your magic power!<end>
+
+#WRITE(MyPtr, $0003C9)
+//spd0　　　　　　　　　　　　　　　　　　　敵がこんらんした！<end>
+The enemy fell into chaos!<end>
+
+#WRITE(MyPtr, $0003CC)
+//マーサ：「わしの助けはここまでじゃ、実体化できる時間はもうない。神の国にもどらねば。」
+//「あとはお前たちにまかせたぞ。　［ガロア］の本しょうはおそろしい魔物じゃ！」<end>
+<frame><$02>
+Martha: this is as far as I<line>
+can help you.<page>
+I have no more time left to<line>
+take physical form. I must<line>
+return to the realm of the gods.<page>
+I leave everything else in<line>
+your hands.<page>
+Galoa's true form is a<line>
+terrifying monster!<end>
+
+#WRITE(MyPtr, $0003CF)
+//　カーディック城　<end>
+
+#WRITE(MyPtr, $0003D2)
+//カーディックの砦　<end>
+
+#WRITE(MyPtr, $0003D5)
+//カーディックの町　<end>
+
+#WRITE(MyPtr, $0003D8)
+//シェフィールドの南<end>
+
+#WRITE(MyPtr, $0003DB)
+//フォース海岸の南　<end>
+
+#WRITE(MyPtr, $0003DE)
+//シェフィールドの西<end>
+
+#WRITE(MyPtr, $0003E1)
+//シェフィールドの村<end>
+
+#WRITE(MyPtr, $0003E4)
+//　フォース海岸　　<end>
+
+#WRITE(MyPtr, $0003E7)
+//ソルズベリーの南　<end>
+
+#WRITE(MyPtr, $0003EA)
+//　　　海の砦　　　<end>
+
+#WRITE(MyPtr, $0003ED)
+//ソルズベリーの森　<end>
+
+#WRITE(MyPtr, $0003F0)
+//ソルズベリーの村　<end>
+
+#WRITE(MyPtr, $0003F3)
+//　アンレーの草原　<end>
+
+#WRITE(MyPtr, $0003F6)
+//ソルズベリーの西　<end>
+
+#WRITE(MyPtr, $0003F9)
+//ソルズベリーの砦　<end>
+
+#WRITE(MyPtr, $0003FC)
+//コンウォールの南　<end>
+
+#WRITE(MyPtr, $0003FF)
+//　アンレーの森　　<end>
+
+#WRITE(MyPtr, $000402)
+//ソルズベリーの北　<end>
+
+#WRITE(MyPtr, $000405)
+//コンウォールの森　<end>
+
+#WRITE(MyPtr, $000408)
+//キャメロットの南　<end>
+
+#WRITE(MyPtr, $00040B)
+//　アンレーの町　　<end>
+
+#WRITE(MyPtr, $00040E)
+//エドウィンの山道　<end>
+
+#WRITE(MyPtr, $000411)
+//　エドウィンの森　<end>
+
+#WRITE(MyPtr, $000414)
+//コンウォールの砦　<end>
+
+#WRITE(MyPtr, $000417)
+//コンウォールの村　<end>
+
+#WRITE(MyPtr, $00041A)
+//コンウォールの北　<end>
+
+#WRITE(MyPtr, $00041D)
+//　キャメロット　　<end>
+
+#WRITE(MyPtr, $000420)
+//　キャメロット城　<end>
+
+#WRITE(MyPtr, $000423)
+//　エドウィンの丘　<end>
+
+#WRITE(MyPtr, $000426)
+//　レジンプの丘　　<end>
+
+#WRITE(MyPtr, $000429)
+//　サンリスの谷　　<end>
+
+#WRITE(MyPtr, $00042C)
+//　　ベニック　　　<end>
+
+#WRITE(MyPtr, $00042F)
+//　ベニックの南　　<end>
+
+#WRITE(MyPtr, $000432)
+//　　　沼の館　　　<end>
+
+#WRITE(MyPtr, $000435)
+//　ルートンの林　　<end>
+
+#WRITE(MyPtr, $000438)
+//ノーフォークの村　<end>
+
+#WRITE(MyPtr, $00043B)
+//　　サンリス　　　<end>
+
+#WRITE(MyPtr, $00043E)
+//　　ベニック城　　<end>
+
+#WRITE(MyPtr, $000441)
+//　ベニック湖沼　　<end>
+
+#WRITE(MyPtr, $000444)
+//　ベニックの北　　<end>
+
+#WRITE(MyPtr, $000447)
+//　ルートン草原　　<end>
+
+#WRITE(MyPtr, $00044A)
+//ノーフォークの森　<end>
+
+#WRITE(MyPtr, $00044D)
+//　サンリスの塔　　<end>
+
+#WRITE(MyPtr, $000450)
+//　ルートンの山道　<end>
+
+#WRITE(MyPtr, $000453)
+//リッチモンドの谷　<end>
+
+#WRITE(MyPtr, $000456)
+//　ルートンの丘　　<end>
+
+#WRITE(MyPtr, $000459)
+//リッチモンドのがけ<end>
+
+#WRITE(MyPtr, $00045C)
+//リッチモンドの村　<end>
+
+#WRITE(MyPtr, $00045F)
+//　山のほらあな　　<end>
+
+#WRITE(MyPtr, $000462)
+//　グールの神殿　　<end>
+
+#WRITE(MyPtr, $000465)
+//　サラスの雪山　　<end>
+
+#WRITE(MyPtr, $000468)
+//　サラスの山道　　<end>
+
+#WRITE(MyPtr, $00046B)
+//　オルニックの砦　<end>
+
+#WRITE(MyPtr, $00046E)
+//　オルニック城　　<end>
+
+#WRITE(MyPtr, $000471)
+//　オルニック城　　<end>
+
+#WRITE(MyPtr, $000474)
+//　　ルートン　　　<end>
+
+#WRITE(MyPtr, $000477)
+//　ノーフォーク　　<end>
+
+#WRITE(MyPtr, $00047A)
+//　森のほらあな　　<end>
+
+#WRITE(MyPtr, $00047D)
+//　アマゾネスの村　<end>
+
+#WRITE(MyPtr, $000480)
+//　　　決戦場　　　<end>
+
+#WRITE(MyPtr, $000483)
+//　　　森の泉　　　<end>
+
+#WRITE(MyPtr, $000486)
+//　ソルズベリー　　<end>
+
+#WRITE(MyPtr, $000489)
+//　　海の中道　　　<end>
+
+#WRITE(MyPtr, $00048C)
+//シェフィールド草原<end>
+
+#WRITE(MyPtr, $00048F)
+//　　　岩場　　　　<end>
+
+#WRITE(MyPtr, $000492)
+//　　半魚人の村　　<end>
+
+#WRITE(MyPtr, $000495)
+//　海のほらあな　　<end>
+
+#WRITE(MyPtr, $000498)
+//　　フォース　　　<end>
+
+#WRITE(MyPtr, $00049B)
+//　エドウィン城　　<end>
+
+#WRITE(MyPtr, $00049E)
+//　　　山の砦　　　<end>
+
+#WRITE(MyPtr, $0004A1)
+//NAMEに敵がいどうした<end>
+The enemy has moved to <place><end>
+
+#WRITE(MyPtr, $0004A4)
+//NAMEに敵があらわれた<end>
+Enemy appeared at <place><end>
+
+#WRITE(MyPtr, $0004A7)
+//NAMEで敵にそうぐうした<end>
+Encountered enemy at <place><end>
+
+#WRITE(MyPtr, $0004AA)
+//リッチモンドの部隊をいどうした<end>
+Richmond's unit has moved<end>
+
+#WRITE(MyPtr, $0004AD)
+//コースをえらんで下さい<end>
+Choose a route<end>
+
+#WRITE(MyPtr, $0004B0)
+//spd0　　　　　　　　　　　　　　　　　　　中からしめられている<end>
+<mannaka>Locked from the inside<end>
+
+#WRITE(MyPtr, $0004B3)
+//spd0　　　　　　　　　　　　　　　　　　　　　開きません<end>
+<mannaka>It won't open<end>
+
+#WRITE(MyPtr, $0004B6)
+//spd0　　　　　　　　　　　　　　　　　　　カギがかかっている<end>
+<mannaka>The door is locked<end>
+
+#WRITE(MyPtr, $0004B9)
+//spd0　　　　　　　　　　　　　　　　かべにこすれたような、あとがある<end>
+<mannaka>There are scrape marks<line>
+on the wall<end>
+
+#WRITE(MyPtr, $0004BC)
+//spd0　　　　　　　　　　　　　　　　クラスチェンジできる者がいません<end>
+<mannaka>No one can Class change<end>
+
+#WRITE(MyPtr, $0004BF)
+//　　さく・えんしゅつ　　　　　　<end>
+Scenario<end>
+
+#WRITE(MyPtr, $0004C2)
+//　　　　　くれ　えいじ　　　　　<end>
+Kure Eiji<end>
+
+#WRITE(MyPtr, $0004C5)
+//　　プログラム　　　　　　　　　<end>
+Programming<end>
+
+#WRITE(MyPtr, $0004C8)
+//　　　　　くらば　のりゆき　　　<end>
+Kubara Noriyuki<end>
+
+#WRITE(MyPtr, $0004CB)
+//　　　　　ひらぐち　やすひと　　<end>
+Hiraguchi Yasuhito<end>
+
+#WRITE(MyPtr, $0004CE)
+//　　マップデザイン　　　　　　　<end>
+Map Design<end>
+
+#WRITE(MyPtr, $0004D1)
+//　　　　　まきの　きょうこ　　　<end>
+Makino Kyōko<end>
+
+#WRITE(MyPtr, $0004D4)
+//　　キャラクターデザイン　　　　<end>
+Character Design<end>
+
+#WRITE(MyPtr, $0004D7)
+//　　　　　あまだ　たかひと　　　<end>
+Amada Takahito<end>
+
+#WRITE(MyPtr, $0004DA)
+//　　　　　ふくはら　みか　　　　<end>
+Fukuhara Mika<end>
+
+#WRITE(MyPtr, $0004DD)
+//　　サウンド　　　　　　　　　　<end>
+Sound<end>
+
+#WRITE(MyPtr, $0004E0)
+//　　　　　ささき　まさき　　　　<end>
+Sasaki Masaki<end>
+
+#WRITE(MyPtr, $0004E3)
+//　　　　　おーたけ　ひろし　　　<end>
+Ōtake Hiroshi
+
+#WRITE(MyPtr, $0004E6)
+//<end>
+#WRITE(MyPtr, $0004E9)
+//<end>
+#WRITE(MyPtr, $0004EC)
+<end>
+
+#WRITE(MyPtr, $0004EF)
+//「ガロアはどこにきえたんだ！？　部屋をしらべるんだっ！！」<end>
+Where did Galoa disappear to!?<line>
+Search this room!!<end>
+
+#WRITE(MyPtr, $0004F2)
+//「この雪では、うもれて死んでしまう。引き返そう！」<end>
+If we get buried in this snow,<line>
+we'll die! Turn back!<end>
+
+#WRITE(MyPtr, $0004F5)
+//「みんなは下がって！！　わたしはもう少し、海に近づいてみよう！」<end>
+Everyone, stand back!<line>
+Let me get closer to the sea!<end>
+
+#WRITE(MyPtr, $0004F8)
+//　　　　スタッフ<end>
+Staff<end>
+
+#WRITE(MyPtr, $0004FB)
+//　　　　ありがとう<end>
+Thank you<end>
+
+#WRITE(MyPtr, $0004FE)
+//あなたの勇かんなる戦士たち　　　<end>
+To all your brave warriors<end>
+
+#WRITE(MyPtr, $000501)
+//NUM　　　　　　　　<end>
+<name><end>
+
+#WRITE(MyPtr, $000504)
+//　　NAMEにて　　　<end>
+At <place><end>
+
+#WRITE(MyPtr, $000507)
+//NUMにたおされ死亡　<end>
+Killed by <class><end>
+
+#WRITE(MyPtr, $00050A)
+//　　　　　わなにかかり死亡　　　<end>
+Killed by a trap<end>
+
+#WRITE(MyPtr, $00050D)
+//　　　　　　　じばくした　　　　<end>
+Self destructed<end>
+
+#WRITE(MyPtr, $000510)
+//　　　　　　かいこ　された　　　<end>
+Discharged<end>
+
+#WRITE(MyPtr, $000513)
+//　　　ばくはつにまきこまれ死亡　<end>
+Killed in an explosion<end>
+
+#WRITE(MyPtr, $000516)
+//　　　　　　まいごになった　　　<end>
+Got lost<end>
+
+#WRITE(MyPtr, $000519)
+//　　　　　　　こうりゅう中　　　<end>
+Held prisoner<end>
+
+#WRITE(MyPtr, $00051C)
+//　　　　　　しょうそくふめい　　<end>
+Fate unknown<end>
+
+#WRITE(MyPtr, $00051F)
+//　　　　　　　せいかんした　　　<end>
+Returned alive<end>
+
+#WRITE(MyPtr, $000522)
+//　　　　ひっそりとくらしている　<end>
+Living quietly<end>
+
+#WRITE(MyPtr, $000525)
+//　　　　ぼこくのために戦とう中　<end>
+Fighting for the homeland<end>
+
+#WRITE(MyPtr, $000528)
+//　　　　　勇かんなる戦士たち　　<end>
+The brave warriors<end>
+
+#WRITE(MyPtr, $00052B)
+//　　　　　　　　　　　　　　　　<end>
+        <end>
+
+#WRITE(MyPtr, $00052E)
+//©1993　カルチャーブレーン<end>
+Culture Brain 1993<end>
+
+#WRITE(MyPtr, $000531)
+//©1993　クレソフト　　　　<end>
+Kure Soft 1993<end>
+
+#WRITE(MyPtr, $000534)
+//我がまつえい、ただ一人となりし時ログリスはひとつとなりはんえいす　　　　　（ログリス創生記　　　　　　　　　　ゴルド王の章より）<end>
+When but one of my descendants<line>
+remains, Glorith shall become<line>
+one and prosper for all eternity.<page>
+From "Genesis of Glorith",<line>
+Chapter of King Gord.<end>
+
+#WRITE(MyPtr, $000537)
+//「この村をやいた魔導士が、領主様のお屋しきの中にぃぃぃ」<end>
+<frame><$02><font><$01>
+"The sorcerer who burned this<line>
+village is inside our lord's<line>
+mansion~"<end>
+
+#WRITE(MyPtr, $00053A)
+//「上の岩あなは、グールの洞くつへ通じているはずですぅ」<end>
+<frame><$02><font><$01>
+The rock cave up above must<line>
+lead into the cave of the<line>
+Ghouls.<end>
+
+#WRITE(MyPtr, $00053D)
+//「うらみをぉぉぉ、はらしてぇぇぇ下さいぃぃぃ」<end>
+<frame><$02><font><$01>
+Avenge uuus~<end>
+
+#WRITE(MyPtr, $000540)
+//「もっと、生きたかったですぅぅ」<end>
+<frame><$02><font><$01>
+I wanted to live longer!<end>
+
+#WRITE(MyPtr, $000543)
+//「魔導士の手下が、洞くつの入口をふさいでいますぅ。魔導士をたおせば、やつらはきえるでしょう。」<end>
+<frame><$02><font><$01>
+The sorcerer's minions are<line>
+blocking the cave entrance.<page>
+If you defeat the sorcerer,<line>
+they will probably vanish<line>
+too.<end>
+
+#WRITE(MyPtr, $000546)
+//「あ、ありがとうございますぅぅ」<end>
+<frame><$02><font><$01>
+Thank you so much, sir.<end>
+
+#WRITE(MyPtr, $000549)
+//「おかげ様で、またはたらく事ができますよ！」<end>
+<frame><$02><font><$01>
+Thanks to you, I can work<line>
+again like before!<end>
+
+#WRITE(MyPtr, $00054C)
+//「［サラスの雪山］を通るのでしたら、雪がとけなければムリです。」<page>
+//「とおい昔に［マーサ］と言う魔法使いが、雪をとかすものを持っていたと闇きます。」<end>
+<frame><$02><font><$01>
+To cross Mount Sarath, the<line>
+snow has to be melted first.<page>
+They say long ago the wizard<line>
+Martha had something that<line>
+could melt the snow.<end>
+
+#WRITE(MyPtr, $00054F)
+//「サラスの山道の敵をおいはらって下さい。」<end>
+<frame><$02><font><$01>
+Please drive all the enemies<line>
+out of the Sarath pass.<end>
+
+#WRITE(MyPtr, $000552)
+//「つり橋さえもとにもどれば、おおぜいの人をオルニックに送る事ができます。」<end>
+<frame><$02><font><$01>
+Once the rope bridge is rebuilt,<line>
+we can send many people to Ornic.<end>
+
+#WRITE(MyPtr, $000555)
+//「これでキャサリンにふくしゅうができますよ。」<end>
+<frame><$02><font><$01>
+Now we can take revenge<line>
+on Catharin.<end>
+
+#WRITE(MyPtr, $000558)
+//「つり橋はすでにかかっています。いよいよ決戦ですね。」<end>
+<frame><$02><font><$01>
+The rope bridge has been rebuilt.<line>
+The final battle is near.<end>
+
+#WRITE(MyPtr, $00055B)
+//「［ベニック］には、［沼の館］に通じる所があります。
+//［館］には、昔、えらい魔法使いがすんでいたようですが、今は、あれはてていますよ。」<end>
+<frame><$02><font><$01>
+In Benic there's a way into<line>
+the mansion in the swamp.<page>
+Long ago a great wizard lived<line>
+there, but now the mansion<line>
+lies in ruins.<end>
+
+#WRITE(MyPtr, $00055E)
+//「オルニック城には、まだおおぜいの敵がいるでしょう。ゆだんされませぬよう。」<end>
+<frame><$02><font><$01>
+There must still be many<line>
+soldiers in Ornic Castle.<line>
+Don't let your guard down.<end>
+
+#WRITE(MyPtr, $000561)
+//「ありがとう。お気をつけて！」<end>
+<frame><$02><font><$01>
+Thank you. Take care!<end>
+
+#WRITE(MyPtr, $000564)
+//「ざんねんだがここは通せないぜ」<end>
+<frame><$01><font><$01>
+Too bad, but you're not<line>
+getting through here.<end>
+
+#WRITE(MyPtr, $000567)
+//魔導士：「きさまも死ににきたのかならば死ね、じごくの炎にやかれるがいい！」<end>
+ <frame><$01><font><$01>
+Sorcerer: did you come here<line>
+looking for death? Then die!<line>
+Burn in the flames of hell!<end>
+
+#WRITE(MyPtr, $00056A)
+//マーサの声：「まだこの門をくぐってはならぬ！」
+//「おおぜいでせめこむために、サラスの山道に橋をかけるのじゃ！」<end>
+<frame><$02>
+Martha's voice:<line>
+It is not yet time to pass<line>
+through this gate!<page>
+For a great army to attack<line>
+here, you must first bridge<line>
+the Sarath pass!<end>
+
+#WRITE(MyPtr, $00056D)
+//マーサの声：「リッチモンドを先頭に、せめこむがよいぞ！」<end>
+<frame><$02>
+Martha's voice:<line>
+Let Richmond lead the<line>
+attack!<end>
+
+#WRITE(MyPtr, $000570)
+//マーサの声：「決戦の時はきたようじゃ。もはやあともどりはできぬ。こころして行くがよい！」<end>
+<frame><$02>
+Martha's voice:<line>
+The time for the final battle<line>
+has come.<page>
+There's no turning back!<page>
+Prepare yourselves and<line>
+go forth!<end>
+
+#WRITE(MyPtr, $000573)
+//コンスタンティン：「お待ちしておりました。」
+//「敵は［レジンプの丘］のあたりに強力な防衛ラインを作っています」
+//「やぶるには、相当な決意が必要です。まず、兵士をきたえなければ」
+//部隊が仲間になった！<end>
+Constantin: by the King's order<line>
+I have long awaited you here.<page>
+The enemy has set up a tight<line>
+line of defense around Legymp<line>
+Hill.<page>
+To break through their line<line>
+will take firm resolve.<line>
+And first, you must train your<line>
+troops to be strong.<page>
+Constantin's unit has<line>
+joined!<end>
+
+#WRITE(MyPtr, $000576)
+//エルフ王ロイ：「また、かくされた宝の部屋がある。必要な宝があれば使うがよい。」<page>
+//「［ぞう］の右かべに、かくし通ろのある部屋がある。［つばさのあるぞう］の近くをよくさがすのだ。」<end>
+<frame><$02>
+Roy, King of the Elves:<line>
+This place also has secret rooms.<page>
+If there's any treasure you<line>
+need, feel free to use it.<page>
+There is a room with a secret<line>
+passage in the wall to the<line>
+right of the statue.<page>
+Search carefully around the<line>
+winged statue.<end>
+
+#WRITE(MyPtr, $000579)
+//エルフ王ロイ：「なんと、［エルフの笛］がほしくないのか？　ならばもうやらんぞ。」<end>
+<frame><$02>
+Roy, King of the Elves:<line>
+What, you don't want the<line>
+Elf Flute?<page>
+Then I won't give it to you.<end>
+
+#WRITE(MyPtr, $00057C)
+//ソフィア：「キャーッ！！」<end>
+Sophia: oh no!!<end>
+
+#WRITE(MyPtr, $00057F)
+//ソフィア：「・・・・
+//　　　　・・・リッチモンド
+//　どこに行ってしまったのかしら」<end>
+Sophia:...<line>
+...Where has Richmond gone...<end>
+
+#WRITE(MyPtr, $000582)
+//「オルニックが、たおれたぁぁ！　みんなぁ、戦いはおわったぞぉ！」<end>
+Ornic has fallen!<line>
+Everyone, the war is<line>
+over!<end>
+
+#WRITE(MyPtr, $000585)
+//ソフィア：「オルニックの城が！」<end>
+Sophia: Ornic Castle!<end>
+
+#WRITE(MyPtr, $000588)
+//spd0　　　　カーディック城　　　　　　　ソフィアのたいかんしき<end>
+<mannaka>Cardic Castle<line>
+<mannaka>Coronation of Sophia<end>
+
+#WRITE(MyPtr, $00058B)
+//「今、あたらしい女王様のもとに、ログリスは一つとなったのだ！！　ソフィア女王様バンザイ！！！」<end>
+Now Glorith is united as one<line>
+under our new Queen!!<line>
+Long live Queen Sophia!!<end>
+
+#WRITE(MyPtr, $00058E)
+//インキョ：「キャメロットは、もうオルニックの言うなりになっているわしらはなすすべもないのです。」<end>
+<frame><$02><font><$01>
+Retired King: Camelot has become<line>
+a puppet of Ornic. There is<line>
+nothing more we can do.<end>
+
+#WRITE(MyPtr, $000591)
+//エルフ：「この城の上の部屋には、勇者しかもてぬという剣がおさめらている。」<end>
+<frame><$02><font><$01>
+Elf: in a room at the top<line>
+of this castle lies a sword<line>
+that only a true hero can<line>
+wield.<end>
+
+#WRITE(MyPtr, $000594)
+//エルフ：「戦いたくはないが、戦わねばならない時は全力で戦うぜ。」<end>
+<frame><$02><font><$01>
+Elf: I don't want to fight,<line>
+but when I have to, I'll<line>
+fight with all I've got.<end>
+
+#WRITE(MyPtr, $000597)
+//ドワーフ：「おれたちの森をふみにじられているのに、ただじっとしているのもつらいぜ。」<end>
+<frame><$02><font><$01>
+Dwarf: it's hard to just<line>
+stand and watch our forest<line>
+being trampled.<end>
+
+#WRITE(MyPtr, $00059A)
+//ケンタウロス：「［ルートン］の方で修道士をみかけたぜ。魔法を使っていたが、たいしたやつらだ。」<end>
+<frame><$02><font><$01>
+Centaurus: I saw some Monks<line>
+in Lurton. They use magic, and<line>
+they're a tough bunch too.<end>
+
+#WRITE(MyPtr, $00059D)
+//ケンタウロス：「ドワーフの仲間なら、生きては帰さないぜ。」<end>
+<frame><$02><font><$01>
+Centaurus: if you're allies of<line>
+the Dwarves, don't expect<line>
+to leave here alive.<end>
+
+#WRITE(MyPtr, $0005A0)
+//ケンタウロス：「見たところ、かなりデキソウだな。」<end>
+<frame><$02><font><$01>
+Centaurus: from the looks of<line>
+it, you seem pretty capable.<end>
+
+#WRITE(MyPtr, $0005A3)
+//アマゾネス：「わたしたちは、西にいる半魚人とは、なかが悪いのよ。
+//半魚人はかたいウロコをもっていてなかなかテゴワイのだけど、炎や矢には弱いの。」<end>
+<frame><$02><font><$01>
+Amazones: we're on pretty bad<line>
+terms with the Fishmen to<line>
+the West.<page>
+The Fishmen have thick scales<line>
+and are tough, but they're<line>
+weak to fire and arrows.<end>
+
+#WRITE(MyPtr, $0005A6)
+//半魚人：「あんたたち、ウデに自信があるなら、アマゾネスどもをこらしめてくれないかね。」<end>
+<frame><$02><font><$01>
+Fishman: if you're confident in<line>
+your skills, help us teach them<line>
+Amazones a lesson, croak.<end>
+
+#WRITE(MyPtr, $0005A9)
+//半魚人：「アマゾネスのやつら、わしらのワニを食っちまうだ。あんたもワニを食うだか？」<end>
+<frame><$02><font><$01>
+Fishman: them Amazones women<line>
+always eat our gators.<page>
+You eat gators too, huh?<end>
+
+#WRITE(MyPtr, $0005AC)
+//半魚人：「海のほらあなの中には、おそろしい化け物がすんどるだ。　タイジしてケロ。」<end>
+<frame><$02><font><$01>
+Fishman:  in the sea cave lives<line>
+a terrible sea monster.<line>
+Please slay it, croak.<end>
+
+#WRITE(MyPtr, $0005AF)
+//ファンクラブ：「ぼくたち、ジェーンさんのために、少しでも早く兵士になります。そらっ、変身！」<end>
+<frame><$02><font><$01>
+Fan Club:  we'll become soldiers<line>
+to help you, Miss Jean.<page><line>
+Now, transform!<end>
+
+#WRITE(MyPtr, $0005B2)
+//こども：「わーい、助けに来てくれたんだね。」
+//「ぼく、エルフの［ロバート］って言うの。［塔］に入れられていたんだけど、ここに連れてこられたの」<page>
+//「ぼくは、自分で出られるから、早く悪い女王をやってけて。気をつけてね！」<end>
+<frame><$02><font><$01>
+Kid: wow, you came for me!<line>
+My name's Robert!<page>
+I was locked in the tower,<line>
+then brought here. I can get<line>
+out of here by myself.<page>
+Hurry and punish that<line>
+wicked Queen.<line>
+And be careful!<end>
+
+#WRITE(MyPtr, $0005B5)
+//兵士：「戦いに自信がないのなら、少しは強い兵士を用意します。どうしますか？」<end>
+<frame><$02><font><$01>
+Soldier:  if you're not confident<line>
+in battle, shouldn't you have<line>
+some stronger troops?<end>
+
+#WRITE(MyPtr, $0005B8)
+//spd0部下の強さをえらんで下さい　　　　　　強い兵士がほしい　　　　　　　　弱い兵士でよい<end>
+<frame><$02><font><$01>
+Choose the strength of your men<line>
+      I want strong troops<line>
+      Weak troops are fine<end>
+
+#WRITE(MyPtr, $0005BB)
+//「水がふかいぞ！！　この先に進むのはキケンだ！！」<end>
+The water is too deep!!<line>
+Going any further like<line>
+this is dangerous!!<end>

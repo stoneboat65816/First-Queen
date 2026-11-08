@@ -1,0 +1,70 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_dict.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($50)
+#WRITE(MyPtr, $000000)
+được <end>
+
+#WRITE(MyPtr, $000003)
+nhưng <end>
+
+#WRITE(MyPtr, $000006)
+những <end>
+
+#WRITE(MyPtr, $000009)
+Amazones<end>
+
+#WRITE(MyPtr, $00000C)
+trong <end>
+
+#WRITE(MyPtr, $00000F)
+chúng<end>
+
+#WRITE(MyPtr, $000012)
+một <end>
+
+#WRITE(MyPtr, $000015)
+biển<end>
+
+#WRITE(MyPtr, $000018)
+tộc Elf<end>
+
+#WRITE(MyPtr, $00001B)
+Camelot<end>
+
+#WRITE(MyPtr, $00001E)
+inh sĩ<end>
+
+#WRITE(MyPtr, $000021)
+chiến <end>
+
+#WRITE(MyPtr, $000024)
+nhiều<end>
+
+#WRITE(MyPtr, $000027)
+đang <end>
+
+#WRITE(MyPtr, $00002A)
+ngươi<end>
+
+#WRITE(MyPtr, $00002D)
+người<end>
+
+#WRITE(MyPtr, $000030)
+Tộc Dwarf<end>
+
+#WRITE(MyPtr, $000033)
+Conwall<end>
+
+#WRITE(MyPtr, $000036)
+Glorith<end>
+
+#WRITE(MyPtr, $000039)
+Solberry<end>
+
+#WRITE(MyPtr, $00003C)
+Lurton<end>

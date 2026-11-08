@@ -1,0 +1,9 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_dict.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+Dwarf<end>

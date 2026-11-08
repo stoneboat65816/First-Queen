@@ -1,0 +1,55 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($0060)
+#WRITE(MyPtr, $000000)
+//みしゅつけ゛ん
+Chưa xuất hiện<end>
+
+#WRITE(MyPtr, $000003)
+//しほ゛う
+Tử vong<end>
+
+#WRITE(MyPtr, $000006)
+//やられ
+Đang bị đánh<end>
+
+#WRITE(MyPtr, $000009)
+//かくれ
+Đang trốn<end>
+
+#WRITE(MyPtr, $00000C)
+//とつけ゛き
+Đột kích<end>
+
+#WRITE(MyPtr, $00000F)
+//こうけ゛き
+Tấn công<end>
+
+#WRITE(MyPtr, $000012)
+//たいきゃく
+Rút lui<end>
+
+#WRITE(MyPtr, $000015)
+//にけ
+Bỏ chạy<end>
+
+#WRITE(MyPtr, $000018)
+//こんらん
+Hỗn loạn<end>
+
+#WRITE(MyPtr, $00001B)
+//せんとうちゅう
+Đang chiến đấu<end>
+
+#WRITE(MyPtr, $00001E)
+//きゅうけい
+Nghỉ ngơi<end>
+
+#WRITE(MyPtr, $000021)
+//ていし
+Đang dừng<end>

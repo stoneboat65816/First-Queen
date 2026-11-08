@@ -1,0 +1,253 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($00F6)
+#WRITE(MyPtr, $000000)
+//マシ゛シャン<end>
+
+#WRITE(MyPtr, $000003)
+//フ゜リンス<end>
+
+#WRITE(MyPtr, $000006)
+//ゆうしゃ<end>
+
+#WRITE(MyPtr, $000009)
+//しゅうと゛うし<end>
+
+#WRITE(MyPtr, $00000C)
+//ナイト<end>
+
+#WRITE(MyPtr, $00000F)
+//アマソ゛ネス<end>
+
+#WRITE(MyPtr, $000012)
+//ホ゛ウファイター<end>
+
+#WRITE(MyPtr, $000015)
+//アーマーシュータ<end>
+
+#WRITE(MyPtr, $000018)
+//ファイター<end>
+
+#WRITE(MyPtr, $00001B)
+//ソルシ゛ャー<end>
+
+#WRITE(MyPtr, $00001E)
+//け゛んし゛ゅつし<end>
+
+#WRITE(MyPtr, $000021)
+//くろきし<end>
+
+#WRITE(MyPtr, $000024)
+//ランス<end>
+
+#WRITE(MyPtr, $000027)
+//まけんし<end>
+
+#WRITE(MyPtr, $00002A)
+//レット゛アーマー<end>
+
+#WRITE(MyPtr, $00002D)
+//ク゛レムシュータ<end>
+
+#WRITE(MyPtr, $000030)
+//ソルシ゛ャー<end>
+
+#WRITE(MyPtr, $000033)
+//シューター<end>
+
+#WRITE(MyPtr, $000036)
+//アーマーシュータ<end>
+
+#WRITE(MyPtr, $000039)
+//エルフキンク゛<end>
+
+#WRITE(MyPtr, $00003C)
+//スケルトン<end>
+
+#WRITE(MyPtr, $00003F)
+//ソ゛ンヒ゛<end>
+
+#WRITE(MyPtr, $000042)
+//おとこ<end>
+
+#WRITE(MyPtr, $000045)
+//おんな<end>
+
+#WRITE(MyPtr, $000048)
+//フ゜リンセス<end>
+
+#WRITE(MyPtr, $00004B)
+//おとこのこ<end>
+
+#WRITE(MyPtr, $00004E)
+//と゛うし<end>
+
+#WRITE(MyPtr, $000051)
+//ほ゛くし<end>
+
+#WRITE(MyPtr, $000054)
+//てんし<end>
+
+#WRITE(MyPtr, $000057)
+//ク゛ール<end>
+
+#WRITE(MyPtr, $00005A)
+//あくま<end>
+
+#WRITE(MyPtr, $00005D)
+//しにか゛み<end>
+
+#WRITE(MyPtr, $000060)
+//アルマシ゛ロ<end>
+
+#WRITE(MyPtr, $000063)
+//おおめた゛ま<end>
+
+#WRITE(MyPtr, $000066)
+//コ゛ースト<end>
+
+#WRITE(MyPtr, $000069)
+//ワニ<end>
+
+#WRITE(MyPtr, $00006C)
+//ヘヒ゛<end>
+
+#WRITE(MyPtr, $00006F)
+//はんき゛ょし゛ん<end>
+
+#WRITE(MyPtr, $000072)
+//やまコ゛リラ<end>
+
+#WRITE(MyPtr, $000075)
+//コウモリ<end>
+
+#WRITE(MyPtr, $000078)
+//マンイーター<end>
+
+#WRITE(MyPtr, $00007B)
+//ハ゛ート゛マン<end>
+
+#WRITE(MyPtr, $00007E)
+//ヒ゛ック゛マウス<end>
+
+#WRITE(MyPtr, $000081)
+//エルフユミ<end>
+
+#WRITE(MyPtr, $000084)
+//エルフ<end>
+
+#WRITE(MyPtr, $000087)
+//ト゛ワーフ<end>
+
+#WRITE(MyPtr, $00008A)
+//ノーム<end>
+
+#WRITE(MyPtr, $00008D)
+//リサ゛ート゛<end>
+
+#WRITE(MyPtr, $000090)
+//リサ゛ート゛マン<end>
+
+#WRITE(MyPtr, $000093)
+//ケンタウロス<end>
+
+#WRITE(MyPtr, $000096)
+//ケンタウロスユミ<end>
+
+#WRITE(MyPtr, $000099)
+//レイハ゛ン<end>
+
+#WRITE(MyPtr, $00009C)
+//ウルフ<end>
+
+#WRITE(MyPtr, $00009F)
+//きとうし<end>
+
+#WRITE(MyPtr, $0000A2)
+//ト゛ラコ゛ン<end>
+
+#WRITE(MyPtr, $0000A5)
+//クイーン<end>
+
+#WRITE(MyPtr, $0000A8)
+//ウイッチ<end>
+
+#WRITE(MyPtr, $0000AB)
+//コ゛ーレム<end>
+
+#WRITE(MyPtr, $0000AE)
+//ソルシ゛ャー<end>
+
+#WRITE(MyPtr, $0000B1)
+//キンク゛<end>
+
+#WRITE(MyPtr, $0000B4)
+//あきんと゛<end>
+
+#WRITE(MyPtr, $0000B7)
+//ハ゛ーサーカー<end>
+
+#WRITE(MyPtr, $0000BA)
+//せんし<end>
+
+#WRITE(MyPtr, $0000BD)
+//し゛いさん<end>
+
+#WRITE(MyPtr, $0000C0)
+//あきんと゛<end>
+
+#WRITE(MyPtr, $0000C3)
+//エルフ<end>
+
+#WRITE(MyPtr, $0000C6)
+//きへい<end>
+
+#WRITE(MyPtr, $0000C9)
+//ゆうしゃ<end>
+
+#WRITE(MyPtr, $0000CC)
+//せんし<end>
+
+#WRITE(MyPtr, $0000CF)
+//エルフナイト<end>
+
+#WRITE(MyPtr, $0000D2)
+//マシ゛シャン<end>
+
+#WRITE(MyPtr, $0000D5)
+//ハ゛ルキリー<end>
+
+#WRITE(MyPtr, $0000D8)
+//カタハ゜ルト<end>
+
+#WRITE(MyPtr, $0000DB)
+//ゆうしゃ<end>
+
+#WRITE(MyPtr, $0000DE)
+//このえへい<end>
+
+#WRITE(MyPtr, $0000E1)
+//まおう<end>
+
+#WRITE(MyPtr, $0000E4)
+//カ゛マ<end>
+
+#WRITE(MyPtr, $0000E7)
+//ストンコ゛ーレム<end>
+
+#WRITE(MyPtr, $0000EA)
+//おおいか<end>
+
+#WRITE(MyPtr, $0000ED)
+//マンティコア<end>
+
+#WRITE(MyPtr, $0000F0)
+//ト゛ラコ゛ン<end>
+
+#WRITE(MyPtr, $0000F3)
+//カ゛ーコ゛イル<end>

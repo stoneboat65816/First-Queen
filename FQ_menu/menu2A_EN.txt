@@ -1,0 +1,12 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL0>　　　　　　　　　　<HIRA>を、すてます｡　
+//　いいて゛すか？　　<PAL1>はい　　いいえ<END>
+Discard <item>.<line>
+Is that OK?		<opt><pal1>Yes		<opt>No<end>

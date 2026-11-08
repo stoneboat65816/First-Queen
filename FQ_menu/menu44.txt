@@ -1,0 +1,26 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL1>　　<9F>　<9E>
+//　<KATA>スヒート
+//　　　　<9E>
+//　オートハトル　
+//
+//　<HIRA>みかた<KATA>マーク　
+//
+//　<HIRA>たいけい<KATA>
+//　　　　<9F>
+//　キャンフ
+//
+//　ＣＡＮＣＥＬ　<END>
+Tốc độ<line>
+Tự động chiến đấu<line>
+Đánh dấu đồng đội<line>
+Đội hình<line>
+Cắm trại<line>
+Kết thúc<end>

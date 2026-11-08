@@ -1,0 +1,11 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<KATA><PAL2>　ＮＡＭＥ　　　//<+80><PAL1><$104><$A0><$105><$106><$100><$107><$A0><$108><$100><$109><$A0><$10A><$100><$10B><$A0><$10C><$100><$10D><$10E><$10F><$A0><$111>
+//<PAL0><KATA><END>
+Tên<end>

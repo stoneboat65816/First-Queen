@@ -1,0 +1,30 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL1><KATA>　ホ゛ム　　　
+//　８ホ゛ム　　
+//　アイス　　　
+//　ライト　　　
+//<HIRA>　しょうかん　
+//　ふ゛んしん　
+//　へんしん　　
+//<KATA>　チャーム　　
+//<HIRA>　し゛しん　　
+//<KATA>　サンタ゛ー　
+//　ノハ゛　　　<END>
+<opt>Bomb<line>
+<opt>8 Bomb<line>
+<opt>Ice<line>
+<opt>Light<line>
+<opt>Summon<line>
+<opt>Clone<line>
+<opt>Transform<line>
+<opt>Charm<line>
+<opt>Quake<line>
+<opt>Thunder<line>
+<opt>Nova<end>

@@ -1,0 +1,17 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL1>　　　　　　　　　　<G15>　<G16><G17><G10><G18>　<G19><G10><G1A>　<G1B><G10>→　←<G10>↑　↓
+//<PAL0>　　　　　　　　　　　　　　<PAL1>／<PAL0>　　　<PAL1>／<PAL0>　　　<PAL1>／<PAL0>　　　<PAL1>／<PAL0>　　　
+//
+//<PAL1>　　　　　　　　　　　<HIRA>に、<KATA>クラスチェンシ゛　<HIRA>て゛きます｡　　
+//　　　<KATA>クラスチェンシ゛<HIRA>　しますか<KATA>？　　　<HIRA>はい　　いいえ<KATA><END>
+<line>
+<line>
+Có thể chuyển cấp thành <class>.<line>
+Đồng ý chứ?  <opt>Đồng ý  <opt>Không<end>

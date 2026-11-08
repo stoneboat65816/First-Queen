@@ -1,0 +1,305 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($00F6)
+#WRITE(MyPtr, $000000)
+#WRITE(MyPtr, $0000D2)
+//マシ゛シャン<end>
+Magician<end>
+
+#WRITE(MyPtr, $000003)
+//フ゜リンス<end>
+Prince<end>
+
+#WRITE(MyPtr, $000006)
+#WRITE(MyPtr, $0000C9)
+#WRITE(MyPtr, $0000DB)
+//ゆうしゃ<end>
+Hero<end>
+
+#WRITE(MyPtr, $000009)
+//しゅうと゛うし<end>
+Monk<end>
+
+#WRITE(MyPtr, $00000C)
+//ナイト<end>
+Knight<end>
+
+#WRITE(MyPtr, $00000F)
+//アマソ゛ネス<end>
+Amazoness<end>
+
+#WRITE(MyPtr, $000012)
+//ホ゛ウファイター<end>
+Archer<end>
+
+#WRITE(MyPtr, $000015)
+#WRITE(MyPtr, $000036)
+//アーマーシュータ<end>
+Armor Shooter<end>
+
+#WRITE(MyPtr, $000018)
+//ファイター<end>
+Fighter<end>
+
+#WRITE(MyPtr, $00001B)
+#WRITE(MyPtr, $000030)
+#WRITE(MyPtr, $0000AE)
+//ソルシ゛ャー<end>
+Soldier<end>
+
+#WRITE(MyPtr, $00001E)
+//け゛んし゛ゅつし<end>
+Illusionist<end>
+
+#WRITE(MyPtr, $000021)
+//くろきし<end>
+Black Knight<end>
+
+#WRITE(MyPtr, $000024)
+//ランス<end>
+Lancer<end>
+
+#WRITE(MyPtr, $000027)
+//まけんし<end>
+Spellsword<end>
+
+#WRITE(MyPtr, $00002A)
+//レット゛アーマー<end>
+Red Armor<end>
+
+#WRITE(MyPtr, $00002D)
+//ク゛レムシュータ<end>
+Gleam Shooter<end>
+
+#WRITE(MyPtr, $000033)
+//シューター<end>
+Shooter<end>
+
+#WRITE(MyPtr, $000039)
+//エルフキンク゛<end>
+Elf King<end>
+
+#WRITE(MyPtr, $00003C)
+//スケルトン<end>
+Skeleton<end>
+
+#WRITE(MyPtr, $00003F)
+//ソ゛ンヒ゛<end>
+Zombie<end>
+
+#WRITE(MyPtr, $000042)
+//おとこ<end>
+Man<end>
+
+#WRITE(MyPtr, $000045)
+//おんな<end>
+Woman<end>
+
+#WRITE(MyPtr, $000048)
+//フ゜リンセス<end>
+Princess<end>
+
+#WRITE(MyPtr, $00004B)
+//おとこのこ<end>
+Boy<end>
+
+#WRITE(MyPtr, $00004E)
+//と゛うし<end>
+Mystic<end>
+
+#WRITE(MyPtr, $000051)
+//ほ゛くし<end>
+Priest<end>
+
+#WRITE(MyPtr, $000054)
+//てんし<end>
+Angel<end>
+
+#WRITE(MyPtr, $000057)
+//ク゛ール<end>
+Ghoul<end>
+
+#WRITE(MyPtr, $00005A)
+//あくま<end>
+Demon<end>
+
+#WRITE(MyPtr, $00005D)
+//しにか゛み<end>
+Reaper<end>
+
+#WRITE(MyPtr, $000060)
+//アルマシ゛ロ<end>
+Armadillo<end>
+
+#WRITE(MyPtr, $000063)
+//おおめた゛ま<end>
+Big Eye<end>
+
+#WRITE(MyPtr, $000066)
+//コ゛ースト<end>
+Ghost<end>
+
+#WRITE(MyPtr, $000069)
+//ワニ<end>
+Crocodile<end>
+
+#WRITE(MyPtr, $00006C)
+//ヘヒ゛<end>
+Snake<end>
+
+#WRITE(MyPtr, $00006F)
+//はんき゛ょし゛ん<end>
+Merman<end>
+
+#WRITE(MyPtr, $000072)
+//やまコ゛リラ<end>
+Mt. Gorilla<end>
+
+#WRITE(MyPtr, $000075)
+//コウモリ<end>
+Bat<end>
+
+#WRITE(MyPtr, $000078)
+//マンイーター<end>
+Man Eater<end>
+
+#WRITE(MyPtr, $00007B)
+//ハ゛ート゛マン<end>
+Birdman<end>
+
+#WRITE(MyPtr, $00007E)
+//ヒ゛ック゛マウス<end>
+Big Mouse<end>
+
+#WRITE(MyPtr, $000081)
+//エルフユミ<end>
+Elf Archer<end>
+
+#WRITE(MyPtr, $000084)
+#WRITE(MyPtr, $0000C3)
+//エルフ<end>
+Elf<end>
+
+#WRITE(MyPtr, $000087)
+//ト゛ワーフ<end>
+Dwarf<end>
+
+#WRITE(MyPtr, $00008A)
+//ノーム<end>
+Gnome<end>
+
+#WRITE(MyPtr, $00008D)
+//リサ゛ート゛<end>
+Lizard<end>
+
+#WRITE(MyPtr, $000090)
+//リサ゛ート゛マン<end>
+Lizardman<end>
+
+#WRITE(MyPtr, $000093)
+//ケンタウロス<end>
+Centaur<end>
+
+#WRITE(MyPtr, $000096)
+//ケンタウロスユミ<end>
+Centaur Archer<end>
+
+#WRITE(MyPtr, $000099)
+//レイハ゛ン<end>
+Raven<end>
+
+#WRITE(MyPtr, $00009C)
+//ウルフ<end>
+Wolf<end>
+
+#WRITE(MyPtr, $00009F)
+//きとうし<end>
+Shaman<end>
+
+#WRITE(MyPtr, $0000A2)
+#WRITE(MyPtr, $0000F0)
+//ト゛ラコ゛ン<end>
+Dragon<end>
+
+#WRITE(MyPtr, $0000A5)
+//クイーン<end>
+Queen<end>
+
+#WRITE(MyPtr, $0000A8)
+//ウイッチ<end>
+Witch<end>
+
+#WRITE(MyPtr, $0000AB)
+//コ゛ーレム<end>
+Golem<end>
+
+#WRITE(MyPtr, $0000B1)
+//キンク゛<end>
+King<end>
+
+#WRITE(MyPtr, $0000B4)
+#WRITE(MyPtr, $0000C0)
+//あきんと゛<end>
+Merchant<end>
+
+#WRITE(MyPtr, $0000B7)
+//ハ゛ーサーカー<end>
+Berserker<end>
+
+#WRITE(MyPtr, $0000BA)
+#WRITE(MyPtr, $0000CC)
+//せんし<end>
+Warrior<end>
+
+#WRITE(MyPtr, $0000BD)
+//し゛いさん<end>
+Old Man<end>
+
+#WRITE(MyPtr, $0000C6)
+//きへい<end>
+Cavalry<end>
+
+#WRITE(MyPtr, $0000CF)
+//エルフナイト<end>
+Elf Knight<end>
+
+#WRITE(MyPtr, $0000D5)
+//ハ゛ルキリー<end>
+Valkyrie<end>
+
+#WRITE(MyPtr, $0000D8)
+//カタハ゜ルト<end>
+Catapult<end>
+
+#WRITE(MyPtr, $0000DE)
+//このえへい<end>
+Royal Guard<end>
+
+#WRITE(MyPtr, $0000E1)
+//まおう<end>
+Demon Lord<end>
+
+#WRITE(MyPtr, $0000E4)
+//カ゛マ<end>
+Toad<end>
+
+#WRITE(MyPtr, $0000E7)
+//ストンコ゛ーレム<end>
+Stone Golem<end>
+
+#WRITE(MyPtr, $0000EA)
+//おおいか<end>
+Giant Squid<end>
+
+#WRITE(MyPtr, $0000ED)
+//マンティコア<end>
+Manticore<end>
+
+#WRITE(MyPtr, $0000F3)
+//カ゛ーコ゛イル<end>
+Gargoyle<end>

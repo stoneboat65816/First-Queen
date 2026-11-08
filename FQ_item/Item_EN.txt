@@ -1,0 +1,134 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($0060)
+#WRITE(MyPtr, $000000)
+	<end>
+
+#WRITE(MyPtr, $000003)
+//<HIRA>もんしょう
+Crest<end>
+
+#WRITE(MyPtr, $000006)
+//<HIRA>はかいの石
+Doom Stone<end>
+
+#WRITE(MyPtr, $000009)
+//エクスカリハ゛ー
+Excalibur<end>
+
+#WRITE(MyPtr, $00000C)
+//エルフ<HIRA>のふえ
+Elf Flute<end>
+
+#WRITE(MyPtr, $00000F)
+//<HIRA>きんのかき゛
+Gold Key<end>
+
+#WRITE(MyPtr, $000012)
+//クロス
+Cross<end>
+
+#WRITE(MyPtr, $000015)
+//ヨハネ<HIRA>のたて
+John's Shield<end>
+
+#WRITE(MyPtr, $000018)
+//<HIRA>まほうの矢
+Magic Arrow<end>
+
+#WRITE(MyPtr, $00001B)
+//Ｍ．スレイヤー
+M.Slayer<end>
+
+#WRITE(MyPtr, $00001E)
+//月<HIRA>の守り
+Moon Charm<end>
+
+#WRITE(MyPtr, $000021)
+//ハ゜ワーリンク゛
+Power Ring<end>
+
+#WRITE(MyPtr, $000024)
+//レット゛クロス
+Red Cross<end>
+
+#WRITE(MyPtr, $000027)
+//<HIRA>ふっかつの石
+Revive Stone<end>
+
+#WRITE(MyPtr, $00002A)
+//<HIRA>にし゛のたて
+Rainbow Shield<end>
+
+#WRITE(MyPtr, $00002D)
+//ト゛クロ
+Skull<end>
+
+#WRITE(MyPtr, $000030)
+//<HIRA>せいなるゆひ゛わ
+Holy Ring<end>
+
+#WRITE(MyPtr, $000033)
+//太陽<HIRA>の守り
+Sun Charm<end>
+
+#WRITE(MyPtr, $000036)
+//<HIRA>しす゛く石
+Dew Stone<end>
+
+#WRITE(MyPtr, $000039)
+//<HIRA>ほのおの石
+Fire Stone<end>
+
+#WRITE(MyPtr, $00003C)
+//大地<HIRA>の守り
+Earth Charm<end>
+
+#WRITE(MyPtr, $00003F)
+//<HIRA>ゆきのけっしょう
+Snow Crystal<end>
+
+#WRITE(MyPtr, $000042)
+//<HIRA>ひかりの石
+Light Stone<end>
+
+#WRITE(MyPtr, $000045)
+//<HIRA>いなつ゛まの石
+Thunder Stone<end>
+
+#WRITE(MyPtr, $000048)
+//ライオン<HIRA>のきは゛
+Lion Fang<end>
+
+#WRITE(MyPtr, $00004B)
+// <HIRA>てんしのゆひ゛わ
+Angel Ring<end>
+
+#WRITE(MyPtr, $00004E)
+//Ｌ．シールト゛
+Large Shield<end>
+
+#WRITE(MyPtr, $000051)
+// <HIRA>そ゛うのはね
+Statue Wing<end>
+
+#WRITE(MyPtr, $000054)
+//<HIRA>はし゛ゃのけん
+Evilbane<end>
+
+#WRITE(MyPtr, $000057)
+//<HIRA>はか゛ねのけん
+Steel Sword<end>
+
+#WRITE(MyPtr, $00005A)
+//<HIRA>はし゛ゃのたて
+Bane Shield<end>
+
+#WRITE(MyPtr, $00005D)
+//Ｓ．シールト゛
+Small Shield<end>

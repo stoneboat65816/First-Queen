@@ -1,0 +1,134 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($0060)
+#WRITE(MyPtr, $000000)
+	<end>
+
+#WRITE(MyPtr, $000003)
+//<HIRA>もんしょう
+Con ấn<end>
+
+#WRITE(MyPtr, $000006)
+//<HIRA>はかいの石
+Đá hủy diệt<end>
+
+#WRITE(MyPtr, $000009)
+//エクスカリハ゛ー
+Excalibur<end>
+
+#WRITE(MyPtr, $00000C)
+//エルフ<HIRA>のふえ
+Sáo của tộc Elf<end>
+
+#WRITE(MyPtr, $00000F)
+//<HIRA>きんのかき゛
+Chìa khóa bạc<end>
+
+#WRITE(MyPtr, $000012)
+//クロス
+Thập tự giá<end>
+
+#WRITE(MyPtr, $000015)
+//ヨハネ<HIRA>のたて
+Khiên của John<end>
+
+#WRITE(MyPtr, $000018)
+//<HIRA>まほうの矢
+Mũi tên ma pháp<end>
+
+#WRITE(MyPtr, $00001B)
+//Ｍ．スレイヤー
+Monster Slayer<end>
+
+#WRITE(MyPtr, $00001E)
+//月<HIRA>の守り
+Bùa mặt trăng<end>
+
+#WRITE(MyPtr, $000021)
+//ハ゜ワーリンク゛
+Nhẫn sức mạnh<end>
+
+#WRITE(MyPtr, $000024)
+//レット゛クロス
+Hồng thập tự giá<end>
+
+#WRITE(MyPtr, $000027)
+//<HIRA>ふっかつの石
+Đá hồi sinh<end>
+
+#WRITE(MyPtr, $00002A)
+//<HIRA>にし゛のたて
+Khiên cầu vòng<end>
+
+#WRITE(MyPtr, $00002D)
+//ト゛クロ
+Đầu lâu<end>
+
+#WRITE(MyPtr, $000030)
+//<HIRA>せいなるゆひ゛わ
+Nhẫn thánh<end>
+
+#WRITE(MyPtr, $000033)
+//太陽<HIRA>の守り
+Bùa Thái dương<end>
+
+#WRITE(MyPtr, $000036)
+//<HIRA>しす゛く石
+Đá nước mắt<end>
+
+#WRITE(MyPtr, $000039)
+//<HIRA>ほのおの石
+Đá lửa<end>
+
+#WRITE(MyPtr, $00003C)
+//大地<HIRA>の守り
+Bùa Đại địa<end>
+
+#WRITE(MyPtr, $00003F)
+//<HIRA>ゆきのけっしょう
+Tinh thể tuyết<end>
+
+#WRITE(MyPtr, $000042)
+//<HIRA>ひかりの石
+Đá ánh sáng<end>
+
+#WRITE(MyPtr, $000045)
+//<HIRA>いなつ゛まの石
+Đá sấm sét<end>
+
+#WRITE(MyPtr, $000048)
+//ライオン<HIRA>のきは゛
+Nanh sư tử<end>
+
+#WRITE(MyPtr, $00004B)
+// <HIRA>てんしのゆひ゛わ
+Nhẫn Thiên sứ<end>
+
+#WRITE(MyPtr, $00004E)
+//Ｌ．シールト゛
+Khiên lớn<end>
+
+#WRITE(MyPtr, $000051)
+// <HIRA>そ゛うのはね
+Cặp cánh tượng<end>
+
+#WRITE(MyPtr, $000054)
+//<HIRA>はし゛ゃのけん
+Kiếm phá tà<end>
+
+#WRITE(MyPtr, $000057)
+//<HIRA>はか゛ねのけん
+Kiếm thép<end>
+
+#WRITE(MyPtr, $00005A)
+//<HIRA>はし゛ゃのたて
+Khiên phá tà<end>
+
+#WRITE(MyPtr, $00005D)
+//Ｓ．シールト゛
+Khiên nhỏ<end>

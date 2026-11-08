@@ -1,0 +1,30 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL1>　ＬＩＦＥ<PAL0>　・・・　<HIRA>せいめい<KATA>カ
+//<PAL1>　　　ＲＥ<PAL0>　・・・　<HIRA>せいめいかいふく<KATA>リツ
+//
+//<PAL1>　　　ＡＴ<PAL0>　・・・　<HIRA>こうけ゛き<KATA>カ
+//<PAL1>　　　ＡＲ<PAL0>　・・・　<HIRA>こうけ゛きのひ゛んしょうせい<KATA>　
+//
+//<PAL1>　　　ＤＥ<PAL0>　・・・　<HIRA>ほ゛うき゛ょ<KATA>カ
+//<PAL1>　　　ＤＲ<PAL0>　・・・　<HIRA>こうけ゛きかいひのう<KATA>カ
+//
+//<PAL1>　　　ＡＤ<PAL0>　・・・　<KATA>矢テ゛ィフェンス　　　　　　　
+//<PAL1>　　　ＡＡ<PAL0>　・・・　<KATA>矢<HIRA>かいひのう<KATA>カ
+//
+//<PAL1>　　　ＭＤ<PAL0>　・・・　<KATA>マシ゛ックテ゛ィフェンス<END>
+LIFE: Life<line>
+RE: Life recovery rate<line>
+AT: Attack power<line>
+AR: Attack hit rate<line>
+DE: Defense power<line>
+DR: Evasion<line>
+AD: Arrow defense<line>
+AA: Arrow evasion<line>
+MD: Magic defense<end>

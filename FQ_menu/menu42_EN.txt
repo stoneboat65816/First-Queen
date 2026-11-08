@@ -1,0 +1,12 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL0><HIRA>　これいし゛ょう　<KATA>アイテム<HIRA>　は　もてません｡
+//　<PAL1>　　　　　　　とる　　　やめる<END>
+You can't carry any more items.<line>
+		<opt>Take     	<opt>Cancel<end>

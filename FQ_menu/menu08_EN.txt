@@ -1,0 +1,12 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL0>　テ゛ータ　<HIRA>を　よみこみます｡　よろしいて゛すか<KATA>？　
+//<HIRA>　　　　　　よみこむ　　　やっは゜りやめる<KATA><END>
+Load the data. Is that OK?<line>
+<opt>Load<col06><opt>Cancel<end>

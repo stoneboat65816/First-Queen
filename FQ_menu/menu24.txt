@@ -1,0 +1,30 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL1>　ＬＩＦＥ<PAL0>　・・・　<HIRA>せいめい<KATA>カ
+//<PAL1>　　　ＲＥ<PAL0>　・・・　<HIRA>せいめいかいふく<KATA>リツ
+//
+//<PAL1>　　　ＡＴ<PAL0>　・・・　<HIRA>こうけ゛き<KATA>カ
+//<PAL1>　　　ＡＲ<PAL0>　・・・　<HIRA>こうけ゛きのひ゛んしょうせい<KATA>　
+//
+//<PAL1>　　　ＤＥ<PAL0>　・・・　<HIRA>ほ゛うき゛ょ<KATA>カ
+//<PAL1>　　　ＤＲ<PAL0>　・・・　<HIRA>こうけ゛きかいひのう<KATA>カ
+//
+//<PAL1>　　　ＡＤ<PAL0>　・・・　<KATA>矢テ゛ィフェンス　　　　　　　
+//<PAL1>　　　ＡＡ<PAL0>　・・・　<KATA>矢<HIRA>かいひのう<KATA>カ
+//
+//<PAL1>　　　ＭＤ<PAL0>　・・・　<KATA>マシ゛ックテ゛ィフェンス<END>
+LIFE: chỉ số sinh mệnh<line>
+RE: tốc độ hồi phục sinh mệnh<line>
+AT: chỉ số tấn công<line>
+AR: tốc độ tấn công<line>
+DE: chỉ số phòng vệ<line>
+DR: chỉ số tránh né đòn<line>
+AD: chỉ số phòng vệ cung tên<line>
+AA: chỉ số né cung tên<line>
+MD: chỉ số phòng vệ ma pháp<end>

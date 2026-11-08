@@ -1,0 +1,10 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<HIRA>　　　　こうけ゛き<KATA>カ（ＡＴ）　＋３　ＵＰ<END>
+Attack (AT) + 3<end>

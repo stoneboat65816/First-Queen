@@ -1,0 +1,1725 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($0620)
+#WRITE(MyPtr, $000000)
+//リッチモント゛
+Richmond<end>
+
+#WRITE(MyPtr, $000003)
+//アラン
+Alan<end>
+
+#WRITE(MyPtr, $000006)
+//シ゛ェーン
+Jane<end>
+
+#WRITE(MyPtr, $000009)
+//ユーサー
+Uther<end>
+
+#WRITE(MyPtr, $00000C)
+//ロイ
+Roy<end>
+
+#WRITE(MyPtr, $00000F)
+//ロハ゛ート
+Robert<end>
+
+#WRITE(MyPtr, $000012)
+//ロッテリア
+Lotteria<end>
+
+#WRITE(MyPtr, $000015)
+//ロレンス
+Lawrence<end>
+
+#WRITE(MyPtr, $000018)
+//クレイ
+Cley<end>
+
+#WRITE(MyPtr, $00001B)
+//コ゛ーインキョ
+Lão ẩn cư<end>
+
+#WRITE(MyPtr, $00001E)
+//スケサーン
+Sukethan<end>
+
+#WRITE(MyPtr, $000021)
+//カークノーシン
+Kakunoshin<end>
+
+#WRITE(MyPtr, $000024)
+//コンスタンティン
+Constantin<end>
+
+#WRITE(MyPtr, $000027)
+//テ゛ィナタ゛ン
+Thyme<end>
+
+#WRITE(MyPtr, $00002A)
+//ティンタシ゛ル
+Parsley<end>
+
+#WRITE(MyPtr, $00002D)
+//ハ゜ーシハ゛ル
+Rosemary<end>
+
+#WRITE(MyPtr, $000030)
+//ハ゜ラミテ゛ス
+Sage<end>
+
+#WRITE(MyPtr, $000033)
+//エクター
+A.Garfunkle<end>
+
+#WRITE(MyPtr, $000036)
+//カ゛ーウィン
+P.Simon<end>
+
+#WRITE(MyPtr, $000039)
+//チヒ゛ト゛ラ
+Tiểu Long<end>
+
+#WRITE(MyPtr, $00003C)
+//ク゛リフレット
+Griflet<end>
+
+#WRITE(MyPtr, $00003F)
+//ケ゛イレス
+Geyles<end>
+
+#WRITE(MyPtr, $000042)
+//ケイ
+Kei<end>
+
+#WRITE(MyPtr, $000045)
+//アルフレット゛
+Alfred<end>
+
+#WRITE(MyPtr, $000048)
+//エク゛ハ゛ート
+Egbert<end>
+
+#WRITE(MyPtr, $00004B)
+//ウィリアム
+William<end>
+
+#WRITE(MyPtr, $00004E)
+//ハ゛ーナート゛
+Bernard<end>
+
+#WRITE(MyPtr, $000051)
+//ホ゛ニヘス
+Bonihes<end>
+
+#WRITE(MyPtr, $000054)
+//ヒ゛ル
+Bill<end>
+
+#WRITE(MyPtr, $000057)
+//トーマス
+Thomas<end>
+
+#WRITE(MyPtr, $00005A)
+//ミカエル
+Michael<end>
+
+#WRITE(MyPtr, $00005D)
+//シモン
+Simon<end>
+
+#WRITE(MyPtr, $000060)
+//ヒ゜ネル
+Pinel<end>
+
+#WRITE(MyPtr, $000063)
+//マーリン
+Merlin<end>
+
+#WRITE(MyPtr, $000066)
+//マーク
+Marc<end>
+
+#WRITE(MyPtr, $000069)
+//モーカ゛ン
+Morgan<end>
+
+#WRITE(MyPtr, $00006C)
+//ニコラス
+Nicolas<end>
+
+#WRITE(MyPtr, $00006F)
+//ヨセ゛フ
+Joseph<end>
+
+#WRITE(MyPtr, $000072)
+//ラモラック
+Lamolack<end>
+
+#WRITE(MyPtr, $000075)
+//ヘ゜テ゛ィヒ゛ア
+Pedivia<end>
+
+#WRITE(MyPtr, $000078)
+//イソ゛ルテ゛
+Izolde<end>
+
+#WRITE(MyPtr, $00007B)
+//メリー
+Merry<end>
+
+#WRITE(MyPtr, $00007E)
+//アン
+SilverGirl<end>
+
+#WRITE(MyPtr, $000081)
+//ロサ゛リー
+Rosary<end>
+
+#WRITE(MyPtr, $000084)
+//イフ゛
+Eva<end>
+
+#WRITE(MyPtr, $000087)
+//アンナ
+Anna<end>
+
+#WRITE(MyPtr, $00008A)
+//マリア
+Maria<end>
+
+#WRITE(MyPtr, $00008D)
+//モモコ
+Kathy<end>
+
+#WRITE(MyPtr, $000090)
+//ラナ
+Lana<end>
+
+#WRITE(MyPtr, $000093)
+//ユリア
+Julia<end>
+
+#WRITE(MyPtr, $000096)
+//アイラス
+Ilas<end>
+
+#WRITE(MyPtr, $000099)
+//エト゛ワート゛
+Edward<end>
+
+#WRITE(MyPtr, $00009C)
+//シ゛ョセ゛フ
+Josep<end>
+
+#WRITE(MyPtr, $00009F)
+//エト゛モント
+Edmond<end>
+
+#WRITE(MyPtr, $0000A2)
+//シーサ゛ー
+Ceasar<end>
+
+#WRITE(MyPtr, $0000A5)
+//クレメント
+Clement<end>
+
+#WRITE(MyPtr, $0000A8)
+//ト゛ミニク
+Dominic<end>
+
+#WRITE(MyPtr, $0000AB)
+//アーネスト
+Ernest Satow<end>
+
+#WRITE(MyPtr, $0000AE)
+//フェルナント゛
+Fernando<end>
+
+#WRITE(MyPtr, $0000B1)
+//レナート゛
+Lenard<end>
+
+#WRITE(MyPtr, $0000B4)
+//ク゛レコ゛リー
+Gleygori<end>
+
+#WRITE(MyPtr, $0000B7)
+//イノセント
+Inocent<end>
+
+#WRITE(MyPtr, $0000BA)
+//エト゛カ゛ル
+Edgar<end>
+
+#WRITE(MyPtr, $0000BD)
+//シ゛ャック
+Jack<end>
+
+#WRITE(MyPtr, $0000E0)
+//レオ
+Leo<end>
+
+#WRITE(MyPtr, $0000E3)
+//フランシス
+Francis<end>
+
+#WRITE(MyPtr, $0000E6)
+//レオハ゜ルト゛
+Leopard<end>
+
+#WRITE(MyPtr, $0000E9)
+//モークス
+Morcus<end>
+
+#WRITE(MyPtr, $0000EC)
+//マイケル
+Michel<end>
+
+#WRITE(MyPtr, $0000EF)
+//モルト゛レット
+Moldored<end>
+
+#WRITE(MyPtr, $0000F2)
+//ホ゜ール
+Paul<end>
+
+#WRITE(MyPtr, $0000F5)
+//ヒ゜ーター
+Peter<end>
+
+#WRITE(MyPtr, $0000F8)
+//ハ゜イアス
+Hector<end>
+
+#WRITE(MyPtr, $0000FB)
+//タ゛リオス
+Darios<end>
+
+#WRITE(MyPtr, $0000FE)
+//アクハ゛ル
+Acbar<end>
+
+#WRITE(MyPtr, $000101)
+//リハ゛ー
+River<end>
+
+#WRITE(MyPtr, $000104)
+//ストーン
+Sekishusai<end>
+
+#WRITE(MyPtr, $000107)
+//ロヘ゛ルト
+Roberto<end>
+
+#WRITE(MyPtr, $00010A)
+//アルセス
+Arcess<end>
+
+#WRITE(MyPtr, $00010D)
+//カーヒ゛ン
+Kervin<end>
+
+#WRITE(MyPtr, $000110)
+//リトルシ゛ョン
+Little John<end>
+
+#WRITE(MyPtr, $000113)
+//マチアス
+Matias<end>
+
+#WRITE(MyPtr, $000116)
+//ライオネル
+Lionel<end>
+
+#WRITE(MyPtr, $000119)
+//マート
+Art<end>
+
+#WRITE(MyPtr, $00011C)
+//キ゛ルト
+Gilto<end>
+
+#WRITE(MyPtr, $00011F)
+//シ゛ョーシ゛
+George<end>
+
+#WRITE(MyPtr, $000122)
+//ロヒ゛ンソン
+Robinson<end>
+
+#WRITE(MyPtr, $000125)
+//ハロルト゛
+Harold<end>
+
+#WRITE(MyPtr, $000128)
+//シ゛ャクソン
+Jason<end>
+
+#WRITE(MyPtr, $00012B)
+//リチャート
+Richard<end>
+
+#WRITE(MyPtr, $00012E)
+//シ゛ェームス
+James<end>
+
+#WRITE(MyPtr, $000131)
+//アンリ
+Anri<end>
+
+#WRITE(MyPtr, $000134)
+//シ゛ェフリ
+Strauss<end>
+
+#WRITE(MyPtr, $000137)
+//フレト゛リック
+Fredrick<end>
+
+#WRITE(MyPtr, $00013A)
+//スチュアート
+Stewart<end>
+
+#WRITE(MyPtr, $00013D)
+//ヘンリー
+Henry<end>
+
+#WRITE(MyPtr, $000140)
+//コンラット゛
+Lenon<end>
+
+#WRITE(MyPtr, $000143)
+//シ゛ョン
+John<end>
+
+#WRITE(MyPtr, $000146)
+//カール
+Karl<end>
+
+#WRITE(MyPtr, $000149)
+//フィリッフ゜
+Philip<end>
+
+#WRITE(MyPtr, $00014C)
+#WRITE(MyPtr, $000518)
+//ハノーハ゛ー
+Gordon<end>
+
+#WRITE(MyPtr, $00014F)
+//ルト゛ルフ
+Ringo<end>
+
+#WRITE(MyPtr, $000152)
+//ネロ
+Nero<end>
+
+#WRITE(MyPtr, $000155)
+//アストラット
+Sigurd<end>
+
+#WRITE(MyPtr, $000158)
+//コナン
+Conan<end>
+
+#WRITE(MyPtr, $00015B)
+//サフォーク
+Doyle<end>
+
+#WRITE(MyPtr, $00015E)
+//ケン
+Ken<end>
+
+#WRITE(MyPtr, $000161)
+//カイ
+Kai<end>
+
+#WRITE(MyPtr, $000164)
+//ウェールス゛
+Ishibune<end>
+
+#WRITE(MyPtr, $000167)
+//チャールス
+Charles<end>
+
+#WRITE(MyPtr, $00016A)
+//フ゛ラウン
+Brown<end>
+
+#WRITE(MyPtr, $00016D)
+//レット゛
+Red<end>
+
+#WRITE(MyPtr, $000170)
+//ホワイト
+White<end>
+
+#WRITE(MyPtr, $000173)
+//アルハ゛ート
+Albert<end>
+
+#WRITE(MyPtr, $000176)
+//ルイス
+Louis<end>
+
+#WRITE(MyPtr, $000179)
+//ファルコン
+Falcon<end>
+
+#WRITE(MyPtr, $00017C)
+//アレキサンタ゛ー
+Alexander<end>
+
+#WRITE(MyPtr, $00017F)
+//アントニー
+Anthony<end>
+
+#WRITE(MyPtr, $000182)
+//オウカ゛スティン
+Augustin<end>
+
+#WRITE(MyPtr, $000185)
+//カ゛リハ゛ー
+McKenzie<end>
+
+#WRITE(MyPtr, $000188)
+#WRITE(MyPtr, $0004A6)
+//アントニウス
+Antonius<end>
+
+#WRITE(MyPtr, $00018B)
+//シ゛ェファーソン
+Eleanor<end>
+
+#WRITE(MyPtr, $00018E)
+//マット゛
+Rigby<end>
+
+#WRITE(MyPtr, $000191)
+//タロウ
+Stoneboat<end>
+
+#WRITE(MyPtr, $000194)
+//ロシ゛ャー
+Erwin<end>
+
+#WRITE(MyPtr, $000197)
+//ローラント゛
+Hein<end>
+
+#WRITE(MyPtr, $00019A)
+//ク゛レックス
+Leon<end>
+
+#WRITE(MyPtr, $00019D)
+//ウィクリル
+Barry<end>
+
+#WRITE(MyPtr, $0001A0)
+#WRITE(MyPtr, $0004F4)
+//クリストファ
+Christopher<end>
+
+#WRITE(MyPtr, $0001A3)
+//ヘ゛ン
+Ben<end>
+
+#WRITE(MyPtr, $0001A6)
+//トーマス
+Jigme<end>
+
+#WRITE(MyPtr, $0001A9)
+//サマセット
+Khesar<end>
+
+#WRITE(MyPtr, $0001AC)
+//ト゛レイク
+Tashidelek<end>
+
+#WRITE(MyPtr, $0001AF)
+//ローリー
+SemHingiMeto<end>
+
+#WRITE(MyPtr, $0001B2)
+//フォックス
+MementoMori<end>
+
+#WRITE(MyPtr, $0001B5)
+//ヘ゛ーコン
+Gibb<end>
+
+#WRITE(MyPtr, $0001B8)
+//ハーハ゛ー
+Noish<end>
+
+#WRITE(MyPtr, $0001BB)
+//クロムウェル
+Alec<end>
+
+#WRITE(MyPtr, $0001BE)
+//ホッフ゜ス
+Abbey<end>
+
+#WRITE(MyPtr, $0001C1)
+#WRITE(MyPtr, $0004C4)
+//ヘ゛ンシ゛ャミン
+Benjamin<end>
+
+#WRITE(MyPtr, $0001C4)
+//ミルトン
+Milton<end>
+
+#WRITE(MyPtr, $0001C7)
+#WRITE(MyPtr, $0004C7)
+//ハミルトン
+Hamilton<end>
+
+#WRITE(MyPtr, $0001CA)
+#WRITE(MyPtr, $0004CA)
+//ロック
+Rock<end>
+
+#WRITE(MyPtr, $0001CD)
+#WRITE(MyPtr, $0004CD)
+//ニュートン
+Newton<end>
+
+#WRITE(MyPtr, $0001D0)
+#WRITE(MyPtr, $0004D0)
+//オーク゛
+Oldtone<end>
+
+#WRITE(MyPtr, $0001D3)
+//マック
+Yellow<end>
+
+#WRITE(MyPtr, $0001D6)
+#WRITE(MyPtr, $0004D3)
+//スリフト
+Submarine<end>
+
+#WRITE(MyPtr, $0001D9)
+//ヒューム
+Octopus<end>
+
+#WRITE(MyPtr, $0001DC)
+#WRITE(MyPtr, $0004D6)
+//ヒ゜ット
+Garden<end>
+
+#WRITE(MyPtr, $0001DF)
+#WRITE(MyPtr, $0004D9)
+//ワット
+Strawberry<end>
+
+#WRITE(MyPtr, $0001E2)
+//アークライト
+Field<end>
+
+#WRITE(MyPtr, $0001E5)
+//タ゛マシ
+Forever<end>
+
+#WRITE(MyPtr, $0001E8)
+//カートライト
+Pasa<end>
+
+#WRITE(MyPtr, $0001EB)
+//アタ゛ム
+Adam<end>
+
+#WRITE(MyPtr, $0001EE)
+//シ゛ェンナー
+Marus<end>
+
+#WRITE(MyPtr, $0001F1)
+//マルサス
+Bridge<end>
+
+#WRITE(MyPtr, $0001F4)
+#WRITE(MyPtr, $0004DC)
+//ファラット゛
+Water<end>
+
+#WRITE(MyPtr, $0001F7)
+#WRITE(MyPtr, $0004DF)
+//ヒ゜ール
+Tintagil<end>
+
+#WRITE(MyPtr, $0001FA)
+//タ゛ーウィン
+Palamides<end>
+
+#WRITE(MyPtr, $0001FD)
+//レーカ゛ン
+Dinadan<end>
+
+#WRITE(MyPtr, $000200)
+#WRITE(MyPtr, $0004E2)
+//リスレー
+Long<end>
+
+#WRITE(MyPtr, $000203)
+//ラサ゛フォート゛
+Winding<end>
+
+#WRITE(MyPtr, $000206)
+#WRITE(MyPtr, $0004E5)
+//マクト゛ナルト゛
+McDonald<end>
+
+#WRITE(MyPtr, $000209)
+//クロンフ゛トン
+Road<end>
+
+#WRITE(MyPtr, $00020C)
+//フレミンク゛
+Aprilcome<end>
+
+#WRITE(MyPtr, $00020F)
+#WRITE(MyPtr, $0004E8)
+//シンフ゜ソン
+Siwill<end>
+
+#WRITE(MyPtr, $000212)
+//ケヘ゛ッカ
+Scarborough<end>
+
+#WRITE(MyPtr, $000215)
+#WRITE(MyPtr, $0004EB)
+//カーター
+Forgety<end>
+
+#WRITE(MyPtr, $000218)
+//マクカ゛イア
+Clifford<end>
+
+#WRITE(MyPtr, $00021B)
+#WRITE(MyPtr, $0004EE)
+//マクミラン
+BadMoon<end>
+
+#WRITE(MyPtr, $00021E)
+//ウィルソン
+Wilson<end>
+
+#WRITE(MyPtr, $000221)
+#WRITE(MyPtr, $0004F1)
+//ラッセル
+Cotton<end>
+
+#WRITE(MyPtr, $000224)
+//ムーア
+Melody<end>
+
+#WRITE(MyPtr, $000227)
+//クリス
+Fair<end>
+
+#WRITE(MyPtr, $00022A)
+//サム
+Sam<end>
+
+#WRITE(MyPtr, $00022D)
+#WRITE(MyPtr, $0004F7)
+//ワシントン
+Cecillia<end>
+
+#WRITE(MyPtr, $000230)
+#WRITE(MyPtr, $0004FA)
+//ウェフ゛スター
+Michelle<end>
+
+#WRITE(MyPtr, $000233)
+//ヒ゛ュイック
+Desmond<end>
+
+#WRITE(MyPtr, $000236)
+//テイラー
+Chiquitita<end>
+
+#WRITE(MyPtr, $000239)
+//マート゛ック
+Atlantis<end>
+
+#WRITE(MyPtr, $00023C)
+//ステーフ゛ンソン
+Luoie<end>
+
+#WRITE(MyPtr, $00023F)
+#WRITE(MyPtr, $0004FD)
+//アレフ
+Rasputin<end>
+
+#WRITE(MyPtr, $000242)
+#WRITE(MyPtr, $000500)
+//ホイットマン
+Babylon<end>
+
+#WRITE(MyPtr, $000245)
+//ルース゛ヘ゛ルト
+Duncan<end>
+
+#WRITE(MyPtr, $000248)
+//クール
+Persival<end>
+
+#WRITE(MyPtr, $00024B)
+//リント゛ハ゛ーク
+Lobo<end>
+
+#WRITE(MyPtr, $00024E)
+//フーハ゜ー
+Boo<end>
+
+#WRITE(MyPtr, $000251)
+//アンタ゛ーソン
+Stoney<end>
+
+#WRITE(MyPtr, $000254)
+//トルーマン
+Truman<end>
+
+#WRITE(MyPtr, $000257)
+#WRITE(MyPtr, $000503)
+//アトラス
+Atlas<end>
+
+#WRITE(MyPtr, $00025A)
+//ニクソン
+Nixon<end>
+
+#WRITE(MyPtr, $00025D)
+//リハ゛ース
+Amstrong<end>
+
+#WRITE(MyPtr, $000260)
+#WRITE(MyPtr, $000506)
+//ミック
+Julius<end>
+
+#WRITE(MyPtr, $000263)
+//ハ゜イソン
+Python<end>
+
+#WRITE(MyPtr, $000266)
+//テ゛イフ゛
+Cain<end>
+
+#WRITE(MyPtr, $000269)
+//エルヒ゛ス
+Abel<end>
+
+#WRITE(MyPtr, $00026C)
+#WRITE(MyPtr, $000509)
+//マッカートニー
+McCartney<end>
+
+#WRITE(MyPtr, $00026F)
+//キース
+Keith<end>
+
+#WRITE(MyPtr, $000272)
+#WRITE(MyPtr, $00050C)
+//ハリソン
+Harrison<end>
+
+#WRITE(MyPtr, $000275)
+//シ゛ェット
+Fogelberg<end>
+
+#WRITE(MyPtr, $000278)
+//レンシ゛ャー
+Ranger<end>
+
+#WRITE(MyPtr, $00027B)
+#WRITE(MyPtr, $00050F)
+//フューチャー
+Neil<end>
+
+#WRITE(MyPtr, $00027E)
+//アッシュ
+Young<end>
+
+#WRITE(MyPtr, $000281)
+//ノイマン
+Carlos<end>
+
+#WRITE(MyPtr, $000284)
+#WRITE(MyPtr, $000512)
+//ホ゛ント゛
+Santana<end>
+
+#WRITE(MyPtr, $000287)
+//オニール
+Aubrey<end>
+
+#WRITE(MyPtr, $00028A)
+//ヒ゛ック゛
+Jimmy<end>
+
+#WRITE(MyPtr, $00028D)
+#WRITE(MyPtr, $000515)
+//モーリス
+Morris<end>
+
+#WRITE(MyPtr, $000290)
+//ク゛レコ
+Griffin<end>
+
+#WRITE(MyPtr, $000293)
+//ハノーハ゛
+Robb<end>
+
+#WRITE(MyPtr, $000296)
+//ヨーク
+Royer<end>
+
+#WRITE(MyPtr, $000299)
+//マリノ
+Marino<end>
+
+#WRITE(MyPtr, $00029C)
+//トレノ
+Toreno<end>
+
+#WRITE(MyPtr, $00029F)
+//レヒ゛ン
+Levin<end>
+
+#WRITE(MyPtr, $0002A2)
+//セレス
+Lyngstad<end>
+
+#WRITE(MyPtr, $0002A5)
+//マレー
+Agnetha<end>
+
+#WRITE(MyPtr, $0002A8)
+//リカキス
+Ulvaeus<end>
+
+#WRITE(MyPtr, $0002AB)
+//アリアス
+Carpenter<end>
+
+#WRITE(MyPtr, $0002AE)
+#WRITE(MyPtr, $000521)
+//ヒテ゛
+Jambalaya<end>
+
+#WRITE(MyPtr, $0002B1)
+//ナーカシ゛マー
+Thibodaux<end>
+
+#WRITE(MyPtr, $0002B4)
+//セナ
+Branigan<end>
+
+#WRITE(MyPtr, $0002B7)
+//フ゜ロスト
+Umbasa<end>
+
+#WRITE(MyPtr, $0002BA)
+//マンセル
+IslaBonita<end>
+
+#WRITE(MyPtr, $0002BD)
+//ナニーニ
+Pedro<end>
+
+#WRITE(MyPtr, $0002C0)
+//ケ゛ッヘ゜ルス
+OyeComova<end>
+
+#WRITE(MyPtr, $0002C3)
+//ト゛ッケン
+Mulata<end>
+
+#WRITE(MyPtr, $0002C6)
+//ハ゜ケット
+Besame<end>
+
+#WRITE(MyPtr, $0002C9)
+//コーン
+Mucho<end>
+
+#WRITE(MyPtr, $0002CC)
+//マクク゛リフ
+Kalinka<end>
+
+#WRITE(MyPtr, $0002CF)
+//ヘンタ゛ーソン
+Bradinsky<end>
+
+#WRITE(MyPtr, $0002D2)
+#WRITE(MyPtr, $00052D)
+//タイソン
+Tyson<end>
+
+#WRITE(MyPtr, $0002D5)
+//ラーキン
+Trojka<end>
+
+#WRITE(MyPtr, $0002D8)
+//ハ゜ーキンス
+Balalaika<end>
+
+#WRITE(MyPtr, $0002DB)
+#WRITE(MyPtr, $000530)
+//レナーケン
+Korobushka<end>
+
+#WRITE(MyPtr, $0002DE)
+#WRITE(MyPtr, $000533)
+//マッケンロー
+Korobeiniki<end>
+
+#WRITE(MyPtr, $0002E1)
+//フ゛ロス
+Loginska<end>
+
+#WRITE(MyPtr, $0002E4)
+//シ゛ュリー
+Jerry<end>
+
+#WRITE(MyPtr, $0002E7)
+//ユルテル
+AkaTombo<end>
+
+#WRITE(MyPtr, $0002EA)
+//サモス
+Furusatow<end>
+
+#WRITE(MyPtr, $0002ED)
+//ク゛レーヒ゛ー
+Soran<end>
+
+#WRITE(MyPtr, $0002F0)
+//カ゛ート゛ナー
+Yaren<end>
+
+#WRITE(MyPtr, $0002F3)
+//タ゛スキム
+Dokkoisho<end>
+
+#WRITE(MyPtr, $0002F6)
+//ト゛ナ
+Tsugaru<end>
+
+#WRITE(MyPtr, $0002F9)
+//ホイサ゛ー
+Jongara<end>
+
+#WRITE(MyPtr, $0002FC)
+//ラスター
+Sumida<end>
+
+#WRITE(MyPtr, $0002FF)
+//スハ゜ーキー
+Urara<end>
+
+#WRITE(MyPtr, $000302)
+//カンセコ
+Etenraku<end>
+
+#WRITE(MyPtr, $000305)
+//ク゛ッテン
+Lindenbaum<end>
+
+#WRITE(MyPtr, $000308)
+//モリター
+Imayou<end>
+
+#WRITE(MyPtr, $00030B)
+//スヘ゜ンサー
+Brunnen<end>
+
+#WRITE(MyPtr, $00030E)
+//マモラ
+Rinde<end>
+
+#WRITE(MyPtr, $000311)
+//シェンカー
+Geselle<end>
+
+#WRITE(MyPtr, $000314)
+//ヒ゜ケ
+Winde<end>
+
+#WRITE(MyPtr, $000317)
+//イーキ゛ー
+Angesicht<end>
+
+#WRITE(MyPtr, $00031A)
+//フィット
+Ludwig<end>
+
+#WRITE(MyPtr, $00031D)
+//エルフィン
+Elf Fin<end>
+
+#WRITE(MyPtr, $000320)
+//エルファン
+Elf Fan<end>
+
+#WRITE(MyPtr, $000323)
+//エルフノスチン
+Elf Nostin<end>
+
+#WRITE(MyPtr, $000326)
+//エルフカ゛ンク゛
+Elf Gang<end>
+
+#WRITE(MyPtr, $000329)
+//エルニーニョ
+Elf Nova<end>
+
+#WRITE(MyPtr, $00032C)
+//エルフローレン
+Elf Laurence<end>
+
+#WRITE(MyPtr, $00032F)
+//エルアライメン
+El Aligmen<end>
+
+#WRITE(MyPtr, $000332)
+//エルト゛ラト゛
+El Dorado<end>
+
+#WRITE(MyPtr, $000335)
+//エルメス
+El Mes<end>
+
+#WRITE(MyPtr, $000338)
+//エルエリ
+El Eri<end>
+
+#WRITE(MyPtr, $00033B)
+//エルハ゜チーノ
+El Condor<end>
+
+#WRITE(MyPtr, $00033E)
+//エルサルハ゛トル
+El Pasa<end>
+
+#WRITE(MyPtr, $000341)
+//エルフル
+Elfull<end>
+
+#WRITE(MyPtr, $000344)
+//エルスイート
+El Sweet<end>
+
+#WRITE(MyPtr, $000347)
+//エルサイース゛
+El Nino<end>
+
+#WRITE(MyPtr, $00034A)
+//エルタ゛ム
+El Nina<end>
+
+#WRITE(MyPtr, $00034D)
+//エルサレム
+El Salem<end>
+
+#WRITE(MyPtr, $000350)
+//エルトッキュ
+El Gaucho<end>
+
+#WRITE(MyPtr, $000353)
+//エルフランス
+El France<end>
+
+#WRITE(MyPtr, $000356)
+//エルシ゛ンシ゛ャ
+El Ginger<end>
+
+#WRITE(MyPtr, $000359)
+//エルフレット
+El Fred<end>
+
+#WRITE(MyPtr, $00035C)
+//エルファイン
+Elfine<end>
+
+#WRITE(MyPtr, $00035F)
+//エルヒ゜ート
+El Eanor<end>
+
+#WRITE(MyPtr, $000362)
+//エルマイン
+El Gato<end>
+
+#WRITE(MyPtr, $000365)
+//エルサ
+El Lobo<end>
+
+#WRITE(MyPtr, $000368)
+//エルヘ゛スト
+El Best<end>
+
+#WRITE(MyPtr, $00036B)
+//エルヘ゛ータ
+El Evator<end>
+
+#WRITE(MyPtr, $00036E)
+//エルサ゛ヘ゛ス
+El Zabeth<end>
+
+#WRITE(MyPtr, $000371)
+//エルモミサキ
+El Fada<end>
+
+#WRITE(MyPtr, $000374)
+//エルツハイマー
+El Zheimer<end>
+
+#WRITE(MyPtr, $000377)
+//エルカ゛イム
+El Gaim<end>
+
+#WRITE(MyPtr, $00037A)
+//エルシオン
+El Sion<end>
+
+#WRITE(MyPtr, $00037D)
+//エルトンシ゛ョン
+El Tonjohn<end>
+
+#WRITE(MyPtr, $000380)
+//エルホ゛ー
+El Bow<end>
+
+#WRITE(MyPtr, $000383)
+//エルウ゛ィス
+El Vis<end>
+
+#WRITE(MyPtr, $000386)
+//エルキテル
+El Ectric<end>
+
+#WRITE(MyPtr, $000389)
+//エルエステ゛ー
+El SD<end>
+
+#WRITE(MyPtr, $00038C)
+//エルカ゛ンス
+El Egance<end>
+
+#WRITE(MyPtr, $00038F)
+//エルテ゛ンテ
+El Dente<end>
+
+#WRITE(MyPtr, $000392)
+//エルフェウス
+El DenRing<end>
+
+#WRITE(MyPtr, $000395)
+//ト゛ワーリン
+Dwalin<end>
+
+#WRITE(MyPtr, $000398)
+//ト゛ワホ゛イ
+Dwaboy<end>
+
+#WRITE(MyPtr, $00039B)
+//ト゛ワノフ゛
+Dwa Knob<end>
+
+#WRITE(MyPtr, $00039E)
+//ト゛ワキュラ
+Dwa Cula<end>
+
+#WRITE(MyPtr, $0003A1)
+//ト゛ワチャカ
+Dwa Chaka<end>
+
+#WRITE(MyPtr, $0003A4)
+//ト゛ワエモン
+Dwa Emon<end>
+
+#WRITE(MyPtr, $0003A7)
+//ト゛ワッフ゜
+Dwa Wop<end>
+
+#WRITE(MyPtr, $0003AA)
+//ト゛ワエモア
+Dwa Gato<end>
+
+#WRITE(MyPtr, $0003AD)
+//ト゛ワトエフスキ
+Dwa Toevsky<end>
+
+#WRITE(MyPtr, $0003B0)
+//ト゛ワルサ゛ーク
+Dwa Rak<end>
+
+#WRITE(MyPtr, $0003B3)
+//ト゛ワノヤマ
+Dwa Yama<end>
+
+#WRITE(MyPtr, $0003B6)
+//ト゛ワノフシ゛
+Dwa Lada<end>
+
+#WRITE(MyPtr, $0003B9)
+//ト゛ワノウミ
+Dwa Obladi<end>
+
+#WRITE(MyPtr, $0003BC)
+//ト゛ワノハナ
+Dwa Sinton<end>
+
+#WRITE(MyPtr, $0003BF)
+//ト゛ワノサト
+Dwa Sambon<end>
+
+#WRITE(MyPtr, $0003C2)
+//ト゛ワノサト
+Dwa Sabi<end>
+
+#WRITE(MyPtr, $0003C5)
+//ト゛ワト゛ワ
+Dwa Sian<end>
+
+#WRITE(MyPtr, $0003C8)
+//ト゛ワムスコ
+Dwa Palyzer<end>
+
+#WRITE(MyPtr, $0003CB)
+//ト゛ワッシ
+Dwa Kanda<end>
+
+#WRITE(MyPtr, $0003CE)
+//ト゛ワラン
+Dwa Karanai<end>
+
+#WRITE(MyPtr, $0003D1)
+//ト゛ワッケン
+Dwa Drobe<end>
+
+#WRITE(MyPtr, $0003D4)
+//ノムサン
+Gnormality<end>
+
+#WRITE(MyPtr, $0003D7)
+//ノームン
+Gnormie<end>
+
+#WRITE(MyPtr, $0003DA)
+//ノーラム
+Gnominator<end>
+
+#WRITE(MyPtr, $0003DD)
+//ノリタム
+Gnoritake<end>
+
+#WRITE(MyPtr, $0003E0)
+//ノコ゛ム
+Gnomogracy<end>
+
+#WRITE(MyPtr, $0003E3)
+//ノッテム
+Gnotepad<end>
+
+#WRITE(MyPtr, $0003E6)
+//ノムリン
+Gnotebook<end>
+
+#WRITE(MyPtr, $0003E9)
+//ノムノム
+Gnobody<end>
+
+#WRITE(MyPtr, $0003EC)
+//ノック
+Gnobleman<end>
+
+#WRITE(MyPtr, $0003EF)
+//ノーシム
+Gnostril<end>
+
+#WRITE(MyPtr, $0003F2)
+//ケンタ
+Center<end>
+
+#WRITE(MyPtr, $0003F5)
+//ケンシ゛
+Century<end>
+
+#WRITE(MyPtr, $0003F8)
+//ケンソ゛ウ
+Censorship<end>
+
+#WRITE(MyPtr, $0003FB)
+//ケンシ
+Centipede<end>
+
+#WRITE(MyPtr, $0003FE)
+//ケント゛ーン
+Centucky<end>
+
+#WRITE(MyPtr, $000401)
+//ケンタスティック
+Centurion<end>
+
+#WRITE(MyPtr, $000404)
+//ケンタカクラ
+Cenotaph<end>
+
+#WRITE(MyPtr, $000407)
+//ケンタック
+Centledge<end>
+
+#WRITE(MyPtr, $00040A)
+//ケンタライオン
+Centalion<end>
+
+#WRITE(MyPtr, $00040D)
+//ケンタオレンチ゛
+Centuorange<end>
+
+#WRITE(MyPtr, $000410)
+//ケンタロウ
+Centaro<end>
+
+#WRITE(MyPtr, $000413)
+//ケンシ゛ロウ
+Cenjiro<end>
+
+#WRITE(MyPtr, $000416)
+//ケンサ゛フ゛ロウ
+Cenzaburo<end>
+
+#WRITE(MyPtr, $000419)
+//ケンシロウ
+Censhiro<end>
+
+#WRITE(MyPtr, $00041C)
+//ケンコ゛ロウ
+Cengoro<end>
+
+#WRITE(MyPtr, $00041F)
+//ケンロクロウ
+Cenrokuro<end>
+
+#WRITE(MyPtr, $000422)
+//ケンシチロウ
+Censhichiro<end>
+
+#WRITE(MyPtr, $000425)
+//ケンハチロウ
+Cenhachiro<end>
+
+#WRITE(MyPtr, $000428)
+//ケンクロウ
+Cenkuro<end>
+
+#WRITE(MyPtr, $00042B)
+//ケンシ゛ュウロウ
+Cenjuro<end>
+
+#WRITE(MyPtr, $00042E)
+//ケンカ゛ミネ
+Centimeter<end>
+
+#WRITE(MyPtr, $000431)
+//ケンカ゛ク
+Censure<end>
+
+#WRITE(MyPtr, $000434)
+//ケンケン
+Cenotaph<end>
+
+#WRITE(MyPtr, $000437)
+//ケンタラス
+Centerpiece<end>
+
+#WRITE(MyPtr, $00043A)
+//ケンサン
+Centrifug<end>
+
+#WRITE(MyPtr, $00043D)
+//ケンコウ
+Cesington<end>
+
+#WRITE(MyPtr, $000440)
+//ケンタム
+Cenosis<end>
+
+#WRITE(MyPtr, $000443)
+//ケンタッキー
+Centenarian<end>
+
+#WRITE(MyPtr, $000446)
+//ケンタクロース
+Centamin<end>
+
+#WRITE(MyPtr, $000449)
+//ケンタクンテ
+Centavo<end>
+
+#WRITE(MyPtr, $00044C)
+//ケロタン
+Kerotan<end>
+
+#WRITE(MyPtr, $00044F)
+//ケロリアン
+Kerorian<end>
+
+#WRITE(MyPtr, $000452)
+//ケロレラ
+Kerorella<end>
+
+#WRITE(MyPtr, $000455)
+//ケロリスト
+Kerorist<end>
+
+#WRITE(MyPtr, $000458)
+//ケロンハ゜ス
+Kerompus<end>
+
+#WRITE(MyPtr, $00045B)
+//ケロム
+Keromancy<end>
+
+#WRITE(MyPtr, $00045E)
+//ケロシン
+Kerography<end>
+
+#WRITE(MyPtr, $000461)
+//ケロック
+Keroxylon<end>
+
+#WRITE(MyPtr, $000464)
+//ケロリンカ゛
+Keropegia<end>
+
+#WRITE(MyPtr, $000467)
+//ケロワッサン
+Keroplasty<end>
+
+#WRITE(MyPtr, $00046A)
+//キ゛ョロイチ
+Gyoroichi<end>
+
+#WRITE(MyPtr, $00046D)
+//キ゛ョロシ゛
+Gyoroji<end>
+
+#WRITE(MyPtr, $000470)
+//キ゛ョロソ゛ウ
+Gyorozo<end>
+
+#WRITE(MyPtr, $000473)
+//キ゛ョロシ
+Gyoroshi<end>
+
+#WRITE(MyPtr, $000476)
+//キ゛ョロコ゛ン
+Gyorogon<end>
+
+#WRITE(MyPtr, $000479)
+//キ゛ョロロク
+Gyororoku<end>
+
+#WRITE(MyPtr, $00047C)
+//ケロテーフ゜
+Kerotape<end>
+
+#WRITE(MyPtr, $00047F)
+//ケロロフィル
+Kerosene<end>
+
+#WRITE(MyPtr, $000482)
+//キ゛ョロキュ
+Gyorokyu<end>
+
+#WRITE(MyPtr, $000485)
+//キ゛ョキ゛ョ
+Gyogyo<end>
+
+#WRITE(MyPtr, $000488)
+//ワニケ゛ータ
+Crocosmia<end>
+
+#WRITE(MyPtr, $00048B)
+//ワニマル
+Crocodimal<end>
+
+#WRITE(MyPtr, $00048E)
+//ワニタ゛イル
+Crocoite<end>
+
+#WRITE(MyPtr, $000491)
+//ワニン
+Crocolite<end>
+
+#WRITE(MyPtr, $000494)
+//ワニコ゛ン
+Croconate<end>
+
+#WRITE(MyPtr, $000497)
+//ワニタ゛フル
+Crocothemis<end>
+
+#WRITE(MyPtr, $00049A)
+//ワニカタヘイシ゛
+Crocodylomorpha<end>
+
+#WRITE(MyPtr, $00049D)
+//ワニハチ
+Crocolidia<end>
+
+#WRITE(MyPtr, $0004A0)
+//ワニキュウ
+Croket<end>
+
+#WRITE(MyPtr, $0004A3)
+//ワニシ゛ュウ
+Crokot<end>
+
+#WRITE(MyPtr, $0004A9)
+//シ゛ェイムス
+Jamus<end>
+
+#WRITE(MyPtr, $0004AC)
+//ローラント゛
+Roland<end>
+
+#WRITE(MyPtr, $0004AF)
+//ウィクリル
+Vicryl<end>
+
+#WRITE(MyPtr, $0004B2)
+//サマセット
+Summerset<end>
+
+#WRITE(MyPtr, $0004B5)
+//ト゛レイク
+Drake<end>
+
+#WRITE(MyPtr, $0004B8)
+//フォックス
+Fox<end>
+
+#WRITE(MyPtr, $0004BB)
+//ハーハ゛ー
+Harber<end>
+
+#WRITE(MyPtr, $0004BE)
+//クロムウェル
+Cromwell<end>
+
+#WRITE(MyPtr, $0004C1)
+//ホッフ゜ス
+Hops<end>
+
+#WRITE(MyPtr, $00051B)
+//ランカスター
+Lancaster<end>
+
+#WRITE(MyPtr, $00051E)
+//フェンタ゛ー
+Fender<end>
+
+#WRITE(MyPtr, $000524)
+//センイチ
+Ajax<end>
+
+#WRITE(MyPtr, $000527)
+//アント゛リュー
+Andrew<end>
+
+#WRITE(MyPtr, $00052A)
+//マクセル
+Maxell<end>
+
+#WRITE(MyPtr, $000536)
+//ユンケロ
+Junkero<end>
+
+#WRITE(MyPtr, $000539)
+#WRITE(MyPtr, $00053C)
+#WRITE(MyPtr, $00053F)
+#WRITE(MyPtr, $000542)
+#WRITE(MyPtr, $000545)
+#WRITE(MyPtr, $000548)
+#WRITE(MyPtr, $00054B)
+#WRITE(MyPtr, $00054E)
+#WRITE(MyPtr, $000551)
+#WRITE(MyPtr, $000554)
+#WRITE(MyPtr, $000557)
+#WRITE(MyPtr, $00055A)
+#WRITE(MyPtr, $00055D)
+#WRITE(MyPtr, $000560)
+#WRITE(MyPtr, $000563)
+#WRITE(MyPtr, $000566)
+#WRITE(MyPtr, $000569)
+#WRITE(MyPtr, $00056C)
+#WRITE(MyPtr, $00056F)
+#WRITE(MyPtr, $000572)
+#WRITE(MyPtr, $000575)
+#WRITE(MyPtr, $000578)
+#WRITE(MyPtr, $00057B)
+#WRITE(MyPtr, $00057E)
+#WRITE(MyPtr, $000581)
+#WRITE(MyPtr, $000584)
+#WRITE(MyPtr, $000587)
+#WRITE(MyPtr, $00058A)
+#WRITE(MyPtr, $00058D)
+#WRITE(MyPtr, $000590)
+#WRITE(MyPtr, $000593)
+#WRITE(MyPtr, $000596)
+#WRITE(MyPtr, $000599)
+#WRITE(MyPtr, $00059C)
+#WRITE(MyPtr, $00059F)
+#WRITE(MyPtr, $0005A2)
+#WRITE(MyPtr, $0005A5)
+#WRITE(MyPtr, $0005A8)
+#WRITE(MyPtr, $0005AB)
+#WRITE(MyPtr, $0005AE)
+#WRITE(MyPtr, $0005B1)
+#WRITE(MyPtr, $0005B4)
+#WRITE(MyPtr, $0005B7)
+#WRITE(MyPtr, $0005BA)
+#WRITE(MyPtr, $0005BD)
+#WRITE(MyPtr, $0005C0)
+#WRITE(MyPtr, $0005C3)
+#WRITE(MyPtr, $0005C6)
+#WRITE(MyPtr, $0005C9)
+#WRITE(MyPtr, $0005CC)
+#WRITE(MyPtr, $0005CF)
+#WRITE(MyPtr, $0005D2)
+#WRITE(MyPtr, $0005D5)
+#WRITE(MyPtr, $0005D8)
+#WRITE(MyPtr, $0005DB)
+#WRITE(MyPtr, $0005DE)
+#WRITE(MyPtr, $0005E1)
+#WRITE(MyPtr, $0005E4)
+#WRITE(MyPtr, $0005E7)
+#WRITE(MyPtr, $0005EA)
+#WRITE(MyPtr, $0005ED)
+#WRITE(MyPtr, $0005F0)
+#WRITE(MyPtr, $0005F3)
+#WRITE(MyPtr, $0005F6)
+#WRITE(MyPtr, $0005F9)
+#WRITE(MyPtr, $0005FC)
+#WRITE(MyPtr, $0005FF)
+#WRITE(MyPtr, $000602)
+#WRITE(MyPtr, $000605)
+#WRITE(MyPtr, $000608)
+#WRITE(MyPtr, $00060B)
+#WRITE(MyPtr, $00060E)
+#WRITE(MyPtr, $000611)
+#WRITE(MyPtr, $000614)
+#WRITE(MyPtr, $000617)
+#WRITE(MyPtr, $00061A)
+#WRITE(MyPtr, $00061D)
+	<end>
+

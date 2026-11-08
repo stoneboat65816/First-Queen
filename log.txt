@@ -1,0 +1,6 @@
+     2 ADDTBL    Added table 'FQ_vn.txt' as 'Table'
+     3 ACTIVETBL Active table is now 'Table'
+     4 HDR       Header size is now $0
+     6 CREATEPTR CustomPointer 'MyPtr' Addressing 'HIROM' Offsetting 0 Size 16d HeaderSize $0
+     8 JMP       ROM Position is now $0
+Đồn lũy trên núi<end>

@@ -1,0 +1,305 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($00F6)
+#WRITE(MyPtr, $000000)
+#WRITE(MyPtr, $0000D2)
+//マシ゛シャン<end>
+Ma đạo sĩ<end>
+
+#WRITE(MyPtr, $000003)
+//フ゜リンス<end>
+Vương tử<end>
+
+#WRITE(MyPtr, $000006)
+#WRITE(MyPtr, $0000C9)
+#WRITE(MyPtr, $0000DB)
+//ゆうしゃ<end>
+Dũng sĩ<end>
+
+#WRITE(MyPtr, $000009)
+//しゅうと゛うし<end>
+Tu sĩ<end>
+
+#WRITE(MyPtr, $00000C)
+//ナイト<end>
+Hiệp sĩ<end>
+
+#WRITE(MyPtr, $00000F)
+//アマソ゛ネス<end>
+Amazones<end>
+
+#WRITE(MyPtr, $000012)
+//ホ゛ウファイター<end>
+Cung thủ<end>
+
+#WRITE(MyPtr, $000015)
+#WRITE(MyPtr, $000036)
+//アーマーシュータ<end>
+Giáp xạ thủ<end>
+
+#WRITE(MyPtr, $000018)
+//ファイター<end>
+Chiến binh<end>
+
+#WRITE(MyPtr, $00001B)
+#WRITE(MyPtr, $000030)
+#WRITE(MyPtr, $0000AE)
+//ソルシ゛ャー<end>
+Lính trơn<end>
+
+#WRITE(MyPtr, $00001E)
+//け゛んし゛ゅつし<end>
+Huyền thuật sư<end>
+
+#WRITE(MyPtr, $000021)
+//くろきし<end>
+Hắc kỵ sĩ<end>
+
+#WRITE(MyPtr, $000024)
+//ランス<end>
+Lance<end>
+
+#WRITE(MyPtr, $000027)
+//まけんし<end>
+Ma kiếm sĩ<end>
+
+#WRITE(MyPtr, $00002A)
+//レット゛アーマー<end>
+Xích giáp<end>
+
+#WRITE(MyPtr, $00002D)
+//ク゛レムシュータ<end>
+Gleam Shooter<end>
+
+#WRITE(MyPtr, $000033)
+//シューター<end>
+Xạ thủ<end>
+
+#WRITE(MyPtr, $000039)
+//エルフキンク゛<end>
+Vua ELF<end>
+
+#WRITE(MyPtr, $00003C)
+//スケルトン<end>
+Bạch cốt<end>
+
+#WRITE(MyPtr, $00003F)
+//ソ゛ンヒ゛<end>
+Zombie<end>
+
+#WRITE(MyPtr, $000042)
+//おとこ<end>
+Thiện nam tử<end>
+
+#WRITE(MyPtr, $000045)
+//おんな<end>
+Thiện nữ nhân<end>
+
+#WRITE(MyPtr, $000048)
+//フ゜リンセス<end>
+Vương nữ<end>
+
+#WRITE(MyPtr, $00004B)
+//おとこのこ<end>
+Bé trai<end>
+
+#WRITE(MyPtr, $00004E)
+//と゛うし<end>
+Đạo sĩ<end>
+
+#WRITE(MyPtr, $000051)
+//ほ゛くし<end>
+Mục sư<end>
+
+#WRITE(MyPtr, $000054)
+//てんし<end>
+Thiên sứ<end>
+
+#WRITE(MyPtr, $000057)
+//ク゛ール<end>
+Ghoul<end>
+
+#WRITE(MyPtr, $00005A)
+//あくま<end>
+Ác ma<end>
+
+#WRITE(MyPtr, $00005D)
+//しにか゛み<end>
+Tử thần<end>
+
+#WRITE(MyPtr, $000060)
+//アルマシ゛ロ<end>
+Xuyên sơn giáp<end>
+
+#WRITE(MyPtr, $000063)
+//おおめた゛ま<end>
+Cầu mắt to<end>
+
+#WRITE(MyPtr, $000066)
+//コ゛ースト<end>
+Hồn ma<end>
+
+#WRITE(MyPtr, $000069)
+//ワニ<end>
+Kă6<end>
+
+#WRITE(MyPtr, $00006C)
+//ヘヒ゛<end>
+Đại xà<end>
+
+#WRITE(MyPtr, $00006F)
+//はんき゛ょし゛ん<end>
+Bán ngư nhân<end>
+
+#WRITE(MyPtr, $000072)
+//やまコ゛リラ<end>
+Khỉ đột núi<end>
+
+#WRITE(MyPtr, $000075)
+//コウモリ<end>
+Dơi<end>
+
+#WRITE(MyPtr, $000078)
+//マンイーター<end>
+Man Eater<end>
+
+#WRITE(MyPtr, $00007B)
+//ハ゛ート゛マン<end>
+Người chim.<end>
+
+#WRITE(MyPtr, $00007E)
+//ヒ゛ック゛マウス<end>
+Rồng mộm<end>
+
+#WRITE(MyPtr, $000081)
+//エルフユミ<end>
+ELF cung<end>
+
+#WRITE(MyPtr, $000084)
+#WRITE(MyPtr, $0000C3)
+//エルフ<end>
+ELF<end>
+
+#WRITE(MyPtr, $000087)
+//ト゛ワーフ<end>
+Dwarf<end>
+
+#WRITE(MyPtr, $00008A)
+//ノーム<end>
+Gnome<end>
+
+#WRITE(MyPtr, $00008D)
+//リサ゛ート゛<end>
+Thằn lằn<end>
+
+#WRITE(MyPtr, $000090)
+//リサ゛ート゛マン<end>
+Người thằn lằn<end>
+
+#WRITE(MyPtr, $000093)
+//ケンタウロス<end>
+Centaurus<end>
+
+#WRITE(MyPtr, $000096)
+//ケンタウロスユミ<end>
+Centaurus cung<end>
+
+#WRITE(MyPtr, $000099)
+//レイハ゛ン<end>
+Raven<end>
+
+#WRITE(MyPtr, $00009C)
+//ウルフ<end>
+Sói<end>
+
+#WRITE(MyPtr, $00009F)
+//きとうし<end>
+Thầy mo<end>
+
+#WRITE(MyPtr, $0000A2)
+#WRITE(MyPtr, $0000F0)
+//ト゛ラコ゛ン<end>
+Rồng<end>
+
+#WRITE(MyPtr, $0000A5)
+//クイーン<end>
+Nữ vương<end>
+
+#WRITE(MyPtr, $0000A8)
+//ウイッチ<end>
+Phù thủy<end>
+
+#WRITE(MyPtr, $0000AB)
+//コ゛ーレム<end>
+Golem<end>
+
+#WRITE(MyPtr, $0000B1)
+//キンク゛<end>
+Đại vương<end>
+
+#WRITE(MyPtr, $0000B4)
+#WRITE(MyPtr, $0000C0)
+//あきんと゛<end>
+Thương nhân<end>
+
+#WRITE(MyPtr, $0000B7)
+//ハ゛ーサーカー<end>
+Berserker<end>
+
+#WRITE(MyPtr, $0000BA)
+#WRITE(MyPtr, $0000CC)
+//せんし<end>
+Chiến sĩ<end>
+
+#WRITE(MyPtr, $0000BD)
+//し゛いさん<end>
+Hiền lão<end>
+
+#WRITE(MyPtr, $0000C6)
+//きへい<end>
+Kỵ binh<end>
+
+#WRITE(MyPtr, $0000CF)
+//エルフナイト<end>
+ELF Knight<end>
+
+#WRITE(MyPtr, $0000D5)
+//ハ゛ルキリー<end>
+Valkyrie<end>
+
+#WRITE(MyPtr, $0000D8)
+//カタハ゜ルト<end>
+Catapult<end>
+
+#WRITE(MyPtr, $0000DE)
+//このえへい<end>
+Cận vệ<end>
+
+#WRITE(MyPtr, $0000E1)
+//まおう<end>
+Ma vương<end>
+
+#WRITE(MyPtr, $0000E4)
+//カ゛マ<end>
+Cóc<end>
+
+#WRITE(MyPtr, $0000E7)
+//ストンコ゛ーレム<end>
+Stone Golem<end>
+
+#WRITE(MyPtr, $0000EA)
+//おおいか<end>
+Mực khổng lồ<end>
+
+#WRITE(MyPtr, $0000ED)
+//マンティコア<end>
+Manticore<end>
+
+#WRITE(MyPtr, $0000F3)
+//カ゛ーコ゛イル<end>
+Gargoyle<end>

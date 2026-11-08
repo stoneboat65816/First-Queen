@@ -1,0 +1,55 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($0060)
+#WRITE(MyPtr, $000000)
+//みしゅつけ゛ん
+Not deployed<end>
+
+#WRITE(MyPtr, $000003)
+//しほ゛う
+Dead<end>
+
+#WRITE(MyPtr, $000006)
+//やられ
+Hit<end>
+
+#WRITE(MyPtr, $000009)
+//かくれ
+Hiding<end>
+
+#WRITE(MyPtr, $00000C)
+//とつけ゛き
+Charge<end>
+
+#WRITE(MyPtr, $00000F)
+//こうけ゛き
+Attack<end>
+
+#WRITE(MyPtr, $000012)
+//たいきゃく
+Retreat<end>
+
+#WRITE(MyPtr, $000015)
+//にけ
+Fleeing<end>
+
+#WRITE(MyPtr, $000018)
+//こんらん
+Confused<end>
+
+#WRITE(MyPtr, $00001B)
+//せんとうちゅう
+In combat<end>
+
+#WRITE(MyPtr, $00001E)
+//きゅうけい
+Resting<end>
+
+#WRITE(MyPtr, $000021)
+//ていし
+Halted<end>

@@ -1,0 +1,19 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL1>　<HIRA>なにもつけない
+//
+//　<KATA>コントロール・キャラ　
+//　<9E><9E>　　<9E>
+//　<HIRA>しふんのふたい
+//　　　　　　<9E>
+//　<HIRA>てき・しきへつ：　　　<END>
+No Marker<line>
+Controlled Unit<line>
+Own Squad<line>
+Foe or Ally:<end>

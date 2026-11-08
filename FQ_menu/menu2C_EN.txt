@@ -1,0 +1,12 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 16)
+
+#JMP($00)
+//<PAL0><HIRA>　た゛っしゅつ　しますか？　
+//<PAL1>　　　　はい　　いいえ<END>
+Escape from here?<line>
+<pal1>		<opt>Yes				<opt>No<end>

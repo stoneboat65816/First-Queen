@@ -1,0 +1,3505 @@
+#VAR(Table,TABLE)
+#ADDTBL("FQ_vn.txt",Table)
+#ACTIVETBL(Table)
+#HDR($0)
+#VAR(MyPtr, CUSTOMPOINTER)
+#CREATEPTR(MyPtr, "HIROM", $00, 24)
+
+#JMP($05BE)
+#WRITE(MyPtr, $000000)
+//spd0　　　　　　　　　　　　　　　　　　　［リッチモンドの村］<end>
+<mannaka>Làng Richmond<end>
+
+#WRITE(MyPtr, $000003)
+//spd0　　　　　　　　　　　　　　　　　　コンウォールの森の近く<end>
+<mannaka>Gần khu rừng Conwall<end>
+
+#WRITE(MyPtr, $000006)
+//墓からの声：「この世をすくいに、［過去］からきた魔法使いが［沼の館］にいる。」
+//「沼をよくさがせ、館の入口があるはずだ。」<end>
+<frame><$02>
+Giọng nói từ ngôi mộ:<line>
+Có một vị pháp sư hiện đang ở<line>
+dinh thự trong đầm lầy.<page>
+Vị ấy đến đây từ "quá khứ" để<line>
+cứu rỗi cõi đời.<page>
+Hãy tìm đến đầm lầy.<line>
+Lối vào dinh thự nằm ở đó.<end>
+
+#WRITE(MyPtr, $000009)
+//半魚人：「どうだ？　オラのワニ、かわいいだろ？」
+//「こんなかわいいワニをアマゾネスのやつらは食っちまうんだぞ！　　オラ、信じられないだよ！」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  sao hả? Cá xấu của<line>
+tụi tui có đẹp không?<page>
+Thiệt không thể tin nổi đám<line>
+Amazones lại ăn thịt cá xấu<line>
+dễ thương như này căăkk!<end>
+
+#WRITE(MyPtr, $00000C)
+//かべに落がきがある<page>
+//「この城は魔王にうばわれてしまった。あいつとけいやくできるのは、一人だけなのだ！」<end>
+<frame><$02>
+Trên tường có dán mảnh giấy.<line>
+Trên đó có dòng chữ:<page>
+"Lâu đài này đã bị Ma vương<line>
+chiếm đoạt.Chỉ một người duy<line>
+nhất có thể giao kèo với hắn.<end>
+
+#WRITE(MyPtr, $00000F)
+//ドクロ：「魔物がこわいものしっているか。そいつは、強れつな光だよケケケケケ。」<end>
+<frame><$02><font><$01>
+Đầu lâu:  ngươi có biết yêu quái<line>
+không.Nó là ánh sáng mạnh mẽ<line>
+kekekeke.<end>
+
+#WRITE(MyPtr, $000012)
+//ドクロ：「魔物が手を出せないものしっているか。そいつは空の虹さ。ははははは。」<end>
+<frame><$02><font><$01>
+Đầu lâu:  ngươi có biết thứ mà<line>
+yêu quái không chạm tay tới<line>
+được không.<page>
+Đó là cầu vòng trên bầu trời<line>
+kekekeke.<end>
+
+#WRITE(MyPtr, $000015)
+//ドクロ：「ドラゴンは、このおくにいる。」
+//「でもやつに会うためには、おくの祭だんにのっているドクロの力をかりなきゃならないぜ。」<end>
+<frame><$02><font><$01>
+Đầu lâu:<line>
+Rồng ở sâu bên trong này.<page>
+Nhưng muốn gặp nó thì phải<line>
+nhờ sức mạnh của đầu lâu ở tế<line>
+đàn bên trong kekeke.<end>
+
+#WRITE(MyPtr, $000018)
+//spd0　　　　　　　　　　　　　　　　　　このカガミは何か変だ！<end>
+Cái gương chỗ này lạ quá!<end>
+
+#WRITE(MyPtr, $00001B)
+//ペリーズ：「リッチモンド伯よ、　たのむぞ。キャサリンのくわだてを打ちくだいてくれ！」
+//「わしはこのとおり自分の身もままならない。わずかな数だが、わが兵が外で待っておる。」
+//「かれらをひきいて［オルニック］と戦ってくれ！」<end>
+Vua Peris:  hỡi Bá tước Richmond,<line>
+hãy giúp Trẫm đập tan âm mưu<line>
+của Catharin.<page>
+Khanh thấy đấy,giờ đây Trẫm<line>
+còn không tự dịch chuyển tấm<line>
+thân được nữa.<page>
+Tuy không nhiều, nhưng binh sĩ<line>
+của Trẫm đang đợi khanh bên<line>
+ngoài.<page>
+Hãy dẫn dắt họ mà chiến đấu<line>
+chống lại lũ Ornic!<end>
+
+#WRITE(MyPtr, $00001E)
+//ペリーズ：「すでにわが配下の騎士コンスタンティンも、ソルズベリーに向かわしておる。」
+//「かれらはすぐにでも戦える場所にいるはずじゃ。そなたのかつやくを期待しておるぞ。」<end>
+Vua Peris:  kỵ sĩ Constantin,<line>
+thuộc hạ của Trẫm đã tiến về<line>
+Solberry rồi.<page>
+Hẳn là cậu ta đang ở gần chiến<line>
+trường.Hãy hợp lưu với cậu ta.<page>
+Cầu cho khanh lập được chiến<line>
+công hiển hách.<end>
+
+#WRITE(MyPtr, $000021)
+//ペリーズ：「せ、戦況はどうじゃ？よい協力者はえられたか？」
+//「わが［カーディック］の兵だけではあの［オルニック］には立ち向かえんかもしれん。」<page>
+//「ほかの部族に協力を求めるほかはないか・・・」<end>
+Vua Peris:  chiến sự thế nào rồi?<line>
+Khanh đã tìm được kiệt vật hợp<line>
+sức với mình chưa?<page>
+Nếu chỉ trông chờ vào binh lực<line>
+của mỗi Cardic chúng ta thì sẽ<line>
+không cự nổi Ornic đâu.<line>
+Đành phải nhờ các bộ tộc khác<line>
+giúp sức vậy...<end>
+
+#WRITE(MyPtr, $000024)
+//ペリーズ：「おお、リッチモンド、ゴホッ、せっ、戦況は・・・　　　グフッ、グフッ」<end>
+Vua Peris:  ồ Richmond,khụ khụ...<line>
+Tình hình chiến sự thế nào...<line>
+Khụ...khụ...<end>
+
+#WRITE(MyPtr, $000027)
+//ソフィア：「［オルニック］と戦ってくれるのですね！」<page>
+//ソフィア：「それではカーディックの町にわたくしのおさななじみの、［ジェーン］がおりますから、たずねてみてください。きっと力になってくれるはずです。」<end>
+Sophia:  ngài hãy giúp ta đánh<line>
+bại lũ Ornic!<page>
+Sophia:  trong thị trấn Cardic<line>
+có người bạn thân của ta là<line>
+Jane.Hãy đến tìm cô ấy.<page>
+Sophia:  chắc hẳn cô ấy sẽ giúp<line>
+sức cho ngài trong trận chiến<line>
+lần này.<end>
+
+#WRITE(MyPtr, $00002A)
+//ソフィア：「父の容体は思わしくありません。いっこくも早く［オルニック］をたおしてください。」<end>
+Sophia:  long thể của phụ vương<line>
+ta không được như ý. Hãy mau<line>
+chóng tiến đánh Ornic.<end>
+
+#WRITE(MyPtr, $00002D)
+//ソフィア：「父は、もうダメかもしれません。」
+//「もし父が死んだら、城にのこる者すべてを集めて、キャサリンと戦うことになりましょう。」<end>
+Sophia:  có lẽ phụ vương ta khó<line>
+qua khỏi lần này.<page>
+Nếu người có mệnh hệ gì thì<line>
+ta quyết tập hợp những kẻ còn<line>
+sót trong thành mà quyết sống<line>
+mái với mụ Catharin một trận.<end>
+
+#WRITE(MyPtr, $000030)
+//「リッチモンド様、我々もおともさせて下さい。」<page>
+//「我々弓兵は、［Ｂ］ボタンで矢をうつことが出来ます。」<end>
+<frame><$02>
+Lãnh chúa Richmond,xin hãy để<line>
+chúng thuộc hạ theo ngài.<page>
+Chúng thuộc hạ là cung binh,<line>
+chỉ cần nhấn nút B là có thể<line>
+bắn tên được.<end>
+
+#WRITE(MyPtr, $000033)
+//「城は我々が守ります。なにとぞ、ご無事で。」<end>
+<frame><$02>
+Chúng tôi sẽ bảo vệ thành.<line>
+Xin ngài hãy bảo trọng.<end>
+
+#WRITE(MyPtr, $000036)
+//「まあ、あなた様のうわさは町中に広まっていますわ。がんばって下さいね！」<end>
+<frame><$02><font><$01>
+Uy danh của ngài vang dội khắp<line>
+thị trấn này.Hãy cố lên nhé!<end>
+
+#WRITE(MyPtr, $000039)
+//「宿屋に［ジェーン］のファンが　あつまっているんだ。」
+//「あいつら、ジェーン一人じゃいくさに行かせないって、はりきっていたぜ。」<end>
+<frame><$02><font><$01>
+Đám fan cuồng của Jane đang<line>
+tập trung trong lữ điếm.<page>
+Họ nói là quyết không để cô<line>
+ấy đi đâu một mình.<end>
+
+#WRITE(MyPtr, $00003C)
+//「うわさでは、敵は［ルートン］のドワーフをおって、［コーンウォール］まで来ているらしいのです。」<end>
+<frame><$02>
+Nghe đồn là địch đã băng qua<line>
+Lurton của tộc Dwarf và đang<line>
+tiến đến Conwall.<end>
+
+#WRITE(MyPtr, $00003F)
+//「エルフ王の子が人質にとらわれたそうだ。」<page>
+//「でもなきゃ［オルニック］のばかどもをエルフのやつらが放っておくわけないさ。」<end>
+<frame><$02><font><$01>
+Nghe nói Vương tử tộc Elf đã<line>
+bị bắt cóc rồi.<page>
+Nếu không thì tộc Elf sẽ không<line>
+để mặc lũ Ornic ngu xuẩn muốn<line>
+làm gì thì làm đâu.<end>
+
+#WRITE(MyPtr, $000042)
+//「勇気のあるお方、道中ご無事で」<end>
+<frame><$02><font><$01>
+Hỡi vị dũng sĩ,ta cầu cho chàng<line>
+đi đường được bình an vô sự.<end>
+
+#WRITE(MyPtr, $000045)
+//「［ナイト］は死をもおそれず、ゆうかんに戦う。死んでしまっては、なんにもならんと思うがのう。」<end>
+<frame><$02><font><$01>
+Các Hiệp sĩ thì không sợ chết<line>
+đâu.Họ sẽ chiến đấu dũng cảm.<page>
+Nhưng nếu chết thì sẽ chấm hết...<line>
+Nói nghe huề vốn quá...<end>
+
+#WRITE(MyPtr, $000048)
+//「ここは、カーディックの城下町だよ。敵が来てもこの町はだいじょうぶだよね？」<end>
+<frame><$02><font><$01>
+Đây là thị trấn dưới thành<line>
+Cardic.Nếu quân địch kéo tới<line>
+thì có còn an toàn không?<end>
+
+#WRITE(MyPtr, $00004B)
+//「［オルニック］って北のはずれの国なんでしょう。ここまで来れるのかしら？」<end>
+<frame><$02><font><$01>
+Ornic là đất nước xa xôi ở<line>
+phương Bắc nhỉ.Mà họ có tới<line>
+đây không?<end>
+
+#WRITE(MyPtr, $00004E)
+//「北では、山のやつらがあばれ回ってるっていうし、［ドワーフ］や　［ケンタウロス］がいざこざをおこしているし・・、ぶっそうな世の中になったもんじゃわい。」<end>
+<frame><$02><font><$01>
+Vùng núi phía Bắc có lũ làm<line>
+rộn cả lên.Đó là đám Dwarf với<line>
+đám Centaurus...<page>
+Chúng cứ kình cự nhau mãi.<line>
+Đời sống chả yên ổn được tí<line>
+chút nào.<end>
+
+#WRITE(MyPtr, $000051)
+//「戦争だって？？　おそろしいことだ！！！」<end>
+<frame><$02><font><$01>
+Có chiến tranh hả??<line>
+Eo ôi nghe khiếp thế!!<end>
+
+#WRITE(MyPtr, $000054)
+//「東のみなと町、［アンレー］に、海の向こうから兵士がついたって　うわさです。」<end>
+<frame><$02><font><$01>
+Thành phố cảng Anrey ở phía<line>
+Đông đang tập trung nhiều binh<line>
+lính từ bên kia bờ biển đến.<page>
+Nghe đồn là vậy.<end>
+
+#WRITE(MyPtr, $000057)
+//「［オルニック］の城は、けわしい地形に守られた城だそうです。　　どうか、お気をつけて。」<end>
+<frame><$02><font><$01>
+Thành Ornic được địa hình<line>
+hiểm trở bảo vệ.<line>
+Xin hãy bảo trọng.<end>
+
+#WRITE(MyPtr, $00005A)
+//ジェーン：「話は闇いたわ。用意はできているの。ソフィアがあぶないんじゃだまってられないわ。」
+//「あたしも行く。まかせて！」
+//「でも、その前に、ファンのみんなにあいさつして来るわ。宿屋にいかなくちゃ。」<page>
+//ジェーン：「これから、あたしは　あなたとはちがう部隊として、行動するわ。」
+//「ちがう部隊へコントロールを　　うつす方法をおしえるわね！」<page>
+//「ここで［キャンプ］をすると、　あたしの名前もでているはずよ。」<page>
+//「［ゲームスタート］を、えらんでから、あたしの部隊［ジェーン］をえらべばいいの。いいわね？」<page>
+//ジェーンの部隊が仲間になった<end>
+Jane:  tôi nghe đầu đuôi mọi<line>
+chuyện rồi.Và cũng đã chuẩn<line>
+bị xong xuôi cả rồi.<page>
+Thân này tuy là nữ nhi nhưng<line>
+khi biết Sophia gặp nguy thì<line>
+há có thể ngồi yên.<page>
+Nào,đi thôi!<line>
+Mọi việc cứ phó thác cho tôi.<page>
+Nhưng trước hết tôi phải đến lữ<line>
+điếm chào tạm biệt người hâm<line>
+mộ cái đã.<page>
+Jane:  từ giờ tôi sẽ chỉ huy một<line>
+đạo binh khác với đạo binh của<line>
+tráng sĩ.<page>
+Để tôi chỉ cho tráng sĩ cách<line>
+điều khiển đạo binh khác.<page>
+Hãy nhấn nút Select rồi cắm<line>
+trại,lúc đó sẽ thấy tên tôi<line>
+hiện ra trong Menu.<page>
+Sau khi chọn "Bắt đầu" thì có<line>
+thể lựa chọn được đạo binh<line>
+của tôi.<page>
+Tráng sĩ hiểu rồi chứ?<page>
+Jane đã gia nhập đội!<end>
+
+#WRITE(MyPtr, $00005D)
+//神父：「［オルニック］のぼうきょは神もおゆるしにはなりますまい」
+//「勇かんなるわが修道士たちは彼らをたおすべくすでに出発しました。どこかで会う事もあるでしょう。」<end>
+<frame><$02>
+Thần phụ:  thần linh sẽ không<line>
+tha thứ cho lũ Ornic bạo ngược<line>
+đâu.<page>
+Các tu sĩ quả cảm của ta đã xuất<line>
+chinh thảo phạt chúng rồi.<page>
+Hẳn là tráng sĩ sẽ gặp được<line>
+họ ở đâu đó trên đường.<end>
+
+#WRITE(MyPtr, $000060)
+//「東の海岸の先に半魚人のすむ洞くつがあるよ。みかけは悪いけど話せるやつらだよ。」<end>
+<frame><$02><font><$01>
+Thiện nam tử: ở bờ biển phía<line>
+Đông có cái hang là nơi sinh<line>
+sống của tộc Bán ngư nhân.<page>
+Nhìn bộ dạng chúng xấu xí<line>
+nhưng cũng hiểu chuyện lắm.<end>
+
+#WRITE(MyPtr, $000063)
+//「海には強い女だけの村があるらしいの。行ってみたらいかが？」<end>
+<frame><$02><font><$01>
+Thiện nữ nhân: phía biển có ngô<line>
+làng chỉ toàn các nữ nhân mạnh mẽ.<page>
+Quý vị cũng hãy thử đến<line>
+đó xem sao?<end>
+
+#WRITE(MyPtr, $000066)
+//主人：「ごくろうさまです。　　　兵隊さんなら、いつでもただで　　おとめします。」<end>
+<frame><$02><font><$01>
+Chủ nhân:  cảm ơn.Quân đội các<line>
+vị luôn được chào đón.<end>
+
+#WRITE(MyPtr, $000069)
+//ファンクラブ：「ぼくらはジェーンさんの行く所なら、どこへでも行きます！」<end>
+<frame><$02><font><$01>
+Fan Club:  Jane đến bất cứ đâu<line>
+thì bọn tôi sẽ theo đó!<end>
+
+#WRITE(MyPtr, $00006C)
+//主人：「われわれも協力します。　クラスチェンジできる人がいれば、武器や防具をさしあげましょう。」<end>
+<frame><$02><font><$01>
+Chủ nhân:  chúng tôi sẽ hợp sức<line>
+với tráng sĩ.<page>
+Nếu có ai chuyển cấp được<line>
+thì tôi sẽ tặng lại vũ khí và<line>
+binh giáp cho người đó.<end>
+
+#WRITE(MyPtr, $00006F)
+//妻：「せんそーですって！　　　　まあどうしましょう！！」<page>
+//夫：「逃げようか？かあちゃん。」<end>
+<frame><$02><font><$01>
+Vợ:  nghe nói có chiến tranh!<line>
+Trời ơi,biết làm sao đây~<page>
+Chồng:  thì chạy chứ biết làm<line>
+sao? Bà nó mau chạy đi.<end>
+
+#WRITE(MyPtr, $000072)
+//「［Ｘ］ボタンは、部下をたいきゃくさせます。部下たちは、入って来た方向に向かってにげます。」<end>
+<frame><$02>
+Nhấn nút X để bộ hạ rút lui.<page>
+Khi đó đám bộ hạ sẽ bỏ chạy<line>
+về phía họ đã tiến vào.<end>
+
+#WRITE(MyPtr, $000075)
+//老人：「西の岩あなには、［ケンタウロス］どもがすんでおる。」
+//「気のあらいやつらでな、話せば力になってくれるかもしれんが、最近［ドワーフ］といざこざをおこしたようで、仲が悪くなっておる。」<end>
+<frame><$02><font><$01>
+Lão nhân:  bọn Centaurus sống<line>
+trong hang đá ở phía Tây.<page>
+Tính khí chúng khá hoang dã<line>
+nhưng nếu thuyết phục được thì<line>
+ắt chúng sẽ có ích.<page>
+Nhưng mà gần đây chúng phát<line>
+sinh mâu thuẫn với tộc người<line>
+lùn Dwarf rồi.<end>
+
+#WRITE(MyPtr, $000078)
+//こども：「エルフの子［ロバート］がさらわれたんだって！」
+//「ぼく、あの子知っているんだ。　ねえ、たすけてあげてよ！！」<end>
+<frame><$02><font><$01>
+Con nít:  cậu Robert tộc Elf bị<line>
+bắt cóc mất rùi!<page>
+Cháu biết cậu ấy.<line>
+Cô chú cứu cậu ấy nhé!!<end>
+
+#WRITE(MyPtr, $00007B)
+//「リッチモンド様、われわれはあなたとともに最後まで戦います。行きましょう、［オルニック］へ！」<page>
+//「リッチモンド様、もし我々部下をちょくせつコントロールしたい時は［ＬＲ］ボタンをおして下さい。」<end>
+<frame><$02>
+Lãnh chúa Richmond,chúng tôi<line>
+sẽ cùng ngài chiến đấu đến<line>
+phút cuối cùng. Nào đi thôi!<page>
+Đến Ornic nào! Và đừng quên ấn<line>
+nút L,R nếu ngài muốn trực tiếp<line>
+điều khiển chúng tôi.<end>
+
+
+#WRITE(MyPtr, $00007E)
+//アマゾネス：「いくさですって？　今それどころじゃないのよ。」
+//「大事な宝、［なみだのしずく石］がぬすまれてしまったの。」
+//「なにかてがかりでも、つかめればいいのだけど。」<end>
+<frame><$02><font><$01>
+Amazones:  chiến tranh hả?<line>
+Giờ chẳng phải lúc.<page>
+Bảo vật "lệ thạch",viên đá<line>
+nước mắt của chúng tôi đã<line>
+bị trộm mất rồi.<page>
+Cần phải sớm tìm ra manh mối<line>
+để lấy lại nó mới được.<end>
+
+#WRITE(MyPtr, $000081)
+//アマゾネス：「わたしたちの宝、　［なみだのしずく石］をアラシの夜ぬすまれてしまったのです。」
+//「ボートがなくなっているけど、　あのアラシではしずんでしまったかもしれないわ。」
+//「ぬすんだやつが生きているとすれば、近くにいるような気がするわ」<end>
+<frame><$02><font><$01>
+Amazones:  bảo bối của bọn tôi<line>
+là viên đá "lệ thạch" đã bị<line>
+trộm mất từ đêm qua.<page>
+Thuyền cũng đã mất,mà chắc là<line>
+nó chìm trong cơn bão rồi.<page>
+Tôi cảm thấy nếu kẻ trộm còn<line>
+sống thì hắn chỉ quanh quẩn<line>
+đâu đây mà thôi.<end>
+
+#WRITE(MyPtr, $000084)
+//アマゾネス：「なみだのしずく石を持ってきてくれたのね！」
+//「ありがとう！！　これがあれば、わたしたちも力をだせるわ。」<page>
+//アマゾネスの部隊が仲間になった<end>
+<frame><$02><font><$01>
+Amazones:  các vị đã mang viên<line>
+"lệ thạch" trở về rồi sao!<page>
+Xin đa tạ! Có nó thì chúng tôi<line>
+sẽ giúp sức được cho các vị.<page>
+Tộc Amazones đã gia nhập đội!<end>
+
+#WRITE(MyPtr, $000087)
+//アマゾネス：「よくも、［なみだのしずく石］を、化け物にわたしたわね！　かくごをおし！！」<end>
+<frame><$02><font><$01>
+Amazones:  khốn kiếp! Dám đưa đá<line>
+nước mắt cho lũ quái vật ư!<page>
+Các ngươi hãy chết đi!!<end>
+
+#WRITE(MyPtr, $00008A)
+//ドロボウ：「ひえぇぇぇぇ　見つかっちゃった。アマゾネスどもにオレの事を知らせないでくれ！」<page>
+//「オレか？　オレは［オルニック］の者だ。キャサリン様から命ぜられアマゾネスの宝、［なみだのしずく石］をぬすんだんだ」
+//「［なみだのしずく石］は、イカの化け物にもっていかれちまった。」
+//「オレはにげたけど、相棒はきっとくわれちまったろうな。」<page>
+//あの化け物は海の中にはいってしまったから、とりもどすのはむずかしいぜ。」<end>
+<frame><$02><font><$01>
+Đạo chích:  úi úi,bị phát hiện<line>
+rùi! Đừng để bọn Amazones<line>
+biết được bọn tui!<page>
+Tui hả? Tui là người Ornic.<line>
+Bà Catharin ra lệnh cho tui<line>
+lấy trộm đá của bọn Amazones.<page>
+Nhưng viên đá nước mắt đã bị<line>
+con thủy quái Mực cuỗm đi rùi.<page>
+Tui may mắn thoát được nhưng<line>
+thằng đệ bị nó ăn thịt mất.<page>
+Con quái vật đó chui xuống<line>
+biển rùi,khó mà lấy lại viên<line>
+đá lắm.<end>
+
+#WRITE(MyPtr, $00008D)
+//主人：「岩場づたいにいった所に、［アマゾネス］のすむ村があるぜ」<end>
+<frame><$02><font><$01>
+Chủ nhân:  ven bãi đá có ngôi<line>
+làng của tộc Amazones.<end>
+
+#WRITE(MyPtr, $000090)
+//主人：「岩場の西の方には［ほらあな］があって、化け物がすんでいるらしい。」<page>
+//「化け物たいじに行く者もあったが帰ってきたもんはおらなんだ。　　今じゃあ、だれも近よらんよ。」<end>
+<frame><$02><font><$01>
+Chủ nhân:  phía Tây bãi đá có<line>
+cái hang,trong đó có quái vật.<page>
+Những kẻ đi trừng trị quái vật<line>
+thì chẳng có ai trở về hết.<page>
+Bây giờ chằng còn ai dám<line>
+lại gần nó nữa.<end>
+
+#WRITE(MyPtr, $000093)
+//妖精：「私たちはあなたがたの味方です。」<page>
+//「もし、エルフたちの力をかりたいのでしたら、［サンリスの塔］へ向かいなさい。」
+//「そこにとじこめられているエルフの王子を、ぶじにエルフ王のもとへとどけてあげることです。」
+//「キャメロットに助けを求めたり、オルニックの近くまでせめては、手おくれになるかもしれません。」<end>
+<font><$01>
+Tinh linh:  tôi là đồng minh<line>
+của các vị.<page>
+Nếu các vị muốn tộc Elf giúp<line>
+sức thì hãy tiến về tháp<line>
+Sanrith.<page>
+Hãy giải cứu Vương tử Elf đang<line>
+bị giam ở đó,rồi tộc Elf sẽ hợp<line>
+sức giúp các vị.<page>
+Nếu các vị nhờ Camelot giúp<line>
+sức hay tiến đến gần Ornic thì<line>
+mọi chuyện sẽ chấm hết.<end>
+
+#WRITE(MyPtr, $000096)
+//妖精：「ベニックに行きましたか？
+//とおい過去から、あなた方を助けるために、よみがえった方が待っておりますよ。」<end>
+<font><$01>
+Tinh linh:<line>
+các vị đã đến Benic chưa?<page>
+Có một vị cao nhân từ quá khứ<line>
+xa xăm đang đợi các vị ở đó.<end>
+
+#WRITE(MyPtr, $000099)
+//主人：「勇者様、女王キャサリンは魔物に心を支配されてしまったと、泉の妖精が話してくれました。」
+//「西の［森の泉］に行けば、妖精に会えますよ。」<end>
+<frame><$02><font><$01>
+Chủ nhân:  tráng sĩ,Nữ vương<line>
+Catharin đã bị ma quỷ nhập<line>
+hồn mất rồi.<page>
+Tinh linh ở con suối nói vậy.<line>
+Hãy đến khu rừng bên suối ở<line>
+phía Tây để gặp tinh linh.<end>
+
+#WRITE(MyPtr, $00009C)
+//老人：「［敵］はこのあたりまで、やってきておる。やつらがたおせんようでは、きたえ方がたらんぞ。」<end>
+<frame><$02><font><$01>
+Lão nhân:  quân địch đã tiến tới<line>
+quanh đây rồi.Cần phải rèn<line>
+luyện để đánh bại chúng.<end>
+
+#WRITE(MyPtr, $00009F)
+//半魚人：「おらたちゃ見はりじゃ。よそ者は早くかえるだ。」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:<line>
+bọn ta đang canh gác căă.<line>
+Người lạ mau về đi căă.<end>
+
+#WRITE(MyPtr, $0000A2)
+//半魚人：「てめえら、アマゾネスのまわしモンだな。」
+//「あいつらァ、いつもオラたちの　ワニっこをぬすんで行きやがんだ。さっさと帰れ！」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  tụi bây là do<line>
+thám của bọn Amazones phải<line>
+không căă.<page>
+Bọn chúng toàn ăn trộm cá xấu<line>
+của bọn ta căă.Mau về đi căă!<end>
+
+#WRITE(MyPtr, $0000A5)
+//半魚人：「てめえらのコンタンは、キャサリン様から闇いてわかってんだ！」
+//「おう、ミンナ、かまうこたぁねえから、たたんじまえ！」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  bọn ta nghe bà<line>
+Catharin nói hết tim đen của<line>
+các người rồi căă!<page>
+Mọi người,đập chết chúng đi<line>
+đừng ngại gì căă!<end>
+
+#WRITE(MyPtr, $0000A8)
+//半魚人：「アンだ？　戦争だ？　　おるにっくだ？　オラたちには関係ないね。」
+//「でも、ペリーズの王さんにゃ、前に世話になったかんな。」
+//「どうだ、［なみだのしずく石］をとってきてくれたら、この村のモンは、おめえさんに協力するがね。」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  hả? Chiến tranh?<line>
+Ornic hả căă? Chả liên quan gì<line>
+tới tụi này căă.<page>
+Nhưng tụi này biết ơn ông vua<line>
+Peris từ trước rùi căă.<page>
+Sao hả,nếu mang viên đá "lệ<line>
+thạch" tới đây thì cả làng này<line>
+sẽ giúp các ngươi căăk!.<end>
+
+#WRITE(MyPtr, $0000AB)
+//半魚人：「お、なみだのしずく石だこれで［アマゾネス］たちも、少しはおとなしくなるってもんだ。」
+//　「そんじゃ、やくそくだからな。　ひとつおらたちも、ワニつれて行くべえ。」<page>
+//半魚人の部隊が仲間になった<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  ồ viên đá nước<line>
+mắt đây mà!Không có nó thì<line>
+bọn Amazones sẽ ngoan căă.<page>
+Đã hứa thì phải giữ lời.Bọn ta<line>
+sẽ dẫn cá xấu theo các ngươi.<page>
+Tộc bán ngư nhân đã gia nhập!<end>
+
+#WRITE(MyPtr, $0000AE)
+//夫：「アマゾネスと半魚人は昔っから仲が悪いんだ。かわいいワニを女たちは皮はいでくっちまうんだぜ」妻：「だからわたしたちは、みんなとはなれてくらしているのよ。　　ねえ、あ・な・た！」<page>
+//夫：「ゲロゲロッ！」<end>
+<frame><$02><font><$01>
+Chồng: tộc Amazones và tộc<line>
+Bán ngư nhân luôn kèn cựa nhau<line>
+từ xưa tới nay.<page>
+Do tộc Amazones hay lột da cá<line>
+xấu xinh đẹp của chúng tôi<line>
+để ăn thịt.<page>
+Vợ:  cho nên chúng tôi mới sống<line>
+cách xa những người khác.<page>
+Chồng:  căăkk!<end>
+
+#WRITE(MyPtr, $0000B1)
+//「おねがい、［なみだのしずく石］をとりかえしてきて！」<end>
+<frame><$02><font><$01>
+Làm ơn đi,hãy mang viên đá<line>
+nước mắt về giúp với!<end>
+
+#WRITE(MyPtr, $0000B4)
+//「［なみだのしずく石］を、とりかえしてきてくれたのね。さあ、早くリーダーのところへ！」<end>
+<frame><$02><font><$01>
+Các vị đã giành lại được đá<line>
+nước mắt rồi nhỉ.Vậy thì mau<line>
+đến chỗ thủ lãnh thôi!<end>
+
+#WRITE(MyPtr, $0000B7)
+//宿の主人：「おとまりですか？　　道にまよった旅人は、よくうちへ　いらっしゃいます。」<end>
+<frame><$02><font><$01>
+Chủ lữ điếm: các vị trọ lại à?<page>
+Chào mừng lữ khác đường xa<line>
+đến với tệ điếm.<end>
+
+#WRITE(MyPtr, $0000BA)
+//主人：「私は魔法の研究をしている者です。あなたに魔法の矢をさしあげましょう。」
+//「これを弓でうてば、かべをもつらぬく事ができます。」<end>
+<frame><$02><font><$01>
+Chủ nhân:  tôi là người nghiên<line>
+cứu ma pháp.<page>
+Để tôi tặng các vị mũi tên<line>
+ma pháp này.<page>
+Lắp nó vào tên mà bắn thì sẽ<line>
+bắn xuyên tường được.<end>
+
+#WRITE(MyPtr, $0000BD)
+//主人：「うわさでは、魔力を持った［石］がいくつかあるそうです。」
+//「なかにはとてもおそろしい力をもつものもあると闇いております。」<end>
+<frame><$02><font><$01>
+Chủ nhân:<line>
+Nghe đồn trên đời có mấy viên<line>
+đá sở hữu ma lực bên trong nó.<page>
+Trong số đó có một viên mang<line>
+sức mạnh khủng khiếp lắm.<line>
+Giang hồ đồn vậy.<end>
+
+#WRITE(MyPtr, $0000C0)
+//村長：「ようこそ、われらの村に。われわれケンタウロスもオルニックの事では頭をいためておる。」
+//「だが、ドワーフのやつらにもなんとか、［いたい目］を見せてやらねば、はらのむしがおさまらん。」
+//「われらの助けをかりたいのであればドワーフとも戦ってもらおう」<end>
+<frame><$02><font><$01>
+Thôn trưởng: chào mừng đến với<line>
+ngôi làng của chúng tôi.<page>
+Tộc Centaurus chúng tôi cũng<line>
+đang đau đầu với lũ Ornic.<page>
+Nhưng cần phải dạy cho lũ<line>
+Dwarf một bài học,không thì<line>
+cứ bức rức khó chịu lắm.<page>
+Nếu muốn bọn tôi giúp sức thì<line>
+hãy giúp chúng tôi đập bọn<line>
+lùn Dwarf một trận.<end>
+
+#WRITE(MyPtr, $0000C3)
+//村長：「そうか、では血気にはやっている若いのが何人かいるから、つれてゆくがよい。」<page>
+//ケンタウロスの部隊が仲間になった<end>
+<frame><$02><font><$01>
+Tộc trưởng:  vậy à.Trong làng<line>
+có mấy kẻ hăng máu lắm.<page>
+Các vị cứ dẫn chúng đi theo.<page>
+Tộc Centaurus đã gia nhập đội.<end>
+
+#WRITE(MyPtr, $0000C6)
+//村長：「われらも、ここでただ手をこまねいているわけではない。」
+//「そなたも、するべきことがわかっているはずじゃ。こんな所であそんでいる時ではないぞ。」<end>
+<frame><$02><font><$01>
+Tộc trưởng:  chúng tôi cũng<line>
+không thể khoanh tay đứng<line>
+nhìn ở đây mãi được.<page>
+Hẳn các vị cũng có điều cần<line>
+phải làm.Giờ không phải là<line>
+lúc nhởn nhơ vui đùa ở đây.<end>
+
+#WRITE(MyPtr, $0000C9)
+//村長：「あの、いじきたないドワーフどもと手を組むとは！　おまえらの顔などみたくもないわ！」<page>
+//「我らケンタウロスは敵だと思え」<end>
+Tộc trưởng:  dám bắt tay với lũ<line>
+lùn Dwarf bẩn thỉu sao!Ta<line>
+không muốn gặp các ngươi nữa!<page>
+Từ giờ tộc Centaurus bọn ta<line>
+sẽ là kẻ thù của các ngươi!<end>
+
+#WRITE(MyPtr, $0000CC)
+//ケンタウロス：「ここは［ケンタウロス］の村だ。」<page>
+//「いにしえより、神がわれらにさずけて下さった土地だ。　ドワーフのしたいようにはさせん！」<end>
+<frame><$02><font><$01>
+Centaurus:<line>
+đây là làng Centaurus.<page>
+Vùng đất này được thần linh<line>
+ban tặng từ thời cổ xưa.<page>
+Bọn tôi không để đám lùn muốn<line>
+làm gì thì làm đâu!<end>
+
+#WRITE(MyPtr, $0000CF)
+//ケンタウロス：「何だお前たちは？何しに来たんだ。人間が来る所ではないぞ！！」<end>
+<frame><$02><font><$01>
+Centaurus:  các người là ai?<line>
+Tới đây làm gì? Đây không phải<line>
+chỗ cho con người lui tới!!<end>
+
+#WRITE(MyPtr, $0000D2)
+//「ここの人々のためにもがんばって下さい。神よ、正しき者に勝利を、ログリスに平和を！」<end>
+<frame><$02><font><$01>
+Hãy cố gắng vì những người ở<line>
+đây.Thần linh ơi,hãy ban chiến<line>
+thắng cho người công chính!<page>
+Hãy ban hòa bình cho Glorith!<end>
+
+#WRITE(MyPtr, $0000D5)
+//「ここはログリスのみなと町。海の向こうからもたくさんの人がやってきます。」<end>
+<frame><$02><font><$01>
+Đây là thành phố cảng Glorith.<line>
+Nơi này có nhiều người từ bên<line>
+kia bờ biển tìm tới lắm.<end>
+
+#WRITE(MyPtr, $0000D8)
+//「キャサリンがせめてくるのか！」
+//「うわさじゃ、やつらリザードマンやオオガラスどもを味方にしたそうじゃないか！」<end>
+<frame><$02><font><$01>
+Quân Catharin tấn công tới rồi!<page>
+Nghe đâu là chúng đã kết bè<line>
+với lũ người bò sát và đám<line>
+quạ khổng lồ!<end>
+
+#WRITE(MyPtr, $0000DB)
+<end>
+
+#WRITE(MyPtr, $0000DE)
+//「みんながいっしょに戦えば、オルニックなんてこわくないのに。」
+//「ま、おれは戦いに行きたかないけどよ。」<end>
+<frame><$02><font><$01>
+Nếu mọi người cùng nhau chiến<line>
+đấu thì ta sợ gì bọn Ornic!<page>
+Nói vậy chứ ta chả muốn ra<line>
+trận tí nào đâu.<end>
+
+#WRITE(MyPtr, $0000E1)
+//「ここにいれば、いざって時でも、海に逃げられるのですよ。」<end>
+<frame><$02><font><$01>
+Khi khẩn cấp thì có thể từ<line>
+đây mà chạy ra biển.<end>
+
+#WRITE(MyPtr, $0000E4)
+//「なぁに、あそんでくれるの？」<end>
+<frame><$02><font><$01>
+Sao,chơi với cháu à?<end>
+
+#WRITE(MyPtr, $0000E7)
+//「はるか北まで戦いに行かれるのですね。　なんて勇気あるお方なんでしょう。」<end>
+<frame><$02><font><$01>
+Các vị lên tận phương Bắc xa<line>
+xôi để chiến đấu à.Thật là<line>
+quả cảm.<end>
+
+#WRITE(MyPtr, $0000EA)
+//「キャメロットの王を動かすには、だれかが、セットクに行くしかないだろうな。」<end>
+<frame><$02><font><$01>
+Để lay động Vua Camelot thì<line>
+cần có ai đó thuyết phục được<line>
+ông ấy.<end>
+
+#WRITE(MyPtr, $0000ED)
+//「ベニックの沼の［リザードマン］は強敵です。やつらをたおすには、強い兵士が必要ですよ。」<end>
+<frame><$02><font><$01>
+Lũ người thằn lằn ở đầm lầy<line>
+Benic rất lợi hại.Cần có binh<line>
+sĩ mạnh để hạ được chúng.<end>
+
+#WRITE(MyPtr, $0000F0)
+//妻：「ここだけの話だけど、キャメロットの王様って［こしぬけ］らしいわよ。」
+//「いつも城のおくにかくれているんですって。」<end>
+<frame><$02><font><$01>
+Vợ:  các bác ơi,em bảo này.<line>
+Vua Camelot là ông vua yếu<line>
+môn sinh môn hóa.<page>
+Suốt ngày cứ ru rú trong<line>
+thành,thiếu điều mặc váy thôi.<end>
+
+#WRITE(MyPtr, $0000F3)
+//夫：「先代の王なら、だまっちゃいないだろうけど、どこかでインキョしているみたいなんだ。」<end>
+<frame><$02><font><$01>
+Chồng:  đức vua đời trước đâu<line>
+có yếu hèn chịu nhục như vậy.<page>
+Nhưng mà tiên vương đã lui về<line>
+ẩn cư ở đâu rồi,chả ai biết.<end>
+
+#WRITE(MyPtr, $0000F6)
+//半魚人：「キャメロットのお城の　［カガミ］には、しかけがあるってさあ。ゲロゲロ。」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  cái gương trong<line>
+thành Camelot cần phải có mẹo<line>
+để mở nó,căă.<end>
+
+#WRITE(MyPtr, $0000F9)
+//半魚人：「あたしたちすっかり人間になっちゃった気分ね、ゲロゲロ。ここの水はうまいよ、ゲロ」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  bọn tôi cảm thấy<line>
+như biến thành người rồi.Căă.<line>
+Nước ở đây ngon quá căă.<end>
+
+#WRITE(MyPtr, $0000FC)
+//牧師：「オルニックの人も、すべての人がキャサリンをよく思っているわけではない。」
+//「リーダーをたおせば、あるいは味方につく者もあるでしょう。」<end>
+<frame><$02>
+Mục sư:  ngay cả người của Ornic,<line>
+không phải tất cả đều nghĩ tốt<line>
+về mụ Catharin đâu.<page>
+Chỉ cần đánh bại thủ lĩnh của<line>
+họ thì ắt là họ sẽ theo ta thôi.<end>
+
+#WRITE(MyPtr, $0000FF)
+//こども：「あのねぇ、［エクスカリバー］ってすごい剣がエドウィン城にあるんだって。」<end>
+<frame><$02><font><$01>
+Nhóc con:  nghe này chú ơi.Trong<line>
+thành Edwin có thanh kiếm tên<line>
+là Excalibur lợi hại lắm đó.<end>
+
+#WRITE(MyPtr, $000102)
+//主人：「オレにもいくさに行けってか？　ジョーダン言っちゃいけねえよ。この宿を守らなきゃならん。」
+//「どっちが勝ってもオレたちの生活はかわらないよ。」<end>
+<frame><$02><font><$01>
+Chủ nhân:  bảo ta ra trận á?<line>
+Đừng có đùa chứ.Ta còn phải<line>
+trông cái lữ điếm này.<page>
+Phe nào thắng đi nữa thì cũng<line>
+chẳng ảnh hưởng tới cuộc sống<line>
+của bọn ta.<end>
+
+#WRITE(MyPtr, $000105)
+//キンピカの騎士：「フランクはどうもたいくつでね。わざわざドーバーをこえてやって来たんだ。
+//ウワサじゃ、こまったことになっているようじゃないか。
+//わかってるって、敵はオルニックだろう。おれたちがけちらしてやるぜ
+//おれはフランクの王子［アラン］、よろしくな！」<page>
+//アランの部隊が仲間になった<end>
+<frame><$02>
+Kỵ sĩ lấp lánh: Flank chán quá<line>
+nhỉ.Ta lặn lội từ Dorver tới<line>
+đây.<page>
+Nghe đồn các vị đang gặp khó<line>
+khăn hả.Ta hiểu rồi.Kẻ thù chắc<line>
+là bọn Ornic chứ gì.<page>
+Bọn ta sẽ cho chúng một trận.<page>
+Ta là Alan,Vương tử xứ Flank!<line>
+Rất hân hạnh!<page>
+Alan đã gia nhập đội!<end>
+
+#WRITE(MyPtr, $000108)
+//ノーム：「一族の生きのこりはほんのすこしだよう。オロオロ。」<end>
+<frame><$02><font><$01>
+Gnome:  cả tộc chỉ còn vài kẻ<line>
+sống sót.Gay quá.<end>
+
+#WRITE(MyPtr, $00010B)
+//「お金などいりません。使いこなせる武器などがあれば、どうぞお持ちになっていって下さい。」<end>
+<frame><$02><font><$01>
+Không cần tiền bạc gì đâu.<line>
+Có vũ khí nào dùng được thì<line>
+các vị cứ tự do mang đi.<end>
+
+#WRITE(MyPtr, $00010E)
+//「これはこれはロレンスのだんな。だんなも行かれるんですかい？」
+//「なら、いいヨロイがありますよ。着てって下さい。　カーディックの店は、弟さんにおまかせですか？」<page>
+//ロレンスは［強そう］になった！<end>
+<frame><$02><font><$01>
+Chà chà Lawrence đây hử.<line>
+Ông chủ cũng đi sao?<page>
+Vậy thì ta có bộ giáp tốt này.<line>
+Hãy mặc vào đi.<page>
+Ông phó thác cửa hàng ở Cardic<line>
+cho thằng đệ rồi à?<page>
+Lawrence đã mạnh hơn!<end>
+
+#WRITE(MyPtr, $000111)
+//「キャメロットのお城にも強い兵隊さんがたくさんいるらしいです。」
+//「あのお城に力ずくで入るのはむずかしいですわ。先代の王様なら、もちろん、入れるでしょうけど・・」<end>
+<frame><$02><font><$01>
+Trong thành Camelot có nhiều<line>
+binh sĩ mạnh lắm.<page>
+Rất khó để dùng vũ lực mà xông<line>
+vào đó.Nhưng dĩ nhiên nếu<line>
+là tiên vương thì vào được.<end>
+
+#WRITE(MyPtr, $000114)
+//きとう師（ロッテリア）：「おお、とうとういくさとなったか。わらわのにらんだとおりじゃ。」
+//「みよ！　この日のために、いのり作りし［はかいの石］、これを持ち敵にひとあわふかせてくれん。」
+//「これを使う時は、味方もまた命をうしなうやもしれん。おそろしい石じゃ。こころして使えよ。」<page>
+//ロッテリアが仲間になった<end>
+<frame><$02><font><$01>
+Thầy mo Lotteria: cuối cùng các<line>
+vị cũng tới.Đúng như ta đã<line>
+nhìn thấy.<page>
+Xem đây!Viên đá phá hoại mà<line>
+ta dốc sức cầu nguyện cho ngày<line>
+hôm nay!<page>
+Nó có sức mạnh bất khả tư nghị,<line>
+tiêu diệt địch trong sát na.<page>
+Dĩ nhiên khi sử dụng nó thì<line>
+phe ta cũng thiệt mạng.<line>
+Đáng sợ lắm thay!<page>
+Hãy cân nhắc trước khi dùng nó!<page>
+Thầy mo Lotteria đã gia nhập!<end>
+
+#WRITE(MyPtr, $000117)
+//バードマン：「カーディック軍か？王は城の中だ。」<end>
+<frame><$02><font><$01>
+Người chim:  quân Cardic à?<line>
+Đức vua đang ở trong thành.<end>
+
+#WRITE(MyPtr, $00011A)
+//エルフ王ロイ：「わが一族は、城から外へ出る事はできん。」
+//「最愛の息子ロバートがキャサリンにとらわれておるからじゃ。」
+//「お主らの期待には、こたえることができん、帰られるがよい。」<end>
+<frame><$02>
+Roy vua tộc Elf:  tộc chúng tôi<line>
+không thể xuất thành được.<page>
+Con trai ta,Robert đã bị mụ<line>
+Catharin bắt đi mất rồi.<page>
+Chúng tôi không thể đáp ứng<line>
+nguyện vọng của quý vị.<line>
+Xin hãy về đi cho.<end>
+
+#WRITE(MyPtr, $00011D)
+//エルフ：「キャメロットが動き始めたので、キャサリンが［みせしめ］にロバート王子の命をうばった！　　人間どもはすべて敵だ！！」<end>
+<frame><$02><font><$01>
+Elf: do Camelot động thủ nên<line>
+mụ Catharin đã hạ sát Vương<line>
+tử Robert để dằn mặt!<page>
+Từ giờ lũ con người sẽ là kẻ<line>
+thù của bọn ta!<end>
+
+#WRITE(MyPtr, $000120)
+//エルフ王ロイ：「おお、ロバート、よく無事でもどってきてくれた！　パパはうれしいよ！」
+//「よし、みなの者、キャサリンに　かりを返すのだ！」<page>
+//エルフの部隊が仲間になった<end>
+<frame><$02>
+Roy vua tộc Elf:  ồ Rober,con đã<line>
+bình an vô sự mà trở về!<page>
+Papa vui lắm!<line>
+Tất cả mọi người,giờ là lúc<line>
+báo thù mụ Catharin!<page>
+Tộc Elf đã gia nhập đồng minh!<end>
+
+#WRITE(MyPtr, $000123)
+//エルフ王ロイ：「わしのもっている［エルフの笛］を使えばバードマンどもをよぶ事ができるぞ。」<end>
+<frame><$02>
+Roy vua tộc Elf: chỉ cần thổi<line>
+cây sáo Elf của ta là có thể<line>
+chiêu hồi lũ người chim.<end>
+
+#WRITE(MyPtr, $000126)
+//エルフ：「なんだ？　カーディックの者か？」
+//「ここは神聖なるエルフの城だ。　人間はどうも信用できん。　　　　早々に立ち去ってくれ。」<end>
+<frame><$02><font><$01>
+Elf:  sao? Người của Cardic hả?<line>
+Nơi này là thành trì thần<line>
+thánh của tộc Elf.<page>
+Bọn ta không tin lũ con người.<line>
+Mau về đi!<end>
+
+#WRITE(MyPtr, $000129)
+//エルフ：「勇者よ、ありがとう！！オルニックのやつらはぜったいに　ゆるせん！」
+//エルフ：「二度とわれわれに手が　だせぬよう、オルニックのやつらをうちのめしてやる！」<end>
+<frame><$02><font><$01>
+Elf: hỡi tráng sĩ,xin đa tạ<line>
+chàng!! Bọn tôi sẽ không bỏ<line>
+qua cho lũ Ornic đâu!<page>
+Phải đập chúng một trận đau<line>
+điếng để chúng không còn động<line>
+tới chúng ta được nữa!<end>
+
+#WRITE(MyPtr, $00012C)
+//兵士：「アイテムは、一人にひとつしか持てません。」
+//「大事なアイテムは、なくさないように気をつけてください。」
+//「また、アイテムを持ちすぎないように、ほかの部隊にわけてあげる事もかんがえてください。」<end>
+<frame><$02>
+Binh sĩ:  mỗi người chỉ mang được<line>
+1 món Item mà thôi.Hãy chú ý<line>
+đừng để mất Item quan trọng.<page>
+Hãy suy nghĩ cẩn thận,giao<line>
+Item cho các đạo binh khác,<line>
+đừng để mang quá nhiều Item.<end>
+
+#WRITE(MyPtr, $00012F)
+//ドワーフ：「われわれは、きわめてシンコクな状況におかれている。」
+//「とつぜんオルニック軍のこうげきをうけ、このかくれ里にたどりついた者も、けっして多くはない。」<end>
+<frame><$02><font><$01>
+Dwarf: bọn ta đang ở<line>
+trong tình thế cực kỳ<line>
+nghiêm trọng.<page>
+Tự dưng bọn ta bị lũ Ornic<line>
+tấn công,và giờ ở cái làng<line>
+hẻo lánh này cũng chả còn<line>
+bao nhiêu người cả.<end>
+
+#WRITE(MyPtr, $000132)
+//ドワーフ：「ケンタウロスどもを仲間にいれるとは！　カーディックも信じられん。」
+//「やつらはわれわれの森をあらしたのだ。これではオルニックと和解した方がまだましだ！」<end>
+<frame><$02><font><$01>
+Dwarf: dám bắt tay với lũ<line>
+Centaurus hả! Ngay cả bọn Cardic<line>
+cũng không đáng tin!<page>
+Chúng đã dày xéo khu rừng<line>
+của bọn ta! Vậy là từ giờ bọn ta<line>
+nên hòa giải với Ornic thì hơn.<end>
+
+#WRITE(MyPtr, $000135)
+//ノーム：「クラスチェンジできる者はいないかい？」
+//「ほんのわずかだけど、使える武器があるなら、持って行きなよ。」<end>
+<frame><$02><font><$01>
+Gnome: có ai chuyển cấp được<line>
+không? Tệ điếm có chút vũ khí<line>
+mọn này,xin hãy cầm lấy.<end>
+
+#WRITE(MyPtr, $000138)
+//ドワーフ：「オルニックのやつらはきらいだが、ケンタウロスどもは　もっときらいだ。」<end>
+<frame><$02><font><$01>
+Dwarf: bọn ta tuy ghét lũ<line>
+Ornic, nhưng ghét nhất vẫn là<line>
+đám Centaurus.<end>
+
+#WRITE(MyPtr, $00013B)
+//ドワーフ：「おれたちドワーフは、めったにおたがいの村へはいききしないものなんだ。」
+//「気がついた時にはもうばらばらにされてしまったあとだった。」<end>
+<frame><$02><font><$01>
+Dwarf: tộc Dwarf bọn ta hiếm<line>
+khi đến thăm làng của nhau.<page>
+Thành ra khi đáo sự thì đều<line>
+tan cửa nát nhà,tan đàn xẻ nghé<line>
+cả rồi.<end>
+
+#WRITE(MyPtr, $00013E)
+//ドワーフ：「気をつけろ、このあたりはオルニックのやつらがよく通るぞ。」<end>
+<frame><$02><font><$01>
+Dwarf: hãy cẩn thận!<line>
+Lũ Ornic rất hay qua lại quanh<line>
+khu này!<end>
+
+#WRITE(MyPtr, $000141)
+//声：「聖剣は、それを持つしかくのある者をまっている。あなた方ではない。」<end>
+<frame><$02><font><$01>
+Giọng nói:<line>
+Thánh kiếm đang đợi người có<line>
+tư cách mang nó.<page>
+Người đó không phải nhà ngươi.<end>
+
+#WRITE(MyPtr, $000144)
+//ドワーフ：「ケンタウロスも人間もゆだんのならぬやつばかりだ。」<end>
+<frame><$02><font><$01>
+Dwarf: cả bọn Centaurus,cả lũ<line>
+con người đều toàn những kẻ<line>
+hiểm ác không thể lơ là.<end>
+
+#WRITE(MyPtr, $000147)
+//「わが主君、ユーサー王はだれにもお会いにはならない。さあ、帰られよ。」<end>
+<frame><$02><font><$01>
+Vua Uther,bậc quân chủ của<line>
+chúng tôi chẳng muốn gặp ai cả.<line>
+Xin về đi cho.<end>
+
+#WRITE(MyPtr, $00014A)
+//「これはこれはごインキョ様。ただ今すぐに開けますです。」<end>
+<frame><$02><font><$01>
+Đây là Tiên vương ẩn cư mà.<line>
+Chúng thần sẽ mở cổng ngay.<end>
+
+#WRITE(MyPtr, $00014D)
+//兵士：「この先は［ろうや］でございますだ。」<end>
+<frame><$02><font><$01>
+Binh sĩ: phía trước là nhà lao.<end>
+
+#WRITE(MyPtr, $000150)
+//ユーサー：「すでに、キャメロットはオルニックと協定をむすんだ。　今さらあとにはひけるものか！」<end>
+<frame><$02>
+Uther: Camelot đã ký hiệp định<line>
+với Ornic rồi.Đã tới nước này<line>
+thì sao rút lui được nữa!<end>
+
+#WRITE(MyPtr, $000153)
+//ユーサー：「お父上、あなたが戦えとおっしゃるなら、とじこもっているわけにはまいりますまい。」<end>
+<frame><$02>
+Uther: phụ thân!<page>
+Người đã bảo chiến đấu<line>
+thì há nào con lại ru rú mãi<line>
+trong thành được!<end>
+
+#WRITE(MyPtr, $000156)
+//ユーサー：「わがヨロイを持て！　いざ出陣じゃ！」<end>
+<frame><$02>
+Uther: tả hữu đâu!<line>
+Mau mang chiến giáp lại đây!<line>
+Ta phải xuất trận!<end>
+
+#WRITE(MyPtr, $000159)
+//じい：「殿！　おやめ下さい！！　じいはかなしゅうございます！」<end>
+<frame><$02><font><$01>
+Ông lão:  chúa công!<line>
+Xin hãy dừng lại!!<line>
+Lão buồn lắm!<end>
+
+#WRITE(MyPtr, $00015C)
+//ユーサー：「ええい、はなせ！　　主君がためらっていてどうする。」
+//「オルニックとあたるなら、全力をつくさねば。いざ、変身っ！！」<end>
+<frame><$02>
+Uther: buông ta ra!<line>
+Đấng quân chủ mà còn chần<line>
+chừ thì còn thể thống gì!<page>
+Nếu đối đầu với Ornic thì cứ<line>
+dốc toàn lực là được!<line>
+Nào,biến thân!!<end>
+
+#WRITE(MyPtr, $00015F)
+//兵士：「ごインキョ様にケイレイ」<end>
+<frame><$02><font><$01>
+Binh sĩ: kính lễ ngài ẩn cư!!<end>
+
+#WRITE(MyPtr, $000162)
+//兵士：「わが王は心のおやさしい方であらせられる。ご自分から戦いをしかけるような事はなさらない。」<end>
+<frame><$02><font><$01>
+Binh sĩ: đức vua của chúng<line>
+tôi là người có lòng từ ái.<page>
+Ngài không bao giờ tự mình<line>
+gây chiến đâu.<end>
+
+#WRITE(MyPtr, $000165)
+//リザードマン：「へへへへへっ、　なんだ？　おれたちのエサになりにきたのか？」<end>
+<frame><$01><font><$01>
+Người thằn lằn: hehehe~<line>
+Gì vậy? Các ngươi tới đây để làm<line>
+mồi nhậu cho bọn ta sao?<end>
+
+#WRITE(MyPtr, $000168)
+//魔女（マーサ）：「わたしはお前たちを助けるために過去からよみがえった者。」
+//「［サラスの雪山］をこえるには、雪をとかさねばならないであろう。だが、あんずる事はない。［太陽の守り］を雪山においた。あとは、お前たちの力しだいじゃ。」<end>
+Ma nữ (Martha):<line>
+Ta là người hồi sinh từ quá khứ<line>
+để giúp đỡ các ngươi.<page>
+Để vượt qua Tuyết sơn Sarath<line>
+thì cần phải làm cho tuyết tan.<page>
+Nhưng đừng lo.Ta đã để lá bùa<line>
+Thái dương trong núi tuyết.<page>
+Mọi việc còn lại tùy thuộc vào<line>
+nỗ lực tinh tấn của các ngươi.<end>
+
+#WRITE(MyPtr, $00016B)
+//マーサ：「また、魔王の力をかりたいのなら、修道士を一人で沼の古城に行かせるがよい。」
+//「城へ入れるよう、ふういんをといておく。みっつならんだ石ぞうのひとつにふれれば中に入れるはず。」「キャサリンの後には、大魔法使い［ガロア］がついている。ゆだんをするでない。では、さらばじゃ。」「武運をいのっておるぞ。」<end>
+Martha:<line>
+Nếu muốn mượn sức của Ma vương<line>
+thì hãy để một Tu sĩ đến cổ<line>
+thành trong đầm lầy.<page>
+Hãy vào trong thành rồi gỡ<line>
+phong ấn.<page>
+Hãy chạm vào 1 trong số 3 pho<line>
+tượng xếp hàng để vào trong.<page>
+Sau lưng Catharin là Đại ma<line>
+thuật sư Galoa.Chớ có lơ là<line>
+với hắn.<page>
+Thôi,tạm biệt các ngươi.<line>
+Chúc may mắn.<end>
+
+#WRITE(MyPtr, $00016E)
+//主人：「ゆっくり、やすんで行って下さい」<end>
+<frame><$02><font><$01>
+Chủ nhân:<line>
+Xin hãy nghỉ ngơi thong thả.<end>
+
+#WRITE(MyPtr, $000171)
+//修道士：「あなた方はカーディックの方ですね。」
+//「われわれもこれだけの人数になってしまいましたが、まだ戦えます。いっしょにまいりましょう！！」<page>
+//修道士の部隊が仲間になった<end>
+<frame><$02>
+Tu sĩ:<line>
+Các vị là người Cardic nhỉ.<page>
+Chúng tôi chỉ còn chừng này<line>
+người nhưng vẫn còn chiến<line>
+đấu được.<page>
+Chúng tôi sẽ theo các vị!!<page>
+Đội Tu sĩ đã gia nhập đồng minh!<end>
+
+#WRITE(MyPtr, $000174)
+//インキョ：「そうですか、こんな事になっているのに、キャメロットが動かないとはなさけない。」
+//「では、わたしたちもまいりましょうか」<page>
+//ゴエイ：「がってんでい！！！、ごインキョ！」<page>
+//ごインキョの部隊が仲間になった<page>
+//インキョ：「キャメロットには、わしらだけで行きましょう。うたぐりぶかい相手でな。」<page>
+//ゴエイ：「わしらのチームにはだれもいれないでもらいたい！」<end>
+<frame><$02>
+Lão ẩn cư: ra là vậy à.<line>
+Sự tình đã thế này mà Camelot<line>
+vẫn bình chân như vại.<page>
+Thật là thảm hại.<line>
+Vậy thì chúng ta cũng đi thôi.<page>
+Hộ vệ: chúng thuộc hạ rõ!<page>
+Đạo quân của Lão ẩn cư đã<line>
+gia nhập đồng minh!<page>
+Lão ẩn cư: hãy để chúng tôi đi<line>
+Camelot một chuyến.<line>
+Bọn họ đa nghi lắm.<page>
+Hộ vệ: đừng để bất cứ kẻ<line>
+nào khác vào đội của chúng tôi!<end>
+
+#WRITE(MyPtr, $000177)
+//マーサ：「さあ、行くがよい。　　魔王は、魔法陣の中に入れば、よび出せるであろう。」<end>
+Martha: nào, hãy đi đi.<line>
+Nếu tiến vào ma pháp trận thì<line>
+hẳn sẽ gọi được Ma vương.<end>
+
+#WRITE(MyPtr, $00017A)
+//主人：「わずかですが、うちにあるもので使いこなせる武器などがあれば、お持ちになって行って下さい」<end>
+<frame><$02><font><$01>
+Chủ nhân: tệ điếm còn ít vũ<line>
+khí, nếu có vị nào dùng được thì<line>
+cứ tự nhiên mà lấy đi.<end>
+
+#WRITE(MyPtr, $00017D)
+//魔王：「オレ様をよびだしたのはキサマか？」<end>
+<frame><$01>
+Ma vương: nhà ngươi là kẻ<line>
+đã gọi ta sao?<end>
+
+#WRITE(MyPtr, $000180)
+//魔王：「けいやくにより、キサマにだけのぞみをかなえてやる。いくつかの魔力をあたえてやろう。」
+//「使い方は自分でためすがいい。そのかわり、ペリーズがくたばったらたましいはオレ様のものだぞ。」<end>
+<frame><$01>
+Ma vương: theo khế ước, ta sẽ<line>
+ban điều ước cho mỗi mình nhà<line>
+ngươi.<page>
+Ta sẽ ban cho ngươi một số ma<line>
+lực.Hãy tự mình thử cách dùng<line>
+của chúng.<page>
+Đổi lại,khi Peris mệnh chung thì<line>
+linh hồn của hắn sẽ thuộc về ta.<end>
+
+#WRITE(MyPtr, $000183)
+//魔王：「欲ばりなやつらだ。もっと魔力がほしいなら、悪魔にでもなるんだな。ハァハハハ。」<end>
+<frame><$01>
+Ma vương: đúng là kẻ tham lam.<line>
+Nếu muốn có thêm ma lực thì hãy<line>
+biến thành ác ma đi. Hahaha~<end>
+
+#WRITE(MyPtr, $000186)
+//spd0魔王：「魔力がほしいのか？」　　　　　はい。魔力をわけて下さい　　　　いいえ。さようなら！<end>
+<frame><$01>
+Ma vương: muốn xin ma lực à?<line>
+      Đúng<line>
+      Không,bái bai!<end>
+
+#WRITE(MyPtr, $000189)
+//リザードマン：「ケケケ、オレたちはオルニックの兵士どもとはちがうぜ。かくごしな！」<end>
+Người thằn lằn: kekeke.<line>
+Bọn ta khác với đám binh sĩ<line>
+Ornic lắm đó. Chịu chết đi!<end>
+
+#WRITE(MyPtr, $00018C)
+//リザードマン：「この沼地でオレたちとやり合おうとは。命知らずなやつらだぜ。」<end>
+Người thằn lằn: dám giao tranh<line>
+với bọn ta trên đầm lầy này à!<line>
+Đúng là lũ điếc không sợ sấm!<end>
+
+#WRITE(MyPtr, $00018F)
+//牢番：「わしは知らんぞ、なーんにも知らん！　［ぞう］にしかけがあるなんて知らんのだ！」<end>
+<frame><$02><font><$01>
+Cai ngục: tui có biết gì đâu!<line>
+Chả biết gì hết á! Chả biết là trên<line>
+bức tượng có cơ quan bí mật đâu!<end>
+
+#WRITE(MyPtr, $000192)
+//こども：「わーい、助けに来てくれたんだね。」
+//「オオガラスにさらわれて、とじこめられていたんだ。」
+//「ぼく、エルフの［ロバート］って言うの。お父さんの所へつれて行ってよね。」<page>
+<frame><$02><font><$01>
+//ロバートが仲間になった<end>
+Con nít: hoan hô~<line>
+Các cô chú tới cứu cháu ha.<page>
+Cháu bị đám quạ khổng lồ bắt<line>
+đi rồi nhốt trong này.<page>
+Cháu là Robert của tộc Elf.<line>
+Dẫn cháu tới chỗ bố cháu với.<page>
+Robert đã gia nhập đồng minh.<end>
+
+#WRITE(MyPtr, $000195)
+//ゾンビ：「くやしい・・、このままでは、死にきれるものではない。」<end>
+<frame><$02><font><$01>
+Zombie: tiếc quá...<line>
+Cứ thế này thì ta không thể<line>
+siêu thoát được.<end>
+
+#WRITE(MyPtr, $000198)
+//ゾンビ：「ああ、わが領主様。生きておいでなのなら、われらのうらみをはらしてください！」<end>
+<frame><$02><font><$01>
+Zombie: trời ơi,ngài lãnh chúa ơi!<line>
+Nếu ngài còn sống thì hãy báo<line>
+thì cho bọn tôi!<end>
+
+#WRITE(MyPtr, $00019B)
+//「ああ、体があつい！　この感覚はまるで生き返ったようだ！」<end>
+<frame><$02><font><$01>
+"Cơ thể ta ấm quá! Cảm giác này<line>
+hệt như được sống lại vậy!"<end>
+
+#WRITE(MyPtr, $00019E)
+//「サラスの山道の落とされたつり橋をかけなおさないと、オルニックはせめられません。」
+//「サラスの山道から敵を追い出して下さい！　われわれで［橋］をかけなおします！！」<end>
+<frame><$02><font><$01>
+"Cây cầu treo bắc qua sơn đạo<line>
+Sarath bị chặt đứt rồi.Không nối<line> 
+lại cầu thì không tới Ornic được".<page>
+Hãy đuổi hết quân địch ra khỏi<line>
+sơn đạo Sarath.Rồi bọn tôi sẽ<line>
+bắc lại cầu cho!!<end>
+
+#WRITE(MyPtr, $0001A1)
+//「すでに［つり橋］はわたれるようになっています。オルニックが守りをかためないうちにさあ早く！」<end>
+<frame><$02><font><$01>
+Bây giờ đã có thể băng qua cầu<line>
+treo được rồi.<page>
+Hãy nhanh tiến công<line>
+trong khi Ornic đang lơ là<line>
+phòng thủ!<end>
+
+#WRITE(MyPtr, $0001A4)
+//墓からの声：「たのむぅ・・・　　みんなを助けてやってくれぇ・・」<page>
+//「地下のドラゴンが［死者をよみがえらせる宝］を持っているぅ・・」<end>
+<frame><$02>
+Giọng nói từ ngôi mộ:<line>
+Làm ơn...Hãy làm ơn cứu<line>
+mọi người...<page>
+Con rồng dưới lồng đất đang giữ<line>
+bảo vật hồi sinh người chết...<end>
+
+#WRITE(MyPtr, $0001A7)
+//［ぞうのはね］の数がへんだ
+//ひとつがとれそうだ！<page>
+//spd0　　　　　　　　　　　　　　　　　　［ぞうのはね］をとった！<end>
+<font><$01>
+Số lượng cánh của pho tượng<line>
+kỳ lạ quá.Có một cái như đang<line>
+muốn rơi ra!<page>
+Đã lấy một cánh của bức tượng!<end>
+
+#WRITE(MyPtr, $0001AA)
+//下にあった［ぞう］のはねをつけると、近くでなにかの音がした<end>
+<font><$01>
+Khi lắp cánh vào bức tượng bên<line>
+dưới thì có tiếng gì đó vang lên<line>
+ở gần đây.<end>
+
+#WRITE(MyPtr, $0001AD)
+//グール：「にっ、にんげん。なんのよっ、ようだぁ！　かえれぇ、かえれぇ」<end>
+<frame><$02><font><$01>
+Ghoul: Con,con người.<line>
+Cần gì,cần gì hảả!<line>
+Về,về điii!<end>
+
+#WRITE(MyPtr, $0001B0)
+//グール：「わっ、わしらぁ、にっ、にんげん、みっ、みてないぃ。きっきゃさりん、きっ、きてないぃ」<end>
+<frame><$02><font><$01>
+Ghoul: bọn,bọn taa khônggg<line>
+thấy conn conn người.Catharinnn<line>
+khôngg tớii đâyy.<end>
+
+#WRITE(MyPtr, $0001B3)
+//グール：「こっ、このおくぅ、りゅりゅう、いるぅ。にっ、にんげん、くっ、くわれたぁ」<end>
+<frame><$02><font><$01>
+Ghoul: có có connn rồnnng<line>
+ở phíaaa trong.Nóó ăn ăn<line>
+thịtt connn ngườiii.<end>
+
+#WRITE(MyPtr, $0001B6)
+//グール：「たっ、たからぁ、あるぅりゅっ、りゅう、まっ、まもるぅ」<end>
+<frame><$02><font><$01>
+Ghoul: nên nênn rồnng<line>
+đợiii, rồnnng bảoo vệệ.<end>
+
+#WRITE(MyPtr, $0001B9)
+//グール：「わっ、わしらぁ、たっ、たたかうぅ、きっ、きらいぃ。そ、そとにいるやつらたたかうぅ。」<end>
+<frame><$02><font><$01>
+Ghoul: bọnn taaa ghétt đánhh<line>
+nhauu.Ghéétt.Lũ bênnn ngoàii<line>
+toànnn đđáánnhh nhaauu.<end>
+
+#WRITE(MyPtr, $0001BC)
+//グール：「［じしん］を、おこす、いし、どうくつのどこかにあるう」<page>
+//「なくなっても、また、もどって、くるぅ、へんないしぃ」<end>
+<frame><$02><font><$01>
+Ghoul: viênn đđă gâyy động đấtt<line>
+đanng ở đđđâuu đđó trroong cáii<line>
+hanng nàyy.<page>
+Mmmấtt rồii quaayy lạiii nóó vẫẫnn<line>
+cònn.Vviêênn đđă kỳìì lạạạ...<end>
+
+#WRITE(MyPtr, $0001BF)
+//ゾンビ：「たすけてくれ！　グールのやつらは、おれをウンとくさらせてから食うつもりなんだ！」<page>
+//「たのむ、おれも連れてってくれ」<page>
+//ゾンビが仲間になった！<end>
+<frame><$02><font><$01>
+Zombie: cứu với!<line>
+Lũ Ghoul định để tôi mục ruỗng<line>
+rồi mới ăn thịt!<page>
+Hãy cho tôi theo các vị với!<page>
+Zombie đã gia nhập đồng minh!<end>
+
+#WRITE(MyPtr, $0001C2)
+//きとう師：「グールの神殿には、　めおとのドクロが祭られておる。
+//ドラゴンの所に行きたいのなら、彼らの助けが必要じゃ」
+//きとう師：「だが、グールのやつらが、ハシゴをはずしたので、ここからではおくへ進めない」
+//きとう師：「リッチモンドの村に、もう一つの入口があったはずじゃ」<end>
+<frame><$02><font><$01>
+Thầy mo: bên trong thần điện<line>
+Ghoul có thờ cặp đầu lâu vợ chồng.<page>
+Nếu muốn đến chỗ con rồng thì<line>
+phải nhờ chúng giúp sức mới được.<page>
+Thầy mo: nhưng lũ Ghoul đã tháo<line>
+cái thang đi mất rồi, nên từ đây<line>
+không thể tiến vào trong được.<page>
+Thầy mo: trong làng Richmond<line>
+cũng có một lối khác  dẫn vào<line>
+bên trong thần điện Ghoul.<end>
+
+
+#WRITE(MyPtr, $0001C5)
+//チビドラゴン：「あなたたちが、　［強い人］だね？」
+//「お父さんがぼくに［お前も強い人について修業して来い］ってさ。　ぼくもつれて行ってね。」<page>
+//チビドラゴンが仲間になった<end>
+<frame><$02><font><$01>
+Tiểu Long: các ngươi là<line>
+cường giả phải không?<page>
+Cha ta nói "con hãy theo cường giả<line>
+mà rèn luyện rồi về đây cho ta".<line>
+Hãy cho ta theo các ngươi với!<page>
+Tiểu Long đã gia nhập.<end>
+
+#WRITE(MyPtr, $0001C8)
+//ドラゴン：「わしのねむりのじゃまをするのは、どこのどいつだ？」
+//「ほう、リッチモンドの村人を生きかえらせるため、［復活の石］がほしいと言うのだな・・・。」
+//「ほしければ、お前たちの力をしめしてみよ！」<end>
+<frame><$01><font><$01>
+Rồng: đứa nào dám làm rộn<line>
+giấc ngủ của ta?<page>
+Sao,các ngươi muốn lấy viên đá hồi<line>
+sinh để cứu người làng Richmond à...<page>
+Được,nếu muốn lấy nó thì hãy để<line>
+ta kiểm tra sức mạnh của các ngươi!<end>
+
+#WRITE(MyPtr, $0001CB)
+//ドラゴン：「ウーム・・・、わしとここまではりあえる者は、ずいぶんとあらわれなかった。」
+//「よし、リッチモンドの村へもどるがよい。墓に向かっていのるのだ。村人を復活させてあげよう」<end>
+<frame><$02>
+Rồng: hừm... Trước nay chẳng<line>
+có kẻ nào cầm cự với ta đến<line>
+mức này cả.<page>
+Hay lắm.Hãy đến làng Richmond.<line>
+Hướng về phía nghĩa trang, rồi ta<line>
+sẽ giúp hồi sinh người làng ở đó.<end>
+
+#WRITE(MyPtr, $0001CE)
+//オルニック先王：「わしは前の国王じゃ。キャサリンのやつは何者かにあやつられておるのじゃ。」
+//「あやつのまわりは、人の形をした魔物だらけじゃ。」
+//「わしも、何か手伝えればよいのだが、わずかの武具があるだけじゃ」<end>
+<frame><$02><font><$01>
+Tiên vương Ornic: ta là Quốc<line>
+vương đời trước của Ornic.<page>
+Catharin đang bị kẻ nào đó<line>
+thao túng.Bên cạnh nó rặt một<line>
+lũ yêu ma đội lốt người.<page>
+Nếu ta giúp được gì thì tốt,nhưng<line>
+chỉ còn một ít binh giáp thôi.<page>
+Nếu có trong quân có ai<line>
+chuyển cấp được thì chứ lấy<line>
+đi mà dùng.<end>
+
+#WRITE(MyPtr, $0001D1)
+//ソフィア：「いよいよキャサリンと対決する時が来たのですね。」
+//「わたしはここであなた方のご無事を神にいのっています。どうか生きて帰ってきて・・・。」<end>
+Sophia: đã đến lúc quyết chiến<line>
+với mụ Catharin rồi nhỉ.<page>
+Ta sẽ ngồi đây cầu nguyện thần<line>
+linh gia hộ cho các vị được<line>
+bình an vô sự.<page>
+Cầu xin mọi người hãy sống<line>
+sót trở về...<end>
+
+#WRITE(MyPtr, $0001D4)
+//ガロア：「わが名は、［ガロア］　わしのたくらみを、さんざんにふみにじったのは、お前たちか！」　　「せいぜい、この部屋で苦しんでもらおう！」<end>
+<frame><$01><font><$01>
+Galoa: ta là Galoa.Các ngươi là<line>
+cái lũ đã dẫm nát âm mưu của<line>
+ta sao!<page>
+Vậy thì hãy nếm mùi đau khổ của<line>
+luyện ngục trong căn phòng này<line>
+đi!<end>
+
+#WRITE(MyPtr, $0001D7)
+//キャサリン：「ついにここまで来たというわけね。でも、おまえたちに私はたおせないよ！」
+//「どうしうちのおそろしさを、とくと味わうがよい！」<end>
+<frame><$01><font><$01>
+Catharin: cuối cùng các ngươi<line>
+cũng tới được đây rồi nhỉ.<page>
+Nhưng các ngươi đừng hòng làm<line>
+gì được ta.Hãy nếm mùi lợi hại<line>
+của chính các ngươi đi!<end>
+
+#WRITE(MyPtr, $0001DA)
+//キャサリン：「ガロ、ア・、な、ぜ・・、じゃ・・・。」<end>
+<frame><$01><font><$01>
+Catharin: Galoaaa... Tại...tại sao...<end>
+
+#WRITE(MyPtr, $0001DD)
+//ガロア：「おのれ、マーサめ！　　じゃまをしおって！　　　　　　　ええい、ここはひとまず引くか！」<end>
+<frame><$01><font><$01>
+Galoa: con mụ Martha chó đẻ!<line>
+Dám cản trở ta à!<line>
+Tạm thời rút khỏi đây thôi!<end>
+
+#WRITE(MyPtr, $0001E0)
+//ガロア：「ゴ、ゴアアアアアアァァァァ・・・！！」<end>
+<frame><$01><font><$01>
+Galoa: Gooaaaaaa...!!<end>
+
+#WRITE(MyPtr, $0001E3)
+//ガロア：「もう少しで、ログリスののすべてを手にできたものを！」
+//「おまえたちはゆるさない。ユルスモノカ！」<end>
+<frame><$01><font><$01>
+Galoa: chỉ còn một chút nữa thôi<line>
+là Glorith rơi vào tay tao!<page>
+Vậy mà!Không thể tha thứ<line>
+cho chúng mày được!<line>
+Tuyệt đối không!!<end>
+
+#WRITE(MyPtr, $0001E6)
+//「われわれに手向かう者には、ハメツあるのみだ。」<end>
+<frame><$01><font><$01>
+Kẻ nào dám chống lại ta thì<line>
+chỉ có đường hoại diệt.<end>
+
+#WRITE(MyPtr, $0001E9)
+//「もうすぐキャサリン様がこの地を支配なさるのだ。ムダなていこうは命をみじかくするだけだぞ。」<end>
+<frame><$01><font><$01>
+Chẳng bao lâu nữa, bà Catharin sẽ<line>
+cai trị vùng đất này.Chống cự chỉ<line>
+càng thêm bụng bự mà thôi.<end>
+
+#WRITE(MyPtr, $0001EC)
+//「ペリーズのじじいが死ねば、この地はキャサリン様のものだ。」<end>
+<frame><$01><font><$01>
+Khi thằng già Peris đòm thì vùng<line>
+đất này sẽ về tay bà Catharin.<end>
+
+#WRITE(MyPtr, $0001EF)
+//「われわれに、はむかうとは、いいどきょうだ。だが、その元気、いつまでつづくかな。」<end>
+<frame><$01><font><$01>
+Khá khen cho các ngươi cũng quả<line>
+cảm khi dám chống lại ta.<page>
+Nhưng liệu lòng can cường đó<line>
+còn kéo dài được bao lâu nữa.<end>
+
+#WRITE(MyPtr, $0001F2)
+//「おまえたちにはうらみはないが、これも仕事なんだ。悪く思うな。」<end>
+<frame><$01><font><$01>
+Ta với các ngươi không thù oán gì.<line>
+Nhưng đây là công việc.Chớ có oán<line>
+trách ta!<end>
+
+#WRITE(MyPtr, $0001F5)
+//「なんと、こんなヤツラがわがオルリックにたてつこうというのか。まるでよせ集めの軍隊じゃないか。」<end>
+<frame><$01><font><$01>
+Sao,cái lũ này dám chống cự Ornic<line>
+à? Trông chúng như một đám quân<line>
+ô hợp vậy.<end>
+
+#WRITE(MyPtr, $0001F8)
+//「ペリーズはもう死ぬ。予言どおりキャサリン様がログリスを統一するのだ。これ以上の争いはムダだぞ」<end>
+<frame><$01><font><$01>
+Peris chết rồi.Bà Catharin sẽ thống<line>
+nhất toàn cõi Glorith như lời dự<line>
+ngôn.Có đánh nhau nữa cũng ích gì.<end>
+
+#WRITE(MyPtr, $0001FB)
+//かべが動きだした！<end>
+Bức tường đã di chuyển!<end>
+
+#WRITE(MyPtr, $0001FE)
+//［月のアミュレット］を海になげこんだ。<end>
+<font><$01>
+Đá ném bùa mặt trăng xuống biển.<end>
+
+#WRITE(MyPtr, $000201)
+//魔導士：「ぐふっ・・・、　おれもこれまでのようだな。」
+//「オルニックの砦をぬければ決戦場だ。しかし、二度と後にはもどれんぞ。かくごをしておけ。」<end>
+<frame><$01><font><$01>
+Ma đạo sĩ: hự...Có vẻ như mạng ta<line>
+tới đây thôi.Qua khỏi đồn<line>
+Ornic sẽ là bãi quyết chiến.<page>
+Nhưng các ngươi đừng hòng quay lại<line>
+lần hai.Hãy chuẩn bị đi!<end>
+
+#WRITE(MyPtr, $000204)
+//「敵の様子を知るには、エリアに入った時［スタートボタン］をおし、キーで、スクロールさせて下さい。
+//エリア全体の様子を見る事ができますわ。
+//化け物の中には、とつぜんあらわれる物もいるそうです。見えない時はきっとそれです！」<end>
+<frame><$02><font><$01>
+Muốn biết tình hình của bên địch<line>
+thì khi vào trận,hãy nhấn nút<line>
+Start rồi nhấn các nút thập tự.<page>
+Lúc đó ta sẽ thấy được tổng<line>
+thể của khu vực.<page>
+Trong số yêu quái cũng có những<line>
+loài xuất hiện đột ngột.Ta không<line>
+thể thấy trước loại này đâu.<end>
+
+#WRITE(MyPtr, $000207)
+//「［敵が強い］と感じたら、それは自分たちが、まだ弱いのです。」<page>
+//「先をいそがず、きたえながら、進む方がよいでしょう。」<end>
+<frame><$02><font><$01>
+Nếu thấy bên địch mạnh thì tức<line>
+là phe ta còn yếu.<page>
+Đừng vội xông lên trước,mà hãy<line>
+luyện binh cho mạnh đã rồi tiến<line>
+quân cũng chẳng muộn.<end>
+
+#WRITE(MyPtr, $00020A)
+//ドクロ：「たのむ。オレを元の所にもどしてくれ。」<page>
+//spd0　　　　　　　　　　　　　　　　　　　　　ドクロをとった！<end>
+<frame><$02><font><$01>
+Đầu lâu: làm ơn đi.<line>
+Hãy đem ta trả về chỗ cũ đi!<page>
+<mannaka>Đã lấy đầu lâu!<end>
+
+#WRITE(MyPtr, $00020D)
+//ドクロ：「悪いグールが、あの人をどこかへつれて行ったの。　とてもさびしい、シクシク。」<end>
+<frame><$02><font><$01>
+Đầu lâu: gã Ghoul độc ác đã<line>
+đem người ấy đi đâu mất rồi.<line>
+Ta buồn lắm. Hix hix.<end>
+
+#WRITE(MyPtr, $000210)
+//ドクロ：「あんたーっ！　もどってきたのね。よかったわっ！！！　　親切な方、ありがとう！」　
+//「ドラゴンのいる所へ行きたいの？ちょっとまってね！　お礼に、水でヨウガンをひやしてあげるわ。」<end>
+<frame><$02><font><$01>
+Đầu lâu: chàng! Chàng đã trở<line>
+về rồi nhỉ!! Thật là tốt quá!!<page>
+Xin đa tạ những Người Tử Tế!<line>
+Người Tử Tế muốn tới chỗ con<line>
+rồng à? Hãy đợi một lát nhé.<page>
+Để ta dùng nước làm nguội<line>
+dung nham cho.<end>
+
+#WRITE(MyPtr, $000213)
+//声：「ケケケ、ここまで来たのか。だが、ここまでだぜ。」<page>
+//マーサの声：「じゃまをするんじゃないよっ！　きえておしまいっ！」<end>
+<frame><$01><font><$01>
+Giọng nói: kekeke.<line>
+Các ngươi đã tới được đây rồi à.<line>
+Nhưng đừng hòng tiến thêm nữa.<page><frame><$02><font><$00>
+Giọng Martha:<line>
+Đừng có cản đường họ!<line>
+Mau biến đi!!<end>
+
+#WRITE(MyPtr, $000216)
+//声：「よく来た。ここから先、お前の勇気をためさせてもらおう。　　　行くがいい、死ぬ気でなっ！！」<end>
+<frame><$02>
+Giọng nói: tới đúng lúc lắm.<line>
+Từ chỗ này đi về trước là nơi<line>
+thử thách dũng khí của ngươi.<page>
+Nào, đi đi.<line>
+Hãy đi như thể nhà ngươi<line>
+sẽ chết!<end>
+
+#WRITE(MyPtr, $000219)
+//声：「ここから先へ行けるのは、　修道士一人だけだ。」<end>
+<frame><$02>
+Giọng nói:<line>
+Từ đây trở đi chỉ có một Tu sĩ<line>
+mới tiến vào được.<end>
+
+#WRITE(MyPtr, $00021C)
+//声：「リッチモンドよ・・・　あなたをまっていました。この剣をたくしましょう。」
+//「そして、しんの勇者としてふさわしいすがたにおなりなさい。」<page>
+//「敵の女王は、［ガロア］という魔女にあやつられています。」
+//「さらに強くなって、いっこくも早く、この国に平和をとりもどしてください。」<end>
+<frame><$02>
+Giọng nói: hỡi Richmond...<line>
+Ta đã đợi chàng từ lâu.Ta ban<line>
+cho chàng thanh kiếm này.<page>
+Và hãy trở thành bộ dạng phù<line>
+hợp với một dũng sĩ chân chính.<page>
+Nữ vương bên địch đang bị Ma nữ<line>
+Galoa thao túng.<page>
+Hãy mạnh mẽ lên và mau<line>
+giành lại hòa bình cho xứ<line>
+sở này.<end>
+
+
+#WRITE(MyPtr, $00021F)
+//「キャメロット親衛隊、ただいま参上。すけだちいたす！」<end>
+<frame><$02><font><$01>
+Đội cận vệ Camelot tham thượng!<line>
+Chúng tôi đến trợ sức đây!<end>
+
+#WRITE(MyPtr, $000222)
+//「助けに来たぞっ！」<end>
+<frame><$02><font><$01>
+Bọn ta đến cứu đây!<end>
+
+#WRITE(MyPtr, $000225)
+//「おお、助けに来てくれたのか、　ありがたい。」<end>
+<frame><$02><font><$01>
+Đến cứu ta sao! Thật quý hóa!<end>
+
+#WRITE(MyPtr, $000228)
+//「待っていたんですよ。早く行きましょう。」<end>
+<frame><$02><font><$01>
+Chúng tôi đã đợi ngài lâu rồi.<line>
+Nào đi thôi.<end>
+
+#WRITE(MyPtr, $00022B)
+//女：「エルフの城には［勇者］しか手に入れる事のできない［聖剣］がかくされていると闇きます。」<end>
+<frame><$02><font><$01>
+Nữ nhân:  nghe nói trong lâu đài<line>
+của tộc Elf có giấu Thánh kiếm<line>
+mà chỉ có dũng sĩ mới rút được.<end>
+
+#WRITE(MyPtr, $00022E)
+//男：「私しか生きのこりませんでした。みんなオルニックのやつらに、やられてしまったのです。」
+//「やつらは、［サラスの山道］にかかる［つり橋］をおとし、［がけ］でふさいで、守っています。」
+//「［サラスの雪山］をぬければ、敵のうしろに出られます。」<page>
+//男：「［リッチモンドのがけ］は、［地しん］でもおきれば、くずれるでしょう。」
+//「しかし、［つり橋］はこの村の者が生き返りでもしないかぎり、なおせるみこみはありません。」
+//「［サラスの雪山］はとても大人数が通れるような所ではありません」
+//「オルニックをせめるには、なんとしても、［つり橋］をかけなおさなければならないのです！」<end>
+<frame><$02><font><$01>
+Thiện nam tử: chỉ có mình tôi<line>
+sống sót thôi.Mọi người đều bị<line>
+bọn Ornic sát hại hết rồi.<page>
+Bọn chúng đã chặt đứt cây cầu<line>
+treo bắc qua Tuyết sơn Sarath<line>
+và rồi cố thủ trên bờ vực.<page>
+Chỉ cần băng qua Tuyết sơn<line>
+Sarath là có thể lần ra sau lưng<line>
+quân địch.<page>
+Thiện nam tử: chỉ cần có động<line>
+đất là bờ vực Richmond sẽ sụp<line>
+đổ.<page>
+Nhưng để bắc lại cầu treo thì chỉ<line>
+còn cách hồi sinh những người<line>
+trong làng đã mất mạng.<page>
+Tuyết sơn Sarath không phải nơi<line>
+nhiều người qua lại.<page>
+Để tiến đánh Ornic thì phải bắc<line>
+lại cầu treo bằng mọi giá!<end>
+
+#WRITE(MyPtr, $000231)
+//「オルニックへ行くんじゃ、リッチモンドのがけがじゃまじゃのう。」
+//「ルートンの丘は敵がふさいでしまったで、こまったもんじゃのう。」<end>
+<frame><$02><font><$01>
+Bờ vực Richmond là thứ cản trở<line>
+đường đến Ornic.<page>
+Quân địch lại đang áng ngữ ở đồi<line>
+Lurton. Thật chẳng biết làm sao.<end>
+
+#WRITE(MyPtr, $000234)
+//牢番：「おそかったな。エルフの子はオルニックのやつらが連れて行ってしまったよ。」<end>
+<frame><$02><font><$01>
+Cai ngục: chậm chân rồi.<line>
+Thằng nhóc Elf đã bị bọn Ornic<line>
+dẫn đi mất rồi.<end>
+
+#WRITE(MyPtr, $000237)
+//「つり橋が落とされている。これではオリニック城へ進めない。リッチモンドの村の者が生きていれば、橋をかけられるのに。」<end>
+<frame><$02><font><$01>
+Cây cầu treo đã bị chặt đứt.<line>
+Như vầy thì không thể tiến<line>
+đến Ornic được.<page>
+Nếu người làng Richmond<line>
+còn sống thì họ có thể giúp<line>
+ta sửa lại cầu.<end>
+
+#WRITE(MyPtr, $00023A)
+//spd0「ジェーンって知っているかい？」　　　よく知らない　　　　　　　　　　もう闇いた<end>
+<frame><$02><font><$01>
+Các vị có biết Jane không?<line>
+      Không biết<line>
+      Có nghe nói<end>
+
+#WRITE(MyPtr, $00023D)
+//spd0　　　　　　　　　　　　　　　　　　　　［サラスの山道］<end>
+<mannaka>Sơn đạo Sarath<end>
+
+#WRITE(MyPtr, $000240)
+//隊長：「よしっ！　みんなわたったな。橋を落として、城をせめられないようにするんだ。」<page>
+//兵士：「ホントに切っちゃっていいんですか？」<page>
+//隊長：「なにをためらっている！　早く切れ！！」<end>
+<frame><$01><font><$01>
+Đội trưởng:  tốt!Tất cả qua cầu<line>
+hết rùi hén.Chặt cầu đi.Để chúng<line>
+không tấn công thành được.<page>
+Binh sĩ:  nhưng chặt đứt liệu có<line>
+ổn không hả đội trưởng?<page>
+Đội trưởng:  ổn chớ sao không?<line>
+Tụi bây chần chờ gì nữa!<line>
+Mau chặt đi!<page>
+Binh sĩ:  dzậy tụi em chặt đây!<end>
+
+#WRITE(MyPtr, $000243)
+//「この町で一番うつくしいのはもちろんの事、剣のうでなら騎士も顔負けってぐらいすごいんだぜ。」<end>
+<frame><$02><font><$01>
+Đó là nữ kiếm sĩ xinh đẹp<line>
+nhất thị trấn này.<page>
+Kiếm pháp của cô ấy chẳng<line>
+thua gì các kỵ sĩ cả.<end>
+
+#WRITE(MyPtr, $000246)
+//「我らがペリーズ王は、この国の開祖［ゴルド王］の血を引くお方。」
+//「ちいさい国とは言え、オルニックなんぞにゃ負けてはおれんわい。」<end>
+<frame><$02>
+Đức vua Peris của chúng tôi<line>
+là người kế thừa dòng máu của<line>
+vua Gord.<page>
+Vua Gord là người khai quốc<line>
+của đất nước này.<page>
+Tuy nhỏ bé nhưng đất nước<line>
+này quyết không chịu thua bè<line>
+lũ Ornic đâu.<end>
+
+#WRITE(MyPtr, $000249)
+//ファンクラブ：「ジェーンさん！　戦いにいくのですね。ぜひ、我々も連れて行って下さい！」<page>
+//ジェーン：「わかったわ、みんなで行きましょう。」<page>
+//ファンクラブが、仲間になった<end>
+Fan Club:  cô Jane!Cô ra trận<line>
+đấy ư.Hãy dẫn chúng tôi theo<line>
+với!<page>
+Jane:  tôi hiểu rồi.<line>
+Nào mọi người,đi thôi!<page>
+Fan Club của Jane đã gia nhập<line>
+phe đồng minh!<end>
+
+#WRITE(MyPtr, $00024C)
+//「［オルニック］なんかに負けないでね。」<end>
+<frame><$02><font><$01>
+Chúng ta không thua cái lũ<line>
+Ornic đó đâu.<end>
+
+#WRITE(MyPtr, $00024F)
+//牢番：「キャメロットが動き始めたからだぜ。エルフの子がどうなったかは知らんね」<end>
+<frame><$02><font><$01>
+Cai ngục:  tất cả là do lũ<line>
+Camelot động thủ!<page>
+Ai mà biết được thằng nhãi<line>
+Elf đó bị làm sao chứ.<end>
+
+#WRITE(MyPtr, $000252)
+//聖者：「この城があぶなくなった時は、私の力であなたをよびよせましょう。たよりにしております。」<end>
+<frame><$02>
+Thánh giả:  khi thành này gặp<line>
+nguy thì ta sẽ dùng sức mạnh<line>
+của mình để gọi tráng sĩ về.<end>
+
+#WRITE(MyPtr, $000255)
+//兵士：「勇者さま、あまりお力にはなれませんが、こんな物でよかったら持って行ってください。」<end>
+<frame><$02>
+Binh sĩ:  thưa tráng sĩ,dẫu vật<line>
+này hèn mọn nhưng xin hãy<line>
+nhận lấy cho.<end>
+
+#WRITE(MyPtr, $000258)
+//　　　　オルニック戦記<end>
+Ornic chiến ký<end>
+
+#WRITE(MyPtr, $00025B)
+//遠い昔、［ログリス］とよばれる　大地があった。<end>
+Ngày xửa ngày xưa có vùng đất<line>
+nọ tên là Glorith.<end>
+
+#WRITE(MyPtr, $00025E)
+//［ログリス］は多様な民族が住み、およそつぎのような国に分かれて　いる。<end>
+Glorith là nơi sinh sống của<line>
+nhiều chủng tộc khác nhau.<line>
+Đại lục này chia thành các quốc<line>
+gia như sau.<end>
+
+#WRITE(MyPtr, $000261)
+//　南に［ペリーズ王］の治める　　　［カーディック］<end>
+Phía Nam là Cardic do<line>
+Vua Peris trị vì.<end>
+
+#WRITE(MyPtr, $000264)
+//　南西の［ソルズベリー］には　　　［ケンタウロス族］<end>
+Phía Tây Nam là vùng<line>
+Solberry của tộc Centaurus.<end>
+
+#WRITE(MyPtr, $000267)
+//南東には海をへだてて、女だけが　住む［アマゾネス］の村<end>
+Vượt qua đại dương phía Đông<line>
+Nam là ngôi làng Amazones.<page>
+Nơi đây chỉ toàn nữ nhân sinh sống.<end>
+
+#WRITE(MyPtr, $00026A)
+//西には［バードマン］を従える、　エルフの国［エドウィン］<end>
+Phía Tây là Vương quốc Edwin,<line>
+đất nước của tộc Elf thống lĩnh<page>
+đạo quân người chim.<end>
+
+#WRITE(MyPtr, $00026D)
+//東には［ユーサー王］の治める、　［キャメロット］<end>
+Phía Đông là thành Camelot do<line>
+Vua Uther cai trị.<end>
+
+#WRITE(MyPtr, $000270)
+//中央の森には［ドワーフ］の住む　［コンウォール］<end>
+Vùng trung tâm là rừng Conwall,<line>
+nơi cư ngụ của tộc Dwarf.<end>
+
+#WRITE(MyPtr, $000273)
+//北西の沼地は［リザードマン］の　支配する［ベニック］<end>
+Benic là vùng đầm lầy phía Tây<line>
+Bắc do người thằn lằn cai trị.<end>
+
+#WRITE(MyPtr, $000276)
+//そして北には、［オルニック］が　あった。<end>
+Và phía Bắc là thành Ornic.<end>
+
+#WRITE(MyPtr, $000279)
+//［カーディック］の［ペリーズ王］には、［ソフィア］と言う、一人のむすめがいた。<end>
+Vua Peris thành Cardic có người<line>
+con gái tên là Sophia.<end>
+
+#WRITE(MyPtr, $00027C)
+//ソフィア：「お父様、おかげんはいかがですか。」<page>
+//ペリーズ：「ああ、心配をかけるのう。しかし、わしも老い先みじかいのはまちがいない。」
+//「それよりも、［オルニック］が気がかりじゃ。最近、よくないウワサを闇く。」<end>
+Sophia: <line>
+Thưa phụ vương,chẳng hay long<line>
+thể người thế nào?<page>
+Vua Peris: Ta lại khiến con lo<line>
+lắng rồi.Nhưng đúng là mạng ta<line>
+chẳng còn được bao lâu nữa.<page>
+Mà ta đang lo về Ornic nhiều hơn.<line>
+Gần đây toàn nghe những<line>
+tin đồn không hay.<end>
+
+#WRITE(MyPtr, $00027F)
+//牧師：「兵士をきたえるのに、時間がかかるようでしたら、敵の動きをおくらせるようにいのりましょう」<end>
+<frame><$02><font><$01>
+Mục sư:  nếu ngài cần thời gian<line>
+để rèn binh sĩ thì ta sẽ cầu<line>
+nguyện để địch chậm lại.<end>
+
+#WRITE(MyPtr, $000282)
+//spd0敵のいどう開始をおくらせますか？　　　おそい方がよい　　　　　　　　　早くてもかまわない<end>
+<frame><$02><font><$01>
+Muốn địch di chuyển chậm?<line>
+      Chậm thì tốt hơn<line>
+      Nhanh cũng không sao<end>
+
+#WRITE(MyPtr, $000285)
+//兵士：「はっ、女王キャサリン様が即位されていらい、オルニックではいくさの準備をつづけているとか」<end>
+<frame><$02><font><$01>
+Binh sĩ:  vâng,từ khi Nữ vương<line>
+Catharin lên ngôi thì Ornic cứ<line>
+liên tục chuẩn bị chiến tranh.<end>
+
+#WRITE(MyPtr, $000288)
+//ペリーズ：「もし、そうだとしたらねらいはこの［カーディック］。　そして、わしらの命じゃ！」<end>
+Peris: nếu vậy thì mục tiêu của ả<line>
+chính là Cardic này.<line>
+Và cả cái mạng ta nữa!<end>
+
+#WRITE(MyPtr, $00028B)
+//ソフィア：「！　なぜ、そんな。」<end>
+Sophia: !!<line>
+Không,không thể nào!<line>
+Tại sao lại như vậy chứ!<end>
+
+#WRITE(MyPtr, $00028E)
+//ペリーズ：「われらが祖先、［ゴルド王］のゆい言を知っておろう。」
+//「［我がまつえい、ただ一人となりし時、ログリスはひとつとなり、はんえいす］とある。」<end>
+Peris: tổ tiên của chúng ta,vua<line>
+Gord có để lại di ngôn.Hẳn là<line>
+con biết chứ?<page>
+"Khi hậu duệ của ta còn duy<line>
+nhất một người thì Glorith sẽ<line>
+quy về một mối,được đời đời<line>
+phồn thịnh".<end>
+
+#WRITE(MyPtr, $000291)
+//ペリーズ：「［キャサリン］はわしらの遠い親せき、つまりゴルド王のまつえいじゃ。」
+//「今はわしらとキャサリンしかまつえいはいない。」<end>
+Peris: Catharin là họ hàng xa của<line>
+chúng ta,tức ả cũng là hậu duệ<line>
+của vua Gord.<page>
+Bây giờ,hậu duệ của vua Gord<line>
+chỉ còn mỗi cha con ta và ả<line>
+mà thôi.<end>
+
+#WRITE(MyPtr, $000294)
+//ペリーズ：「あの女は［ログリス］全土を手にいれようと、わしら親子をねらって来るじゃろう。」<end>
+Peris: con mụ đó muốn thôn tính<line>
+toàn bộ Glorith,nhắm đến cha<line>
+con chúng ta đây mà.<end>
+
+#WRITE(MyPtr, $000297)
+//ペリーズ：「だが、［オルニック］をむかえうつ力は［カーディック］にはない。早く手を打たんと・・」<end>
+Peris: nhưng mà bây giờ Cardic<line>
+không đủ sức để kháng cự Ornic...<page>
+Chúng ta cần phải có<line>
+hành động sớm mới được...<end>
+
+#WRITE(MyPtr, $00029A)
+//spd0　　　　　　　　　　　　　　　　　　［［［オルニック城］］］　<end>
+<mannaka>Thành Ornic<end>
+
+#WRITE(MyPtr, $00029D)
+//兵士：「兵をきたえるには、敵と戦う時間が長いほどよいのです。敵をたおさずともレベルは上がります」<end>
+<frame><$02>
+Binh sĩ:  để luyện binh thì thời<line>
+gian chiến đấu với địch càng<line>
+lâu càng tốt.<page>
+Không cần phải hạ được địch,<line>
+chỉ cần kéo dài thời gian cũng<line>
+lên Level được.<end>
+
+#WRITE(MyPtr, $0002A0)
+//兵士：「［海の砦］の敵をたおすには、カタパルトにやられないように敵をおびきだすとよいでしょう」<page>
+//「敵部隊だけたおして、だっしゅつするのが、よい作戦です！」<end>
+<frame><$02>
+Binh sĩ:  để hạ quân địch ở đồn<line>
+ải trên biển thì cần dụ quân<line>
+địch ra khỏi máy bắn đá.<page>
+Chỉ cần đánh bại đạo quân địch<line>
+rồi thoát khỏi trận đánh là<line>
+thượng sách!<end>
+
+#WRITE(MyPtr, $0002A3)
+//兵士：「もうし上げます！　全部隊出発の準備がととのいましてございます！」<end>
+<frame><$01><font><$01>
+Binh sĩ:  khởi bẩm!<line>
+Tất cả các đạo quân đã chuẩn<line>
+bị xong xuôi cả rồi!<end>
+
+#WRITE(MyPtr, $0002A6)
+//キャサリン：「よし、して、先発隊のようすはどうじゃ？」<end>
+<frame><$01><font><$01>
+Catharin:  tốt.Vậy còn tình hình<line>
+của đạo quân tiên phong thế<line>
+nào rồi?<end>
+
+#WRITE(MyPtr, $0002A9)
+//兵士：「ベニックのリザードマンはすでにわれわれの意のままとなっております。」<end>
+<frame><$01><font><$01>
+Binh sĩ:  lũ người thằn lằn ở<line>
+Benic đều đã theo ý chúng ta.<end>
+
+#WRITE(MyPtr, $0002AC)
+//兵士：「キャメロットのユーサー王にはたっぷりオドシをかけておきました。」<page>
+//「城にとじこもったままですが、　状況しだいでこちらの味方となりましょう。」<end>
+<frame><$01><font><$01>
+Binh sĩ:  còn lão vương Uther ở<line>
+thành Camelot thì đã bị chúng<line>
+ta dọa cho một trận.<page>
+Bây giờ hắn cứ co rút trong<line>
+thành,hẳn là đang chờ tình<line>
+hình để làm thân với ta.<end>
+
+#WRITE(MyPtr, $0002AF)
+//キャサリン：「エルフ、アマゾネスはどうした？　どちらも敵に回してはうるさい連中じゃ。」<end>
+<frame><$01><font><$01>
+Catharin:  còn lũ Elf và Amazones<line>
+thế nào?Dù bên nào cự ta cũng<line>
+đều phiền toái cả.<end>
+
+#WRITE(MyPtr, $0002B2)
+//兵士：「ご安心を。すでに手はうってございます。」<end>
+<frame><$01><font><$01>
+Binh sĩ:  Nữ vương cứ an tâm.<line>
+Thần đã có diệu kế.<end>
+
+#WRITE(MyPtr, $0002B5)
+//spd0　　　　　　　　　　　　　　　　　　エルフの城［エドウィン］<end>
+<mannaka>Thành Edwin<end>
+
+#WRITE(MyPtr, $0002B8)
+//兵士：「一大事にございます！！」<end>
+<frame><$02><font><$01>
+Binh sĩ: khởi bẩm Đại vương!!<line>
+Nguy to rồi!!<end>
+
+#WRITE(MyPtr, $0002BB)
+//エルフ王ロイ：「何事じゃ？」<end>
+<frame><$02>
+Roy vua tộc Elf: <line>
+Có chuyện gì!?<end>
+
+#WRITE(MyPtr, $0002BE)
+//兵士：「たった今、王子様が、［ロバート王子］様がオオガラスどもにさらわれてしまいました！」<end>
+<frame><$02><font><$01>
+Binh sĩ: vừa rồi Vương tử Robert<line>
+đã bị lũ quạ khổng lồ bắt đi<line>
+mất rồi!<end>
+
+#WRITE(MyPtr, $0002C1)
+//エルフ王ロイ：「何とロバートが！見はりの者はどうした！　バードマンは何をしておるのだっ！！」<end>
+<frame><$02>
+Roy vua tộc Elf: cái gì! Robert á!<line>
+Lũ lính gác đâu! Đám người chim<line>
+làm cái trò gì vậy!!<end>
+
+#WRITE(MyPtr, $0002C4)
+//兵士：「いっしゅんの出来事でございました。前からの敵に気をとられ後ろからの敵に気がつかず・・・」「もうしわけございません！！！」<end>
+<frame><$02><font><$01>
+Binh sĩ: chuyện xảy ra trong<line>
+chớp mắt.<page>
+Chúng thuộc hạ bị kẻ địch trước<line>
+mặt chi phối mà lơ là cảnh giác<line>
+phía sau...Xin Đại vương tha tội!!<end>
+
+#WRITE(MyPtr, $0002C7)
+//魔導士：「フッフッフ・・・　　　エルフ王よ、おこまりのようだな」<end>
+<frame><$01><font><$01>
+Ma đạo sĩ: khà khà khà...<line>
+Hỡi vua tộc Elf,nhà ngươi khốn<line>
+khổ quá nhỉ.<end>
+
+#WRITE(MyPtr, $0002CA)
+//兵士：「き、きさまは、オルニックの魔導士！　生かして返すかっ！　くらえっ！」<end>
+<frame><$01><font><$01>
+Binh sĩ: ngươi,ngươi là ma đạo sĩ<line>
+của lũ Ornic! Đừng hòng sống<line>
+sót trở về!  Tiếp chiêu!!<end>
+
+#WRITE(MyPtr, $0002CD)
+//魔導士：「心配は無用、ロバートは生きておる。」<page>
+//「我々は、むやみに人を殺したりはせんよ。ただし、キャサリン様にさからうのならば、責任は持てん。」<end>
+<frame><$01><font><$01>
+Ma đạo sĩ: đừng lo.Robert vẫn<line>
+còn sống.Bọn ta không giết<line>
+người vô ích đâu.<page>
+Nhưng nếu chống cự Nữ vương<line>
+Catharin thì ta không chịu trách<line>
+nhiệm đâu nhé.<end>
+
+#WRITE(MyPtr, $0002D0)
+//エルフ王ロイ：「ぬうううう・・・キャサリンめ！」<end>
+<frame><$02>
+Roy vua tộc Elf: grừừ...<line>
+Con mụ Catharin chó chết!<end>
+
+#WRITE(MyPtr, $0002D3)
+//spd0　　　　　　　　　　　　　　　　　　　　［サンリスの塔］<end>
+<mannaka>Tháp Sanrith<end>
+
+#WRITE(MyPtr, $0002D6)
+//牢番：「ほら、おとなしく入っているんだぞ、ぼうず。」<end>
+<frame><$02><font><$01>
+Cai ngục: nè thằng nhóc,ngoan<line>
+ngoản chui vô đi.<end>
+
+#WRITE(MyPtr, $0002D9)
+//牢番：「まったく、オルニックのやつらはムゴイ事しやがるぜ。こんなちいさい子をさらうなんて・・・」「ま、おれには関係ないか。」<end>
+<frame><$02><font><$01>
+Cai ngục: mà bọn Ornic tàn bạo<line>
+thiệt đó.Có đứa con nít chút ét<line>
+mà hành hạ như này...<page>
+Mà kệ bà nó,liên qua gì tao.<line>
+Cho nó tới công chiện luôn.<end>
+
+#WRITE(MyPtr, $0002DC)
+//spd0　　　　　　　　　　　　　　　　　　　［アマゾネスの村］<end>
+<mannaka>Làng Amazones<end>
+
+#WRITE(MyPtr, $0002DF)
+//コソ泥Ａ：「おう、相棒、早くしろい！」<end>
+<frame><$01><font><$01>
+Anh Đạo: ê, lẹ lên coi mậy!<end>
+
+#WRITE(MyPtr, $0002E2)
+//コソ泥Ｂ：「とったぜ！　これが　［なみだのしずく石］だ！」
+//「女共が大切にしている宝だ。　　これで、キャサリン様からたんまり礼金がもらえるぜ！」<end>
+<frame><$01><font><$01>
+Anh Chích: lấy được rùi nè!<line>
+Đây chính là viên đá nước mắt<line>
+"lệ thạch".<page>
+Báu vật của đám đàn bà đây mà.<line>
+Kỳ này moi được một đống tiền<line>
+của bà Catharin rùi!<end>
+
+#WRITE(MyPtr, $0002E5)
+//コソ泥Ａ：「よし、ずらかろう！」<end>
+<frame><$01><font><$01>
+Anh Đạo: ngon!  Dzọt lẹ đi!<end>
+
+#WRITE(MyPtr, $0002E8)
+//コソ泥Ｂ：「風が出てきたぜ、　　大丈夫かなあ？」<end>
+<frame><$01><font><$01>
+Anh Chích: nổi gió rùi.<line>
+Có sao hôn ta?<end>
+
+#WRITE(MyPtr, $0002EB)
+//コソ泥Ａ：「かまうこたあねえや、早くしないと気づかれるぜ！」<end>
+<frame><$01><font><$01>
+Anh Đạo: kệ mẹ nó. Hơi đâu.<line>
+Mau lên không là tụi nó biết!<end>
+
+#WRITE(MyPtr, $0002EE)
+//兵士：「敵だ！　オオガラスどもがせめて来たぞ！！！」<end>
+<frame><$02><font><$01>
+Binh sĩ: địch kìa!<line>
+Lũ quạ khổng lồ đang tấn công!!<end>
+
+#WRITE(MyPtr, $0002F1)
+//隊長：「なにをしておるのだ！　　早くがけをのぼって、弓兵をたおすのだ！！」<end>
+<frame><$01><font><$01>
+Đội trưởng: các ngươi làm gì vậy!<line>
+Mau leo lên đồi đập chết bọn<line>
+cung binh cho ta!!<end>
+
+#WRITE(MyPtr, $0002F4)
+//魔導士：「こんなゴミどものそうじに、なにを手まどっておるのだ。　わしがきれいにしてくれるわ！！」<end>
+<frame><$01><font><$01>
+Ma đạo sĩ: dọn dẹp lũ rác rưởi<line>
+này cũng đến tay ta sao.<line>
+Được,để ta dọn cho!!<end>
+
+#WRITE(MyPtr, $0002F7)
+//ドワーフ：「いかん！　こいつはかなわんぞ。みんな、にげるんだ！」<end>
+<frame><$02><font><$01>
+Dwarf: hỏng!  Không chơi nổi<line>
+đám này.Mọi người chạy đi!<end>
+
+#WRITE(MyPtr, $0002FA)
+//魔導士：「キャサリン様、すべて、手はず通り・・・」<end>
+<frame><$01><font><$01>
+Ma đạo sĩ: thưa nữ vương<line>
+Catharin,tất cả đều như<line>
+kế hoạch...<end>
+
+#WRITE(MyPtr, $0002FD)
+//キャサリン：「おお、たいぎであった。者共！、時は来た！」
+//「ついに、わが［オルニック］が、この全ログリスをわが手にする時が来たのじゃっ！」<end>
+<frame><$01><font><$01>
+Catharin: ồ các ngươi vất vả.<line>
+Các ngươi!Thời của ta đến rồi!<page>
+Cuối cùng thì thời khắc toàn<line>
+đại lục Glorith rơi vào tay ta<line>
+cũng đã đến!<end>
+
+#WRITE(MyPtr, $000300)
+//「おーうっ！！！」<end>
+<frame><$01><font><$01>
+Vạn tuế!!Vạn tuế!!<line>
+Vạn vạn tuế!!<end>
+
+#WRITE(MyPtr, $000303)
+//キャサリン：「手向かう者には、　ようしゃするな！」
+//「めざすは、［カーディック］、　ペリーズとソフィアの息のねをとめるのじゃ！」<end>
+<frame><$01><font><$01>
+Catharin: đừng nương tay với<line>
+kẻ kháng cự!<page>
+Mục tiêu là thành Cardic,phải<line>
+lấy mạng Peris và Sophia cho ta!<end>
+
+#WRITE(MyPtr, $000306)
+//「お、おーうっ！！！」<end>
+<frame><$01><font><$01>
+<mannaka>"Tuân lệnh!!"<end>
+
+#WRITE(MyPtr, $000309)
+//村人：「敵だあーっ！　オルニックがせめて来たぞーっ！」<end>
+<frame><$02>
+Thôn nhân: quân địch!<line>
+Quân Ornic kéo tới rồi!<end>
+
+#WRITE(MyPtr, $00030C)
+//村人：「は、早く逃げろーっ！」<end>
+<frame><$02>
+Thôn nhân: mau,mau chạy đi!<end>
+
+#WRITE(MyPtr, $00030F)
+//兵士：「領主様！　お逃げ下さい。ここはわれわれが食いとめます！」<end>
+<frame><$02>
+Binh sĩ: ngài lãnh chúa!<line>
+Hãy mau chạy đi.Nơi này cứ để<line>
+bọn tôi chặn chúng lại!<end>
+
+#WRITE(MyPtr, $000312)
+//リッチモンド：「何を言う！　お前たちこそ早く逃げろ！　敵は私がふせぐ！」<end>
+Richmond: các ngươi nói gì vậy!<line>
+Các ngươi mau chạy đi!<line>
+Để ta cản địch!<end>
+
+#WRITE(MyPtr, $000315)
+//兵士：「この村だけの事ではありませんぞ、［ログリス］の運命がかかっているのです！」
+//「早く、少しでも早くカーディックのお城にこの事を！」<end>
+<frame><$02>
+Binh sĩ: vận mệnh của cả Glorith<line>
+đang lung lay,đâu chỉ mỗi ngôi<line>
+làng này!<page>
+Ngài hãy cấp báo sự việc đến<line>
+thành Cardic!<end>
+
+#WRITE(MyPtr, $000318)
+//リッチモンド：「・・・わかった、すぐに助けをたのむ。ムダに死ぬなよ！」<end>
+Richmond: ...ta hiểu rồi.<line>
+Ta sẽ quay lại cứu các ngươi!<line>
+Đừng chết vô ích đấy!<end>
+
+#WRITE(MyPtr, $00031B)
+//ドワーフ：「えらいこっちゃ！！　［オルニック］がせめて来たぞ！」<end>
+<frame><$02><font><$01>
+Dwarf: lũ Ornic láo chó kéo<line>
+tới rồi nè anh em!<end>
+
+#WRITE(MyPtr, $00031E)
+//ドワーフ：「何の、そうかんたんにおれたちの森を通してなるものか！戦いだ！　おのをとれ！」<end>
+<frame><$02><font><$01>
+Dwarf: đừng hòng qua được khu<line>
+rừng của bọn ta!Chiến tranh<line>
+rồi!  Cầm rìu lên đi anh em!<end>
+
+#WRITE(MyPtr, $000321)
+//兵士：「もうし上げます。リッチモンドの領主、リッチモンド伯が手きずを負われていらっしゃいました」<end>
+<frame><$02>
+Binh sĩ: bẩm báo!  Lãnh chúa<line>
+Richmond đã thọ trọng thương!<end>
+
+#WRITE(MyPtr, $000324)
+//ペリーズ：「リッチモンドが！　すぐにここへ！」<end>
+Vua Peris: Richmond hả!<line>
+Mau dẫn vào đây!<end>
+
+#WRITE(MyPtr, $000327)
+//リッチモンド：「ペリーズ王、つ、ついに［キャサリン］が兵を上げましたっ！」<page>
+//「敵はログリスの中央、コーンウォールをぬけてこちらへ、先発隊は、す、すでに、近くま・で・来て・」<end>
+Richmond: thưa đức vua,cuối<line>
+cùng thì bè lũ Catharin cũng đã<line>
+dấy binh!<page>
+Quân địch đang vượt qua vùng<line>
+Conwall,trung tâm của Glorith<line>
+để tiến về đây.<page>
+Đội tiên phong đã tới gần...<end>
+
+#WRITE(MyPtr, $00032A)
+//ソフィア：「リッチモンド伯！　しっかりなさって！！」<end>
+Sophia: Bá tước Richmond!<line>
+Hãy tỉnh lại!!<end>
+
+#WRITE(MyPtr, $00032D)
+//兵士：「大丈夫、まだ息はありますすぐに手当をいたします！」<end>
+<frame><$02>
+Binh sĩ: không sao đâu.Ngài ấy<line>
+vẫn còn thở.Thần sẽ chăm sóc<line>
+vết thương ngay!<end>
+
+#WRITE(MyPtr, $000330)
+//とつぜんの大音きょうと共にオルニックの城は、勇者たちをのみこみ、くずれ落ちた。<page>
+//しかし、がれきの下からは妖じゅうの死がいも、勇者たちのすがたも見つけることは出来なかった。<end>
+Tiếng động lớn đột nhiên vang<line>
+lên,rồi cả thành trì Ornic sụp đổ,<line>
+nuốt chửng các dũng sĩ.<page>
+Nhưng bên dưới đống đổ nát đó<line>
+chẳng thấy xác của yêu thú,cũng<line>
+không thấy các dũng sĩ đâu.<end>
+
+#WRITE(MyPtr, $000333)
+//こうしてログリスは一つの国となり勝利の日を待たずに病死したペリーズ王にかわりソフィアが最初の女王となる。<end>
+Và như vậy là Glorith đã thống<line>
+nhất về một mối...<page>
+Sophia trở thành Nữ vương<line>
+đầu tiên thay của Glorith,<line>
+thay cho phụ vương Peris đã<line>
+bệnh tử mà không đợi được<line>
+ngày thắng lợi.<end> 
+
+#WRITE(MyPtr, $000336)
+//spd0　　　　　　　　　　　　　　　　　　　　　どこかの海辺<end>
+<mannaka>Tại một bãi biển nào đó<end>
+
+#WRITE(MyPtr, $000339)
+//「う、うう・・・　こ、ここはどこだ？？　何だ？　私は何をしているんだ？？」<end>
+"Uầy... Ta là đâu... Đây là ai?<line>
+Tại sao? Tại sao chỗ này lại<line>
+ở trong ta??"<end>
+
+#WRITE(MyPtr, $00033C)
+//「お、思いだせない！　わ、わたしの名前は・・・　？」<page>
+//「わたしは・・・　だれなんだ！」<end>
+"Ta chẳng nhớ gì hết!<line>
+Ta... Ta tên là gì.....?"<page>
+"Ta là... Ta là ai!"<end>
+
+#WRITE(MyPtr, $00033F)
+//「何かしかけが、ありそうだぞ！」<end>
+Dường như là có cơ quan gì đó!<end>
+
+#WRITE(MyPtr, $000342)
+//「あっ！　ゆかが・・・！」<end>
+Trời! Sàn nhà...!<end>
+
+#WRITE(MyPtr, $000345)
+//「二部隊以上の部隊を手に入れておるか？
+//ほかの部隊を動かすには、キャンプして［オールマップ］を見るのじゃ
+//そこで、［ＬＲ］ボタンを、おしてみなさい。てんめつするキャラが変るじゃろう。
+//［Ａ］ボタンをおせば、その部隊にコントロールがうつるのじゃ。」<end>
+<frame><$02>
+Đang giữ 2 đạo quân trở lên à?<line>
+Muốn điều khiển đạo quân khác<line>
+thì hãy đóng trại cái đã.<page>
+Sau đó vào Menu mà xem bản đồ<line>
+tổng thể, rồi nhấn hút L,R.<page>
+Lúc đó có thể chọn đạo quân<line>
+đang nhấp nháy.Nhấn nút A để<line>
+điều khiển đạo quân đó.<end>
+
+#WRITE(MyPtr, $000348)
+//兵士：「おはずかしい話ですが、我々はみじゅくな兵士が多く、すぐに強い敵と戦うのはむりでしょう。」「戦いのけいけんをつませてあげて下さい。」<end>
+<frame><$02>
+Binh sĩ:  nói ra thật xấu hổ,<line>
+nhưng trong đám binh sĩ chúng<line>
+tôi có nhiều kẻ còn non nớt.<page>
+Bây giờ chưa thể chiến đấu với<line>
+kẻ mạnh được.Xin ngài hãy để<line>
+chúng tôi tích lũy kinh nghiệm.<end>
+
+#WRITE(MyPtr, $00034B)
+//アマゾネス：「［オルニック］は　ゆるせないわ！　戦いましょう！」<end>
+<frame><$02><font><$01>
+Amazones: không thể tha thứ<line>
+cho lũ Ornic!<line>
+Chúng tôi cũng sẽ tham chiến!<end>
+
+#WRITE(MyPtr, $00034E)
+//ロレンス「さあさあ、［クラスチェンジ］できる人はいないかな。
+//いれば、うちの武器や防具を持っていっていいぜ。」<page>
+//主人：「にいさん！　本当に戦争に行っちゃうのかい？」<page>
+//ロレンス：「当たり前だ。店はお前にまかせたぜ。武器屋に戦争けいけんは必要さ。」<end>
+<frame><$02><font><$01>
+Lawrence: nào nào,có ai<line>
+chuyển cấp được không nhỉ?<page>
+Nó có thì hãy mang vũ khí với áo<line>
+giáp của tệ điếm đi đi.<page>
+Chủ nhân: huynh!<line>
+Huynh ra trận thật đó hả?<page>
+Lawrence: dĩ nhiên rồi.<line>
+Ta giao cửa hiệu này lại đệ.<page>
+Chủ tiệm vũ khí cũng cần phải<line>
+có kinh nghiệm chiến tranh<line>
+mới được.<end>
+
+#WRITE(MyPtr, $000351)
+//「アイテムには、持っているだけでこうかのあるものと、［Ｙ］ボタンで使うものがあります。」<end>
+<frame><$02>
+Item có 2 loại,1 loại chỉ cần<line>
+mang trong người là có hiệu<line>
+quả thụ động.<page>
+Loại còn lại thì phải nhấn nút<line>
+Y để sử dụng.<end>
+
+#WRITE(MyPtr, $000354)
+//「オルニックはもう目の前です。　がんばってください。」<end>
+"Ornic ở ngay trước mắt rồi.<line>
+Hãy cố lên nhé".<end> 
+
+#WRITE(MyPtr, $000357)
+//アマゾネス：「わたしたちアマゾネスは昔からどこの国とも戦わずにいたわ。」
+//「自分たちの村を守る時にしか戦わないの。」<end>
+<frame><$02><font><$01>
+Amazones: từ xưa thì tộc<line>
+Amazones chúng tôi chẳng gây<line>
+hấn với nước nào cả.<page>
+Chúng tôi chỉ chiến đấu khi bảo<line>
+vệ làng của chính mình thôi.<end>
+
+#WRITE(MyPtr, $00035A)
+//アマゾネス：「ここは女だけの村。いつもは決して男はいれないのだけど、今こまった事がおきてるの。」「私たちのリーダーに会ってみて　下さい。」<end>
+<frame><$02><font><$01>
+Amazones: làng này chỉ toàn nữ<line>
+nhân thôi,chẳng cho nam nhân<line>
+vào bao giờ.<page>
+Nhưng hiện nay sự tình đang gấp<line>
+nên đành phá lệ.Hãy đến gặp thủ<line>
+lãnh của chúng tôi.<end>
+
+#WRITE(MyPtr, $00035D)
+//アマゾネス：「なみだのしずく石は私たちの宝。私たちの苦しみのなみだを、すいとってくれるの。」
+//「あれがあれば、どんな苦しみも　おそれる事がないのよ。」<end>
+<frame><$02><font><$01>
+Amazones: viên đá giọt nước mắt<line>
+là bảo vật của chúng tôi.Nó nuốt<line>
+hết mọi khổ đau của chúng tôi.<page>
+Chỉ cần có nó thì chúng tôi<line>
+chẳng sợ bất cứ gian khổ nào.<end>
+
+#WRITE(MyPtr, $000360)
+//アマゾネス：「えっ！　ぬすんだのは［オルニック］から来たコソドロですって！」
+<frame><$02><font><$01>
+Amazones: sao! Kẻ trộm là lũ<line>
+đạo chính từ Ornic đến à!<end>
+
+//「で、海の化物にとられたのね。」
+//「それなら、この宝を持って行くといいわ。　潮を引かせる力のあるお守りなの。」<end>
+<frame><$02><font><$01>
+Nhưng chúng đã bị quái vật biển<line>
+bắt rồi à. Nếu vậy thì hãy mang<line>
+bảo vật này đi đi.<page>
+Nó là bùa đẩy lùi sóng triều.<end>
+
+#WRITE(MyPtr, $000363)
+//spd0［なみだのしずく石］を見せますか　　　見せてわたす　　　　　　　　　　いまはやめておく<end>
+Có cho xem đá nước mắt không?<line>
+      Cho xem<line>
+      Thôi dẹp đi<end>
+
+#WRITE(MyPtr, $000366)
+//半魚人：「おお、ここの所よく人間が通るな。ここは半魚人の村だ。」<end>
+<frame><$02><font><$01>
+Bán ngư nhân: chà, có con người<line>
+lui tới chốn này à căăk. Đây là<line>
+làng của Bán ngư nhân căăk.<end>
+
+#WRITE(MyPtr, $000369)
+//半魚人：「オラたちは海だけじゃなく、りくにも住めるように、はたけ作って生活しとる。」
+//「言わば、［半のう半魚人］ってェトコだな」<end>
+<frame><$02><font><$01>
+Bán ngư nhân: bọn tôi không chỉ<line>
+sống dưới biển mà còn cày ruộng<line>
+để sống trên bờ nữa căăk.<page>
+Thế nên mới có tên là<line>
+Bán ngư nhân căăk.<end>
+
+#WRITE(MyPtr, $00036C)
+//半魚人：「がんばってくるだぞ。」<end>
+<frame><$02><font><$01>
+Bán ngư nhân: phải cố lên căăk.<end>
+
+#WRITE(MyPtr, $00036F)
+//spd0われらの手助けを必要とするか？　　　　おおいに必要とする　　　　　　　どうぞ、おかまいなく<end>
+<frame><$02><font><$01>
+Có cần bọn tôi giúp không?<line>
+      Rất cần<line>
+      Không quan tâm<end>
+
+#WRITE(MyPtr, $000372)
+//「この国には、太古からいくつもの部族が住んでおる。」
+//「話せば仲間になってくれるものもおろうが、その部族と仲の悪い部族は敵になるやもしれん。」
+//「仲間えらびはしんちょうにの。」<end>
+<frame><$02>
+Từ thời thái cổ đã có nhiều<line>
+bộ tộc sinh sống ở đại lục này.<page>
+Hẳn là sẽ có những bộ tộc theo<line>
+ta khi thuyết phục họ,nhưng bù<line>
+lại thì tộc khác sẽ đối đầu.<page>
+Cần phải cân nhắc thận trọng<line>
+khi lựa chọn đồng minh.<end>
+
+#WRITE(MyPtr, $000375)
+//「ともに、ケンタウロスどもと戦ってくれるならば、我々も手をかそうではないか。」<end>
+<frame><$02><font><$01>
+Nếu cùng đánh lũ Centaurus<line>
+thì bọn ta sẽ giúp các ngươi<line>
+một tay.<end>
+
+#WRITE(MyPtr, $000378)
+//「［ログリス］はその昔、［ゴルド王］によってまとめられたが、すぐみなバラバラになってしまった。」<page>
+//「いつか、すくい主があらわれるだろうと信じてたのに、大きな戦いが始まってしまうなんて・・・。」<end>
+<frame><$02><font><$01>
+Ngày xưa,Glorith được Vua Gord<line>
+thống nhất về một mối, nhưng rồi<line>
+cũng sớm chia lìa tan tác.<page>
+Ta vẫn tin một lúc nào đó Đấng<line>
+cứu thế sẽ xuất hiện...<page>
+Nào ngờ lại xảy ra chiến sự<line>
+to như này...<end>
+
+#WRITE(MyPtr, $00037B)
+//「あなたごぞんじ？　［フランク］から王子様がいらっしゃってるんですって！」
+//「海の向こうの王子様ってどんな方かしらぁ。お会いしたいわぁ」<end>
+<frame><$02><font><$01>
+Các vị có biết gì không?<line>
+Nghe đâu ở xứ Flank có vị Vương tử!<page>
+Không biết vị Vương tử ở bên kia<line>
+biển trông như nào nhỉ.Mình cũng<line>
+muốn gặp quá.<end>
+
+#WRITE(MyPtr, $00037E)
+//牧師：「この戦いに勝利すれば、　この地にかつてない平和な時がおとずれる。そんな気がします。」<end>
+<frame><$02>
+Mục sư: ta có linh cảm rằng<line>
+khi dành thắng lợi trong cuộc<line>
+chiến này thì hòa bình chưa<line>
+từng có sẽ đến với vùng đất này.<end>
+
+#WRITE(MyPtr, $000381)
+//こども：「キャメロットのお城にはねえ、丈夫な盾があるらしいよ。」<end>
+<frame><$02><font><$01>
+Nhóc con: trong thành Camelot<line>
+có cái khiên chắc lắm đó.<end>
+
+#WRITE(MyPtr, $000384)
+//兵士：「シェフィールドの方には、［ヘビ］がたくさんいます。弱い兵をきたえるのにいいと思います。」<end>
+<frame><$02>
+Binh sĩ:  ở Shefield có rất nhiều<line>
+rắn.Có thể dùng chúng để rèn<line>
+luyện binh sĩ còn yếu.<end>
+
+#WRITE(MyPtr, $000387)
+//「キャメロット王、［ユーサー］は［オルニック］におどかされて、城にとじこもったって話だ。」
+//「なさけないヤツ・・・」<end>
+<frame><$02><font><$01>
+Vua Uther của Camelot đã bị lũ<line>
+Ornic dọa cho một trận.<page>
+Giờ đây hắn chỉ co cụm trong<line>
+thành.Thật là hèn nhát...<end>
+
+#WRITE(MyPtr, $00038A)
+//「いっぺん死ぬと、よくわかるよ。［生きた心地］ってやつがさ。」<end>
+<frame><$02><font><$01>
+Chết một lần thì sẽ hiểu rõ.<line>
+Đó là cái tâm của cảnh giới<line>
+sinh tồn.<end>
+
+#WRITE(MyPtr, $00038D)
+//主人：「はるか、北東にあるグールのすむ洞くつには、［ドラゴン］がいるそうです。」<end>
+<frame><$02><font><$01>
+Chủ nhân: nghe đâu ở phía<line>
+Đông Bắc xa xôi có cái hang,<line>
+trong đó có con rồng.<end>
+
+#WRITE(MyPtr, $000390)
+//エルフ：「ロバート王子がどこかに連れ去られてしまったのだ。」
+//「キャサリンは、人間の味方をすれば、王子の命はない、と言ってきているのだ。」
+//「協力したいのだが・・　わかってくれ。」<end>
+<frame><$02><font><$01>
+Elf: Vương tử Robert đã bị<line>
+chúng bắt đi đâu mất rồi.<page>
+Mụ Catharin nói,nếu bọn tôi bắt<line>
+tay với con người thì Vương tử<line>
+sẽ mất mạng...<page>
+Bọn tôi cũng muốn hợp sức với<line>
+loài người nhưng mà...<line>
+Hãy thông cảm.<end>
+
+#WRITE(MyPtr, $000393)
+//「ユックリトナブリコロシテヤル。オモイシルガイイ・・・」<end>
+<frame><$01><font><$01>
+Để tao đập chết chúng mày từ từ.<line>
+Hãy chuẩn bị chết đi...<end>
+
+#WRITE(MyPtr, $000396)
+//アマゾネス：「わたしたちは、ほかの人とはあまり話をしないのよ。　わるいけどね。」<end>
+<frame><$02><font><$01>
+Amazones: xin lỗi, nhưng chúng tôi<line>
+không nói nhiều với người khác.<end>
+
+#WRITE(MyPtr, $000399)
+//spd0仲間にしますか？　　　　　　　　　　　仲間になってくれ　　　　　　　　考えておくよ<end>
+<frame><$02><font><$01>
+Chọn họ làm đồng minh?<line>
+      Chọn<line>
+      Để suy nghĩ đã<end>
+
+#WRITE(MyPtr, $00039C)
+//主人：「ケンタウロスとドワーフはここの所とても仲が悪いのです。」
+//「かれらのあらそいにくわわるのはあまりよい事とは思えませんな。」<end>
+<frame><$02><font><$01>
+Chủ nhân: quan hệ giữa tộc<line>
+Centaurus với tộc Dwart ở khu<line>
+này xấu lắm.<page>
+Tôi không nghĩ can thiệp vào<line>
+tranh chấp của họ là chuyện<line>
+hay đâu.<end>
+
+#WRITE(MyPtr, $00039F)
+//「ベニックの城には魔王がすんでいるらしい。やつに力をかりれば魔力をうけられるぞ。」
+//「ただし、それなりに修業をつんだ者でないとだめらしいがな。」<end>
+<frame><$02><font><$01>
+Nghe đâu có Ma vương trong<line>
+thành Benic.Nếu được hắn giúp<line>
+sức thì sẽ có thêm ma lực.<page>
+Nhưng để được như vậy thì cần<line>
+phải có người tu luyện đến<line>
+cảnh giới thượng thừa.<end>
+
+#WRITE(MyPtr, $0003A2)
+//ドワーフの部隊が仲間になった<end>
+Quân đội Dwarf đã gia nhập!<end>
+
+#WRITE(MyPtr, $0003A5)
+//キャメロットの部隊が仲間になった<end>
+Quân đội Camelot đã gia nhập!<end>
+
+#WRITE(MyPtr, $0003A8)
+//兵士：「国王にもしもの事があっては一大事。　ごむりをさせぬよう、よろしくおねがいいたす。」<end>
+<frame><$02><font><$01>
+Binh sĩ: nếu Quốc vương có<line>
+mệnh hệ gì thì sẽ là chuyện lớn.<page>
+Xin ngài đừng cố quá sức.<end>
+
+#WRITE(MyPtr, $0003AB)
+//spd0［カーディックの城がきけんです］カーディック城まで、リッチモンドの部隊をよびもどすことができます<end>
+Thành Cardic đang lâm nguy.<line>
+Có thể gọi đạo quân của<line>
+Richmond trở về thành Cardic.<end>
+
+#WRITE(MyPtr, $0003AE)
+//spd0　　部隊をよびもどしますか？　　　　　よびもどす　　　　　　　　　　　このままつづける<end>
+Có gọi quân trở về không?<line>
+      Gọi về<line>
+      Không cần<end>
+
+#WRITE(MyPtr, $0003B1)
+//spd0　　　　　　　　　　　　　　　　　　　　魔法使いになった<end>
+<name> đã dùng ma pháp<end>
+
+#WRITE(MyPtr, $0003B4)
+//spd0　　　　　　　　　　　　　　　　　　　　　悪魔になった<end>
+<name> đã trở thành ác ma.<end>
+
+#WRITE(MyPtr, $0003B7)
+//「ありがとうございました。まるで生き返ったようなきもちです。」<end>
+<frame><$02>
+Xin cảm ơn.<line>
+Cảm giác này hệt như là được<line>
+sống lại vậy.<end>
+
+#WRITE(MyPtr, $0003BA)
+//「きゃあ、きゃあー！　王子様よっおーじ・さ・まぁーーーっ！！」<end>
+<frame><$02><font><$01>
+Jời ơi! Ối giời ơi!<line>
+Chàng Vương tử~!!<end>
+
+#WRITE(MyPtr, $0003BD)
+//spd0　　　　　　　　　　　　　　　　［この門は勇者しか通れません。］<end>
+Chỉ có dũng sĩ mới được<line>
+đi qua cổng này.<end>
+
+#WRITE(MyPtr, $0003C0)
+//spd0　　　　　　　　　　　　　　　　　ドクロを［だん］の上においた<end>
+Đã đặt đầu lâu lên tế đàn.<end>
+
+#WRITE(MyPtr, $0003C3)
+//spd0　　　　　　　　　　　　　　　　　　　味方がこんらんした！<end>
+Quân đội đồng minh trở<line>
+nên hỗn loạn!<end>
+
+#WRITE(MyPtr, $0003C6)
+//マーサ：「そうはさせないよ。　　お主の魔力ぐらい、このわたしが　ふうじてくれよう！」<end>
+<frame><$02>
+Martha: đừng hòng làm càn!<line>
+Ta sẽ phá giải ma lực của<line>
+nhà ngươi!<end>
+
+#WRITE(MyPtr, $0003C9)
+//spd0　　　　　　　　　　　　　　　　　　　敵がこんらんした！<end>
+Quân địch trở nên hỗn loạn!<end>
+
+#WRITE(MyPtr, $0003CC)
+//マーサ：「わしの助けはここまでじゃ、実体化できる時間はもうない。神の国にもどらねば。」
+//「あとはお前たちにまかせたぞ。　［ガロア］の本しょうはおそろしい魔物じゃ！」<end>
+Martha: ta chỉ có thể giúp<line>
+các vị tới đây thôi.<page>
+Ta không có thời gian để hiện<line>
+thực hóa mọi việc.Ta phải trở<line>
+về cõi thần.<page>
+Mọi chuyện sau này đành phó<line>
+thác cho các vị.<page>
+Bản thể của Galoa là một con<line>
+yêu quái khủng khiếp!<line>
+Hãy bảo trọng!<end>
+
+#WRITE(MyPtr, $0003CF)
+//　カーディック城　<end>
+
+#WRITE(MyPtr, $0003D2)
+//カーディックの砦　<end>
+
+#WRITE(MyPtr, $0003D5)
+//カーディックの町　<end>
+
+#WRITE(MyPtr, $0003D8)
+//シェフィールドの南<end>
+
+#WRITE(MyPtr, $0003DB)
+//フォース海岸の南　<end>
+
+#WRITE(MyPtr, $0003DE)
+//シェフィールドの西<end>
+
+#WRITE(MyPtr, $0003E1)
+//シェフィールドの村<end>
+
+#WRITE(MyPtr, $0003E4)
+//　フォース海岸　　<end>
+
+#WRITE(MyPtr, $0003E7)
+//ソルズベリーの南　<end>
+
+#WRITE(MyPtr, $0003EA)
+//　　　海の砦　　　<end>
+
+#WRITE(MyPtr, $0003ED)
+//ソルズベリーの森　<end>
+
+#WRITE(MyPtr, $0003F0)
+//ソルズベリーの村　<end>
+
+#WRITE(MyPtr, $0003F3)
+//　アンレーの草原　<end>
+
+#WRITE(MyPtr, $0003F6)
+//ソルズベリーの西　<end>
+
+#WRITE(MyPtr, $0003F9)
+//ソルズベリーの砦　<end>
+
+#WRITE(MyPtr, $0003FC)
+//コンウォールの南　<end>
+
+#WRITE(MyPtr, $0003FF)
+//　アンレーの森　　<end>
+
+#WRITE(MyPtr, $000402)
+//ソルズベリーの北　<end>
+
+#WRITE(MyPtr, $000405)
+//コンウォールの森　<end>
+
+#WRITE(MyPtr, $000408)
+//キャメロットの南　<end>
+
+#WRITE(MyPtr, $00040B)
+//　アンレーの町　　<end>
+
+#WRITE(MyPtr, $00040E)
+//エドウィンの山道　<end>
+
+#WRITE(MyPtr, $000411)
+//　エドウィンの森　<end>
+
+#WRITE(MyPtr, $000414)
+//コンウォールの砦　<end>
+
+#WRITE(MyPtr, $000417)
+//コンウォールの村　<end>
+
+#WRITE(MyPtr, $00041A)
+//コンウォールの北　<end>
+
+#WRITE(MyPtr, $00041D)
+//　キャメロット　　<end>
+
+#WRITE(MyPtr, $000420)
+//　キャメロット城　<end>
+
+#WRITE(MyPtr, $000423)
+//　エドウィンの丘　<end>
+
+#WRITE(MyPtr, $000426)
+//　レジンプの丘　　<end>
+
+#WRITE(MyPtr, $000429)
+//　サンリスの谷　　<end>
+
+#WRITE(MyPtr, $00042C)
+//　　ベニック　　　<end>
+
+#WRITE(MyPtr, $00042F)
+//　ベニックの南　　<end>
+
+#WRITE(MyPtr, $000432)
+//　　　沼の館　　　<end>
+
+#WRITE(MyPtr, $000435)
+//　ルートンの林　　<end>
+
+#WRITE(MyPtr, $000438)
+//ノーフォークの村　<end>
+
+#WRITE(MyPtr, $00043B)
+//　　サンリス　　　<end>
+
+#WRITE(MyPtr, $00043E)
+//　　ベニック城　　<end>
+
+#WRITE(MyPtr, $000441)
+//　ベニック湖沼　　<end>
+
+#WRITE(MyPtr, $000444)
+//　ベニックの北　　<end>
+
+#WRITE(MyPtr, $000447)
+//　ルートン草原　　<end>
+
+#WRITE(MyPtr, $00044A)
+//ノーフォークの森　<end>
+
+#WRITE(MyPtr, $00044D)
+//　サンリスの塔　　<end>
+
+#WRITE(MyPtr, $000450)
+//　ルートンの山道　<end>
+
+#WRITE(MyPtr, $000453)
+//リッチモンドの谷　<end>
+
+#WRITE(MyPtr, $000456)
+//　ルートンの丘　　<end>
+
+#WRITE(MyPtr, $000459)
+//リッチモンドのがけ<end>
+
+#WRITE(MyPtr, $00045C)
+//リッチモンドの村　<end>
+
+#WRITE(MyPtr, $00045F)
+//　山のほらあな　　<end>
+
+#WRITE(MyPtr, $000462)
+//　グールの神殿　　<end>
+
+#WRITE(MyPtr, $000465)
+//　サラスの雪山　　<end>
+
+#WRITE(MyPtr, $000468)
+//　サラスの山道　　<end>
+
+#WRITE(MyPtr, $00046B)
+//　オルニックの砦　<end>
+
+#WRITE(MyPtr, $00046E)
+//　オルニック城　　<end>
+
+#WRITE(MyPtr, $000471)
+//　オルニック城　　<end>
+
+#WRITE(MyPtr, $000474)
+//　　ルートン　　　<end>
+
+#WRITE(MyPtr, $000477)
+//　ノーフォーク　　<end>
+
+#WRITE(MyPtr, $00047A)
+//　森のほらあな　　<end>
+
+#WRITE(MyPtr, $00047D)
+//　アマゾネスの村　<end>
+
+#WRITE(MyPtr, $000480)
+//　　　決戦場　　　<end>
+
+#WRITE(MyPtr, $000483)
+//　　　森の泉　　　<end>
+
+#WRITE(MyPtr, $000486)
+//　ソルズベリー　　<end>
+
+#WRITE(MyPtr, $000489)
+//　　海の中道　　　<end>
+
+#WRITE(MyPtr, $00048C)
+//シェフィールド草原<end>
+
+#WRITE(MyPtr, $00048F)
+//　　　岩場　　　　<end>
+
+#WRITE(MyPtr, $000492)
+//　　半魚人の村　　<end>
+
+#WRITE(MyPtr, $000495)
+//　海のほらあな　　<end>
+
+#WRITE(MyPtr, $000498)
+//　　フォース　　　<end>
+
+#WRITE(MyPtr, $00049B)
+//　エドウィン城　　<end>
+
+#WRITE(MyPtr, $00049E)
+//　　　山の砦　　　<end>
+
+#WRITE(MyPtr, $0004A1)
+//NAMEに敵がいどうした<end>
+Địch di chuyển đến <place><end>
+
+#WRITE(MyPtr, $0004A4)
+//NAMEに敵があらわれた<end>
+Địch xuất hiện ở <place><end>
+
+#WRITE(MyPtr, $0004A7)
+//NAMEで敵にそうぐうした<end>
+Đụng độ địch ở <place><end>
+
+#WRITE(MyPtr, $0004AA)
+//リッチモンドの部隊をいどうした<end>
+Đạo quân Richmond đã di chuyển<end>
+
+#WRITE(MyPtr, $0004AD)
+//コースをえらんで下さい<end>
+Hãy chọn tuyến đường<end>
+
+#WRITE(MyPtr, $0004B0)
+//spd0　　　　　　　　　　　　　　　　　　　中からしめられている<end>
+<mannaka>Cửa bị khóa từ bên trong<end>
+
+#WRITE(MyPtr, $0004B3)
+//spd0　　　　　　　　　　　　　　　　　　　　　開きません<end>
+<mannaka>Không mở được<end>
+
+#WRITE(MyPtr, $0004B6)
+//spd0　　　　　　　　　　　　　　　　　　　カギがかかっている<end>
+<mannaka>Cửa đang bị khóa<end>
+
+#WRITE(MyPtr, $0004B9)
+//spd0　　　　　　　　　　　　　　　　かべにこすれたような、あとがある<end>
+<mannaka>Trên tường có vết cọ xát<end>
+
+#WRITE(MyPtr, $0004BC)
+//spd0　　　　　　　　　　　　　　　　クラスチェンジできる者がいません<end>
+<mannaka>Không có ai chuyển cấp được<end>
+
+#WRITE(MyPtr, $0004BF)
+//　　さく・えんしゅつ　　　　　　<end>
+Biên kịch<end>
+
+#WRITE(MyPtr, $0004C2)
+//　　　　　くれ　えいじ　　　　　<end>
+Kure Eiji<end>
+
+#WRITE(MyPtr, $0004C5)
+//　　プログラム　　　　　　　　　<end>
+Lập trình<end>
+
+#WRITE(MyPtr, $0004C8)
+//　　　　　くらば　のりゆき　　　<end>
+Kubara Noriyuki<end>
+
+#WRITE(MyPtr, $0004CB)
+//　　　　　ひらぐち　やすひと　　<end>
+Hiraguchi Yasuhito<end>
+
+#WRITE(MyPtr, $0004CE)
+//　　マップデザイン　　　　　　　<end>
+Thiết kế bản đồ<end>
+
+#WRITE(MyPtr, $0004D1)
+//　　　　　まきの　きょうこ　　　<end>
+Makino Kyōko<end>
+
+#WRITE(MyPtr, $0004D4)
+//　　キャラクターデザイン　　　　<end>
+Thiết kế nhân vật<end>
+
+#WRITE(MyPtr, $0004D7)
+//　　　　　あまだ　たかひと　　　<end>
+Amada Takahito<end>
+
+#WRITE(MyPtr, $0004DA)
+//　　　　　ふくはら　みか　　　　<end>
+Fukuhara Mika<end>
+
+#WRITE(MyPtr, $0004DD)
+//　　サウンド　　　　　　　　　　<end>
+Âm thanh<end>
+
+#WRITE(MyPtr, $0004E0)
+//　　　　　ささき　まさき　　　　<end>
+Sasaki Masaki<end>
+
+#WRITE(MyPtr, $0004E3)
+//　　　　　おーたけ　ひろし　　　<end>
+Ōtake Hiroshi<end>
+
+#WRITE(MyPtr, $0004E6)
+//<end>
+#WRITE(MyPtr, $0004E9)
+//<end>
+#WRITE(MyPtr, $0004EC)
+<end>
+
+#WRITE(MyPtr, $0004EF)
+//「ガロアはどこにきえたんだ！？　部屋をしらべるんだっ！！」<end>
+Galoa biến đâu mất rồi!?<line>
+Hãy tìm trong phòng này!!<end>
+
+#WRITE(MyPtr, $0004F2)
+//「この雪では、うもれて死んでしまう。引き返そう！」<end>
+Bị chôn vùi trong tuyết là<line>
+chết đó! Mau rút lui!<end>
+
+#WRITE(MyPtr, $0004F5)
+//「みんなは下がって！！　わたしはもう少し、海に近づいてみよう！」<end>
+Mọi người lui xuống đi!<line>
+Để ta đến gần biển xem sao!<end>
+
+#WRITE(MyPtr, $0004F8)
+//　　　　スタッフ<end>
+Nhân sự<end>
+
+#WRITE(MyPtr, $0004FB)
+//　　　　ありがとう<end>
+Xin cảm ơn<end>
+
+#WRITE(MyPtr, $0004FE)
+//あなたの勇かんなる戦士たち　　　<end>
+Cảm ơn các chiến sĩ dũng cảm<end>
+
+#WRITE(MyPtr, $000501)
+//NUM　　　　　　　　<end>
+<name><end>
+
+#WRITE(MyPtr, $000504)
+//　　NAMEにて　　　<end>
+Tại <place><end>
+
+#WRITE(MyPtr, $000507)
+//NUMにたおされ死亡　<end>
+Bị sát hại bởi <class><end>
+
+#WRITE(MyPtr, $00050A)
+//　　　　　わなにかかり死亡　　　<end>
+Chết vì mắc bẫy<end>
+
+#WRITE(MyPtr, $00050D)
+//　　　　　　　じばくした　　　　<end>
+Đã tự hủy<end>
+
+#WRITE(MyPtr, $000510)
+//　　　　　　かいこ　された　　　<end>
+Đã giải ngũ<end>
+
+#WRITE(MyPtr, $000513)
+//　　　ばくはつにまきこまれ死亡　<end>
+Chết trong vụ nổ<end>
+
+#WRITE(MyPtr, $000516)
+//　　　　　　まいごになった　　　<end>
+Đã đi lạc<end>
+
+#WRITE(MyPtr, $000519)
+//　　　　　　　こうりゅう中　　　<end>
+Đang bị giam<end>
+
+#WRITE(MyPtr, $00051C)
+//　　　　　　しょうそくふめい　　<end>
+Không rõ sống chết<end>
+
+#WRITE(MyPtr, $00051F)
+//　　　　　　　せいかんした　　　<end>
+Sống sót trở về<end>
+
+#WRITE(MyPtr, $000522)
+//　　　　ひっそりとくらしている　<end>
+Sống lặng lẽ ở <place><end>
+
+#WRITE(MyPtr, $000525)
+//　　　　ぼこくのために戦とう中　<end>
+Đang chiến đấu vì mẫu quốc<end>
+
+#WRITE(MyPtr, $000528)
+//　　　　　勇かんなる戦士たち　　<end>
+Các chiến sĩ quả cảm<end>
+
+#WRITE(MyPtr, $00052B)
+//　　　　　　　　　　　　　　　　<end>
+        <end>
+
+#WRITE(MyPtr, $00052E)
+//©1993　カルチャーブレーン<end>
+Culture Brain 1993<end>
+
+#WRITE(MyPtr, $000531)
+//©1993　クレソフト　　　　<end>
+Kure Soft 1993<end>
+
+#WRITE(MyPtr, $000534)
+//我がまつえい、ただ一人となりし時ログリスはひとつとなりはんえいす　　　　　（ログリス創生記　　　　　　　　　　ゴルド王の章より）<end>
+Khi hậu duệ của ta còn duy nhất<line>
+một người thì Glorith sẽ quy về<line>
+một mối,được đời đời phồn thịnh.<page>
+Trích "Sáng thế ký Glorith",<line>
+chương Vua Gord.<end>
+
+#WRITE(MyPtr, $000537)
+//「この村をやいた魔導士が、領主様のお屋しきの中にぃぃぃ」<end>
+<frame><$02><font><$01>
+"Gã ma đạo sĩ đốt ngôi làng<line>
+này đang ở trong dinh thự<line>
+của ngài lãnh chúa~"<end>
+
+#WRITE(MyPtr, $00053A)
+//「上の岩あなは、グールの洞くつへ通じているはずですぅ」<end>
+<frame><$02><font><$01>
+Trong hang đá phía trên chắc chắn<line>
+có lối thông vào hang động của<line>
+đám Ghoul.<end>
+
+#WRITE(MyPtr, $00053D)
+//「うらみをぉぉぉ、はらしてぇぇぇ下さいぃぃぃ」<end>
+<frame><$02><font><$01>
+Xin hãy báooo thùùù~<end>
+
+#WRITE(MyPtr, $000540)
+//「もっと、生きたかったですぅぅ」<end>
+<frame><$02><font><$01>
+Tôi muốn sống lâu hơn!<end>
+
+#WRITE(MyPtr, $000543)
+//「魔導士の手下が、洞くつの入口をふさいでいますぅ。魔導士をたおせば、やつらはきえるでしょう。」<end>
+<frame><$02><font><$01>
+Đám thuộc hạ của ma đạo sĩ<line>
+đang áng ngữ lối vào hang.<page>
+Nếu đánh bại gã ma đạo sĩ<line>
+thì chắc là chúng sẽ biến mất<line>
+thôi.<end>
+
+#WRITE(MyPtr, $000546)
+//「あ、ありがとうございますぅぅ」<end>
+<frame><$02><font><$01>
+Xin đa tạ ngài.<end>
+
+#WRITE(MyPtr, $000549)
+//「おかげ様で、またはたらく事ができますよ！」<end>
+<frame><$02><font><$01>
+Nhờ có ngài mà tôi lại được làm<line>
+việc như xưa!<end>
+
+#WRITE(MyPtr, $00054C)
+//「［サラスの雪山］を通るのでしたら、雪がとけなければムリです。」<page>
+//「とおい昔に［マーサ］と言う魔法使いが、雪をとかすものを持っていたと闇きます。」<end>
+<frame><$02><font><$01>
+Để băng qua Tuyết sơn Sarath thì<line>
+phải làm cho tuyết tan mới được.<page>
+Nghe nói ngày xưa có pháp sư<line>
+Martha có vật gì đó làn cho<line>
+tuyết tan được.<end>
+
+#WRITE(MyPtr, $00054F)
+//「サラスの山道の敵をおいはらって下さい。」<end>
+<frame><$02><font><$01>
+Hãy đuổi hết quân địch ra khỏi<line>
+sơn đạo Sarath.<end>
+
+#WRITE(MyPtr, $000552)
+//「つり橋さえもとにもどれば、おおぜいの人をオルニックに送る事ができます。」<end>
+<frame><$02><font><$01>
+Chỉ cần bắc lại cầu treo là có<line>
+thể đưa nhiều người vào Ornic.<end>
+
+#WRITE(MyPtr, $000555)
+//「これでキャサリンにふくしゅうができますよ。」<end>
+<frame><$02><font><$01>
+Vậy là có thể báo thù<line>
+mụ Catharin rồi.<end>
+
+#WRITE(MyPtr, $000558)
+//「つり橋はすでにかかっています。いよいよ決戦ですね。」<end>
+<frame><$02><font><$01>
+Cầu treo đã được bắc trở lại.<line>
+Sắp đến trận quyết chiến rồi.<end>
+
+#WRITE(MyPtr, $00055B)
+//「［ベニック］には、［沼の館］に通じる所があります。
+//［館］には、昔、えらい魔法使いがすんでいたようですが、今は、あれはてていますよ。」<end>
+<frame><$02><font><$01>
+Benic có một chỗ vào dinh thự<line>
+trong đầm lầy.<page>
+Ngày xưa trong dinh có một<line>
+pháp sư tài ba,nhưng bây giờ<line>
+dinh này bị bỏ hoang rồi.<end>
+
+#WRITE(MyPtr, $00055E)
+//「オルニック城には、まだおおぜいの敵がいるでしょう。ゆだんされませぬよう。」<end>
+<frame><$02><font><$01>
+Trong thành Ornic hẳn vẫn còn<line>
+nhiều lính.Đừng có lơ là.<end>
+
+#WRITE(MyPtr, $000561)
+//「ありがとう。お気をつけて！」<end>
+<frame><$02><font><$01>
+Xin đa tạ. Hãy bảo trọng!<end>
+
+#WRITE(MyPtr, $000564)
+//「ざんねんだがここは通せないぜ」<end>
+<frame><$01><font><$01>
+Đáng tiếc, nhưng các ngươi<line>
+không đi qua đây được đâu.<end>
+
+#WRITE(MyPtr, $000567)
+//魔導士：「きさまも死ににきたのかならば死ね、じごくの炎にやかれるがいい！」<end>
+ <frame><$01><font><$01>
+Ma đạo sĩ: các ngươi tới đây<line>
+tìm cái chết à? Vậy thì chết đi!<line>
+Hãy chết cháy trong lửa địa ngục!<end>
+
+#WRITE(MyPtr, $00056A)
+//マーサの声：「まだこの門をくぐってはならぬ！」
+//「おおぜいでせめこむために、サラスの山道に橋をかけるのじゃ！」<end>
+<frame><$02>
+Giọng nói của Martha:<line>
+Bây giờ chưa phải lúc chui qua<line>
+cánh cổng này!<page>
+Để số đông có thể tiến công tới<line>
+đây thì cần phải bắc cầu treo<line>
+qua sơn đạo Sarath đã!<end>
+
+#WRITE(MyPtr, $00056D)
+//マーサの声：「リッチモンドを先頭に、せめこむがよいぞ！」<end>
+<frame><$02>
+Giọng nói của Martha:<line>
+Hãy để Richmond dẫn đầu mà<line>
+tiến công!<end>
+
+#WRITE(MyPtr, $000570)
+//マーサの声：「決戦の時はきたようじゃ。もはやあともどりはできぬ。こころして行くがよい！」<end>
+<frame><$02>
+Giọng nói của Martha:<line>
+Đã tới lúc quyết chiến rồi.<line>
+Không còn đường lùi nữa đâu!<page>
+Hãy chuẩn bị cho chu đáo<line>
+trước khi tiến lên!<end>
+
+#WRITE(MyPtr, $000573)
+//コンスタンティン：「お待ちしておりました。」
+//「敵は［レジンプの丘］のあたりに強力な防衛ラインを作っています」
+//「やぶるには、相当な決意が必要です。まず、兵士をきたえなければ」
+//部隊が仲間になった！<end>
+Constantin: tôi vâng mệnh<line>
+đức Vua đợi ngài ở đây từ lâu.<page>
+Quân địch đang giăng tuyến<line>
+phòng ngự khá chặt quanh đồi<line>
+Legymp.<page>
+Để phá vỡ phòng tuyến của chúng<line>
+thì cần quyết tâm vững mạnh.<line>
+Và đầu tiên là cần luyện binh<line>
+cho mạnh trước đã.<page>
+Đạo quân của Constantin<line>
+gia nhập!<end>
+
+#WRITE(MyPtr, $000576)
+//エルフ王ロイ：「また、かくされた宝の部屋がある。必要な宝があれば使うがよい。」<page>
+//「［ぞう］の右かべに、かくし通ろのある部屋がある。［つばさのあるぞう］の近くをよくさがすのだ。」<end>
+<frame><$02>
+Roy vua tộc Elf:<line>
+Nơi này còn có các mật thất.<page>
+Nếu có bảo vật nào mà tráng sĩ<line>
+cần thì cứ lấy mà dùng.<page>
+Có một căn phòng với lối đi bí<line>
+mật ở bức tường bên phải<line>
+của pho tượng.<page>
+Hãy tìm kỹ quanh bức tượng<line>
+có cánh.<end>
+
+#WRITE(MyPtr, $000579)
+//エルフ王ロイ：「なんと、［エルフの笛］がほしくないのか？　ならばもうやらんぞ。」<end>
+<frame><$02>
+Roy vua Elf:<line>
+Sao, không muốn lấy sáo của<line>
+tộc Elf à?<page>
+Vậy thì ta không cho nữa.<end>
+
+#WRITE(MyPtr, $00057C)
+//ソフィア：「キャーッ！！」<end>
+Sophia: trời ơi!!<end>
+
+#WRITE(MyPtr, $00057F)
+//ソフィア：「・・・・
+//　　　　・・・リッチモンド
+//　どこに行ってしまったのかしら」<end>
+Sophia:...<line>
+...Richmond đi đâu mất rồi...<end>
+
+#WRITE(MyPtr, $000582)
+//「オルニックが、たおれたぁぁ！　みんなぁ、戦いはおわったぞぉ！」<end>
+Ornic đã sụp đổ rồi!<line>
+Mọi người ơi,chiến tranh đã<line>
+chấm dứt rồi!<end>
+
+#WRITE(MyPtr, $000585)
+//ソフィア：「オルニックの城が！」<end>
+Sophia: thành Ornic!<end>
+
+#WRITE(MyPtr, $000588)
+//spd0　　　　カーディック城　　　　　　　ソフィアのたいかんしき<end>
+<mannaka>Thành Cardic<line>
+<mannaka>Lễ đăng cơ của Sophia<end>
+
+#WRITE(MyPtr, $00058B)
+//「今、あたらしい女王様のもとに、ログリスは一つとなったのだ！！　ソフィア女王様バンザイ！！！」<end>
+Bây giờ Glorith đã thống nhất về<line>
+một mối bên vị Nữ vương mới!!<line>
+Nữ vương Sophia vạn tuế!!<end>
+
+#WRITE(MyPtr, $00058E)
+//インキョ：「キャメロットは、もうオルニックの言うなりになっているわしらはなすすべもないのです。」<end>
+<frame><$02><font><$01>
+Lão ẩn cư: Camelot đã trở thành<line>
+tay sai của Ornic.Bọn ta chẳng còn<line>
+làm được gì nữa.<end>
+
+#WRITE(MyPtr, $000591)
+//エルフ：「この城の上の部屋には、勇者しかもてぬという剣がおさめらている。」<end>
+<frame><$02><font><$01>
+Elf: trong căn phòng phía<line>
+trên của thành này có một thanh<line>
+kiếm mà chỉ có dũng sĩ mới<line>
+mang được.<end>
+
+#WRITE(MyPtr, $000594)
+//エルフ：「戦いたくはないが、戦わねばならない時は全力で戦うぜ。」<end>
+<frame><$02><font><$01>
+Elf: mặc dù tôi không muốn<line>
+đánh nhau nhưng khi phải đánh<line>
+thì sẽ dốc hết sức mà đánh.<end>
+
+#WRITE(MyPtr, $000597)
+//ドワーフ：「おれたちの森をふみにじられているのに、ただじっとしているのもつらいぜ。」<end>
+<frame><$02><font><$01>
+Dwarf: thật là khổ sở khi<line>
+phải đứng nhìn khu rừng của<line>
+bọn ta bị giày xéo.<end>
+
+#WRITE(MyPtr, $00059A)
+//ケンタウロス：「［ルートン］の方で修道士をみかけたぜ。魔法を使っていたが、たいしたやつらだ。」<end>
+<frame><$02><font><$01>
+Centaurus: ta đã nhìn thấy các<line>
+Tu sĩ ở Lurton. Họ dùng ma pháp<line>
+nhưng cũng là kẻ đáng gờm đó.<end>
+
+#WRITE(MyPtr, $00059D)
+//ケンタウロス：「ドワーフの仲間なら、生きては帰さないぜ。」<end>
+<frame><$02><font><$01>
+Centaurus: nếu là đồng minh của<line>
+lũ Dwarf thì các ngươi đừng hòng<line>
+sống sót trở về.<end>
+
+#WRITE(MyPtr, $0005A0)
+//ケンタウロス：「見たところ、かなりデキソウだな。」<end>
+<frame><$02><font><$01>
+Centaurus: nhìn bề ngoài thì<line>
+có vẻ cũng khá đó.<end>
+
+#WRITE(MyPtr, $0005A3)
+//アマゾネス：「わたしたちは、西にいる半魚人とは、なかが悪いのよ。
+//半魚人はかたいウロコをもっていてなかなかテゴワイのだけど、炎や矢には弱いの。」<end>
+<frame><$02><font><$01>
+Amazones: mối quan hệ giữa<line>
+chúng tôi với tộc Bán ngư nhân ở<line>
+phía Tây khá là xấu.<page>
+Tộc Bán ngư nhân có lớp vảy dày<line>
+rất đáng gờm,ng chúng lại sợ lửa<line>
+với cung tên.<end>
+
+#WRITE(MyPtr, $0005A6)
+//半魚人：「あんたたち、ウデに自信があるなら、アマゾネスどもをこらしめてくれないかね。」<end>
+<frame><$02><font><$01>
+Bán ngư nhân: nếu các ngươi đủ tự<line>
+tin thì hãy giúp bọn ta dạy cho lũ<line>
+Amazones một trận nhá căăk.<end>
+
+#WRITE(MyPtr, $0005A9)
+//半魚人：「アマゾネスのやつら、わしらのワニを食っちまうだ。あんたもワニを食うだか？」<end>
+<frame><$02><font><$01>
+Bán ngư nhân: cái lũ đàn bà<line>
+Amazones toàn ăn thịt cá xấu của<line>
+bọn ta.<page>
+Nhà ngươi cũng ăn thịt cá xấu hử?<end>
+
+#WRITE(MyPtr, $0005AC)
+//半魚人：「海のほらあなの中には、おそろしい化け物がすんどるだ。　タイジしてケロ。」<end>
+<frame><$02><font><$01>
+Bán ngư nhân:  trong hang biển<line>
+có con thủy quái đáng sợ lắm.<line>
+Hãy trừng trị nó đi căă.<end>
+
+#WRITE(MyPtr, $0005AF)
+//ファンクラブ：「ぼくたち、ジェーンさんのために、少しでも早く兵士になります。そらっ、変身！」<end>
+<frame><$02><font><$01>
+Fan Club:  bọn tôi sẽ trở thành<line>
+binh sĩ để giúp cô đấy Jane.<page><line>
+Nào,biến thân!<end>
+
+#WRITE(MyPtr, $0005B2)
+//こども：「わーい、助けに来てくれたんだね。」
+//「ぼく、エルフの［ロバート］って言うの。［塔］に入れられていたんだけど、ここに連れてこられたの」<page>
+//「ぼくは、自分で出られるから、早く悪い女王をやってけて。気をつけてね！」<end>
+<frame><$02><font><$01>
+Nhóc con: chà các cô chú tới<line>
+con hả! Con tên là Robert!<page>
+Cháu bị nhốt vô tháp rồi bị dẫn<line>
+tới đây.Tự cháu có thể thoát<line>
+khỏi đây được.<page>
+Các cô chú hãy mau trừng trị<line>
+mụ Nữ vương ác độc đi.<line>
+Và nhớ cẩn thận nhé!<end>
+
+#WRITE(MyPtr, $0005B5)
+//兵士：「戦いに自信がないのなら、少しは強い兵士を用意します。どうしますか？」<end>
+<frame><$02><font><$01>
+Binh sĩ:  nếu ngài không đủ tự<line>
+tin nơi chiến trận thì nên có<line>
+binh lính mạnh một chút chứ?<end>
+
+#WRITE(MyPtr, $0005B8)
+//spd0部下の強さをえらんで下さい　　　　　　強い兵士がほしい　　　　　　　　弱い兵士でよい<end>
+<frame><$02><font><$01>
+Hãy chọn sức mạnh của thuộc hạ<line>
+      Muốn có lính mạnh<line>
+      Lính yếu cũng được<end>
+
+#WRITE(MyPtr, $0005BB)
+//「水がふかいぞ！！　この先に進むのはキケンだ！！」<end>
+Nước sâu quá!!<line>
+Cứ thế này mà tiến lên trước<line>
+thì nguy hiểm lắm!!<end>

@@ -1,0 +1,568 @@
+;############################################################
+;# 概要
+;############################################################
+;
+; MODE 7 は BG が 1 枚 (回転・拡大用) のみで文字用 BG が無いため, 会話テキストを 16X16 スプライトで描く.
+; 文字のデコード ($C0F585, 制御コード, 辞書) と速度/ボタン処理 ($C0FB3A, $C0FACD) は通常の会話と共通
+; (FQ_CODE.TXT 参照). 違うのは描画先だけ:
+;
+;  $C0EE96  入口 (枠なし版): $EEA3 初期化 -> $EF1D -> $F033 ページループ -> $EF48 終了処理
+;  $C0EF1D  $2D0D = $4000 (スプライト用 VRAM), $2CFB BIT7=0 ならスプライト全消去 + $2CF7 = 0
+;  $C0F033  4 行表示. ページが一杯なら $F0B9 で全スプライトを 16 ドット上へ (最上行は消す) して 1 行追加
+;   $C0F3D8  1 行 = 16 文字. 文字毎に:
+;     $C0F585  デコード (A = グリフ番号)
+;     $C0F9C1  縁取りグリフ作成:
+;       $C0FA35  フォント $CFD000 (12X12 1BPP) を 16X16 の作業領域 $7E2D24- へ (右へ 2 ドット)
+;       $C0FA5B-$FAA0  上下左右に 1 ドットずらして OR -> 縁 ($7E2D42-)
+;       $C0FAB5  縁 = 縁 AND NOT 文字
+;       -> 4BPP スプライト 4 タイル ($7E2D60-$2DDF) に並べ替え: プレーン 0 = 文字, プレーン 2 = 縁
+;          (色 1 = 文字, 色 4 = 縁, 色 5 = 両方)
+;     $C0F242  OAM 影 $7E36EC に 1 エントリ書込, 1 フレーム待ち,
+;              グリフ DMA ($C0F765: 上 2 タイル $40 バイト -> $2D0D, 下 2 タイル -> $2D0D+$100),
+;              OAM DMA ($C0FD9B: $7E36EC -> OAM, $220 バイト), 速度ウェイト ($C0FB3A)
+;   $C0F47D  行末コード確認
+;  $C0EF48  $2CFB BIT7=0 ならスプライト全消去して OAM 転送
+;
+; スプライトの配置 ($C0F242):
+;  OAM 番号   = 行 ($2D1B & $FF) * 16 + 列 ($2D1D)          (OAM 影 $36EC + 番号*4)
+;  X 座標     = $2CF5 + 列 * 14                             (12 ドット文字 + 縁 = 14 ドット間隔)
+;  Y 座標     = $2CF6 + 表示行 ($2D1C) * 16
+;  タイル     = 16X16 スプライト形式: n = (行 & 7) * 16 + 列 -> (n & $F8) * 4 + (n & 7) * 2
+;  属性       = $3400 | $2CF7 (優先度 3, パレット 2)
+;  VRAM       = $4000 + (行 & 7) * $400 + 列 * $20 (16 列を超えると +$100). 8 行分を循環使用
+;
+; RAM ($7E): 会話と共通 ($2CF1 メッセージ ID, $2CF5 位置 X, $2CF6 位置 Y, $2CF7 属性, $2CFB/$2CFC フラグ,
+;  $2D03 テキストポインタ, $2D0D VRAM アドレス, $2D1B 行番号, $2D1C 表示行, $2D1D 列) に加えて:
+;  $7E2D20-$2D3F  文字レイヤ (16 行 X 2 バイト)    $7E2D40-$2D5F  縁レイヤ
+;  $7E2D60-$2DDF  4BPP スプライト 4 タイル        $7E36EC-$390B  OAM 影 (128 エントリ + 上位 $20 バイト)
+;
+; 呼出元: $C09E75, $C09EAD, $C0A419, $C0BBAB ($2CF1/$2CF5/$2CF7/$2CFB を設定してから JSL $C0EE96)
+
+;============================================================
+; 呼出例 ($2CF5 = $4816, $2CFB = $13) (トレース範囲外)
+;============================================================
+C0BB96  08            PHP                   ; === 呼出例: A = メッセージ ID ===
+C0BB97  C2 10         REP #$10
+C0BB99  AA            TAX
+C0BB9A  8E F1 2C      STX $2CF1
+C0BB9D  A2 16 48      LDX #$4816            ; 位置 X=$16, Y=$48
+C0BBA0  8E F5 2C      STX $2CF5
+C0BBA3  E2 20         SEP #$20
+C0BBA5  A9 13         LDA #$13              ; $13: オートリピート, 自動送り, START
+C0BBA7  8D FB 2C      STA $2CFB
+C0BBAA  08            PHP
+C0BBAB  22 96 EE C0   JSL $C0EE96           ; スプライト文字で表示
+C0BBAF  28            PLP
+C0BBB0  AD FB 2C      LDA $2CFB
+C0BBB3  89 40         BIT #$40              ; START でスキップされた?
+C0BBB5  D0 03         BNE $BBBA
+C0BBB7  28            PLP
+C0BBB8  18            CLC
+C0BBB9  60            RTS
+
+C0BBBA  28            PLP
+C0BBBB  38            SEC
+C0BBBC  60            RTS
+
+;============================================================
+; 入口: スプライト文字でメッセージ表示 (トレース範囲外)
+;============================================================
+C0EE96  20 A3 EE      JSR $EEA3             ; === スプライト文字表示 ===
+C0EE99  20 1D EF      JSR $EF1D             ; 初期化
+C0EE9C  20 33 F0      JSR $F033             ; ページループ
+C0EE9F  20 48 EF      JSR $EF48             ; 終了処理
+C0EEA2  6B            RTL
+
+;============================================================
+; 初期化 / 終了処理 (トレース範囲外)
+;============================================================
+C0EF1D  08            PHP                   ; === 初期化 ===
+C0EF1E  E2 20         SEP #$20
+C0EF20  A2 00 10      LDX #$1000            ; ボタン: A または START
+C0EF23  AD FB 2C      LDA $2CFB
+C0EF26  89 10         BIT #$10
+C0EF28  D0 03         BNE $EF2D
+C0EF2A  A2 80 00      LDX #$0080            ; ボタン: A
+C0EF2D  8E FD 2C      STX $2CFD
+C0EF30  AD FB 2C      LDA $2CFB
+C0EF33  89 80         BIT #$80              ; BIT7=0 なら
+C0EF35  D0 09         BNE $EF40
+C0EF37  20 6D FD      JSR $FD6D             ; スプライト全消去
+C0EF3A  A2 00 00      LDX #$0000            ; 属性 = 0
+C0EF3D  8E F7 2C      STX $2CF7
+C0EF40  A2 00 40      LDX #$4000            ; スプライト VRAM $4000
+C0EF43  8E 0D 2D      STX $2D0D
+C0EF46  28            PLP
+C0EF47  60            RTS
+
+C0EF48  E2 20         SEP #$20              ; === 終了処理 ===
+C0EF4A  AD FB 2C      LDA $2CFB
+C0EF4D  89 80         BIT #$80
+C0EF4F  D0 09         BNE $EF5A
+C0EF51  20 6D FD      JSR $FD6D             ; スプライト全消去
+C0EF54  20 D1 FD      JSR $FDD1             ; 1 フレーム待ち
+C0EF57  20 9B FD      JSR $FD9B             ; OAM DMA
+C0EF5A  60            RTS
+
+;============================================================
+; ページループ (4 行) / 改ページ判定 / 1 行スクロール
+;============================================================
+C0F033  C2 30         REP #$30              ; === ページループ ===
+C0F035  3B            TSC
+C0F036  8D FF 2C      STA $2CFF             ; SP 保存
+C0F039  A9 00 40      LDA #$4000            ; スプライト VRAM $4000
+C0F03C  8D 0D 2D      STA $2D0D
+C0F03F  A9 04 00      LDA #$0004            ; 4 行
+C0F042  48            PHA
+C0F043  AD FC 2C      LDA $2CFC             ; メッセージ終了?
+C0F046  89 80 00      BIT #$0080
+C0F049  D0 17         BNE $F062
+C0F04B  20 D8 F3      JSR $F3D8             ; 1 行表示
+C0F04E  EE 1C 2D      INC $2D1C             ; 表示行 + 1
+C0F051  EE 1B 2D      INC $2D1B             ; 行番号 + 1
+C0F054  20 93 F0      JSR $F093             ; 改ページ/改行の処理
+C0F057  90 04         BCC $F05D
+C0F059  68            PLA
+C0F05A  4C 33 F0      JMP $F033
+
+C0F05D  68            PLA
+C0F05E  3A            DEC
+C0F05F  D0 E1         BNE $F042
+C0F061  48            PHA
+C0F062  68            PLA
+C0F063  CE 1C 2D      DEC $2D1C             ; 最終行に留まる
+C0F066  AD 1B 2D      LDA $2D1B
+C0F069  29 00 FF      AND #$FF00            ; 行番号の下位をクリア
+C0F06C  8D 1B 2D      STA $2D1B
+C0F06F  AD FC 2C      LDA $2CFC
+C0F072  89 80 00      BIT #$0080
+C0F075  D0 18         BNE $F08F
+C0F077  20 B9 F0      JSR $F0B9             ; 全スプライトを 1 行上へ
+C0F07A  20 D8 F3      JSR $F3D8             ; 最終行に 1 行追加
+C0F07D  AD 1B 2D      LDA $2D1B             ; 行番号 + 1 (8 行で循環)
+C0F080  1A            INC
+C0F081  29 07 FF      AND #$FF07
+C0F084  8D 1B 2D      STA $2D1B
+C0F087  20 93 F0      JSR $F093
+C0F08A  90 E3         BCC $F06F
+C0F08C  4C 33 F0      JMP $F033
+
+C0F08F  20 CD FA      JSR $FACD             ; ページ末: ボタン待ち
+C0F092  60            RTS
+
+C0F093  AD FC 2C      LDA $2CFC             ; $2CFC BIT5: 改ページ
+C0F096  89 20 00      BIT #$0020
+C0F099  F0 08         BEQ $F0A3
+C0F09B  20 CD FA      JSR $FACD
+C0F09E  20 20 F5      JSR $F520             ; ボタン待ち後, 全消去
+C0F0A1  38            SEC
+C0F0A2  60            RTS
+
+C0F0A3  A9 40 00      LDA #$0040            ; $2CFC BIT6: 改行
+C0F0A6  2C FC 2C      BIT $2CFC
+C0F0A9  F0 0C         BEQ $F0B7
+C0F0AB  1C FC 2C      TRB $2CFC
+C0F0AE  A9 04 00      LDA #$0004
+C0F0B1  0C FC 2C      TSB $2CFC
+C0F0B4  20 CD FA      JSR $FACD
+C0F0B7  18            CLC
+C0F0B8  60            RTS
+
+C0F0B9  08            PHP                   ; === 1 行スクロール ===
+C0F0BA  E2 20         SEP #$20
+C0F0BC  A2 00 00      LDX #$0000
+C0F0BF  A0 80 00      LDY #$0080            ; 128 エントリ
+C0F0C2  BD ED 36      LDA $36ED,X           ; Y 座標
+C0F0C5  C9 E0         CMP #$E0              ; $E0 = 非表示
+C0F0C7  F0 0C         BEQ $F0D5
+C0F0C9  CD F6 2C      CMP $2CF6             ; 最上行なら
+C0F0CC  D0 04         BNE $F0D2
+C0F0CE  A9 E0         LDA #$E0              ; 非表示にする
+C0F0D0  80 03         BRA $F0D5
+
+C0F0D2  38            SEC                   ; Y - 16
+C0F0D3  E9 10         SBC #$10
+C0F0D5  9D ED 36      STA $36ED,X
+C0F0D8  E8            INX
+C0F0D9  E8            INX
+C0F0DA  E8            INX
+C0F0DB  E8            INX
+C0F0DC  88            DEY
+C0F0DD  D0 E3         BNE $F0C2
+C0F0DF  20 D1 FD      JSR $FDD1             ; 1 フレーム待ち
+C0F0E2  20 9B FD      JSR $FD9B             ; OAM DMA
+C0F0E5  28            PLP
+C0F0E6  60            RTS
+
+;============================================================
+; 1 文字のスプライトを OAM 影に書いて転送
+;============================================================
+C0F242  C2 30         REP #$30              ; === 1 文字スプライト ===
+C0F244  48            PHA
+C0F245  DA            PHX
+C0F246  5A            PHY
+C0F247  AD 1B 2D      LDA $2D1B             ; 行 * $40
+C0F24A  29 FF 00      AND #$00FF
+C0F24D  EB            XBA
+C0F24E  4A 4A         LSR #2
+C0F250  48            PHA
+C0F251  AD 1D 2D      LDA $2D1D             ; + 列 * 4 = OAM 影オフセット
+C0F254  29 0F 00      AND #$000F
+C0F257  0A 0A         ASL #2
+C0F259  18            CLC
+C0F25A  63 01         ADC $01,S
+C0F25C  AA            TAX
+C0F25D  68            PLA
+C0F25E  08            PHP
+C0F25F  E2 20         SEP #$20
+C0F261  AD 1D 2D      LDA $2D1D             ; X = 列 * 14 + $2CF5
+C0F264  29 0F         AND #$0F
+C0F266  0A            ASL
+C0F267  48            PHA
+C0F268  0A 0A 0A      ASL #3
+C0F26B  38            SEC
+C0F26C  E3 01         SBC $01,S
+C0F26E  6D F5 2C      ADC $2CF5
+C0F271  9D EC 36      STA $36EC,X           ; OAM X
+C0F274  68            PLA
+C0F275  AD 1C 2D      LDA $2D1C             ; Y = 表示行 * 16 + $2CF6
+C0F278  0A 0A 0A 0A   ASL #4
+C0F27C  18            CLC
+C0F27D  6D F6 2C      ADC $2CF6
+C0F280  9D ED 36      STA $36ED,X           ; OAM Y
+C0F283  A9 00         LDA #$00              ; n = (行 & 7) * 16 + 列
+C0F285  EB            XBA
+C0F286  AD 1B 2D      LDA $2D1B
+C0F289  29 07         AND #$07
+C0F28B  0A 0A 0A 0A   ASL #4
+C0F28F  18            CLC
+C0F290  6D 1D 2D      ADC $2D1D
+C0F293  28            PLP
+C0F294  A8            TAY
+C0F295  29 F8 00      AND #$00F8            ; 16X16 スプライトのタイル番号
+C0F298  0A 0A         ASL #2
+C0F29A  48            PHA
+C0F29B  98            TYA
+C0F29C  29 07 00      AND #$0007
+C0F29F  0A            ASL
+C0F2A0  03 01         ORA $01,S
+C0F2A2  09 00 34      ORA #$3400            ; 優先度 3, パレット 2
+C0F2A5  0D F7 2C      ORA $2CF7             ; | $2CF7
+C0F2A8  9D EE 36      STA $36EE,X           ; OAM タイル + 属性
+C0F2AB  68            PLA
+C0F2AC  20 D1 FD      JSR $FDD1             ; NMI 待ち
+C0F2AF  20 65 F7      JSR $F765             ; グリフ DMA
+C0F2B2  20 9B FD      JSR $FD9B             ; OAM DMA
+C0F2B5  20 3A FB      JSR $FB3A             ; 速度ウェイト / A で即時
+C0F2B8  7A            PLY
+C0F2B9  FA            PLX
+C0F2BA  68            PLA
+C0F2BB  60            RTS
+
+;============================================================
+; 1 行 (16 文字) 表示
+;============================================================
+C0F3D8  C2 30         REP #$30              ; === 1 行表示 ===
+C0F3DA  3B            TSC
+C0F3DB  8D 01 2D      STA $2D01             ; SP 保存 (行抜け用)
+C0F3DE  20 5E FD      JSR $FD5E             ; 作業領域消去
+C0F3E1  A9 FF 00      LDA #$00FF            ; 列 = 0
+C0F3E4  1C 1D 2D      TRB $2D1D
+C0F3E7  AD 1B 2D      LDA $2D1B             ; VRAM = $4000 + (行 & 7) * $400
+C0F3EA  29 07 00      AND #$0007
+C0F3ED  EB            XBA
+C0F3EE  0A 0A         ASL #2
+C0F3F0  18            CLC
+C0F3F1  69 00 40      ADC #$4000
+C0F3F4  8D 0D 2D      STA $2D0D
+C0F3F7  A0 00 00      LDY #$0000
+C0F3FA  A9 10 00      LDA #$0010            ; 16 文字
+C0F3FD  48            PHA
+C0F3FE  AE 03 2D      LDX $2D03
+C0F401  8E 03 2D      STX $2D03
+C0F404  BF 00 2A C1   LDA $C12A00,X         ; テキスト読込 ($C12A00 + X)
+C0F408  20 85 F5      JSR $F585             ; デコード (CARRY = 続けて読む)
+C0F40B  B0 F4         BCS $F401
+C0F40D  20 C1 F9      JSR $F9C1             ; 縁取りグリフ
+C0F410  20 42 F2      JSR $F242             ; スプライト表示
+C0F413  AD 0D 2D      LDA $2D0D             ; VRAM + $20 ワード (2 タイル)
+C0F416  18            CLC
+C0F417  69 20 00      ADC #$0020
+C0F41A  89 FF 00      BIT #$00FF            ; 8 文字毎に
+C0F41D  D0 04         BNE $F423
+C0F41F  18            CLC                   ; + $100 (次のタイル段)
+C0F420  69 00 01      ADC #$0100
+C0F423  8D 0D 2D      STA $2D0D
+C0F426  EE 1D 2D      INC $2D1D             ; 列 + 1
+C0F429  EE 03 2D      INC $2D03             ; ポインタ + 1
+C0F42C  68            PLA
+C0F42D  3A            DEC
+C0F42E  D0 CD         BNE $F3FD
+C0F430  20 7D F4      JSR $F47D             ; 行末コード確認
+C0F433  60            RTS
+
+;============================================================
+; グリフ DMA: 16X16 スプライト 4 タイル -> VRAM
+;============================================================
+C0F765  08            PHP                   ; === グリフ DMA ===
+C0F766  E2 20         SEP #$20
+C0F768  A9 80         LDA #$80
+C0F76A  8F 15 21 00   STA $002115
+C0F76E  A9 01         LDA #$01
+C0F770  8F 00 43 00   STA $004300
+C0F774  A9 18         LDA #$18
+C0F776  8F 01 43 00   STA $004301
+C0F77A  A9 7E         LDA #$7E
+C0F77C  8F 04 43 00   STA $004304
+C0F780  C2 20         REP #$20
+C0F782  A9 60 2D      LDA #$2D60            ; 転送元 $7E2D60
+C0F785  8F 02 43 00   STA $004302
+C0F789  AD 0D 2D      LDA $2D0D             ; VRAM $2D0D (上 2 タイル)
+C0F78C  8F 16 21 00   STA $002116
+C0F790  A9 40 00      LDA #$0040            ; $40 バイト
+C0F793  8F 05 43 00   STA $004305
+C0F797  E2 20         SEP #$20
+C0F799  A9 01         LDA #$01
+C0F79B  8F 0B 42 00   STA $00420B
+C0F79F  C2 20         REP #$20
+C0F7A1  AD 0D 2D      LDA $2D0D             ; VRAM $2D0D + $100 (下 2 タイル)
+C0F7A4  18            CLC
+C0F7A5  69 00 01      ADC #$0100
+C0F7A8  8F 16 21 00   STA $002116
+C0F7AC  A9 40 00      LDA #$0040            ; $40 バイト (転送元は続き $2DA0)
+C0F7AF  8F 05 43 00   STA $004305
+C0F7B3  E2 20         SEP #$20
+C0F7B5  A9 01         LDA #$01
+C0F7B7  8F 0B 42 00   STA $00420B
+C0F7BB  28            PLP
+C0F7BC  60            RTS
+
+;============================================================
+; 縁取りグリフ作成
+;============================================================
+C0F9C1  08            PHP                   ; === 縁取りグリフ: A = グリフ番号 ===
+C0F9C2  5A            PHY
+C0F9C3  C2 30         REP #$30
+C0F9C5  20 0E FA      JSR $FA0E             ; 文字 + 縁を作業領域に
+C0F9C8  E2 20         SEP #$20
+C0F9CA  A0 40 00      LDY #$0040            ; 出力 $2D60-
+C0F9CD  A2 00 00      LDX #$0000
+C0F9D0  A9 08         LDA #$08              ; 8 行 X 4 タイル
+C0F9D2  48            PHA
+C0F9D3  BD 20 2D      LDA $2D20,X           ; 左上: プレーン 0 = 文字
+C0F9D6  99 20 2D      STA $2D20,Y
+C0F9D9  BD 40 2D      LDA $2D40,X           ; 左上: プレーン 2 = 縁
+C0F9DC  99 30 2D      STA $2D30,Y
+C0F9DF  BD 21 2D      LDA $2D21,X           ; 右上
+C0F9E2  99 40 2D      STA $2D40,Y
+C0F9E5  BD 41 2D      LDA $2D41,X
+C0F9E8  99 50 2D      STA $2D50,Y
+C0F9EB  BD 30 2D      LDA $2D30,X           ; 左下
+C0F9EE  99 60 2D      STA $2D60,Y
+C0F9F1  BD 50 2D      LDA $2D50,X
+C0F9F4  99 70 2D      STA $2D70,Y
+C0F9F7  BD 31 2D      LDA $2D31,X           ; 右下
+C0F9FA  99 80 2D      STA $2D80,Y
+C0F9FD  BD 51 2D      LDA $2D51,X
+C0FA00  99 90 2D      STA $2D90,Y
+C0FA03  E8            INX
+C0FA04  E8            INX
+C0FA05  C8            INY
+C0FA06  C8            INY
+C0FA07  68            PLA
+C0FA08  3A            DEC
+C0FA09  D0 C7         BNE $F9D2
+C0FA0B  7A            PLY
+C0FA0C  28            PLP
+C0FA0D  60            RTS
+
+C0FA0E  5A            PHY                   ; === 文字 + 縁 ===
+C0FA0F  20 26 FA      JSR $FA26
+C0FA12  20 35 FA      JSR $FA35
+C0FA15  20 5B FA      JSR $FA5B
+C0FA18  20 73 FA      JSR $FA73
+C0FA1B  20 8B FA      JSR $FA8B
+C0FA1E  20 A0 FA      JSR $FAA0
+C0FA21  20 B5 FA      JSR $FAB5
+C0FA24  7A            PLY
+C0FA25  60            RTS
+
+C0FA26  A2 00 00      LDX #$0000            ; $2D20-$2D5F クリア
+C0FA29  A0 20 00      LDY #$0020
+C0FA2C  9E 20 2D      STZ $2D20,X
+C0FA2F  E8            INX
+C0FA30  E8            INX
+C0FA31  88            DEY
+C0FA32  D0 F8         BNE $FA2C
+C0FA34  60            RTS
+
+C0FA35  0A 0A 0A      ASL #3                ; X = グリフ * 24
+C0FA38  48            PHA
+C0FA39  0A 0A         ASL #2
+C0FA3B  38            SEC
+C0FA3C  E3 01         SBC $01,S
+C0FA3E  FA            PLX
+C0FA3F  AA            TAX
+C0FA40  A0 00 00      LDY #$0000
+C0FA43  A9 0C 00      LDA #$000C            ; 12 行
+C0FA46  48            PHA
+C0FA47  BF 00 D0 CF   LDA $CFD000,X         ; フォント $CFD000
+C0FA4B  EB            XBA
+C0FA4C  4A 4A         LSR #2                ; 右へ 2 ドット
+C0FA4E  EB            XBA
+C0FA4F  99 24 2D      STA $2D24,Y           ; 文字レイヤ (2 行目から)
+C0FA52  E8            INX
+C0FA53  E8            INX
+C0FA54  C8            INY
+C0FA55  C8            INY
+C0FA56  68            PLA
+C0FA57  3A            DEC
+C0FA58  D0 EC         BNE $FA46
+C0FA5A  60            RTS
+
+C0FA5B  A0 00 00      LDY #$0000            ; 縁: 左へ 1 ドット
+C0FA5E  A2 0C 00      LDX #$000C
+C0FA61  B9 24 2D      LDA $2D24,Y
+C0FA64  EB            XBA
+C0FA65  0A            ASL
+C0FA66  EB            XBA
+C0FA67  19 44 2D      ORA $2D44,Y
+C0FA6A  99 44 2D      STA $2D44,Y
+C0FA6D  C8            INY
+C0FA6E  C8            INY
+C0FA6F  CA            DEX
+C0FA70  D0 EF         BNE $FA61
+C0FA72  60            RTS
+
+C0FA73  A0 00 00      LDY #$0000            ; 縁: 右へ 1 ドット
+C0FA76  A2 0C 00      LDX #$000C
+C0FA79  B9 24 2D      LDA $2D24,Y
+C0FA7C  EB            XBA
+C0FA7D  4A            LSR
+C0FA7E  EB            XBA
+C0FA7F  19 44 2D      ORA $2D44,Y
+C0FA82  99 44 2D      STA $2D44,Y
+C0FA85  C8            INY
+C0FA86  C8            INY
+C0FA87  CA            DEX
+C0FA88  D0 EF         BNE $FA79
+C0FA8A  60            RTS
+
+C0FA8B  A0 00 00      LDY #$0000            ; 縁: 上へ 1 行
+C0FA8E  A2 0C 00      LDX #$000C
+C0FA91  B9 24 2D      LDA $2D24,Y
+C0FA94  19 42 2D      ORA $2D42,Y
+C0FA97  99 42 2D      STA $2D42,Y
+C0FA9A  C8            INY
+C0FA9B  C8            INY
+C0FA9C  CA            DEX
+C0FA9D  D0 F2         BNE $FA91
+C0FA9F  60            RTS
+
+C0FAA0  A0 00 00      LDY #$0000            ; 縁: 下へ 1 行
+C0FAA3  A2 0C 00      LDX #$000C
+C0FAA6  B9 24 2D      LDA $2D24,Y
+C0FAA9  19 46 2D      ORA $2D46,Y
+C0FAAC  99 46 2D      STA $2D46,Y
+C0FAAF  C8            INY
+C0FAB0  C8            INY
+C0FAB1  CA            DEX
+C0FAB2  D0 F2         BNE $FAA6
+C0FAB4  60            RTS
+
+C0FAB5  A0 00 00      LDY #$0000            ; 縁 = 縁 AND NOT 文字
+C0FAB8  A2 0C 00      LDX #$000C
+C0FABB  B9 24 2D      LDA $2D24,Y
+C0FABE  49 FF FF      EOR #$FFFF
+C0FAC1  39 44 2D      AND $2D44,Y
+C0FAC4  99 44 2D      STA $2D44,Y
+C0FAC7  C8            INY
+C0FAC8  C8            INY
+C0FAC9  CA            DEX
+C0FACA  D0 EF         BNE $FABB
+C0FACC  60            RTS
+
+;============================================================
+; 作業領域消去 / スプライト全消去 / OAM DMA
+;============================================================
+C0FD5E  A0 00 02      LDY #$0200            ; 作業領域 $2D20-$311F 消去
+C0FD61  A2 00 00      LDX #$0000
+C0FD64  9E 20 2D      STZ $2D20,X
+C0FD67  E8            INX
+C0FD68  E8            INX
+C0FD69  88            DEY
+C0FD6A  D0 F8         BNE $FD64
+C0FD6C  60            RTS
+
+C0FD6D  DA            PHX                   ; === スプライト全消去 ===
+C0FD6E  5A            PHY
+C0FD6F  48            PHA
+C0FD70  08            PHP
+C0FD71  C2 10         REP #$10
+C0FD73  E2 20         SEP #$20
+C0FD75  A2 00 02      LDX #$0200
+C0FD78  A9 E0         LDA #$E0              ; Y = $E0 (画面外)
+C0FD7A  CA            DEX
+C0FD7B  CA            DEX
+C0FD7C  CA            DEX
+C0FD7D  CA            DEX
+C0FD7E  9D ED 36      STA $36ED,X
+C0FD81  D0 F7         BNE $FD7A
+C0FD83  C2 20         REP #$20
+C0FD85  A2 00 02      LDX #$0200
+C0FD88  A0 10 00      LDY #$0010
+C0FD8B  A9 AA AA      LDA #$AAAA            ; 上位テーブル: サイズ大
+C0FD8E  9D EC 36      STA $36EC,X
+C0FD91  E8            INX
+C0FD92  E8            INX
+C0FD93  88            DEY
+C0FD94  D0 F5         BNE $FD8B
+C0FD96  28            PLP
+C0FD97  68            PLA
+C0FD98  7A            PLY
+C0FD99  FA            PLX
+C0FD9A  60            RTS
+
+C0FD9B  08            PHP                   ; === OAM DMA ===
+C0FD9C  E2 20         SEP #$20
+C0FD9E  A9 00         LDA #$00
+C0FDA0  8F 00 43 00   STA $004300
+C0FDA4  A9 04         LDA #$04              ; -> $2104 OAMDATA
+C0FDA6  8F 01 43 00   STA $004301
+C0FDAA  A9 7E         LDA #$7E
+C0FDAC  8F 04 43 00   STA $004304
+C0FDB0  C2 20         REP #$20
+C0FDB2  A9 EC 36      LDA #$36EC            ; 転送元 $7E36EC
+C0FDB5  8F 02 43 00   STA $004302
+C0FDB9  A9 20 02      LDA #$0220            ; $220 バイト
+C0FDBC  8F 05 43 00   STA $004305
+C0FDC0  A9 00 00      LDA #$0000            ; OAM アドレス 0
+C0FDC3  8F 02 21 00   STA $002102
+C0FDC7  E2 20         SEP #$20
+C0FDC9  A9 01         LDA #$01
+C0FDCB  8F 0B 42 00   STA $00420B
+C0FDCF  28            PLP
+C0FDD0  60            RTS
+
+;============================================================
+; NMI モード 6: MODE 7 用 HDMA の再設定 (毎フレーム)
+;============================================================
+C0BDFB  C2 20         REP #$20              ; === NMI モード 6 ===
+C0BDFD  A9 3F BE      LDA #$BE3F            ; CH5 テーブル
+C0BE00  8F 52 43 00   STA $004352
+C0BE04  E2 20         SEP #$20
+C0BE06  A9 31         LDA #$31              ; CH6 -> MODE 7 行列 (テーブル $C0BE31)
+C0BE08  8F 62 43 00   STA $004362
+C0BE0C  A9 BE         LDA #$BE
+C0BE0E  8F 63 43 00   STA $004363
+C0BE12  A9 C0         LDA #$C0
+C0BE14  8F 64 43 00   STA $004364
+C0BE18  A9 38         LDA #$38              ; CH7 -> MODE 7 行列 (テーブル $C0BE38)
+C0BE1A  8F 72 43 00   STA $004372
+C0BE1E  A9 BE         LDA #$BE
+C0BE20  8F 73 43 00   STA $004373
+C0BE24  A9 C0         LDA #$C0
+C0BE26  8F 74 43 00   STA $004374
+C0BE2A  A9 E0         LDA #$E0              ; HDMA CH5-7
+C0BE2C  8F 0C 42 00   STA $00420C
+C0BE30  6B            RTL
